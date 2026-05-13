@@ -1,8 +1,8 @@
-# HBR AI × Business — Daily Digest
+# HBR AI x Business -- Daily Digest
 
-Automated daily scrape of Harvard Business Review's RSS feed. Filters for articles mentioning **AI** (expanded: artificial intelligence, generative AI, machine learning, LLM, deep learning, neural networks, ChatGPT, algorithms, etc.) **and** at least one of: *organization, firm, strategy, work, management*. Top 10 per day, ranked by keyword density × recency.
+Automated daily scrape of Harvard Business Review's RSS feeds (articles + IdeaCast + Cold Call podcasts). Filters for items mentioning **AI** (expanded: artificial intelligence, generative AI, machine learning, LLM, deep learning, neural networks, ChatGPT, Copilot, algorithms) **and** at least one of: *organization, firm, strategy, work, management*. Top 10 per day, ranked by keyword density x recency.
 
-Runs daily at **00:00 UTC** ≈ 7 pm CDT (summer) / 6 pm CST (winter).
+Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).
 
 ## Recent digests
 
