@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Daily HBR digest: top 10 items matching 'AI' AND at least one of
-{organization, firm, strategy, work, management}, ranked by keyword
-density times recency. No API key required -- uses RSS excerpts.
+Daily AI x Business digest across HBR + NBER + MIT SMR + arXiv + McKinsey.
 
-Pulls from HBR articles feed + IdeaCast + Cold Call podcast feeds, dedupes.
+Filter rule (strict AND):
+  - at least one STRONG AI term, OR a BOOSTER AI term accompanied by a STRONG AI term
+  - at least one business-domain term
+Ranking: (AI matches + booster bonus + domain matches) * recency
+Diversity: cap of MAX_PER_SOURCE in the daily top N.
 """
 from __future__ import annotations
 
@@ -12,36 +14,60 @@ import json
 import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from collections import defaultdict
 
 import feedparser
 
 # ---------------------------------------------------------------------------
-# Version stamp -- look for this in the workflow log to confirm you have the
-# right file. If you don't see "DIGEST SCRIPT v3" near the top of the
-# 'Generate today's digest' step output, the new digest.py was NOT committed.
+# Version stamp -- check the workflow log for "DIGEST SCRIPT v4" to confirm
+# this file is the one running.
 # ---------------------------------------------------------------------------
-VERSION = "v3 (2026-05-13)"
+VERSION = "v4 (2026-05-13)"
 
 # ---------------------------------------------------------------------------
-# Config
+# Sources
 # ---------------------------------------------------------------------------
 
 FEED_URLS = [
-    "https://hbr.org/the-latest/feed",                              # written articles
-    "http://feeds.harvardbusiness.org/harvardbusiness/ideacast",    # IdeaCast podcast
-    "http://feeds.harvardbusiness.org/harvardbusiness/cold-call",   # Cold Call podcast (HBS cases) -- note the hyphen
-    # Optional additional HBR podcasts -- uncomment to enable later:
-    # "http://feeds.harvardbusiness.org/harvardbusiness/hbrontheworkfeed",
-    # "http://feeds.harvardbusiness.org/harvardbusiness/womenatwork",
-    # "http://feeds.harvardbusiness.org/harvardbusiness/skydeck",
+    # HBR -- written articles (main + topic-specific)
+    "https://hbr.org/the-latest/feed",
+    "https://hbr.org/topic/subject/artificial-intelligence/feed",
+    "https://hbr.org/topic/subject/strategy/feed",
+    "https://hbr.org/topic/subject/managing-people/feed",
+    "https://hbr.org/topic/subject/organizational-culture/feed",
+
+    # HBR podcasts
+    "http://feeds.harvardbusiness.org/harvardbusiness/ideacast",
+    "http://feeds.harvardbusiness.org/harvardbusiness/cold-call",
+
+    # NBER Working Papers
+    "https://www.nber.org/papers.rss",
+
+    # MIT Sloan Management Review
+    "https://sloanreview.mit.edu/feed/",
+
+    # arXiv -- economics + computers & society (broader categories like
+    # cs.AI / cs.LG are intentionally omitted to avoid 100+/day technical
+    # ML papers that won't match the business filter anyway).
+    "https://rss.arxiv.org/rss/econ.GN",
+    "https://rss.arxiv.org/rss/cs.CY",
+
+    # McKinsey Insights (includes McKinsey Global Institute items)
+    "https://www.mckinsey.com/insights/rss",
 ]
 
 PER_FEED_ITEM_LIMIT = 30
 TOP_N = 10
-RECENCY_WINDOW_DAYS = 14
+MAX_PER_SOURCE = 4              # diversity cap: no more than this many items from any one source in the top N
+RECENCY_WINDOW_DAYS = 30
 REAPPEAR_LOOKBACK_DAYS = 7
 
-AI_PATTERNS = [
+# ---------------------------------------------------------------------------
+# Keyword pools
+# ---------------------------------------------------------------------------
+
+# STRONG AI terms -- match alone is enough on the AI side.
+AI_STRONG_PATTERNS = [
     r"\bAI\b",
     r"\bA\.I\.",
     r"\bartificial intelligence\b",
@@ -58,8 +84,25 @@ AI_PATTERNS = [
     r"\bchatbots?\b",
     r"\balgorithmic\b",
     r"\balgorithms?\b",
+    r"\bagentic\b",
+    r"\bdata science\b",
+    r"\bfoundation models?\b",
+    r"\bGPT-?\d+\b",
+    r"\bClaude\b",
+    r"\bGemini\b",
 ]
 
+# BOOSTER AI terms -- only count if at least one STRONG term is also present.
+# Per your rule: "digital transformation" must co-occur with a real AI term.
+AI_BOOSTER_PATTERNS = [
+    r"\bdigital transformation\b",
+    r"\bdigitali[sz]ation\b",
+    r"\bautomation\b",
+    r"\banalytics\b",
+    r"\bpredictive\b",
+]
+
+# Business-context terms (existing five plus the five you added).
 DOMAIN_PATTERNS = [
     r"\borgani[sz]ations?\b",
     r"\borgani[sz]ational\b",
@@ -67,6 +110,12 @@ DOMAIN_PATTERNS = [
     r"\bstrateg(?:y|ies|ic|ically)\b",
     r"\bwork(?:place|places|force|forces|ers?|ing)?\b",
     r"\bmanage(?:ment|r|rs|ial|ing)?\b",
+    r"\bleader(?:s|ship)?\b",
+    r"\bexecutives?\b",
+    r"\bteams?\b",
+    r"\bculture\b",
+    r"\bcultural\b",
+    r"\binnovation\b",
 ]
 
 REPO_ROOT = Path(__file__).parent
@@ -109,7 +158,6 @@ def parse_pub_date(entry):
 
 
 def extract_authors(entry) -> str:
-    """Defensive: podcast feeds expose authors in varied shapes."""
     try:
         authors = getattr(entry, "authors", None)
         if authors:
@@ -143,23 +191,35 @@ def extract_authors(entry) -> str:
 
 
 def feed_label(url: str) -> str:
-    if "ideacast" in url:
-        return "IdeaCast (podcast)"
-    if "cold-call" in url or "coldcall" in url:
-        return "Cold Call (podcast)"
-    if "hbrontheworkfeed" in url:
-        return "HBR On Work (podcast)"
-    if "womenatwork" in url:
-        return "Women at Work (podcast)"
-    if "skydeck" in url:
-        return "Skydeck (podcast)"
-    if "the-latest" in url:
+    if "hbr.org/the-latest" in url:
         return "HBR Article"
-    return "HBR"
+    if "hbr.org/topic/subject/artificial-intelligence" in url:
+        return "HBR Topic: AI"
+    if "hbr.org/topic/subject/strategy" in url:
+        return "HBR Topic: Strategy"
+    if "hbr.org/topic/subject/managing-people" in url:
+        return "HBR Topic: Managing People"
+    if "hbr.org/topic/subject/organizational-culture" in url:
+        return "HBR Topic: Org Culture"
+    if "ideacast" in url:
+        return "HBR IdeaCast (podcast)"
+    if "cold-call" in url or "coldcall" in url:
+        return "HBR Cold Call (podcast)"
+    if "nber.org" in url:
+        return "NBER Working Paper"
+    if "sloanreview.mit.edu" in url:
+        return "MIT Sloan Management Review"
+    if "arxiv.org/rss/econ.GN" in url:
+        return "arXiv: Economics (econ.GN)"
+    if "arxiv.org/rss/cs.CY" in url:
+        return "arXiv: Computers & Society (cs.CY)"
+    if "mckinsey.com" in url:
+        return "McKinsey Insights"
+    return url
 
 
 # ---------------------------------------------------------------------------
-# Main pipeline
+# Pipeline
 # ---------------------------------------------------------------------------
 
 def collect_entries() -> list:
@@ -171,8 +231,10 @@ def collect_entries() -> list:
             print(f"[error] could not parse {url}: {e}")
             continue
         if feed.bozo:
+            # bozo warnings are common (e.g. encoding mismatches) and don't prevent parsing
             print(f"[warn] feed parse warning for {url}: {feed.bozo_exception}")
-        print(f"[info] {url} -> {len(feed.entries)} entries")
+        n = len(feed.entries)
+        print(f"[info] {url} -> {n} entries")
         for entry in feed.entries[:PER_FEED_ITEM_LIMIT]:
             all_entries.append((url, entry))
     return all_entries
@@ -190,8 +252,9 @@ def build_digest() -> None:
 
     seen_links = set()
     candidates = []
-    ai_only = 0
-    domain_only = 0
+    skipped_ai = 0
+    skipped_domain = 0
+    skipped_age = 0
     for feed_url, entry in raw_entries:
         link = entry.get("link", "")
         if not link or link in seen_links:
@@ -202,27 +265,32 @@ def build_digest() -> None:
         summary = strip_html(entry.get("summary") or entry.get("description") or "")
         haystack = f"{title}\n{summary}"
 
-        ai_count = count_matches(haystack, AI_PATTERNS)
+        # --- AI side: strong required; booster counts only if strong present ---
+        ai_strong = count_matches(haystack, AI_STRONG_PATTERNS)
+        if ai_strong == 0:
+            skipped_ai += 1
+            continue
+        ai_booster = count_matches(haystack, AI_BOOSTER_PATTERNS)
+        ai_count = ai_strong + ai_booster
+
+        # --- domain side ---
         domain_count = count_matches(haystack, DOMAIN_PATTERNS)
-        if ai_count == 0 and domain_count == 0:
-            continue
-        if ai_count == 0:
-            domain_only += 1
-            continue
         if domain_count == 0:
-            ai_only += 1
+            skipped_domain += 1
             continue
 
+        # --- recency ---
         pub_dt = parse_pub_date(entry)
         if pub_dt is None:
+            skipped_age += 1
             continue
         age_days = (now_utc - pub_dt).total_seconds() / 86400
         recency = max(0.0, 1.0 - age_days / RECENCY_WINDOW_DAYS)
         if recency == 0.0:
+            skipped_age += 1
             continue
 
-        keyword_score = ai_count + domain_count
-        final_score = keyword_score * recency
+        score = (ai_count + domain_count) * recency
 
         candidates.append({
             "title": title,
@@ -231,17 +299,30 @@ def build_digest() -> None:
             "published_display": pub_dt.strftime("%b %d, %Y"),
             "authors": extract_authors(entry),
             "summary": summary,
-            "ai_matches": ai_count,
+            "ai_strong": ai_strong,
+            "ai_booster": ai_booster,
             "domain_matches": domain_count,
-            "score": round(final_score, 2),
+            "score": round(score, 2),
         })
 
-    print(f"[info] candidates passing both filters: {len(candidates)}  "
-          f"(AI-only skipped: {ai_only}, domain-only skipped: {domain_only})")
+    print(f"[info] candidates passing all filters: {len(candidates)}  "
+          f"(skipped -- no AI: {skipped_ai}, no domain: {skipped_domain}, "
+          f"no/old date: {skipped_age})")
 
     candidates.sort(key=lambda x: x["score"], reverse=True)
-    top = candidates[:TOP_N]
 
+    # --- per-source cap to keep the digest diverse ---
+    top = []
+    source_counts = defaultdict(int)
+    for art in candidates:
+        if source_counts[art["source"]] >= MAX_PER_SOURCE:
+            continue
+        top.append(art)
+        source_counts[art["source"]] += 1
+        if len(top) >= TOP_N:
+            break
+
+    # --- re-appear tagging ---
     seen = load_seen()
     cutoff = today - timedelta(days=REAPPEAR_LOOKBACK_DAYS)
     for art in top:
@@ -255,18 +336,23 @@ def build_digest() -> None:
             seen[art["link"]] = prior + [today_str]
     save_seen(seen)
 
+    # --- write today's digest ---
     DIGESTS_DIR.mkdir(exist_ok=True)
     digest_path = DIGESTS_DIR / f"{today_str}.md"
-    out = [f"# HBR AI x Business Digest -- {today.strftime('%B %d, %Y')}", ""]
+    out = [f"# AI x Business Digest -- {today.strftime('%B %d, %Y')}", ""]
 
     if not top:
         out.append("_No items in today's RSS window matched the filter._")
     else:
+        sources_used = sorted(set(a["source"] for a in top))
         out.append(
-            f"_Top {len(top)} items from HBR articles + IdeaCast + Cold Call matching "
-            f"**AI** + (organization / firm / strategy / work / management), "
-            f"ranked by keyword density x recency._"
+            f"_Top {len(top)} items across HBR + NBER + MIT SMR + arXiv + McKinsey "
+            f"matching **AI** (strong terms required) + (organization / firm / strategy / work / "
+            f"management / leadership / executive / team / culture / innovation), "
+            f"ranked by keyword density x recency. Max {MAX_PER_SOURCE} items per source._"
         )
+        out.append("")
+        out.append(f"_Sources represented today: {', '.join(sources_used)}._")
         out.append("")
         for i, art in enumerate(top, 1):
             badge = "  `(re-appear)`" if art["reappear"] else ""
@@ -278,7 +364,8 @@ def build_digest() -> None:
             out.append(f"- **Author(s):** {art['authors']}")
             out.append(
                 f"- **Score:** {art['score']} "
-                f"(AI matches: {art['ai_matches']}, domain matches: {art['domain_matches']})"
+                f"(AI strong: {art['ai_strong']}, AI booster: {art['ai_booster']}, "
+                f"domain: {art['domain_matches']})"
             )
             out.append("")
             out.append(f"> {art['summary']}")
@@ -293,14 +380,24 @@ def build_digest() -> None:
 def update_readme() -> None:
     digests = sorted(DIGESTS_DIR.glob("*.md"), reverse=True) if DIGESTS_DIR.exists() else []
     lines = [
-        "# HBR AI x Business -- Daily Digest",
+        "# AI x Business -- Daily Digest",
         "",
-        "Automated daily scrape of Harvard Business Review's RSS feeds "
-        "(articles + IdeaCast + Cold Call podcasts). "
-        "Filters for items mentioning **AI** (expanded: artificial intelligence, generative AI, "
-        "machine learning, LLM, deep learning, neural networks, ChatGPT, Copilot, algorithms) "
-        "**and** at least one of: *organization, firm, strategy, work, management*. "
-        "Top 10 per day, ranked by keyword density x recency.",
+        "Automated daily scrape across multiple sources: "
+        "HBR (latest + topic feeds + IdeaCast + Cold Call), "
+        "NBER Working Papers, "
+        "MIT Sloan Management Review, "
+        "arXiv (econ.GN, cs.CY), "
+        "and McKinsey Insights.",
+        "",
+        "Filter: items must contain at least one **strong AI term** "
+        "(AI, machine learning, LLM, generative AI, Copilot, agentic, etc.) "
+        "and at least one **business-domain term** "
+        "(organization, firm, strategy, work, management, leadership, executive, team, culture, innovation). "
+        "Booster terms (digital transformation, automation, analytics, predictive) only count if a strong AI term is also present.",
+        "",
+        "Top 10 per day, ranked by keyword density x recency. "
+        f"Max {MAX_PER_SOURCE} items per source for diversity. "
+        f"Recency window: {RECENCY_WINDOW_DAYS} days with linear decay.",
         "",
         "Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).",
         "",
