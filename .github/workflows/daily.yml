@@ -15,12 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -35,7 +36,17 @@ jobs:
           git add digests/ seen.json README.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "Daily digest $(date -u +%Y-%m-%d)"
-            git push
+            exit 0
           fi
+          git commit -m "Daily digest $(date -u +%Y-%m-%d)"
+          # Retry push with rebase if the remote has moved on between checkout and push.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt — pulling with rebase and retrying..."
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 attempts." >&2
+          exit 1
