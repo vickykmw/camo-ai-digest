@@ -1,14 +1,16 @@
 name: Daily HBR Digest
 
+# WORKFLOW v3 -- if you see "v2" or "v4" tags in commit messages, you have the
+# right file. Check the 'Commit and push' step output for "[workflow v3]".
+
 on:
   schedule:
-    # 00:00 UTC daily ≈ 7 pm CDT (summer) / 6 pm CST (winter).
-    # GitHub Actions cron is always UTC and ignores DST.
+    # 00:00 UTC daily ~ 7 pm CDT (summer) / 6 pm CST (winter).
     - cron: '0 0 * * *'
-  workflow_dispatch:  # allow manual runs from the Actions tab
+  workflow_dispatch:
 
 permissions:
-  contents: write  # needed to commit the digest back to the repo
+  contents: write
 
 jobs:
   digest:
@@ -16,6 +18,8 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0  # full history so rebase has the data it needs
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -31,22 +35,51 @@ jobs:
 
       - name: Commit and push
         run: |
+          echo "[workflow v3] starting commit step"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # If nothing to commit, exit early.
           git add digests/ seen.json README.md
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "[workflow v3] No changes to commit."
             exit 0
           fi
-          git commit -m "Daily digest $(date -u +%Y-%m-%d)"
-          # Retry push with rebase if the remote has moved on between checkout and push.
+
+          # Stash the generated files outside the repo so a hard-reset won't lose them.
+          STASH=/tmp/digest-stash
+          rm -rf "$STASH" && mkdir -p "$STASH"
+          [ -d digests ]   && cp -r digests   "$STASH/" || true
+          [ -f seen.json ] && cp    seen.json "$STASH/" || true
+          [ -f README.md ] && cp    README.md "$STASH/" || true
+
+          # Reset hard to whatever is on the remote, so we never push stale state.
+          git fetch origin main
+          git reset --hard origin/main
+
+          # Reapply our generated files on top of the fresh remote.
+          [ -d "$STASH/digests" ]   && cp -r "$STASH/digests"   .
+          [ -f "$STASH/seen.json" ] && cp    "$STASH/seen.json" .
+          [ -f "$STASH/README.md" ] && cp    "$STASH/README.md" .
+
+          # Stage and commit the fresh changes.
+          git add digests/ seen.json README.md
+          if git diff --cached --quiet; then
+            echo "[workflow v3] No changes after sync (remote already had today's digest)."
+            exit 0
+          fi
+          git commit -m "Daily digest $(date -u +%Y-%m-%d) [v3]"
+
+          # Push with a small retry in case of further race conditions.
           for attempt in 1 2 3; do
-            if git push; then
-              echo "Push succeeded on attempt $attempt."
+            if git push origin main; then
+              echo "[workflow v3] Push succeeded on attempt $attempt."
               exit 0
             fi
-            echo "Push failed on attempt $attempt — pulling with rebase and retrying..."
-            git pull --rebase origin main
+            echo "[workflow v3] Push failed on attempt $attempt -- pulling and retrying..."
+            git pull --rebase origin main || true
+            sleep $((attempt * 2))
           done
-          echo "Push failed after 3 attempts." >&2
+
+          echo "[workflow v3] Push failed after 3 attempts." >&2
           exit 1
