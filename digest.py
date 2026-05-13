@@ -2,9 +2,9 @@
 """
 Daily HBR digest: top 10 items matching 'AI' AND at least one of
 {organization, firm, strategy, work, management}, ranked by keyword
-density times recency. No API key required — uses RSS excerpts.
+density times recency. No API key required -- uses RSS excerpts.
 
-Pulls from multiple HBR feeds (articles + IdeaCast + Cold Call) and dedupes.
+Pulls from HBR articles feed + IdeaCast + Cold Call podcast feeds, dedupes.
 """
 from __future__ import annotations
 
@@ -16,25 +16,31 @@ from pathlib import Path
 import feedparser
 
 # ---------------------------------------------------------------------------
+# Version stamp -- look for this in the workflow log to confirm you have the
+# right file. If you don't see "DIGEST SCRIPT v3" near the top of the
+# 'Generate today's digest' step output, the new digest.py was NOT committed.
+# ---------------------------------------------------------------------------
+VERSION = "v3 (2026-05-13)"
+
+# ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
 FEED_URLS = [
     "https://hbr.org/the-latest/feed",                              # written articles
     "http://feeds.harvardbusiness.org/harvardbusiness/ideacast",    # IdeaCast podcast
-    "http://feeds.harvardbusiness.org/harvardbusiness/coldcall",    # Cold Call podcast (HBS cases)
-    # Optional additional HBR podcasts (uncomment to enable):
+    "http://feeds.harvardbusiness.org/harvardbusiness/cold-call",   # Cold Call podcast (HBS cases) -- note the hyphen
+    # Optional additional HBR podcasts -- uncomment to enable later:
     # "http://feeds.harvardbusiness.org/harvardbusiness/hbrontheworkfeed",
     # "http://feeds.harvardbusiness.org/harvardbusiness/womenatwork",
     # "http://feeds.harvardbusiness.org/harvardbusiness/skydeck",
 ]
 
-PER_FEED_ITEM_LIMIT = 30     # inspect the most recent N items per feed
-TOP_N = 10                   # max items per daily digest
-RECENCY_WINDOW_DAYS = 14     # recency score decays linearly to 0 over this many days
-REAPPEAR_LOOKBACK_DAYS = 7   # flag (re-appear) if item was in any digest within this window
+PER_FEED_ITEM_LIMIT = 30
+TOP_N = 10
+RECENCY_WINDOW_DAYS = 14
+REAPPEAR_LOOKBACK_DAYS = 7
 
-# Expanded AI matcher (case-insensitive, word-boundary aware)
 AI_PATTERNS = [
     r"\bAI\b",
     r"\bA\.I\.",
@@ -54,7 +60,6 @@ AI_PATTERNS = [
     r"\balgorithms?\b",
 ]
 
-# Business-context matcher: organisation/organization, firm, strategy, work, management
 DOMAIN_PATTERNS = [
     r"\borgani[sz]ations?\b",
     r"\borgani[sz]ational\b",
@@ -104,7 +109,7 @@ def parse_pub_date(entry):
 
 
 def extract_authors(entry) -> str:
-    """Defensive author extraction — podcast feeds expose authors in varied shapes."""
+    """Defensive: podcast feeds expose authors in varied shapes."""
     try:
         authors = getattr(entry, "authors", None)
         if authors:
@@ -122,30 +127,25 @@ def extract_authors(entry) -> str:
                 return ", ".join(names)
     except Exception:
         pass
-
     try:
         author = getattr(entry, "author", None)
         if isinstance(author, str) and author.strip():
             return author.strip()
     except Exception:
         pass
-
-    # iTunes podcast namespace sometimes uses 'itunes_author'
     try:
         itunes_author = getattr(entry, "itunes_author", None)
         if isinstance(itunes_author, str) and itunes_author.strip():
             return itunes_author.strip()
     except Exception:
         pass
-
     return "Unknown"
 
 
 def feed_label(url: str) -> str:
-    """Friendly tag shown in the digest so you know which feed an item came from."""
     if "ideacast" in url:
         return "IdeaCast (podcast)"
-    if "coldcall" in url:
+    if "cold-call" in url or "coldcall" in url:
         return "Cold Call (podcast)"
     if "hbrontheworkfeed" in url:
         return "HBR On Work (podcast)"
@@ -163,7 +163,6 @@ def feed_label(url: str) -> str:
 # ---------------------------------------------------------------------------
 
 def collect_entries() -> list:
-    """Pull entries from every feed in FEED_URLS. Returns [(feed_url, entry), ...]."""
     all_entries = []
     for url in FEED_URLS:
         try:
@@ -180,6 +179,8 @@ def collect_entries() -> list:
 
 
 def build_digest() -> None:
+    print(f"=== DIGEST SCRIPT {VERSION} ===")
+
     now_utc = datetime.now(timezone.utc)
     today = now_utc.date()
     today_str = today.isoformat()
@@ -194,7 +195,7 @@ def build_digest() -> None:
     for feed_url, entry in raw_entries:
         link = entry.get("link", "")
         if not link or link in seen_links:
-            continue  # dedupe across feeds
+            continue
         seen_links.add(link)
 
         title = (entry.get("title") or "").strip()
@@ -215,7 +216,6 @@ def build_digest() -> None:
         pub_dt = parse_pub_date(entry)
         if pub_dt is None:
             continue
-
         age_days = (now_utc - pub_dt).total_seconds() / 86400
         recency = max(0.0, 1.0 - age_days / RECENCY_WINDOW_DAYS)
         if recency == 0.0:
@@ -228,7 +228,6 @@ def build_digest() -> None:
             "title": title,
             "link": link,
             "source": feed_label(feed_url),
-            "published": pub_dt.isoformat(),
             "published_display": pub_dt.strftime("%b %d, %Y"),
             "authors": extract_authors(entry),
             "summary": summary,
@@ -243,7 +242,6 @@ def build_digest() -> None:
     candidates.sort(key=lambda x: x["score"], reverse=True)
     top = candidates[:TOP_N]
 
-    # --- re-appear tagging --------------------------------------------------
     seen = load_seen()
     cutoff = today - timedelta(days=REAPPEAR_LOOKBACK_DAYS)
     for art in top:
@@ -257,7 +255,6 @@ def build_digest() -> None:
             seen[art["link"]] = prior + [today_str]
     save_seen(seen)
 
-    # --- write today's digest ----------------------------------------------
     DIGESTS_DIR.mkdir(exist_ok=True)
     digest_path = DIGESTS_DIR / f"{today_str}.md"
     out = [f"# HBR AI x Business Digest -- {today.strftime('%B %d, %Y')}", ""]
@@ -266,7 +263,7 @@ def build_digest() -> None:
         out.append("_No items in today's RSS window matched the filter._")
     else:
         out.append(
-            f"_Top {len(top)} items from HBR's latest articles + IdeaCast + Cold Call podcasts matching "
+            f"_Top {len(top)} items from HBR articles + IdeaCast + Cold Call matching "
             f"**AI** + (organization / firm / strategy / work / management), "
             f"ranked by keyword density x recency._"
         )
@@ -288,7 +285,7 @@ def build_digest() -> None:
             out.append("")
 
     digest_path.write_text("\n".join(out))
-    print(f"[ok] wrote {digest_path}  ({len(top)} items)")
+    print(f"[ok] wrote {digest_path}  ({len(top)} items, script {VERSION})")
 
     update_readme()
 
@@ -298,9 +295,10 @@ def update_readme() -> None:
     lines = [
         "# HBR AI x Business -- Daily Digest",
         "",
-        "Automated daily scrape of Harvard Business Review's RSS feeds (articles + IdeaCast + Cold Call podcasts). "
+        "Automated daily scrape of Harvard Business Review's RSS feeds "
+        "(articles + IdeaCast + Cold Call podcasts). "
         "Filters for items mentioning **AI** (expanded: artificial intelligence, generative AI, "
-        "machine learning, LLM, deep learning, neural networks, ChatGPT, Copilot, algorithms, etc.) "
+        "machine learning, LLM, deep learning, neural networks, ChatGPT, Copilot, algorithms) "
         "**and** at least one of: *organization, firm, strategy, work, management*. "
         "Top 10 per day, ranked by keyword density x recency.",
         "",
