@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
-Daily HBR digest: top 10 articles matching 'AI' AND at least one of
+Daily HBR digest: top 10 items matching 'AI' AND at least one of
 {organization, firm, strategy, work, management}, ranked by keyword
 density times recency. No API key required — uses RSS excerpts.
 
-Run locally:  python digest.py
-Runs daily in GitHub Actions (see .github/workflows/daily.yml).
+Pulls from multiple HBR feeds (articles + IdeaCast podcast) and dedupes.
 """
 from __future__ import annotations
 
@@ -20,11 +19,18 @@ import feedparser
 # Config
 # ---------------------------------------------------------------------------
 
-FEED_URL = "https://hbr.org/the-latest/feed"
-RSS_ITEM_LIMIT = 30          # only inspect the most recent N items
-TOP_N = 10                   # max articles per daily digest
+FEED_URLS = [
+    "https://hbr.org/the-latest/feed",                              # written articles
+    "http://feeds.harvardbusiness.org/harvardbusiness/ideacast",    # IdeaCast podcast
+    # Optional additional HBR podcasts (uncomment to enable):
+    # "http://feeds.harvardbusiness.org/harvardbusiness/coldcall",
+    # "http://feeds.harvardbusiness.org/harvardbusiness/hbrontheworkfeed",
+]
+
+PER_FEED_ITEM_LIMIT = 30     # inspect the most recent N items per feed
+TOP_N = 10                   # max items per daily digest
 RECENCY_WINDOW_DAYS = 14     # recency score decays linearly to 0 over this many days
-REAPPEAR_LOOKBACK_DAYS = 7   # flag (re-appear) if article was in any digest within this window
+REAPPEAR_LOOKBACK_DAYS = 7   # flag (re-appear) if item was in any digest within this window
 
 # Expanded AI matcher (case-insensitive, word-boundary aware)
 AI_PATTERNS = [
@@ -66,7 +72,6 @@ README_FILE = REPO_ROOT / "README.md"
 # ---------------------------------------------------------------------------
 
 def load_seen() -> dict[str, list[str]]:
-    """Load {article_url: [iso_date_strings_when_it_appeared]}."""
     if SEEN_FILE.exists():
         return json.loads(SEEN_FILE.read_text())
     return {}
@@ -106,21 +111,49 @@ def extract_authors(entry) -> str:
     return "Unknown"
 
 
+def feed_label(url: str) -> str:
+    """Friendly tag shown in the digest so you know which feed an item came from."""
+    if "ideacast" in url:
+        return "IdeaCast (podcast)"
+    if "coldcall" in url:
+        return "Cold Call (podcast)"
+    if "the-latest" in url:
+        return "HBR Article"
+    return "HBR"
+
+
 # ---------------------------------------------------------------------------
 # Main pipeline
 # ---------------------------------------------------------------------------
+
+def collect_entries() -> list[tuple[str, object]]:
+    """Pull entries from every feed in FEED_URLS. Returns [(feed_url, entry), ...]."""
+    all_entries: list[tuple[str, object]] = []
+    for url in FEED_URLS:
+        feed = feedparser.parse(url)
+        if feed.bozo:
+            print(f"[warn] feed parse warning for {url}: {feed.bozo_exception}")
+        print(f"[info] {url} → {len(feed.entries)} entries")
+        for entry in feed.entries[:PER_FEED_ITEM_LIMIT]:
+            all_entries.append((url, entry))
+    return all_entries
+
 
 def build_digest() -> None:
     now_utc = datetime.now(timezone.utc)
     today = now_utc.date()
     today_str = today.isoformat()
 
-    feed = feedparser.parse(FEED_URL)
-    if feed.bozo:
-        print(f"[warn] feed parse warning: {feed.bozo_exception}")
+    raw_entries = collect_entries()
 
+    seen_links: set[str] = set()
     candidates = []
-    for entry in feed.entries[:RSS_ITEM_LIMIT]:
+    for feed_url, entry in raw_entries:
+        link = entry.get("link", "")
+        if not link or link in seen_links:
+            continue  # dedupe across feeds
+        seen_links.add(link)
+
         title = (entry.get("title") or "").strip()
         summary = strip_html(entry.get("summary") or entry.get("description") or "")
         haystack = f"{title}\n{summary}"
@@ -144,7 +177,8 @@ def build_digest() -> None:
 
         candidates.append({
             "title": title,
-            "link": entry.get("link", ""),
+            "link": link,
+            "source": feed_label(feed_url),
             "published": pub_dt.isoformat(),
             "published_display": pub_dt.strftime("%b %d, %Y"),
             "authors": extract_authors(entry),
@@ -177,10 +211,10 @@ def build_digest() -> None:
     out = [f"# HBR AI × Business Digest — {today.strftime('%B %d, %Y')}", ""]
 
     if not top:
-        out.append("_No articles in today's RSS window matched the filter._")
+        out.append("_No items in today's RSS window matched the filter._")
     else:
         out.append(
-            f"_Top {len(top)} of HBR's latest {RSS_ITEM_LIMIT} items matching "
+            f"_Top {len(top)} items from HBR's latest articles + IdeaCast podcast matching "
             f"**AI** + (organization / firm / strategy / work / management), "
             f"ranked by keyword density × recency._"
         )
@@ -189,6 +223,7 @@ def build_digest() -> None:
             badge = "  `(re-appear)`" if art["reappear"] else ""
             out.append(f"### {i}. {art['title']}{badge}")
             out.append("")
+            out.append(f"- **Source:** {art['source']}")
             out.append(f"- **Link:** <{art['link']}>")
             out.append(f"- **Published:** {art['published_display']}")
             out.append(f"- **Author(s):** {art['authors']}")
@@ -201,7 +236,7 @@ def build_digest() -> None:
             out.append("")
 
     digest_path.write_text("\n".join(out))
-    print(f"[ok] wrote {digest_path}  ({len(top)} articles)")
+    print(f"[ok] wrote {digest_path}  ({len(top)} items)")
 
     update_readme()
 
@@ -211,8 +246,8 @@ def update_readme() -> None:
     lines = [
         "# HBR AI × Business — Daily Digest",
         "",
-        "Automated daily scrape of Harvard Business Review's RSS feed. Filters for "
-        "articles mentioning **AI** (expanded: artificial intelligence, generative AI, "
+        "Automated daily scrape of Harvard Business Review's RSS feeds (articles + IdeaCast podcast). "
+        "Filters for items mentioning **AI** (expanded: artificial intelligence, generative AI, "
         "machine learning, LLM, deep learning, neural networks, ChatGPT, algorithms, etc.) "
         "**and** at least one of: *organization, firm, strategy, work, management*. "
         "Top 10 per day, ranked by keyword density × recency.",
