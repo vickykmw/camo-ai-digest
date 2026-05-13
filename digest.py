@@ -4,7 +4,7 @@ Daily HBR digest: top 10 items matching 'AI' AND at least one of
 {organization, firm, strategy, work, management}, ranked by keyword
 density times recency. No API key required — uses RSS excerpts.
 
-Pulls from multiple HBR feeds (articles + IdeaCast podcast) and dedupes.
+Pulls from multiple HBR feeds (articles + IdeaCast + Cold Call) and dedupes.
 """
 from __future__ import annotations
 
@@ -22,9 +22,11 @@ import feedparser
 FEED_URLS = [
     "https://hbr.org/the-latest/feed",                              # written articles
     "http://feeds.harvardbusiness.org/harvardbusiness/ideacast",    # IdeaCast podcast
+    "http://feeds.harvardbusiness.org/harvardbusiness/coldcall",    # Cold Call podcast (HBS cases)
     # Optional additional HBR podcasts (uncomment to enable):
-    # "http://feeds.harvardbusiness.org/harvardbusiness/coldcall",
     # "http://feeds.harvardbusiness.org/harvardbusiness/hbrontheworkfeed",
+    # "http://feeds.harvardbusiness.org/harvardbusiness/womenatwork",
+    # "http://feeds.harvardbusiness.org/harvardbusiness/skydeck",
 ]
 
 PER_FEED_ITEM_LIMIT = 30     # inspect the most recent N items per feed
@@ -46,6 +48,7 @@ AI_PATTERNS = [
     r"\bdeep learning\b",
     r"\bneural networks?\b",
     r"\bChatGPT\b",
+    r"\bCopilot\b",
     r"\bchatbots?\b",
     r"\balgorithmic\b",
     r"\balgorithms?\b",
@@ -71,13 +74,13 @@ README_FILE = REPO_ROOT / "README.md"
 # Helpers
 # ---------------------------------------------------------------------------
 
-def load_seen() -> dict[str, list[str]]:
+def load_seen() -> dict:
     if SEEN_FILE.exists():
         return json.loads(SEEN_FILE.read_text())
     return {}
 
 
-def save_seen(seen: dict[str, list[str]]) -> None:
+def save_seen(seen: dict) -> None:
     SEEN_FILE.write_text(json.dumps(seen, indent=2, sort_keys=True))
 
 
@@ -85,14 +88,14 @@ def strip_html(text: str) -> str:
     return re.sub(r"<[^>]+>", " ", text or "").strip()
 
 
-def count_matches(text: str, patterns: list[str]) -> int:
+def count_matches(text: str, patterns: list) -> int:
     total = 0
     for p in patterns:
         total += len(re.findall(p, text, flags=re.IGNORECASE))
     return total
 
 
-def parse_pub_date(entry) -> datetime | None:
+def parse_pub_date(entry):
     if getattr(entry, "published_parsed", None):
         return datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
     if getattr(entry, "updated_parsed", None):
@@ -101,13 +104,40 @@ def parse_pub_date(entry) -> datetime | None:
 
 
 def extract_authors(entry) -> str:
-    if getattr(entry, "authors", None):
-        names = [a.get("name", "").strip() for a in entry.authors if a.get("name")]
-        names = [n for n in names if n]
-        if names:
-            return ", ".join(names)
-    if getattr(entry, "author", None):
-        return entry.author.strip()
+    """Defensive author extraction — podcast feeds expose authors in varied shapes."""
+    try:
+        authors = getattr(entry, "authors", None)
+        if authors:
+            names = []
+            for a in authors:
+                if isinstance(a, dict):
+                    name = (a.get("name") or "").strip()
+                elif isinstance(a, str):
+                    name = a.strip()
+                else:
+                    name = ""
+                if name:
+                    names.append(name)
+            if names:
+                return ", ".join(names)
+    except Exception:
+        pass
+
+    try:
+        author = getattr(entry, "author", None)
+        if isinstance(author, str) and author.strip():
+            return author.strip()
+    except Exception:
+        pass
+
+    # iTunes podcast namespace sometimes uses 'itunes_author'
+    try:
+        itunes_author = getattr(entry, "itunes_author", None)
+        if isinstance(itunes_author, str) and itunes_author.strip():
+            return itunes_author.strip()
+    except Exception:
+        pass
+
     return "Unknown"
 
 
@@ -117,6 +147,12 @@ def feed_label(url: str) -> str:
         return "IdeaCast (podcast)"
     if "coldcall" in url:
         return "Cold Call (podcast)"
+    if "hbrontheworkfeed" in url:
+        return "HBR On Work (podcast)"
+    if "womenatwork" in url:
+        return "Women at Work (podcast)"
+    if "skydeck" in url:
+        return "Skydeck (podcast)"
     if "the-latest" in url:
         return "HBR Article"
     return "HBR"
@@ -126,14 +162,18 @@ def feed_label(url: str) -> str:
 # Main pipeline
 # ---------------------------------------------------------------------------
 
-def collect_entries() -> list[tuple[str, object]]:
+def collect_entries() -> list:
     """Pull entries from every feed in FEED_URLS. Returns [(feed_url, entry), ...]."""
-    all_entries: list[tuple[str, object]] = []
+    all_entries = []
     for url in FEED_URLS:
-        feed = feedparser.parse(url)
+        try:
+            feed = feedparser.parse(url)
+        except Exception as e:
+            print(f"[error] could not parse {url}: {e}")
+            continue
         if feed.bozo:
             print(f"[warn] feed parse warning for {url}: {feed.bozo_exception}")
-        print(f"[info] {url} → {len(feed.entries)} entries")
+        print(f"[info] {url} -> {len(feed.entries)} entries")
         for entry in feed.entries[:PER_FEED_ITEM_LIMIT]:
             all_entries.append((url, entry))
     return all_entries
@@ -145,9 +185,12 @@ def build_digest() -> None:
     today_str = today.isoformat()
 
     raw_entries = collect_entries()
+    print(f"[info] total raw entries across feeds: {len(raw_entries)}")
 
-    seen_links: set[str] = set()
+    seen_links = set()
     candidates = []
+    ai_only = 0
+    domain_only = 0
     for feed_url, entry in raw_entries:
         link = entry.get("link", "")
         if not link or link in seen_links:
@@ -160,7 +203,13 @@ def build_digest() -> None:
 
         ai_count = count_matches(haystack, AI_PATTERNS)
         domain_count = count_matches(haystack, DOMAIN_PATTERNS)
-        if ai_count == 0 or domain_count == 0:
+        if ai_count == 0 and domain_count == 0:
+            continue
+        if ai_count == 0:
+            domain_only += 1
+            continue
+        if domain_count == 0:
+            ai_only += 1
             continue
 
         pub_dt = parse_pub_date(entry)
@@ -188,6 +237,9 @@ def build_digest() -> None:
             "score": round(final_score, 2),
         })
 
+    print(f"[info] candidates passing both filters: {len(candidates)}  "
+          f"(AI-only skipped: {ai_only}, domain-only skipped: {domain_only})")
+
     candidates.sort(key=lambda x: x["score"], reverse=True)
     top = candidates[:TOP_N]
 
@@ -208,15 +260,15 @@ def build_digest() -> None:
     # --- write today's digest ----------------------------------------------
     DIGESTS_DIR.mkdir(exist_ok=True)
     digest_path = DIGESTS_DIR / f"{today_str}.md"
-    out = [f"# HBR AI × Business Digest — {today.strftime('%B %d, %Y')}", ""]
+    out = [f"# HBR AI x Business Digest -- {today.strftime('%B %d, %Y')}", ""]
 
     if not top:
         out.append("_No items in today's RSS window matched the filter._")
     else:
         out.append(
-            f"_Top {len(top)} items from HBR's latest articles + IdeaCast podcast matching "
+            f"_Top {len(top)} items from HBR's latest articles + IdeaCast + Cold Call podcasts matching "
             f"**AI** + (organization / firm / strategy / work / management), "
-            f"ranked by keyword density × recency._"
+            f"ranked by keyword density x recency._"
         )
         out.append("")
         for i, art in enumerate(top, 1):
@@ -244,21 +296,21 @@ def build_digest() -> None:
 def update_readme() -> None:
     digests = sorted(DIGESTS_DIR.glob("*.md"), reverse=True) if DIGESTS_DIR.exists() else []
     lines = [
-        "# HBR AI × Business — Daily Digest",
+        "# HBR AI x Business -- Daily Digest",
         "",
-        "Automated daily scrape of Harvard Business Review's RSS feeds (articles + IdeaCast podcast). "
+        "Automated daily scrape of Harvard Business Review's RSS feeds (articles + IdeaCast + Cold Call podcasts). "
         "Filters for items mentioning **AI** (expanded: artificial intelligence, generative AI, "
-        "machine learning, LLM, deep learning, neural networks, ChatGPT, algorithms, etc.) "
+        "machine learning, LLM, deep learning, neural networks, ChatGPT, Copilot, algorithms, etc.) "
         "**and** at least one of: *organization, firm, strategy, work, management*. "
-        "Top 10 per day, ranked by keyword density × recency.",
+        "Top 10 per day, ranked by keyword density x recency.",
         "",
-        "Runs daily at **00:00 UTC** ≈ 7 pm CDT (summer) / 6 pm CST (winter).",
+        "Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).",
         "",
         "## Recent digests",
         "",
     ]
     if not digests:
-        lines.append("_No digests yet — first run will populate this list._")
+        lines.append("_No digests yet -- first run will populate this list._")
     else:
         for d in digests[:30]:
             lines.append(f"- [{d.stem}](digests/{d.name})")
