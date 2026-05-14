@@ -1,0 +1,423 @@
+[
+  {
+    "id": "ai-persuasion-doctors-2025",
+    "type": "working_paper",
+    "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+    "authors": [
+      "Hanzhe Li",
+      "Jin Li",
+      "Ye Luo",
+      "Xiaowei Zhang"
+    ],
+    "year": 2025,
+    "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/",
+    "tags": [
+      "AI",
+      "attribution",
+      "career concerns",
+      "diagnosis",
+      "interpretability",
+      "persuasion"
+    ],
+    "pillars": [
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "Disagreements between doctors and AI can arise from two sources: attention differences (complementarities) and comprehension differences (substitutes). AI's interpretability influences how doctors attribute these sources and their willingness to change their minds. Surprisingly, uninterpretable AI can be more persuasive by allowing doctors to partially attribute disagreements to attention differences."
+  },
+  {
+    "id": "asymptotic-theory-iv-rl-2024",
+    "type": "working_paper",
+    "title": "Asymptotic Theory for IV-Based Reinforcement Learning with Potential Endogeneity",
+    "authors": [
+      "Jin Li",
+      "Ye Luo",
+      "Zigan Wang",
+      "Xiaowei Zhang"
+    ],
+    "year": 2024,
+    "url": "https://camo.hku.hk/asymptotic-theory-for-iv-based-reinforcement-learning-with-potential-endogeneity/",
+    "tags": [
+      "actor-critic",
+      "endogeneity",
+      "instrumental variable",
+      "markov decision process",
+      "measurement error",
+      "q-learning",
+      "reinforcement bias",
+      "reinforcement learning",
+      "stochastic approximation"
+    ],
+    "pillars": [
+      "AI Algorithms & Data"
+    ],
+    "jel": [
+      "C10"
+    ],
+    "abstract": "In the standard data analysis framework, data is collected (once and for all), and then data analysis is carried out. However, with the advancement of digital technology, decision-makers constantly analyze past data and generate new data through their decisions. We model this as a Markov decision process and show that the dynamic interaction between data generation and data analysis leads to a new type of bias—reinforcement bias—that exacerbates the endogeneity problem in standard data analysis. We propose a class of instrument variable (IV)-based reinforcement learning (RL) algorithms to correct for the bias and establish their theoretical properties by incorporating them into a stochastic approximation (SA) framework."
+  },
+  {
+    "id": "seesaw-experimentation-2024",
+    "type": "working_paper",
+    "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+    "authors": [
+      "Jin Li",
+      "Ye Luo",
+      "Xiaowei Zhang"
+    ],
+    "year": 2024,
+    "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/",
+    "tags": [
+      "A/B test",
+      "experimentation",
+      "spillovers"
+    ],
+    "pillars": [
+      "AI Algorithms & Data",
+      "AI Adoption"
+    ],
+    "jel": [
+      "C12",
+      "D62",
+      "L25"
+    ],
+    "abstract": "This paper examines how a firm's performance can decline despite consistently implementing successful A/B test innovations—a phenomenon we term 'seesaw experimentation.' While these innovations improve the measured primary dimension, they create negative externalities in unmeasured secondary dimensions that exceed the gains. Using a multivariate normal distribution model, we identify the conditions for this decline and propose positive hurdle rates as a solution. Our analysis shows how to set optimal hurdle rates to best mitigate these negative externalities and provides practical guidance for experimental design."
+  },
+  {
+    "id": "genai-mediocrity-trap-2025",
+    "type": "working_paper",
+    "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+    "authors": [
+      "Yvonne Jie Chen",
+      "Jie Gong",
+      "Jin Li",
+      "Zibo Zhao"
+    ],
+    "year": 2025,
+    "url": "https://camo.hku.hk/2025-01-better-technology-worse/",
+    "tags": [
+      "AI",
+      "artificial intelligence",
+      "generative AI",
+      "motivation"
+    ],
+    "pillars": [
+      "AI & Incentives"
+    ],
+    "jel": [],
+    "abstract": "While generative AI (GenAI) promises productive efficiency, it can paradoxically lead to lower-quality work. We conducted an experiment with professional illustrators and found that AI assistance flattens the quality curve—it accelerates initial gains but sharply diminishes the returns on sustained effort. Faced with this, a significant number of professionals made a strategic choice: they sacrificed the final quality to save time. Our finding highlights a critical challenge for GenAI, which can weaken the motivation required for creative excellence and innovation."
+  },
+  {
+    "id": "dynamic-selection-2023",
+    "type": "working_paper",
+    "title": "Dynamic Selection in Algorithmic Decision-making",
+    "authors": [
+      "Jin Li",
+      "Ye Luo",
+      "Xiaowei Zhang"
+    ],
+    "year": 2023,
+    "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/",
+    "tags": [
+      "contextual bandit",
+      "dynamic selection",
+      "endogeneity spillover",
+      "instrumental variable",
+      "self-fulfilling bias"
+    ],
+    "pillars": [
+      "AI Algorithms & Data"
+    ],
+    "jel": [
+      "C13",
+      "C26",
+      "C44"
+    ],
+    "abstract": "This paper identifies and addresses dynamic selection problems in online learning algorithms with endogenous data. In a contextual multi-armed bandit model, a novel bias (self-fulfilling bias) arises because the endogeneity of the data influences the choices of decisions, affecting the distribution of future data to be collected and analyzed. We propose an instrumental-variable-based algorithm to correct for the bias. It obtains true parameter values and attains low (logarithmic-like) regret levels."
+  },
+  {
+    "id": "bad-job-economy-2026",
+    "type": "working_paper",
+    "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+    "authors": [
+      "Matthias Fahn",
+      "Jin Li",
+      "Chang Sun"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+    "tags": [
+      "agency costs",
+      "artificial intelligence",
+      "incentives",
+      "job design",
+      "labor contracts",
+      "limited liability",
+      "search and matching"
+    ],
+    "pillars": [
+      "AI & Incentives",
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [
+      "D86",
+      "J41",
+      "O33",
+      "L23"
+    ],
+    "abstract": "We study how AI affects compensation and job design when performance depends on workers' non-contractible effort. In a principal–agent model with limited liability, AI reduces effort costs but disproportionately lowers the cost of achieving satisfactory performance. This raises the incentive cost of sustaining high effort and can induce firms to replace high-wage, high-effort good jobs with low-wage, low-effort bad jobs, even when good jobs create more total surplus. As a result, AI can lower wages, reduce worker welfare, and even depress profits. If workers can adopt AI unilaterally, adoption occurs even when the resulting equilibrium harms both parties; when adoption requires worker cooperation, resistance is strongest where AI erodes rents embodied in good jobs. In a search-and-matching extension, endogenous outside options amplify these forces, reinforcing a bad-job economy and potentially reducing employment."
+  },
+  {
+    "id": "hidden-penalty-ai-work-2025",
+    "type": "working_paper",
+    "title": "Research: The Hidden Penalty of Using AI at Work",
+    "authors": [
+      "Oguz A. Acar",
+      "Phyliss Jia Gai",
+      "Yanping Tu",
+      "Jiayi Hou"
+    ],
+    "year": 2025,
+    "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+    "tags": [
+      "AI",
+      "AI training",
+      "artificial intelligence",
+      "code",
+      "engineer",
+      "Python"
+    ],
+    "pillars": [
+      "AI & Jobs",
+      "AI Adoption"
+    ],
+    "jel": [],
+    "abstract": "Researchers conducted an experiment with 1,026 engineers in which participants evaluated a Python code snippet purportedly written by another engineer, either with or without AI assistance. The code was identical across all conditions—only the described method of creation differed. When reviewers believed an engineer had used AI, they rated that engineer's competence 9% lower on average, despite reviewing identical work—and the penalty was more severe for women and older workers. This competence penalty points to a fundamental misalignment in how organizations approach AI adoption: while companies focus on access, training, and technical infrastructure, they overlook the social dynamics that determine whether employees actually use these tools."
+  },
+  {
+    "id": "state-of-ai-in-hr-2026",
+    "type": "survey_report",
+    "title": "The State of AI in HR: Balancing Efficiency and Strategy",
+    "authors": [
+      "HKU CAMO",
+      "China International Association for Promotion of Science and Technology",
+      "Zhongguancun Talent Association"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/surveyreport-thestateofaiinhr/",
+    "tags": [
+      "AI adoption",
+      "HR",
+      "human resources",
+      "China",
+      "survey",
+      "adoption barriers"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "The survey reveals that AI adoption in HR is primarily driven by the need for time liberation. Professionals urgently demand human resources automation for repetitive administrative tasks, specifically focusing on resume screening automation and HR reporting. Task time consumption strongly predicts this demand, while high job satisfaction reduces it. Organizations are leveraging these HR tech trends to reinvest saved hours into strategic HR and workforce upskilling. However, data security in HR remains the leading adoption barrier (20.6%), alongside system integration. Successfully scaling artificial intelligence in HR requires prioritizing high-demand tasks, reframing AI as an upskilling tool, and strictly enforcing security compliance."
+  },
+  {
+    "id": "deloitte-hku-ai-adoption-index-2026",
+    "type": "survey_report",
+    "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+    "authors": [
+      "HKU CAMO",
+      "Deloitte China"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/ai-adoption-survey/",
+    "tags": [
+      "AI adoption",
+      "C-suite",
+      "ROI",
+      "organizational barriers",
+      "change management",
+      "China",
+      "Hong Kong",
+      "enterprise AI",
+      "AI strategy"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "A survey of more than 100 C-suite executives in mainland China and Hong Kong reveals a disconnect between the transformative promise of AI and measurable outcomes. AI adoption is nearly universal but its impact remains shallow: only 4% of firms describe themselves as fully transformational, and nearly half of executives report initiatives fell short of expected ROI. The dominant barriers are organisational and executional rather than technical — siloed departments, cultural resistance, lack of quick wins, and poor data quality. Despite uneven results, executives plan to expand AI budgets, expecting AI to drive over 20% of business value within five years."
+  },
+  {
+    "id": "nanocase-cimc-2026",
+    "type": "nano_case",
+    "title": "Scaling Expert Knowledge with AI at CIMC",
+    "authors": [
+      "Jie Gong",
+      "Augustus Pan",
+      "Harry Zhang"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-scalingexpertknowledgewithaiatcimc/",
+    "tags": [
+      "AI agents",
+      "manufacturing",
+      "tacit knowledge",
+      "workflow redesign",
+      "engineering drawings",
+      "CIMC",
+      "knowledge transferability"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "A subsidiary of CIMC used AI agents to interpret complex engineering drawings that previously required manual interpretation by experienced team leaders. Processes that would have taken 18 dedicated team members more than two days could now be completed in less than one day, with an accuracy rate of approximately 95%. Labour costs for routing fell by approximately 80%, dedicated staffing shrank from 18 to 2, and team leaders were freed to manage and produce on-site personnel rather than interpret blueprints. Knowledge previously embedded in individuals became transferable through a structured knowledge base."
+  },
+  {
+    "id": "nanocase-decathlon-china-2026",
+    "type": "nano_case",
+    "title": "Compressing Coordination with AI at Decathlon China",
+    "authors": [
+      "Jie Gong",
+      "Lu Xiao"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+    "tags": [
+      "multi-agent systems",
+      "coordination",
+      "software development",
+      "OpenClaw",
+      "Decathlon",
+      "agent system",
+      "organizational bottlenecks"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "Decathlon China deployed AI in its software development process: coding efficiency increased by 20–40%, but overall delivery speed increased by only 10–15%. Analysis revealed the bottleneck was not technical execution but coordination — clarifying requirements, attending cross-team meetings, synchronizing dependencies, waiting for releases. Using the multi-agent framework OpenClaw to compress coordination work upfront, a task that would have taken four to six weeks was completed in less than a day. The deeper insight: AI optimizes tasks, not systems — real change comes from compressing coordination time between tasks."
+  },
+  {
+    "id": "nanocase-csmart-yum-china-2026",
+    "type": "nano_case",
+    "title": "The C-Smart Agent: A New Service Model at Yum China",
+    "authors": [
+      "Jie Gong",
+      "Jin Li",
+      "Lilian Xu",
+      "Leila Zhang"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-thecsmartagent/",
+    "tags": [
+      "AI agents",
+      "customer service",
+      "digital workforce",
+      "Yum China",
+      "headcount decoupling",
+      "contact center",
+      "C-Smart",
+      "service scalability"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs",
+      "AI & Incentives"
+    ],
+    "jel": [],
+    "abstract": "Yum China transformed its contact center from a labor-intensive model to a technology-driven operation by deploying the AI agent C-Smart. The digital workforce autonomously handles approximately 90% of customer inquiries, decoupling service capacity from headcount. Between 2018 and 2025, customer contact volume increased six-fold to over 60 million contacts per year, delivered with a much leaner staffing footprint. C-Smart also functions as a real-time co-pilot for human agents and a full-volume Voice-of-Customer analytics engine."
+  },
+  {
+    "id": "nanocase-kfc-china-2026",
+    "type": "nano_case",
+    "title": "Scaling Managers with AI at KFC China",
+    "authors": [
+      "Jie Gong",
+      "Jin Li",
+      "Aiken Yuen"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-kfcchina/",
+    "tags": [
+      "AI co-pilot",
+      "store managers",
+      "managerial scaling",
+      "QSR",
+      "KFC",
+      "Yum China",
+      "MEGA+",
+      "training pipeline",
+      "span of control"
+    ],
+    "pillars": [
+      "AI Adoption",
+      "AI & Jobs"
+    ],
+    "jel": [],
+    "abstract": "KFC China embedded AI into store managers' (RGM) daily operating rhythm — half-hourly demand forecasting, labor scheduling, inventory replenishment, exception detection — shifting routine data-heavy work from humans to machines and freeing managerial attention for customer-facing judgment and team leadership. The MEGA+ program then used freed managerial capacity to assign qualified RGMs to oversee clusters of 2–4 (occasionally 5) stores, supporting Yum China's expansion plans without sacrificing service standards. Time to develop a new RGM was reduced significantly."
+  },
+  {
+    "id": "nanocase-medtech-2026",
+    "type": "nano_case",
+    "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+    "authors": [
+      "Jie Gong",
+      "Jin Li",
+      "Fei Pu"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-medtech/",
+    "tags": [
+      "mandatory adoption",
+      "Goodhart's Law",
+      "gaming behavior",
+      "incentive design",
+      "AI adoption",
+      "performance metrics",
+      "MedTech",
+      "DeepSeek"
+    ],
+    "pillars": [
+      "AI & Incentives",
+      "AI Adoption"
+    ],
+    "jel": [],
+    "abstract": "A leading Chinese medical device firm launched an internal AI assistant. Despite demonstrated benefits, organic adoption was low. Management mandated 200 effective queries per month per employee, enforced by fines. The result was classic Goodhart's Law dynamics — employees clustered at exactly 200 queries, surged at month-end, and gaming behavior was associated with lower sales performance. When the firm relaxed the target to 100 queries, gaming declined and the share of work-relevant queries rose, correlating positively with performance. The challenge is not the technology but how to design incentives that direct employees toward genuine use rather than gaming."
+  },
+  {
+    "id": "nanocase-dingdong-2026",
+    "type": "nano_case",
+    "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+    "authors": [
+      "Jin Li",
+      "Lingfang Ivy Li",
+      "Yiyang Zhou",
+      "Yao Huang"
+    ],
+    "year": 2026,
+    "url": "https://camo.hku.hk/nanocase-dingdong/",
+    "tags": [
+      "AI tagging",
+      "performance evaluation",
+      "voice of customer",
+      "VOC",
+      "accountability attribution",
+      "fresh delivery",
+      "Dingdong",
+      "incentive design",
+      "appeals process"
+    ],
+    "pillars": [
+      "AI & Incentives",
+      "AI Adoption",
+      "AI Algorithms & Data"
+    ],
+    "jel": [],
+    "abstract": "Dingdong, one of China's leading fresh-delivery platforms, redesigned and automated its performance evaluation system around the Voice of Customer (VOC) metric. By Q3 2025, VOC tagging had fully transitioned to AI with accuracy exceeding 92%. The AI-driven attribution made previously ambiguous accountability explicit — but precision created friction in shared-responsibility cases (packaging damage, spoilage). Managers retain discretion to weight VOC against KPIs, OKRs, and other measures, and employees can appeal disputed tags (more than half of appeals succeed). The case illustrates how AI shifts where managerial judgment must be applied."
+  }
+]
