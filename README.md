@@ -6,6 +6,10 @@ Filter: items must contain at least one **strong AI term** (AI, machine learning
 
 Top 10 per day, ranked by keyword density x recency. Max 4 items per source for diversity. Recency window: 30 days with linear decay.
 
+Each item is then enriched by the Claude API (claude-sonnet-4-6): a clean summary, a CAMO pillar tag, a centre angle, matched CAMO research, draft LinkedIn/X captions, and a visual concept. Every item carries an `[ ] APPROVE FOR SOCIAL` checkbox for the editorial team, and a `<date>.enriched.json` sidecar is written for the downstream image step.
+
+Enrichment results are cached in `enrichment_cache.json`: when an item re-appears in a later run it is reused from the cache with no API call, so running daily stays inexpensive even though most items re-appear.
+
 Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).
 
 ## Recent digests
