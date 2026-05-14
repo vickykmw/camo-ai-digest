@@ -31,6 +31,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate today's digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python digest.py
 
       - name: Commit and push
@@ -40,46 +42,48 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # If nothing to commit, exit early.
-          git add digests/ seen.json README.md
+          git add digests/ seen.json enrichment_cache.json README.md
           if git diff --cached --quiet; then
-            echo "[workflow v3] No changes to commit."
+            echo "[workflow v4] No changes to commit."
             exit 0
           fi
 
           # Stash the generated files outside the repo so a hard-reset won't lose them.
           STASH=/tmp/digest-stash
           rm -rf "$STASH" && mkdir -p "$STASH"
-          [ -d digests ]   && cp -r digests   "$STASH/" || true
-          [ -f seen.json ] && cp    seen.json "$STASH/" || true
-          [ -f README.md ] && cp    README.md "$STASH/" || true
+          [ -d digests ]                 && cp -r digests                 "$STASH/" || true
+          [ -f seen.json ]               && cp    seen.json               "$STASH/" || true
+          [ -f enrichment_cache.json ]   && cp    enrichment_cache.json   "$STASH/" || true
+          [ -f README.md ]               && cp    README.md               "$STASH/" || true
 
           # Reset hard to whatever is on the remote, so we never push stale state.
           git fetch origin main
           git reset --hard origin/main
 
           # Reapply our generated files on top of the fresh remote.
-          [ -d "$STASH/digests" ]   && cp -r "$STASH/digests"   .
-          [ -f "$STASH/seen.json" ] && cp    "$STASH/seen.json" .
-          [ -f "$STASH/README.md" ] && cp    "$STASH/README.md" .
+          [ -d "$STASH/digests" ]               && cp -r "$STASH/digests"               .
+          [ -f "$STASH/seen.json" ]             && cp    "$STASH/seen.json"             .
+          [ -f "$STASH/enrichment_cache.json" ] && cp    "$STASH/enrichment_cache.json" .
+          [ -f "$STASH/README.md" ]             && cp    "$STASH/README.md"             .
 
           # Stage and commit the fresh changes.
-          git add digests/ seen.json README.md
+          git add digests/ seen.json enrichment_cache.json README.md
           if git diff --cached --quiet; then
-            echo "[workflow v3] No changes after sync (remote already had today's digest)."
+            echo "[workflow v4] No changes after sync (remote already had today's digest)."
             exit 0
           fi
-          git commit -m "Daily digest $(date -u +%Y-%m-%d) [v3]"
+          git commit -m "Daily digest $(date -u +%Y-%m-%d) [v4]"
 
           # Push with a small retry in case of further race conditions.
           for attempt in 1 2 3; do
             if git push origin main; then
-              echo "[workflow v3] Push succeeded on attempt $attempt."
+              echo "[workflow v4] Push succeeded on attempt $attempt."
               exit 0
             fi
-            echo "[workflow v3] Push failed on attempt $attempt -- pulling and retrying..."
+            echo "[workflow v4] Push failed on attempt $attempt -- pulling and retrying..."
             git pull --rebase origin main || true
             sleep $((attempt * 2))
           done
 
-          echo "[workflow v3] Push failed after 3 attempts." >&2
+          echo "[workflow v4] Push failed after 3 attempts." >&2
           exit 1
