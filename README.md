@@ -14,5 +14,6 @@ Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).
 
 ## Recent digests
 
+- [2026-05-15](digests/2026-05-15.md)
 - [2026-05-14](digests/2026-05-14.md)
 - [2026-05-13](digests/2026-05-13.md)
