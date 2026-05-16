@@ -1,7 +1,13 @@
 {
+  "https://arxiv.org/abs/2511.08565": [
+    "2026-05-16"
+  ],
   "https://arxiv.org/abs/2603.00059": [
     "2026-05-13",
     "2026-05-14"
+  ],
+  "https://arxiv.org/abs/2603.16659": [
+    "2026-05-16"
   ],
   "https://arxiv.org/abs/2605.11155": [
     "2026-05-13",
@@ -31,25 +37,41 @@
     "2026-05-14",
     "2026-05-15"
   ],
+  "https://arxiv.org/abs/2605.13851": [
+    "2026-05-16"
+  ],
+  "https://arxiv.org/abs/2605.14049": [
+    "2026-05-16"
+  ],
+  "https://arxiv.org/abs/2605.15034": [
+    "2026-05-16"
+  ],
   "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization": [
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-16"
   ],
   "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/": [
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-16"
   ],
   "https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/": [
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-16"
   ],
   "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho": [
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-16"
+  ],
+  "https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate": [
+    "2026-05-16"
   ],
   "https://www.mckinsey.com/industries/agriculture/our-insights/how-agility-and-ai-could-rewire-agriculture-trading": [
     "2026-05-13",
