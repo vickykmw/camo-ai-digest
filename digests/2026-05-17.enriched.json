@@ -1,0 +1,453 @@
+{
+  "date": "2026-05-17",
+  "script_version": "v5 (2026-05-14)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization",
+      "link": "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "May 12, 2026",
+      "authors": "Unknown",
+      "summary": "In early 2024, six months after the highly anticipated launch of Microsoft Copilot across the 62,000-person Microsoft Customer and Partner Solutions (MCAPS) organization—one of the world’s largest sales organizations—the initial excitement had not yet materialized into widespread adoption and transformation. But, two years after initiating their AI transformation journey, the organization’s daily active usage of AI tools had reached over 60% and monthly active usage over 98%, significantly altering how sales professionals approached their work. The path to adoption had required Microsoft to evolve its approach based on early deployment insights. Harvard Business School Associate Professors Iav Bojinov and Shunyuan Zhang join Brian Kenny to discuss the case, “Microsoft Customer and Partner Solutions: The Deployment of Copilot and Agents.” They explore the company’s journey to successfully mobilizing AI adoption within the sales process, the challenges it faces integrating autonomous sales agents, what it takes to get thousands of employees to fundamentally change how they work.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 6,
+      "score": 10.16,
+      "reappear": true,
+      "claude_summary": "Two years into deploying Microsoft Copilot across its 62,000-person sales organization, Microsoft reached daily active AI usage above 60% and monthly active usage above 98%. The path was not straightforward: six months after launch, adoption had stalled and the company had to rethink its deployment strategy based on early evidence. A Harvard Business School case study examines how Microsoft evolved its approach, what it took to shift entrenched working habits at scale, and what challenges remain as the organization moves toward integrating autonomous sales agents. The excerpt is drawn from a podcast discussion of the case and does not detail specific mechanisms or quantitative causal findings.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 85,
+      "centre_angle": "This case documents how a large enterprise moved from near-zero habitual AI use to near-universal monthly adoption, and what managerial interventions were required to close that gap. From CAMO's perspective on AI adoption, the Microsoft experience illustrates a recurring pattern: technical deployment is the easy part; the organizational and behavioral work of changing how thousands of employees actually operate is where most initiatives stall. Our Deloitte-HKU AI Adoption Index finds that the dominant barriers facing executives today are similarly organizational — siloed departments, cultural resistance, and the absence of visible quick wins — rather than anything technical. Microsoft's two-year arc is a large-scale test of what it takes to move past those barriers.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The Microsoft case directly mirrors the index's central finding that AI adoption is widespread in intent but shallow in measurable impact, with organizational and executional factors — not technology — as the binding constraint.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "The stalled early adoption at Microsoft is consistent with CAMO's finding that social penalties for visible AI use create friction that access, training, and infrastructure alone cannot resolve.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "key_takeaway": "Getting to 98% monthly AI usage across a 62,000-person sales force took Microsoft two years of adaptive management, not just a product rollout — the organizational work dwarfed the technical work.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A floor plan of a large open-plan office rendered as a heat map, with color saturation representing AI tool usage spreading unevenly across departments over time — dense in some clusters, sparse in others — illustrating diffusion as an organizational topology problem rather than a switch being flipped.",
+      "linkedin_caption_draft": "Microsoft launched Copilot across 62,000 salespeople in 2023. Six months later, adoption had barely moved.\n\nTwo years on, daily active usage exceeds 60% and monthly usage tops 98%. The gap between those two data points is the real story — and it has almost nothing to do with the technology.\n\nA new HBS case study traces the management decisions that closed the gap: how the company read early deployment signals, adjusted its approach, and eventually changed how tens of thousands of people actually work day to day. The harder problem now is integrating autonomous sales agents — where the stakes around accountability and workflow redesign are higher still.\n\nCAMO's own research with Deloitte finds the same pattern across the region: AI adoption is nearly universal in intent among C-suite executives, but only 4% of firms describe themselves as fully operational. The bottleneck is organizational, not technical.\n\nFor leaders managing their own deployments: what did your early adoption data actually tell you — and did you act on it? 🔍\n\n#AIAdoption #EnterpriseAI #ChangeManagement #FutureOfWork #CAMOHKU",
+      "x_caption_draft": "Microsoft got 98% monthly AI usage across 62,000 salespeople — but it took 2 years and a mid-course correction. The tech wasn't the problem. The org was. CAMO's research finds the same barrier at firms across the region. https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization\n\nEarly adoption data told Microsoft its rollout wasn't working. The real question for any leader: do you have the measurement infrastructure to catch that signal at month 6 — before 18 months of momentum is lost? #AIAdoption #EnterpriseAI",
+      "red_flags": [
+        "Source is a podcast episode summarizing an HBS teaching case, not a peer-reviewed study — causal claims about what drove adoption should be treated as practitioner narrative, not empirical evidence.",
+        "Quantitative figures (60% daily active usage, 98% monthly) are reported without definition of the denominator, measurement window, or methodology — numbers may be self-reported by Microsoft.",
+        "Potential conflict of interest: Microsoft is both the subject and a major technology partner; HBS case studies are sometimes developed with significant company cooperation, which can shape framing.",
+        "The RSS excerpt is thin; specific mechanisms, interventions, and findings are not detailed, limiting how much the article can be represented with confidence."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Beyond Verification — What Responsible AI Really Demands of Human Experts",
+      "link": "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 12, 2026",
+      "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+      "summary": "For the fifth year in a row, MIT Sloan Management Review and Boston Consulting Group (BCG) have assembled an international panel of AI experts that includes academics and practitioners to help us understand how responsible artificial intelligence is being implemented across organizations worldwide. In our first post this year, we explored how organizations should think [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "score": 5.08,
+      "reappear": true,
+      "claude_summary": "Drawing on five years of MIT SMR and BCG research on responsible AI implementation, this article argues that human oversight of AI systems cannot be reduced to verification—simply checking whether outputs are accurate or compliant. Instead, genuine responsibility requires human experts to exercise substantive judgment: understanding when AI recommendations are appropriate, when context changes the calculus, and when to override or escalate. The authors contend that organizations have overinvested in procedural compliance and underinvested in building the expert capacity needed to interrogate AI outputs meaningfully. Note: the full article is behind a paywall; the summary is based on the RSS excerpt and stated research framing.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that responsible AI requires organizations to move beyond procedural oversight toward cultivating genuine domain expertise capable of interrogating AI outputs. From CAMO's perspective on AI adoption, this points to an underappreciated organizational design problem: deploying AI is relatively tractable, but building the internal human capacity to hold AI accountable is a distinct and harder challenge. CAMO's work on the Dingdong VOC case illustrates this concretely—AI-driven attribution raised precision but created new demands on managerial judgment for edge cases, suggesting that responsible deployment redistributes, rather than eliminates, the burden on human experts.",
+      "matched_camo": [
+        {
+          "id": "nanocase-dingdong-2026",
+          "reason": "Dingdong's case shows how AI automation of attribution does not remove the need for expert judgment—managers retain discretion and employees can appeal, illustrating the organizational mechanics of substantive human oversight the article calls for.",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/"
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "Both pieces identify a gap between how organizations formally frame AI adoption and the social or institutional dynamics that shape whether human expertise is actually applied in practice.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "key_takeaway": "Responsible AI demands organizations invest in expert judgment that can genuinely interrogate AI outputs—not just processes that create the appearance of oversight.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A tiered organizational chart where the upper layers are transparent glass floors—figures standing on them can see the automated processes running below, but some floors are cracked or frosted, suggesting uneven visibility. The image conveys hierarchical oversight as a structural, not merely procedural, property.",
+      "linkedin_caption_draft": "Oversight is not the same as understanding.\n\nA new MIT Sloan Management Review piece from a five-year BCG research collaboration argues that responsible AI has a structural gap: organizations have built compliance layers around AI systems, but have not invested equally in the expert capacity needed to interrogate those systems with genuine judgment.\n\nChecking that outputs look correct is not the same as knowing when the question itself was wrong—or when a confident AI recommendation is operating outside the conditions it was designed for.\n\nAt CAMO, we see this dynamic at the organizational level. Our research on AI-driven performance evaluation at Dingdong found that automation raised precision but redistributed—rather than reduced—the burden on human judgment, particularly for contested attribution cases. The demand for expert oversight did not disappear; it moved.\n\nFor leaders designing AI governance, the question may be less 'do we have a review process?' and more 'do we have people capable of reviewing meaningfully?'\n\n#ResponsibleAI #AIGovernance #AIAdoption #OrganizationalDesign #FutureOfWork",
+      "x_caption_draft": "Responsible AI isn't a compliance checklist—it requires experts who can actually interrogate AI outputs, not just verify them. New MIT SMR research argues orgs are overbuilt on procedure and underbuilt on judgment. https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/\n\nCAMO research echoes this: when Dingdong automated performance attribution, AI precision rose—but so did the demand on managers to handle edge cases. Deployment shifts where expert judgment is needed, not whether it's needed. #AIGovernance #ResponsibleAI",
+      "red_flags": [
+        "Article is paywalled on MIT Sloan Management Review; full findings are not accessible for verification—summary relies on RSS excerpt and stated research framing only.",
+        "Not peer-reviewed; published by a practitioner-oriented management outlet in partnership with BCG, a consulting firm with commercial interests in AI advisory services.",
+        "The excerpt is thin—core empirical claims, methodology, and data from the five-year panel are not visible without full access, which limits confidence in the summary."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "AI, strategy, and the future of work: Oxford economist Jean-Paul Carvalho",
+      "link": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho",
+      "source": "McKinsey Insights",
+      "published_display": "May 06, 2026",
+      "authors": "Unknown",
+      "summary": "Professor Jean-Paul Carvalho explores how AI is reshaping cognitive work, organizations, and where business leaders can capture value at scale.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "score": 4.42,
+      "reappear": true,
+      "claude_summary": "Oxford economist Jean-Paul Carvalho, speaking with McKinsey, examines how AI is restructuring cognitive work and what that means for organizational strategy and business value creation. The excerpt is limited, but the framing centers on where AI creates leverage in knowledge-intensive tasks, how firms should position themselves to capture that value at scale, and what the redistribution of cognitive labor implies for workforce design. Because only the RSS excerpt is available, specific empirical findings cannot be confirmed; the conversation appears to be analytical and conceptual rather than data-driven.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This McKinsey interview raises the question of where AI-driven productivity in cognitive work actually accrues — to firms, workers, or neither. From CAMO's perspective on AI adoption, the organizational challenge is not simply deploying AI but redesigning roles and incentive structures so that productivity gains translate into durable value rather than dissipating through coordination failures or eroded effort. CAMO's work on job design — including findings that AI can systematically shift firms toward lower-effort, lower-wage equilibria even when higher-effort configurations create more total surplus — suggests that 'capturing value at scale' depends as much on compensation architecture as on technical capability.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Carvalho's framing of AI reshaping cognitive work and organizational value capture directly intersects with CAMO's finding that AI can induce firms to substitute high-effort, high-wage roles with low-effort, low-wage ones, complicating the assumption that AI adoption straightforwardly benefits firms and workers.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The interview's focus on why firms struggle to capture AI value at scale mirrors CAMO's survey finding that nearly half of C-suite executives report AI initiatives fell short of expected ROI, with organizational barriers — not technical ones — as the primary cause.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "Capturing value from AI in cognitive work is primarily an organizational and incentive design challenge, not a technical one.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "An overhead floor plan of an open-plan office gradually dissolving into a sparse, modular grid — a few occupied nodes connected by thin lines, with large empty zones where desks once clustered. The geometry suggests contraction and redistribution rather than growth.",
+      "linkedin_caption_draft": "AI is reshaping cognitive work — but who actually captures the value?\n\nOxford economist Jean-Paul Carvalho's conversation with McKinsey puts the strategic question plainly: as AI absorbs more knowledge-intensive tasks, the firms that benefit are those that redesign their organizations around the new division of labor, not just the ones that deploy the tools fastest.\n\nThe catch is that organizational redesign is harder than technology adoption. CAMO's own survey of C-suite executives in China and Hong Kong found that nearly half reported AI initiatives fell short of expected ROI — and the barriers were almost entirely organizational: siloed teams, cultural resistance, and poorly sequenced implementation. Separately, CAMO research on job design suggests AI can quietly shift firms toward lower-effort role structures even when higher-effort configurations would create more total value.\n\nThe strategic question, then, is not 'how much AI can we deploy?' but 'what kind of organization are we building around it?'\n\nHow is your firm thinking about that second question? 🔍\n\n#AIStrategy #FutureOfWork #OrganizationalDesign #AIAdoption #ManagementResearch",
+      "x_caption_draft": "AI reshapes cognitive work — but value capture depends on org design, not just deployment. Oxford economist Carvalho via McKinsey. CAMO research finds the barriers are almost always organizational, not technical. https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho\n\nCAMO finding worth pairing here: firms may rationally shift to lower-effort job structures as AI cuts the cost of 'good enough' performance — even when high-effort roles create more total surplus. The value-capture question runs deeper than strategy decks suggest.",
+      "red_flags": [
+        "Only an RSS excerpt is available; no specific empirical findings, data, or research methodology can be verified from the source provided.",
+        "The article is a practitioner interview published by McKinsey, a consulting firm with commercial interests in AI strategy — framing may favor adoption narratives.",
+        "Not peer-reviewed; represents one economist's perspective in a conversational format rather than a systematic research output.",
+        "Pillar relevance is moderated because the excerpt is too thin to confirm the depth or specificity of the argument."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Calibrate AI Use to the Decision at Hand",
+      "link": "https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 06, 2026",
+      "authors": "Pedro Amorim, Amr Saleh, and Ulrika Cederskog Sundling. <p>Pedro Amorim is a professor at the University of Porto and cofounder of LTPlabs. Amr Saleh is a generative AI and optimization consultant at LTPlabs. Ulrika Cederskog Sundling is an investor, a board director, and a member of LTPlabs’s advisory board.</p>",
+      "summary": "PPaint/Ikon Images On a rainy Tuesday in London, the leadership team of a consumer goods company reviewed two business decisions: “Where should we open our next five stores?” and “Should we pivot the brand toward wellness?” Generative AI had been used to support the decision-making process for addressing both questions. The team ended up with [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "score": 3.88,
+      "reappear": true,
+      "claude_summary": "Not all decisions benefit equally from AI assistance, and treating them the same is a practical error. Using a consumer goods company's experience as a frame, this MIT Sloan Management Review article argues that AI performs well on structured, data-rich decisions — such as site selection — but adds less value, and may introduce false confidence, on ambiguous strategic questions like brand repositioning. The authors propose calibrating AI involvement to the nature of the decision: its data availability, reversibility, and the degree to which human judgment about context and values is irreducible. The core prescription is a decision-type framework that helps leadership teams identify where AI should lead, assist, or step back entirely.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 74,
+      "centre_angle": "This article argues that the value of AI in organizational decision-making is contingent on decision type — structured and quantifiable problems suit AI well, while ambiguous strategic choices require human judgment AI cannot adequately substitute. From CAMO's perspective on AI adoption, this maps directly onto a practical gap: firms investing in AI tools often lack a governance framework for deciding when those tools should be trusted. CAMO's Deloitte-HKU AI Adoption Index (2026) found that nearly half of C-suite executives reported AI initiatives falling short of expected ROI — a result consistent with organizations applying AI indiscriminately rather than calibrating it to decision characteristics.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The index documents a widespread gap between AI investment and realized value — a pattern the article attributes, at the decision level, to poor calibration between AI capability and decision type.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "AI adds reliable value on structured, data-rich decisions but can mislead on open-ended strategic ones — so firms need a decision-type filter before deploying it.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A top-down architectural floor plan split into two zones: one side rendered in precise grid lines and sharp angles representing structured, algorithmic space; the other side deliberately unfinished, with hand-sketched contours and open boundaries representing strategic ambiguity. A single threshold line divides them, with a small figure standing at the boundary deciding which zone to enter.",
+      "linkedin_caption_draft": "AI performs well in some decisions and poorly in others. The difference is not the quality of the tool — it's the nature of the problem.\n\nA new piece in MIT Sloan Management Review draws on a consumer goods case to make a practical distinction: site selection (data-rich, measurable, reversible) is where AI earns its place. Brand strategy (ambiguous, values-laden, hard to unwind) is where overreliance on AI can produce confident-sounding answers to the wrong question.\n\nThe authors' prescription is a decision-type framework — essentially, a filter applied before AI enters the room, not after.\n\nCAMO's own research finds that nearly half of C-suite executives in mainland China and Hong Kong report AI initiatives falling short of expected ROI. Indiscriminate deployment — rather than calibrated use — may be a significant part of that story.\n\nWhat criteria does your organization actually use to decide when AI should lead, assist, or stay out of a decision entirely?\n\n#AIAdoption #DecisionMaking #AIStrategy #OrganizationalDesign #CAMO",
+      "x_caption_draft": "AI is not equally useful for all decisions. Site selection: yes. Brand pivots: much less so. A new @MITSloan piece argues firms need a decision-type filter before deploying AI — not after. CAMO's research shows ROI gaps are real. https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/\n\nThe question isn't whether to use AI. It's whether the decision in front of you is the kind AI can actually improve. Structured + data-rich = good fit. Ambiguous + values-laden = proceed carefully. https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/",
+      "red_flags": [
+        "Article is likely paywalled on MIT Sloan Management Review — verify access before linking in a post.",
+        "The excerpt is thin; the site-selection vs. brand-pivot framework is inferred from a brief case mention and author credentials, not a detailed read of findings.",
+        "Not peer-reviewed — practitioner commentary piece; findings rest on a single illustrative case rather than systematic evidence.",
+        "Two of the three authors are affiliated with LTPlabs, a consultancy they co-founded or advise — a potential conflict of interest if the framework implicitly promotes their services."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Where AI is creating real value in real estate",
+      "link": "https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate",
+      "source": "McKinsey Insights",
+      "published_display": "May 15, 2026",
+      "authors": "Unknown",
+      "summary": "Agentic AI is moving real estate beyond isolated tools toward full workflow transformation—unlocking new value, redefining roles, and reshaping how organizations operate.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "score": 3.72,
+      "reappear": true,
+      "claude_summary": "Agentic AI is shifting real estate from point-tool automation toward end-to-end workflow integration, according to McKinsey Insights. The article argues that the sector is moving beyond isolated AI applications—such as property valuation models or lease abstraction—toward systems that can reason, plan, and act across entire processes: deal sourcing, due diligence, asset management, and tenant engagement. The implication is that value creation is no longer about deploying a single model but about redesigning how work is sequenced and who—or what—handles each step. The excerpt is brief and the underlying article may contain more granular data, but the directional claim is that agentic architectures are beginning to reshape organizational roles and operating models in real estate.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This McKinsey article argues that agentic AI in real estate is shifting the locus of value from task-level automation to system-level workflow redesign. From CAMO's perspective on AI adoption, this mirrors a pattern we document in manufacturing and retail contexts: efficiency gains from automating individual tasks are frequently smaller than the gains from compressing coordination between tasks—as illustrated in our Decathlon China case, where coding efficiency rose 20–40% but end-to-end delivery speed improved by only 10–15% until coordination itself was restructured. The real estate sector may be approaching the same inflection point, where the binding constraint is organizational redesign rather than model capability.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both the article and this case study argue that AI's organizational value is realized at the workflow and coordination level rather than through isolated task automation—a structural parallel that grounds CAMO's angle.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "key_takeaway": "In real estate, as elsewhere, the shift to agentic AI matters less for what individual tools can do and more for how organizations redesign the workflows those tools connect.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A cross-section architectural diagram of a mid-rise commercial building, where each floor represents a distinct business function—leasing, asset management, due diligence, tenant services—connected by a single continuous vertical shaft rather than isolated staircases. The shaft is the only element rendered in a different material, suggesting a structural integration rather than added decoration.",
+      "linkedin_caption_draft": "AI in real estate has spent years automating individual tasks. Agentic AI is now asking a harder question: what happens when you connect those tasks into a single, reasoning workflow?\n\nMcKinsey's latest piece argues the sector is moving from point-tool deployments toward end-to-end process integration—spanning deal sourcing, due diligence, asset management, and tenant engagement. The value, they suggest, is in the architecture, not the individual model.\n\nCAMO's research points to the same dynamic. In our Decathlon China case, coding efficiency rose 20–40% through AI assistance, but overall delivery speed improved by only 10–15%—because the bottleneck was coordination between tasks, not execution of them. Real estate firms may be approaching exactly this inflection point.\n\nThe question worth asking: is your organization optimizing tasks, or redesigning the system?\n\n#AIAdoption #RealEstate #AgenticAI #OrganizationalDesign #HKUCAMO",
+      "x_caption_draft": "Agentic AI in real estate isn't just faster automation—it's workflow redesign. McKinsey argues value shifts to end-to-end process integration. CAMO's research: the real bottleneck is usually coordination, not execution. https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate\n\nWhen AI connects deal sourcing, due diligence, and asset management into one reasoning system, the org chart changes too. Who owns the workflow when no single person runs it? #AIAdoption #RealEstate",
+      "red_flags": [
+        "The RSS excerpt is very brief; the full article's empirical basis, methodology, and data sources cannot be verified from the excerpt alone—pillar relevance and summary are based on limited information.",
+        "McKinsey Insights is a consulting-firm publication, not peer-reviewed research; findings may reflect client-facing framing or selection toward optimistic adoption narratives.",
+        "No authors are identified, which limits accountability for specific claims.",
+        "The article may be partially or fully gated depending on McKinsey account status."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "The AI assembly line: Strategic imperatives for CEOs",
+      "link": "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos",
+      "source": "McKinsey Insights",
+      "published_display": "May 13, 2026",
+      "authors": "Unknown",
+      "summary": "AI has proven its potential, but value remains hard to scale. To turn experimentation into sustained performance, CEOs must reimagine their organizations.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "score": 3.46,
+      "reappear": true,
+      "claude_summary": "McKinsey argues that AI's value creation potential has been demonstrated but remains difficult to scale across organizations. The central challenge for CEOs is moving from isolated experimentation to sustained, enterprise-wide performance improvement. The article frames this as a strategic and organizational design problem rather than a technical one: firms must reimagine structures, workflows, and operating models to capture AI's benefits systematically. The excerpt is thin on specific findings or data, so the precise mechanisms McKinsey recommends are not fully visible from the RSS summary alone. The overall argument is that AI deployment is now a CEO-level organizational transformation challenge, not a pilot program to be managed at the margin.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "centre_angle": "This McKinsey piece argues that scaling AI requires CEOs to redesign organizational structures, not simply expand technical pilots. From CAMO's perspective on AI adoption, the harder problem is not access to AI tools but the organizational and incentive frictions that prevent genuine use at scale — a pattern documented in our Deloitte-HKU AI Adoption Index, where nearly half of executives reported initiatives fell short of expected ROI, with siloed departments and cultural resistance as the leading culprits. The implication is that CEO attention to org-level redesign is necessary but insufficient without deliberate attention to how AI changes job boundaries, accountability, and the conditions under which workers actually adopt these tools.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces center on the gap between AI's promised value and measurable organizational outcomes, identifying executional and structural barriers rather than technical ones as the primary constraint on scaling.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "CEO-level decisions to 'reimagine organizations' around AI have direct implications for job design and compensation structures, which this CAMO paper models formally — showing that efficiency gains at the firm level can coincide with worker welfare losses.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "key_takeaway": "Scaling AI across an organization is primarily an organizational design problem, and CEOs who treat it as a technical rollout are likely to leave most of the value on the table.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "An aerial view of a large factory floor mid-renovation: some production lines fully operational and automated, others partially assembled, and several zones still configured for older manual workflows — showing uneven progress across a single organization rather than a clean before-and-after.",
+      "linkedin_caption_draft": "AI pilots succeed. Scaling them doesn't — at least not yet.\n\nMcKinsey's latest piece for CEOs makes a pointed argument: the bottleneck on AI value is no longer the technology, it's the organization. Reimagining structures, workflows, and operating models is now a CEO-level imperative, not a project to delegate.\n\nCAMO's own survey of 100+ C-suite executives in China and Hong Kong found the same pattern: adoption is nearly universal, but fewer than 5% of firms describe themselves as fully transformational. The barriers are organizational — siloed departments, cultural resistance, and a lack of quick wins — not technical.\n\nThe question for executives isn't whether AI works in a controlled environment. It's whether the rest of the organization is designed to sustain what the pilot proved.\n\nWhat structural change has been hardest to make in your AI rollout? 👇\n\n#AIAdoption #OrganizationalDesign #EnterpriseAI #Leadership #FutureOfWork",
+      "x_caption_draft": "AI value is proven. Scaling it isn't. McKinsey says CEOs must reimagine their organizations — not just expand pilots. CAMO's own C-suite survey found the same wall: org design, not tech, is the binding constraint. https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos\n\nNearly half of executives in CAMO's AI Adoption Index said their AI initiatives fell short of expected ROI. The culprits: siloed teams, cultural resistance, poor data quality. The org problem is real. https://camo.hku.hk/ai-adoption-survey/",
+      "red_flags": [
+        "RSS excerpt is very thin — specific findings, frameworks, or data points from the article are not visible; summary and pillar relevance are based on framing alone and should be revisited once full article is reviewed.",
+        "McKinsey Insights content is practitioner-facing consulting output, not peer-reviewed research; findings may reflect client case selection or proprietary methodology not independently verified.",
+        "Potential conflict of interest: McKinsey has commercial interest in organizational transformation engagements, which may shape how the problem and solution space are framed."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "How agility and AI could rewire agriculture trading",
+      "link": "https://www.mckinsey.com/industries/agriculture/our-insights/how-agility-and-ai-could-rewire-agriculture-trading",
+      "source": "McKinsey Insights",
+      "published_display": "May 12, 2026",
+      "authors": "Unknown",
+      "summary": "Global forces and algorithmic price discovery are reshaping agriculture trading. Traders and processors with agile, analytics‑driven organizations could define the next competitive frontier.",
+      "ai_strong": 2,
+      "ai_booster": 1,
+      "domain_matches": 1,
+      "score": 3.32,
+      "reappear": true,
+      "claude_summary": "Agriculture trading is under pressure from converging forces: geopolitical fragmentation, volatile supply chains, and the accelerating use of algorithmic tools for price discovery. McKinsey argues that traders and processors who reorganize around agile operating models and analytics-driven decision-making will gain a durable competitive edge. The article points to AI as reshaping how firms read market signals, manage risk, and coordinate across the commodity value chain. The excerpt is relatively thin on empirical specifics, so claims about the magnitude of advantage are illustrative rather than measured. The core proposition is structural: firms that embed AI into trading operations — not just as a tool but as part of organizational redesign — are better positioned to navigate the next cycle of agricultural market disruption.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This McKinsey article argues that competitive advantage in agriculture trading will shift toward firms that restructure their organizations around AI-enabled analytics, not merely those that deploy AI point solutions. From CAMO's perspective on AI adoption, the harder challenge is rarely algorithmic — it is organizational. CAMO research on firms like Decathlon China and CIMC shows that efficiency gains from AI are often bottlenecked by coordination structures and workflow design, not the technology itself. The same logic applies here: algorithmic price discovery is only as valuable as the organizational capacity to act on it.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both cases illustrate that AI's performance ceiling is set by organizational bottlenecks — coordination and workflow redesign — rather than by the underlying technology's capabilities.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "key_takeaway": "Embedding AI into agriculture trading is an organizational redesign challenge as much as a technology one — firms that restructure decision-making around algorithmic signals will outpace those that treat AI as a bolt-on.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "An overhead view of a commodity trading floor reimagined as a sparse grid: a few human figures seated at wide intervals, surrounded by flowing data columns arranged like grain silos of varying heights, with directional arrows tracing paths between them — suggesting a system where information architecture, not headcount, determines throughput.",
+      "linkedin_caption_draft": "Agriculture trading is being rewired — not just by markets, but by the firms that can read those markets faster.\n\nMcKinsey's latest piece argues that algorithmic price discovery and agile operating models are becoming the defining competitive variables in commodity trading. The technology is increasingly available to everyone. The differentiator is whether organizations are actually built to act on what the algorithms surface.\n\nCAMO research suggests this gap is common across industries: when Decathlon China adopted AI in software development, efficiency rose — but delivery speed barely moved until the firm redesigned coordination workflows. The same logic applies to trading floors and processing operations. AI doesn't rewire an organization by itself.\n\nFor commodity traders and agri-processors: is your operating model designed around the speed at which your analytics can now generate signals — or around the speed at which your people have traditionally made decisions?\n\n#AIAdoption #AgricultureTrading #OrganizationalDesign #Analytics #FutureOfWork",
+      "x_caption_draft": "Algorithmic price discovery is reshaping agriculture trading. But McKinsey's argument is really about org design: firms that restructure around AI signals will outpace those that bolt AI onto old workflows. CAMO research backs this up. https://www.mckinsey.com/industries/agriculture/our-insights/how-agility-and-ai-could-rewire-agriculture-trading\n\nThe bottleneck in AI-driven trading won't be the algorithm — it'll be the meeting, the approval chain, the legacy coordination structure. Sound familiar? CAMO's work on AI adoption shows the pattern repeats across sectors. https://www.mckinsey.com/industries/agriculture/our-insights/how-agility-and-ai-could-rewire-agriculture-trading",
+      "red_flags": [
+        "McKinsey Insights articles are practitioner commentary, not peer-reviewed research — findings should be treated as consultancy perspective, not empirical evidence.",
+        "The RSS excerpt is thin; specific claims about competitive advantage magnitude or AI adoption rates cannot be verified without full article access, which may be gated.",
+        "Potential conflict of interest: McKinsey serves large agri-trading and commodity clients, which may shape the framing toward large-firm, high-investment solutions."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "The Innovation Advantage GenAI Can’t Give You",
+      "link": "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 04, 2026",
+      "authors": "David Schonthal. <p><a href=\"https://www.kellogg.northwestern.edu/academics-research/faculty/schonthal_david/\" target=\"_blank\" rel=\"noopener noreferrer\">David Schonthal</a> is a clinical professor of strategy, innovation, and entrepreneurship at Northwestern University’s Kellogg School of Management and coauthor of <cite>The Human Element: Overcoming the Resistance That Awaits New Ideas</cite> (Wiley, 2021).</p>",
+      "summary": "Eliot Wyatt/Ikon Images For most of modern business times, competitive advantage belonged to whoever had the best ideas. Better ideas meant better products, which meant more customers, which meant more revenue and profit. The entire innovation industry — consultancies, design firms, brainstorming retreats fueled by sticky notes and gallons of La Croix — was built [&#8230;]",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "score": 2.32,
+      "reappear": false,
+      "claude_summary": "As generative AI commoditizes idea generation, the article argues that competitive advantage is shifting from the quality of ideas to the ability to execute on them — specifically, to overcome the human resistance that new ideas inevitably encounter. The author contends that GenAI can produce an abundance of options, but it cannot navigate the organizational, social, and psychological friction that prevents good ideas from being adopted. The real innovation edge, the piece suggests, now belongs to firms and individuals who understand why people resist change and can design implementation strategies accordingly. The excerpt is brief and the full argument sits behind a paywall, so specific evidence or case studies cited in the article remain unknown.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that GenAI's proliferation of idea-generation capacity renders ideation itself less differentiating, shifting competitive value toward execution and change management. From CAMO's perspective on AI adoption, this reframes the central adoption challenge: the bottleneck is not technical capability or even access to AI tools, but the organizational and social dynamics that determine whether AI-enabled ideas ever reach implementation. CAMO's Deloitte-HKU AI Adoption Index 2026 supports this directly — surveyed executives identified cultural resistance and siloed departments as more significant barriers to AI impact than any technical limitation, suggesting that the 'human element' the article describes is already the dominant constraint in enterprise AI deployment.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "The index finds that organizational and cultural barriers — not technical ones — are the primary reason AI adoption falls short of expected ROI, directly corroborating the article's claim that execution and change management, not idea generation, are where competitive advantage now resides."
+        }
+      ],
+      "key_takeaway": "When GenAI makes good ideas abundant, the scarce resource becomes the organizational capacity to overcome resistance and actually implement them.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A wide corridor lined with identical open doors, each door representing a generated idea, all leading to a single narrow passage at the far end that only one person can walk through at a time — emphasizing abundance at the generation stage and constraint at the execution stage.",
+      "linkedin_caption_draft": "GenAI can generate a hundred ideas before your first coffee. So what's the actual competitive advantage now?\n\nThis MIT Sloan piece makes a pointed argument: when ideation becomes a commodity, the differentiator shifts to execution — specifically, to understanding and overcoming the human resistance that stops good ideas from going anywhere.\n\nThat diagnosis aligns with what CAMO found in its 2026 AI Adoption Index with Deloitte: among C-suite leaders in China and Hong Kong, the dominant barriers to AI impact were cultural resistance and organizational silos, not technology gaps. Access to AI is no longer the hard part.\n\nFor managers, this reframes the investment question. Training budgets and tool subscriptions matter less than building the organizational capacity to move from AI-generated option to implemented reality.\n\nHow is your organization building that capacity — and who owns it?\n\n#AIAdoption #Innovation #OrganizationalChange #FutureOfWork #CAMO",
+      "x_caption_draft": "GenAI makes ideation cheap. The new competitive edge? Navigating the human resistance that stops ideas from becoming reality. @MITSloan's latest — and it matches what CAMO found in its AI Adoption Index. https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/\n\nCAMO's Deloitte survey of 100+ C-suite execs found cultural resistance & siloed departments outrank technical gaps as the #1 AI adoption barrier. The bottleneck was never the algorithm. #AIAdoption #Innovation",
+      "red_flags": [
+        "Article appears to be behind a paywall at MIT Sloan Management Review; full argument and any supporting evidence cannot be verified from the excerpt alone.",
+        "Author is a practitioner-professor and co-author of a book on the same theme — potential framing bias toward the book's central thesis.",
+        "The excerpt is thin; the summary and analysis are based on the article's stated argument rather than verified empirical findings."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How a Family-Owned Greek Cement Company Evolved Its Leadership While Pivoting Its Product Portfolio",
+      "link": "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "Apr 28, 2026",
+      "authors": "Unknown",
+      "summary": "Over 26 years at the helm, Dimitri Papalexopoulos, fourth-generation CEO of TITAN Cement, has turned the company from a domestic player into an internationally diversified group and championed an AI-driven productivity leap, even while steering the company through multiple economic crises. As TITAN prepared for its next phase of growth, Papalexopoulos faced the consequential decision of whether to continue leading the company, promote a trusted insider, or become the first in the company’s history to recommend to the board appoint a non-family CEO.\n\nHarvard Business School Professor George Serafeim and TITAN former CEO Dimitri Papalexopoulos join Brian Kenny to discuss the case, “Transforming a Titan,” exploring digitalization, globalization, and succession planning of an established family business as well as how to accelerate low-carbon efforts in a carbon intensive industry.",
+      "ai_strong": 1,
+      "ai_booster": 1,
+      "domain_matches": 1,
+      "score": 1.14,
+      "reappear": false,
+      "claude_summary": "Over 26 years as fourth-generation CEO of TITAN Cement, Dimitri Papalexopoulos internationalized a family-owned Greek industrial firm, navigated multiple economic crises, and pursued an AI-driven productivity initiative alongside a low-carbon pivot. The HBR Cold Call podcast discusses a Harvard Business School case examining how TITAN approached digitalization and succession planning — specifically whether to appoint the company's first non-family CEO. The article is primarily a leadership and family-business governance story; AI appears as one element of a broader modernization agenda rather than the central subject. The excerpt provides limited detail on what the AI productivity effort entailed, making any AI-specific analysis provisional.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 38,
+      "centre_angle": "This podcast case study positions AI-driven productivity as one lever among several in a century-old industrial firm's modernization — a pattern consistent with what CAMO's Deloitte-HKU AI Adoption Index 2026 identifies as the dominant corporate reality: AI adoption is nearly universal in aspiration but shallow in measurable impact, with organizational and leadership factors often mattering more than the technology itself. The TITAN case, where succession and governance questions appear to carry equal or greater weight than the AI initiative, illustrates how AI adoption decisions are embedded in broader organizational structures that firms must resolve first. For CAMO's purposes, the more instructive question is whether TITAN's AI productivity effort changed job boundaries or managerial roles — a question the available excerpt does not answer.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "TITAN's pattern of pairing an AI productivity push with unresolved organizational and leadership questions mirrors the Index finding that adoption barriers are predominantly executional and structural rather than technical."
+        }
+      ],
+      "key_takeaway": "For established industrial firms, AI adoption decisions cannot be disentangled from governance and succession structures — the organizational questions often determine whether the technology initiative actually lands.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A cross-section diagram of a multi-story building under renovation: the upper floors show new open-plan layouts being constructed while the load-bearing columns — representing ownership structure and governance — remain unchanged at the base. The tension between new configuration above and fixed structure below conveys organizational modernization constrained by inherited architecture.",
+      "linkedin_caption_draft": "Family businesses face a compounded version of the AI adoption problem.\n\nTITAN Cement's outgoing CEO Dimitri Papalexopoulos spent 26 years internationalizing a Greek industrial company and championing an AI-driven productivity push — while simultaneously wrestling with whether to recommend the firm's first non-family CEO. That sequencing matters: organizational structure and leadership continuity shape whether an AI initiative actually changes how work gets done, or simply sits alongside existing hierarchies.\n\nCAMO's Deloitte-HKU AI Adoption Index found that the hardest barriers to AI adoption are organizational, not technical — siloed departments, cultural resistance, and unclear accountability. A CEO transition in a family firm is exactly the kind of structural moment that can either entrench those barriers or dissolve them.\n\nFor C-suite leaders in founder-led or family-owned firms: is your AI agenda connected to your governance roadmap, or running separately from it?\n\n#AIAdoption #FamilyBusiness #Leadership #OrganizationalChange #CAMO",
+      "x_caption_draft": "TITAN Cement's CEO spent 26 years modernizing a family industrial firm — AI productivity push included. But the harder question was governance: who leads next? Org structure shapes whether AI initiatives actually change work. CAMO's Adoption Index found the same. https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio\n\nAI adoption in legacy firms isn't mainly a technology problem. TITAN's story: the succession decision may matter more to AI's real impact than the tools themselves. https://camo.hku.hk/ai-adoption-survey/",
+      "red_flags": [
+        "Primary source is a podcast episode based on an HBR case study — the underlying case may be paywalled or require course access, limiting audience ability to verify claims directly.",
+        "The AI initiative is mentioned only briefly in the excerpt; no specifics on scope, outcomes, or methodology are provided, making any AI-focused analysis speculative.",
+        "HBR Cold Call is practitioner-oriented storytelling, not peer-reviewed research — findings should be treated as illustrative rather than empirically generalized.",
+        "Potential hagiographic framing: the case is co-discussed with the departing CEO himself, which may limit critical perspective on the AI or governance decisions."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Beyond the Model — Why Responsible AI Must Address Workforce Impact",
+      "link": "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Apr 21, 2026",
+      "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+      "summary": "For the fifth year in a row, MIT Sloan Management Review and Boston Consulting Group (BCG) have assembled an international panel of AI experts that includes academics and practitioners to help us understand how responsible artificial intelligence (RAI) is being implemented across organizations worldwide. In prior years, we examined organizational RAI maturity; third-party, generative, and [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "score": 1.02,
+      "reappear": false,
+      "claude_summary": "A fifth consecutive annual survey by MIT Sloan Management Review and Boston Consulting Group examines how organizations are implementing responsible AI (RAI) worldwide. This year's edition shifts attention toward workforce impact as an underexamined dimension of RAI — arguing that responsible AI frameworks have focused heavily on model-level concerns (bias, explainability, safety) while neglecting the organizational and human consequences of deployment: job displacement, skill degradation, shifting accountability, and uneven distribution of AI's benefits and burdens. The article draws on an international panel of academics and practitioners to assess RAI maturity and calls on organizations to extend their governance frameworks to cover how AI reshapes work itself. Note: the full findings are behind a paywall; this summary is based on the RSS excerpt and title framing.",
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 78,
+      "centre_angle": "This article argues that responsible AI governance has a blind spot: it evaluates models but not the workforce consequences of deploying them. From CAMO's perspective on AI and jobs, this gap is well-evidenced in practice — our research on the hidden competency penalty for AI users (see 'Research: The Hidden Penalty of Using AI at Work') shows that even when organizations provide AI access, the social and evaluative dynamics around its use can harm the very workers it is meant to help. Extending RAI frameworks to include job design, accountability attribution, and adoption incentives is not peripheral to responsible AI — it is central to whether deployment produces net benefit for organizations and the people inside them.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both pieces identify a gap between organizational AI access/adoption policy and the social dynamics that determine whether employees can use AI without penalty — a direct illustration of why workforce impact belongs inside RAI frameworks."
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "The article's call to include workforce impact in RAI governance aligns with this paper's finding that AI adoption can systematically degrade job quality and worker welfare even when firms act rationally — a structural risk that model-level RAI checklists would not capture."
+        }
+      ],
+      "key_takeaway": "Responsible AI frameworks that stop at the model layer — ignoring how deployment reshapes jobs, accountability, and worker welfare — are incomplete governance, not just incomplete ethics.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A cross-section architectural diagram of a building: the lower floors (labeled 'model governance') are densely detailed with rooms, walls, and regulations, while the upper floors (labeled 'workforce impact') are shown as an unfinished open frame — structural columns visible but no interior walls, no occupants. The contrast between completed infrastructure below and empty, ungoverned space above carries the central argument.",
+      "linkedin_caption_draft": "Responsible AI has a structural blind spot.\n\nFor five years, MIT Sloan Management Review and BCG have tracked how organizations implement responsible AI. This year's report raises a pointed question: why do most RAI frameworks scrutinize the model — bias, explainability, safety — while saying little about what AI deployment does to the workforce?\n\nJob boundaries shift. Accountability becomes harder to assign. The benefits and risks of AI land unevenly on different workers. These are not edge cases; they are routine consequences of scaled deployment.\n\nAt CAMO, our own research reinforces this concern. We've found that engineers who use AI tools are rated as less competent by peers — despite producing identical work — and that AI adoption can systematically push firms toward lower-wage, lower-effort job structures even when that outcome harms everyone involved.\n\nGovernance that covers models but not the people working alongside them is not responsible AI. It's incomplete infrastructure.\n\nHow is your organization addressing workforce impact inside its AI governance framework? 🔍\n\n#ResponsibleAI #AIGovernance #FutureOfWork #AIAdoption #WorkforceStrategy",
+      "x_caption_draft": "Responsible AI frameworks scrutinize models — bias, safety, explainability. But who governs what AI deployment does to workers? MIT SMR/BCG's annual RAI survey says that gap is the next frontier. CAMO research shows the costs of ignoring it are already here. https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/\n\nEngineers penalized for using AI tools. Job structures degrading even when adoption succeeds. These aren't model failures — they're governance failures. Workforce impact belongs inside RAI frameworks, not outside them. https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/",
+      "red_flags": [
+        "Full article is paywalled at MIT Sloan Management Review — findings beyond the framing and excerpt cannot be independently verified from the RSS excerpt alone; pillar relevance and summary are based on limited available text.",
+        "Annual survey series from MIT SMR and BCG: BCG is a consulting firm with commercial interests in AI adoption advisory services, which may influence framing of 'RAI maturity' findings.",
+        "Not peer-reviewed — practitioner survey report rather than academic research."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}
