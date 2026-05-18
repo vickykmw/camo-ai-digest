@@ -6,7 +6,7 @@ name: Daily HBR Digest
 on:
   schedule:
     # 00:00 UTC daily ~ 7 pm CDT (summer) / 6 pm CST (winter).
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 2'
   workflow_dispatch:
 
 permissions:
