@@ -85,7 +85,7 @@ PER_FEED_ITEM_LIMIT = 30
 TOP_N = 10
 MAX_PER_SOURCE = 4              # diversity cap: no more than this many items from any one source in the top N
 RECENCY_WINDOW_DAYS = 30
-REAPPEAR_LOOKBACK_DAYS = 7
+REAPPEAR_LOOKBACK_DAYS = 14
 
 # ---------------------------------------------------------------------------
 # Enrichment configuration
