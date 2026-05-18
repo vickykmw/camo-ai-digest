@@ -1,4 +1,42 @@
 {
+  "https://arxiv.org/abs/2506.22440": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper argues that deploying LLMs does not eliminate complexity but redistributes it — from the user interface to organizational infrastructure, compliance, and specialist roles. From CAMO's perspective on AI adoption, this reframes the central managerial challenge: the question is not whether to adopt AI but how to design the internal structures that absorb the complexity AI ostensibly hides. This aligns with findings from CAMO's Deloitte-HKU AI Adoption Index, which identifies organizational and executional barriers — siloed departments, poor data quality, lack of quick wins — as the primary reasons AI initiatives fall short of expected returns; the GAS framework offers a theoretical account of why those barriers are structurally inevitable rather than merely implementation failures.",
+      "claude_summary": "When firms deploy large language models, complexity does not disappear — it relocates. This paper introduces a Generality-Accuracy-Simplicity (GAS) framework to show that LLMs' apparently simple interfaces shift hidden costs onto organizational infrastructure, compliance functions, and specialist staff. The authors argue that competitive advantage no longer comes from adopting AI but from managing this redistributed complexity through deliberate decisions about abstraction layers, workflow design, and complementary human expertise. Treating AI purely as an input-cost reduction misses both the inherent trade-offs among generality, accuracy, and simplicity, and the organizational burden created when user-facing simplicity is achieved by pushing complexity inward.",
+      "key_takeaway": "AI does not eliminate organizational complexity — it relocates it to infrastructure, compliance, and specialist staff, making the design of internal workflows and expertise the true source of competitive advantage.",
+      "linkedin_caption_draft": "AI looks simple from the outside. Inside the organization, it is anything but.\n\nA new paper from Hasan, Oettl, and Samila introduces the Generality-Accuracy-Simplicity (GAS) framework to explain why: when LLMs offer broad capability through easy interfaces, the underlying complexity does not vanish — it shifts to infrastructure, compliance, and specialist personnel inside the firm.\n\nThe implication for strategy is direct. Competitive advantage no longer comes from being an early adopter. It comes from mastering the redistribution — designing abstraction layers, aligning workflows, and building the human expertise that makes AI outputs reliable in high-stakes contexts.\n\nCAMO's own survey of C-suite executives in China and Hong Kong found exactly this: the dominant barriers to AI value are organizational and executional, not technical. This paper offers a framework for understanding why that pattern is structural.\n\nFor leaders planning AI investments: where is the complexity landing in your organization, and who is responsible for absorbing it?\n\n#AIStrategy #AIAdoption #OrganizationalDesign #GenerativeAI #ManagementResearch",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both works converge on the finding that AI adoption failures are organizational rather than technical, and that shallow deployment produces shallow returns — directly illustrated by the GAS framework's claim that user-facing simplicity relocates rather than removes complexity.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "The GAS paper's argument that AI creates new demand for specialized complementary expertise connects to CAMO's finding that AI reshapes job design and the distribution of high-skill versus low-skill roles within firms.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 88,
+      "red_flags": [
+        "Working paper posted to arXiv (econ.GN); not yet peer-reviewed — findings should be presented as a framework/argument, not established evidence.",
+        "The GAS framework is conceptual rather than empirically tested in this excerpt; the abstract does not describe data or a study design, so causal or predictive claims should be hedged accordingly."
+      ],
+      "visual_concept": "A cross-section diagram of a multi-story building: the ground floor is a clean, open lobby representing the simple user interface, while the floors above are densely packed with pipes, wiring conduits, and load-bearing columns representing compliance, infrastructure, and specialist roles — the same structural weight, redistributed upward and out of sight.",
+      "x_caption_draft": "AI doesn't remove complexity — it relocates it. New GAS framework shows LLMs shift burden from users to org infrastructure, compliance & specialist staff. Competitive edge comes from managing that redistribution, not just adopting the tool. https://arxiv.org/abs/2506.22440\n\nCAMO's C-suite survey found org & execution barriers — not tech — explain why AI underdelivers. This paper gives the structural explanation for why that finding holds. https://camo.hku.hk/ai-adoption-survey/"
+    },
+    "enriched_at": "2026-05-18",
+    "model": "claude-sonnet-4-6",
+    "title": "From Model Design to Organizational Design: Complexity Redistribution and Trade-Offs in Generative AI"
+  },
   "https://arxiv.org/abs/2511.08565": {
     "data": {
       "audience_relevance": {
@@ -58,6 +96,40 @@
     "enriched_at": "2026-05-16",
     "model": "claude-sonnet-4-6",
     "title": "LLMs learn scientific taste from institutional traces across the social sciences"
+  },
+  "https://arxiv.org/abs/2603.18221": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper demonstrates how AI can make a high-integrity assessment format — the oral examination — economically viable at scale, reducing a 30-instructor-hour process for 36 students to under a dollar per candidate. From CAMO's perspective on AI adoption, the deeper lesson is organizational rather than technical: the system's most useful failures reveal that reliable AI deployment depends on modular task decomposition and hard-coded behavioral constraints, not prompt engineering alone. This mirrors findings from CAMO's work on adoption inside firms — the bottleneck is rarely the model itself, but the design of the workflow around it.",
+      "claude_summary": "When students in an AI/ML course submitted polished project analyses but could not explain their own choices aloud, instructors at NYU Stern built Viva — an AI-driven oral examination system that conducts personalized spoken interviews and grades transcripts using a panel of three LLMs that score independently, compare assessments, and revise. Across two cohorts of roughly 36–37 students, cost stayed under one dollar per exam. The system also failed in instructive ways: asking multiple questions simultaneously, not randomizing topics, and using a voice clone perceived as harsh. These failures yielded five design principles: decompose into single-purpose modules, enforce constraints in code rather than prompts, handle randomization outside the LLM, grade with a disagreeing multi-model panel, and treat voice character as carefully as question content.",
+      "key_takeaway": "Voice AI can make rigorous oral assessments economically feasible at scale, but only if the system is designed with strict module separation and behavioral constraints enforced in code, not in prompts.",
+      "linkedin_caption_draft": "Students wrote polished AI project reports. Asked to defend a single choice aloud, many couldn't.\n\nResearchers at NYU Stern built Viva: an AI system that conducts personalized oral exams and grades transcripts via a panel of three LLMs — at under $1 per student. What had required 30 combined instructor hours for 36 students now scales to any cohort size.\n\nThe failures are as instructive as the successes. The agent asked multiple questions at once. It didn't randomize topics. A voice cloned from the professor came across as harsh. Each breakdown points to a design principle: decompose into single-purpose modules, enforce constraints in code, and treat voice character as seriously as question content.\n\nAt CAMO, we see this pattern repeatedly — the model is rarely the bottleneck. Workflow architecture is. The question for institutions and organizations alike: are you designing the system around the AI, or just deploying the AI into an existing system?\n\n#AIAdoption #EdTech #OrganizationalDesign #AIDeployment #LLM",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both cases show that AI optimizes individual tasks (coding, grading) but the real gains depend on redesigning the surrounding workflow — coordination and module boundaries matter more than raw model capability.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint only; findings are preliminary across two small cohorts (36 and 37 students).",
+        "Small sample sizes limit generalizability; both cohorts are from a single institution (NYU Stern) and a single course type (AI/ML).",
+        "At least one author (Ipeirotis) is also the course instructor, which creates a potential conflict of interest in evaluating the system's success.",
+        "Cost figures depend on specific vendor pricing (ElevenLabs subscription) that may not generalize to other deployments or change over time."
+      ],
+      "visual_concept": "A floor plan of a single-purpose examination room divided into clearly labeled, non-overlapping zones — intake, questioning, scoring, review — each zone connected by a narrow one-way corridor, rendered in clean architectural line-drawing style with no occupants visible.",
+      "x_caption_draft": "Students couldn't explain their own polished AI reports aloud. NYU Stern built an AI oral exam system — under $1/student, panel of 3 LLMs. The key lessons came from where it broke. Workflow design matters more than model quality. https://arxiv.org/abs/2603.18221\n\nThe finding that maps beyond education: reliable AI deployment requires module decomposition + hard-coded constraints, not better prompts. A pattern CAMO sees across industries. https://arxiv.org/abs/2603.18221"
+    },
+    "enriched_at": "2026-05-18",
+    "model": "claude-sonnet-4-6",
+    "title": "Scalable and Personalized Oral Assessments Using Voice AI"
   },
   "https://arxiv.org/abs/2605.12757": {
     "data": {
@@ -293,6 +365,107 @@
     "enriched_at": "2026-05-16",
     "model": "claude-sonnet-4-6",
     "title": "AI Knows When It's Being Watched: Functional Strategic Action and Contextual Register Modulation in Large Language Models"
+  },
+  "https://arxiv.org/abs/2605.15380": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study documents one of the longest-running deployments of a generative AI tool in professional education in the Global South, providing concrete usage data on how students interact with AI when it substitutes for scarce instructional resources. From CAMO's perspective on AI adoption, the case raises a question that organizational contexts share: when AI fills a gap left by limited human expertise, what accountability structures ensure it is used in ways that develop rather than replace the underlying competency? The ethical concerns flagged by the authors — around the nature of student queries — echo dynamics explored in CAMO's work on the hidden social penalties of AI use and on incentive design that shapes whether AI adoption produces genuine capability or surface-level compliance.",
+      "claude_summary": "A team of researchers built and deployed Eskwai for Students, a retrieval-augmented generation (RAG) assistant designed to support law students in Ghana with access to over 12,000 case laws and 1,400 pieces of legislation. Over a 30-month longitudinal study, 3,100 students submitted 32,000 queries, making this one of the most sustained real-world deployments of generative AI in legal education in the Global South. The study evaluates helpfulness, characterizes query patterns, and surfaces ethical concerns about how students are using the tool. It offers rare empirical evidence on what AI-assisted learning looks like in a resource-constrained, non-Western legal context, where access to legal materials and expert instruction is unevenly distributed.",
+      "key_takeaway": "A 30-month, 3,100-student deployment of an AI legal assistant in Ghana shows generative AI can reach underserved professional learners at scale, but raises unresolved questions about whether students use it to learn or to shortcut learning.",
+      "linkedin_caption_draft": "What happens when 3,100 law students in Ghana get a generative AI tutor — and use it for 2.5 years?\n\nResearchers at Eskwai built a RAG-based legal assistant grounded in over 12,000 Ghanaian case laws and deployed it longitudinally. Students submitted 32,000 queries. The system was genuinely helpful — but the query analysis also surfaced ethical concerns about how students were using it, pointing to a tension between access and genuine skill development.\n\nThis is one of the most sustained real-world deployments of AI in professional education in the Global South, and it matters beyond legal training. Wherever AI fills a gap left by scarce expert instruction, the design question is the same: does the tool build capability, or does it quietly substitute for it?\n\nAt CAMO, we see this as an adoption challenge as much as a technical one — the incentive structures around AI use shape outcomes more than the technology itself. 📋\n\nHow should professional education institutions design AI tools so students engage deeply rather than extract answers?\n\n#AIAdoption #LegalEducation #GenerativeAI #GlobalSouth #ResponsibleAI",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "Both studies examine how social and evaluative context shapes whether AI tools are used openly and productively, with downstream implications for skill development and competence signaling.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 52,
+      "red_flags": [
+        "Not yet peer-reviewed — arXiv preprint only; findings on helpfulness and ethical concerns are not independently validated.",
+        "Ethical concerns raised by the authors regarding query types are described but not fully detailed in the abstract; the nature and severity are unclear without reading the full paper.",
+        "Study population is self-selected (students who chose to use the tool); 3,100 users from an unknown total enrollment limits generalizability.",
+        "Pillar fit is adjacent rather than direct — the article is primarily an education technology deployment study rather than a management or organizational AI study, which limits its natural fit for CAMO's core audience."
+      ],
+      "visual_concept": "A layered stack of weathered legal volumes arranged like building floors, with thin luminous horizontal lines threading between each layer — representing retrieval pathways connecting a student's question at the base to specific statutes and case records near the top. The structure feels archival and physical rather than digital.",
+      "x_caption_draft": "3,100 law students in Ghana. 32,000 queries. 30 months. A RAG assistant built on 12K+ case laws shows AI can reach underserved learners — but query patterns raise real questions about whether students learn or shortcut. Adoption design matters as much as the model. https://arxiv.org/abs/2605.15380\n\nThe deeper question isn't whether AI can assist legal education in the Global South — it's whether incentive structures around its use build or erode the competency it's meant to support. Rare longitudinal data worth examining. https://arxiv.org/abs/2605.15380"
+    },
+    "enriched_at": "2026-05-18",
+    "model": "claude-sonnet-4-6",
+    "title": "Eskwai for Students: Generative AI Assistant for Legal Education in Ghana"
+  },
+  "https://arxiv.org/abs/2605.15850": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study argues that a reinforcement learning agent calibrating when — not just how — students access GenAI can improve learning outcomes without requiring explicit pedagogical scaffolding. From CAMO's perspective on algorithmic decision-making, the work is a clean illustration of how RL reward functions grounded in domain theory (here, metacognition and cognitive load) can substitute for human intervention in sequential, high-stakes decision environments. The result also resonates with a concern running through CAMO research on AI and effort: unrestricted AI access can depress the sustained engagement needed for skill acquisition, a dynamic formally examined in our work on GenAI and the mediocrity trap.",
+      "claude_summary": "When should students be allowed to use generative AI — and does timing matter as much as whether they use it at all? This study treats access timing as a form of implicit scaffolding and uses a reinforcement learning agent to decide, in real time, when each student should access GenAI during a task. In a controlled lab experiment with 105 participants, strategically timed access improved objective post-test scores and metacognitive accuracy compared with unrestricted use, while reducing errors and task time compared with complete restriction — all without explicit prompting or structured pedagogical intervention. The RL-driven timing condition outperformed both poles. Self-reported metacognitive awareness, however, showed no significant differences across conditions. The authors argue that access timing is a scalable, theoretically grounded design lever compatible with off-the-shelf AI tools.",
+      "key_takeaway": "Controlling when students can use AI — not just whether they can — measurably improves learning outcomes, and a reinforcement learning agent can do this automatically without additional teacher intervention.",
+      "linkedin_caption_draft": "Should students be able to use AI tools whenever they want — or does timing matter?\n\nA new study from arXiv suggests it matters a great deal. Researchers built a reinforcement learning agent that decided, in real time, when 105 students could access GenAI during a learning task. The result: strategically timed access outperformed both unrestricted use and complete restriction on objective test scores and metacognitive accuracy — without any additional prompting or structured scaffolding.\n\nThe mechanism is straightforward: letting students struggle briefly before AI assistance arrives preserves the cognitive effort that builds durable understanding. Removing all friction, by contrast, erodes it.\n\nAt CAMO, our research on GenAI and professional work finds a parallel dynamic — unrestricted AI access can flatten the effort curve in ways that ultimately reduce quality. The education setting makes that trade-off unusually visible.\n\nFor institutions designing AI policies: is your current approach thinking about access timing, or only about access?\n\n#AIinEducation #GenerativeAI #LearningDesign #AIPolicy #CAMO",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both papers examine how unrestricted GenAI access can undermine the effort and quality of work, whether in professional illustration or student learning, making access design — not just access provision — a central variable.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not yet peer-reviewed — arXiv preprint only; findings should be treated as preliminary.",
+        "Lab study with N=105 may have limited ecological validity for real classroom deployment at scale.",
+        "Self-reported metacognitive awareness showed no significant between-condition differences, which partially qualifies the headline result.",
+        "Primary audience fit is education researchers and EdTech designers rather than CAMO's core business/policy audience, which limits direct relevance."
+      ],
+      "visual_concept": "A timeline rendered as a narrow corridor with a series of doors at uneven intervals — some open, some closed — representing controlled access points rather than a permanently open or permanently sealed passage. The corridor is lit only at the open doors, with a student-sized figure paused at one threshold.",
+      "x_caption_draft": "Unrestricted GenAI access in classrooms hurts learning. Full restriction also hurts. An RL agent timing access dynamically beat both — improving test scores & metacognitive accuracy with no extra scaffolding. Timing is a design variable. https://arxiv.org/abs/2605.15850\n\nThis echoes CAMO findings on AI & effort: when AI removes all friction, sustained engagement falls. The question isn't just whether to allow AI tools — it's when. #AIinEducation #GenAI #CAMO"
+    },
+    "enriched_at": "2026-05-18",
+    "model": "claude-sonnet-4-6",
+    "title": "Access Timing as Scaffolding: A Reinforcement Learning Approach to GenAI in Education"
+  },
+  "https://arxiv.org/abs/2605.16245": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study demonstrates that LLMs embedded in everyday communication infrastructure — post editors, content explainers — carry directional biases that are not incidental but systemic, and that network dynamics amplify rather than average them out. From CAMO's perspective on algorithmic design and trustworthy AI-driven decisions, the finding reframes a familiar problem: bias is not only a measurement issue internal to a model, but an organizational and governance question about who controls the AI intermediary and under what accountability structure. Platform operators effectively become opinion-infrastructure owners without corresponding disclosure obligations — a design choice with consequences that extend well beyond individual user experience.",
+      "claude_summary": "When AI tools edit or contextualize human posts on social platforms, they do not merely polish language — they introduce systematic directional biases. This study finds that popular LLMs consistently nudge texts on contested topics in identifiable directions (e.g., toward gun control, against atheism). The researchers then model what happens when such a biased intermediary sits inside a social network: individual nudges compound through repeated interactions and can shift collective opinion measurably toward the AI's embedded position. An audit of X's 'Explain this post' feature finds evidence of pro-life framing in Grok's outputs on abortion, traceable to specific design decisions. The implication is that platform operators hold significant, and largely unaccountable, influence over public opinion formation through seemingly mundane editorial AI features.",
+      "key_takeaway": "AI tools that mediate human communication on social platforms are not neutral conduits — they carry detectable ideological biases that network effects can amplify into collective opinion shifts.",
+      "linkedin_caption_draft": "When AI edits your post, whose opinion does it actually express?\n\nA new study finds that popular LLMs introduce measurable directional biases when instructed to polish user-written text on contested topics — nudging content toward specific positions on issues like gun control or abortion. When researchers modeled these biases inside a real social network, the small per-post nudges compounded: collective opinion shifted toward whatever position the AI embedded in individual messages.\n\nAn audit of X's 'Explain this post' feature found evidence of pro-life framing in Grok's outputs — traceable to specific design choices, not random error.\n\nAt CAMO, we study how algorithmic systems shape organizational and social decisions. This research makes clear that the accountability question is not only about AI replacing human judgment — it is equally about AI quietly mediating it, at scale, without disclosure.\n\nFor platform operators and regulators: if your AI feature touches communication, it is also touching opinion. Are governance frameworks keeping pace? 🔍\n\n#AIGovernance #ResponsibleAI #PlatformAccountability #AIPolicy #AlgorithmicBias",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "reason": "Both papers address how interventions optimized on a visible primary dimension create unmeasured negative externalities elsewhere — here, AI text-editing improves surface readability while silently shifting opinion content in ways the platform does not measure or disclose.",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "arXiv preprint — not yet peer-reviewed; findings should be treated as preliminary until published in a refereed venue.",
+        "The audit of Grok/X is based on a snapshot; platform AI outputs can change with model updates, so findings may not replicate over time.",
+        "Directional bias claims are topic-specific and may not generalize across all contested domains or languages beyond those tested."
+      ],
+      "visual_concept": "A layered diagram showing two people communicating across a network of nodes, with a semi-transparent filter plane sitting between them — the filter plane subtly warps the color and direction of the message lines passing through it, so that by the time signals reach distant nodes in the network, the angular drift is clearly visible. No human figures needed; the geometry alone tells the story.",
+      "x_caption_draft": "AI tools that edit your social media posts don't just fix grammar — they introduce systematic opinion nudges. At network scale, those nudges compound. New study audited X's Grok and found pro-life framing on abortion content, tied to design choices. https://arxiv.org/abs/2605.16245\n\nThe accountability gap: platform operators who deploy AI communication features become de facto opinion-infrastructure owners. CAMO research on algorithmic design asks who bears responsibility when the bias is in the intermediary, not the user."
+    },
+    "enriched_at": "2026-05-18",
+    "model": "claude-sonnet-4-6",
+    "title": "AI-Mediated Communication Can Steer Collective Opinion"
   },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
