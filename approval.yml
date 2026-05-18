@@ -1,0 +1,104 @@
+name: Process Approvals
+
+# WORKFLOW v1 -- approval pipeline.
+# Triggers when a digest .md file (containing checkbox state) is pushed:
+#   - the daily/weekly bot's own commits go through here too, but at that
+#     point no boxes are ticked, so the script is a no-op.
+#   - when a human ticks a box and pushes, this workflow picks it up,
+#     queues the entry, and -- if any CAMO paper has accumulated 3+ ticks
+#     -- creates a cluster file and opens a GitHub issue.
+
+on:
+  push:
+    paths:
+      - 'digests/**/*.md'
+      - 'process_approvals.py'
+      - '.github/workflows/approval.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write       # to commit approval_state.json + new cluster files
+  issues: write         # to open the "Cluster ready" issue via gh CLI
+
+# Avoid races between two approval runs touching the same files.
+concurrency:
+  group: process-approvals
+  cancel-in-progress: false
+
+jobs:
+  approvals:
+    # Skip when the actor is the bot itself: the bot's commit that creates a
+    # weekly digest has no ticks yet, so we'd just spend runner minutes for
+    # no-op runs. The approval.yml ALSO commits (cluster files + state) via
+    # the same bot identity -- this filter prevents that follow-up commit
+    # from triggering yet another run.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Process approvals
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # gh CLI auto-detects GH_TOKEN; this is the standard pattern for
+          # the implicit per-run token that has access to this repo's issues.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python process_approvals.py
+
+      - name: Commit and push
+        run: |
+          echo "[approval workflow v1] starting commit step"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add approval_state.json clusters/ || true
+          if git diff --cached --quiet; then
+            echo "[approval workflow v1] No state changes to commit."
+            exit 0
+          fi
+
+          # Same stash-and-rebase pattern as daily.yml, so the commit survives
+          # any race with another push that happens between our checkout and
+          # our push.
+          STASH=/tmp/approval-stash
+          rm -rf "$STASH" && mkdir -p "$STASH"
+          [ -f approval_state.json ] && cp    approval_state.json "$STASH/" || true
+          [ -d clusters ]            && cp -r clusters            "$STASH/" || true
+
+          git fetch origin main
+          git reset --hard origin/main
+
+          [ -f "$STASH/approval_state.json" ] && cp    "$STASH/approval_state.json" .
+          [ -d "$STASH/clusters" ]            && cp -r "$STASH/clusters"            .
+
+          git add approval_state.json clusters/ || true
+          if git diff --cached --quiet; then
+            echo "[approval workflow v1] No changes after sync."
+            exit 0
+          fi
+          git commit -m "Process approvals $(date -u +%Y-%m-%d) [approval v1]"
+
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              echo "[approval workflow v1] Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "[approval workflow v1] Push failed on attempt $attempt -- pulling and retrying..."
+            git pull --rebase origin main || true
+            sleep $((attempt * 2))
+          done
+
+          echo "[approval workflow v1] Push failed after 3 attempts." >&2
+          exit 1

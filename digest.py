@@ -47,7 +47,7 @@ except ImportError:
 # Version stamp -- check the workflow log for "DIGEST SCRIPT v5" to confirm
 # this file is the one running.
 # ---------------------------------------------------------------------------
-VERSION = "v5 (2026-05-14)"
+VERSION = "v6 (2026-05-18)"
 
 # ---------------------------------------------------------------------------
 # Sources
@@ -85,7 +85,7 @@ PER_FEED_ITEM_LIMIT = 30
 TOP_N = 10
 MAX_PER_SOURCE = 4              # diversity cap: no more than this many items from any one source in the top N
 RECENCY_WINDOW_DAYS = 30
-REAPPEAR_LOOKBACK_DAYS = 14
+REAPPEAR_LOOKBACK_DAYS = 7
 
 # ---------------------------------------------------------------------------
 # Enrichment configuration
@@ -260,6 +260,31 @@ def feed_label(url: str) -> str:
     if "mckinsey.com" in url:
         return "McKinsey Insights"
     return url
+
+
+def _build_week_paths(week_start: date, week_end: date) -> tuple:
+    """Compute the digest filename stem and a human-readable title label for
+    a weekly run.
+
+    The filename stem is always full ISO on both sides for easy globbing,
+    sorting, and future search regardless of whether the week crosses a
+    month or year boundary:
+      stem  = '2026-05-11_2026-05-18'  (always YYYY-MM-DD_YYYY-MM-DD)
+      stem  = '2026-05-25_2026-06-01'
+      stem  = '2026-12-29_2027-01-05'
+
+    The label is for display only (inside the .md body) and stays
+    human-friendly:
+      label = 'May 11 – May 18, 2026'
+      label = 'May 25 – Jun 01, 2026'
+      label = 'Dec 29, 2026 – Jan 05, 2027'
+    """
+    stem = f"{week_start.isoformat()}_{week_end.isoformat()}"
+    if week_start.year == week_end.year:
+        label = f"{week_start.strftime('%b %d')} – {week_end.strftime('%b %d, %Y')}"
+    else:
+        label = f"{week_start.strftime('%b %d, %Y')} – {week_end.strftime('%b %d, %Y')}"
+    return stem, label
 
 
 # ---------------------------------------------------------------------------
@@ -836,13 +861,27 @@ def build_digest() -> None:
     enrich_with_claude(top, camo_index, today)
     # -------------------------------------------------------------------------
 
-    # --- write today's digest ---
-    DIGESTS_DIR.mkdir(exist_ok=True)
-    digest_path = DIGESTS_DIR / f"{today_str}.md"
-    out = [f"# AI x Business Digest -- {today.strftime('%B %d, %Y')}", ""]
+    # --- weekly file naming ---------------------------------------------------
+    # The cron runs once a week on Monday; this run's digest covers the seven
+    # days ending today. The file goes into a monthly subfolder organised by
+    # the end month, and the filename always uses the full
+    # YYYY-MM-DD_YYYY-MM-DD form (chosen for sortability + easy search):
+    #   typical week     2026-05 / 2026-05-11_2026-05-18.md
+    #   crosses month    2026-06 / 2026-05-25_2026-06-01.md
+    #   crosses year     2027-01 / 2026-12-29_2027-01-05.md
+    week_end = today
+    week_start = today - timedelta(days=7)
+    digest_stem, week_label = _build_week_paths(week_start, week_end)
+    month_dir = DIGESTS_DIR / week_end.strftime("%Y-%m")
+    month_dir.mkdir(parents=True, exist_ok=True)
+    digest_path = month_dir / f"{digest_stem}.md"
+    sidecar_path = month_dir / f"{digest_stem}.enriched.json"
+
+    # --- write this week's digest ---
+    out = [f"# AI x Business Digest — Week of {week_label}", ""]
 
     if not top:
-        out.append("_No items in today's RSS window matched the filter._")
+        out.append("_No items in this week's RSS window matched the filter._")
     else:
         enriched_n = sum(1 for a in top if a.get("enriched"))
         sources_used = sorted(set(a["source"] for a in top))
@@ -853,12 +892,14 @@ def build_digest() -> None:
             f"ranked by keyword density x recency. Max {MAX_PER_SOURCE} items per source._"
         )
         out.append("")
-        out.append(f"_Sources represented today: {', '.join(sources_used)}._")
+        out.append(f"_Sources represented this week: {', '.join(sources_used)}._")
         out.append("")
         if enriched_n == len(top):
             out.append(f"_All {len(top)} items enriched by {ANTHROPIC_MODEL}. "
-                       f"Tick **APPROVE FOR SOCIAL** on the items to publish, edit the "
-                       f"CAMO angle / captions as needed, then commit._")
+                       f"Tick **APPROVE FOR SOCIAL** on the items worth publishing. "
+                       f"Approved items flow into a queue and cluster around CAMO "
+                       f"research; once a paper has 3+ approved items, a content "
+                       f"cluster is created and you'll get a GitHub issue notification._")
         elif enriched_n > 0:
             out.append(f"_{enriched_n}/{len(top)} items enriched by {ANTHROPIC_MODEL}; "
                        f"the rest show the raw RSS excerpt (see note on each)._")
@@ -873,9 +914,9 @@ def build_digest() -> None:
     print(f"[ok] wrote {digest_path}  ({len(top)} items, script {VERSION})")
 
     # --- machine-readable sidecar for the downstream Higgsfield step ---
-    sidecar_path = DIGESTS_DIR / f"{today_str}.enriched.json"
     sidecar = {
-        "date": today_str,
+        "week_start": week_start.isoformat(),
+        "week_end": week_end.isoformat(),
         "script_version": VERSION,
         "model": ANTHROPIC_MODEL if any(a.get("enriched") for a in top) else None,
         "item_count": len(top),
@@ -888,11 +929,11 @@ def build_digest() -> None:
 
 
 def update_readme() -> None:
-    digests = sorted(DIGESTS_DIR.glob("*.md"), reverse=True) if DIGESTS_DIR.exists() else []
+    digests = sorted(DIGESTS_DIR.rglob("*.md"), reverse=True) if DIGESTS_DIR.exists() else []
     lines = [
-        "# AI x Business -- Daily Digest",
+        "# AI x Business -- Weekly Digest",
         "",
-        "Automated daily scrape across multiple sources: "
+        "Automated weekly scrape across multiple sources: "
         "HBR (latest + topic feeds + IdeaCast + Cold Call), "
         "NBER Working Papers, "
         "MIT Sloan Management Review, "
@@ -905,21 +946,21 @@ def update_readme() -> None:
         "(organization, firm, strategy, work, management, leadership, executive, team, culture, innovation). "
         "Booster terms (digital transformation, automation, analytics, predictive) only count if a strong AI term is also present.",
         "",
-        "Top 10 per day, ranked by keyword density x recency. "
+        f"Top {TOP_N} items per week, ranked by keyword density x recency. "
         f"Max {MAX_PER_SOURCE} items per source for diversity. "
         f"Recency window: {RECENCY_WINDOW_DAYS} days with linear decay.",
         "",
         f"Each item is then enriched by the Claude API ({ANTHROPIC_MODEL}): a clean "
         "summary, a CAMO pillar tag, a centre angle, matched CAMO research, draft "
         "LinkedIn/X captions, and a visual concept. Every item carries an "
-        "`[ ] APPROVE FOR SOCIAL` checkbox for the editorial team, and a "
-        "`<date>.enriched.json` sidecar is written for the downstream image step.",
+        "`[ ] APPROVE FOR SOCIAL` checkbox for the editorial team. A "
+        "`<week>.enriched.json` sidecar is written alongside each `.md` for the "
+        "downstream cluster + image steps.",
         "",
         "Enrichment results are cached in `enrichment_cache.json`: when an item "
-        "re-appears in a later run it is reused from the cache with no API call, "
-        "so running daily stays inexpensive even though most items re-appear.",
+        "re-appears in a later run it is reused from the cache with no API call.",
         "",
-        "Runs daily at **00:00 UTC** (about 7 pm CDT / 6 pm CST).",
+        "Runs weekly on **Monday 00:00 UTC** (Monday 7 pm CDT / 6 pm CST in Chicago).",
         "",
         "## Recent digests",
         "",
@@ -928,7 +969,8 @@ def update_readme() -> None:
         lines.append("_No digests yet -- first run will populate this list._")
     else:
         for d in digests[:30]:
-            lines.append(f"- [{d.stem}](digests/{d.name})")
+            rel = d.relative_to(DIGESTS_DIR.parent).as_posix()
+            lines.append(f"- [{d.stem}]({rel})")
         if len(digests) > 30:
             lines.append("")
             lines.append("_Older digests in [`digests/`](digests/)._")
