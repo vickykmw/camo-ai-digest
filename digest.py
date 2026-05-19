@@ -639,11 +639,24 @@ def render_item_md(i: int, art: dict) -> list:
     lines.append(f"### {i}. {art['title']}{badge}")
     lines.append("")
 
-    # Approval checkbox -- the editorial team ticks this; a downstream
+    # Approval checkbox(es) -- the editorial team ticks these; a downstream
     # workflow reads the [x] state to decide what flows to Higgsfield.
+    # When the article has 2+ matched CAMO papers, emit one checkbox per
+    # match so the editor explicitly chooses which paper the article gets
+    # queued under (avoids the "default to first match" imbalance). For
+    # 0 or 1 matches, keep the simple single checkbox.
     pillar_hint = art.get("pillar") or "TBD"
-    lines.append(f"- [ ] **APPROVE FOR SOCIAL**  (pillar: `{pillar_hint}`)")
-    lines.append("")
+    matched_for_approval = art.get("matched_camo") or []
+    if len(matched_for_approval) >= 2:
+        lines.append(f"**Approve and queue under (tick one)** _(pillar: `{pillar_hint}`)_:")
+        for m in matched_for_approval:
+            camo_id = m.get("id", "")
+            camo_title = m.get("title", "")
+            lines.append(f"- [ ] **APPROVE FOR SOCIAL** → `{camo_id}` — {camo_title}")
+        lines.append("")
+    else:
+        lines.append(f"- [ ] **APPROVE FOR SOCIAL** (pillar: `{pillar_hint}`)")
+        lines.append("")
 
     lines.append(f"- **Source:** {art['source']}")
     lines.append(f"- **Link:** <{art['link']}>")
