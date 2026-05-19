@@ -142,5 +142,42 @@
     "title": "AI, strategy, and the future of work: Oxford economist Jean-Paul Carvalho",
     "visual_concept": "An overhead floor plan of an open-plan office gradually dissolving into a sparse, modular grid — a few occupied nodes connected by thin lines, with large empty zones where desks once clustered. The geometry suggests contraction and redistribution rather than growth.",
     "x_caption_draft": "AI reshapes cognitive work — but value capture depends on org design, not just deployment. Oxford economist Carvalho via McKinsey. CAMO research finds the barriers are almost always organizational, not technical. https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho\n\nCAMO finding worth pairing here: firms may rationally shift to lower-effort job structures as AI cuts the cost of 'good enough' performance — even when high-effort roles create more total surplus. The value-capture question runs deeper than strategy decks suggest."
+  },
+  "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos": {
+    "approved_at": "2026-05-19",
+    "approved_in_digest": "digests/2026-05/2026-05-12_2026-05-19.md",
+    "authors": "Unknown",
+    "centre_angle": "This McKinsey piece argues that scaling AI requires CEOs to redesign organizational structures, not simply expand technical pilots. From CAMO's perspective on AI adoption, the harder problem is not access to AI tools but the organizational and incentive frictions that prevent genuine use at scale — a pattern documented in our Deloitte-HKU AI Adoption Index, where nearly half of executives reported initiatives fell short of expected ROI, with siloed departments and cultural resistance as the leading culprits. The implication is that CEO attention to org-level redesign is necessary but insufficient without deliberate attention to how AI changes job boundaries, accountability, and the conditions under which workers actually adopt these tools.",
+    "chosen_camo_explicitly": true,
+    "claude_summary": "McKinsey argues that AI's value creation potential has been demonstrated but remains difficult to scale across organizations. The central challenge for CEOs is moving from isolated experimentation to sustained, enterprise-wide performance improvement. The article frames this as a strategic and organizational design problem rather than a technical one: firms must reimagine structures, workflows, and operating models to capture AI's benefits systematically. The excerpt is thin on specific findings or data, so the precise mechanisms McKinsey recommends are not fully visible from the RSS summary alone. The overall argument is that AI deployment is now a CEO-level organizational transformation challenge, not a pilot program to be managed at the margin.",
+    "cluster_file": null,
+    "key_takeaway": "Scaling AI across an organization is primarily an organizational design problem, and CEOs who treat it as a technical rollout are likely to leave most of the value on the table.",
+    "link": "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos",
+    "linkedin_caption_draft": "AI pilots succeed. Scaling them doesn't — at least not yet.\n\nMcKinsey's latest piece for CEOs makes a pointed argument: the bottleneck on AI value is no longer the technology, it's the organization. Reimagining structures, workflows, and operating models is now a CEO-level imperative, not a project to delegate.\n\nCAMO's own survey of 100+ C-suite executives in China and Hong Kong found the same pattern: adoption is nearly universal, but fewer than 5% of firms describe themselves as fully transformational. The barriers are organizational — siloed departments, cultural resistance, and a lack of quick wins — not technical.\n\nThe question for executives isn't whether AI works in a controlled environment. It's whether the rest of the organization is designed to sustain what the pilot proved.\n\nWhat structural change has been hardest to make in your AI rollout? 👇\n\n#AIAdoption #OrganizationalDesign #EnterpriseAI #Leadership #FutureOfWork",
+    "matched_camo": [
+      {
+        "id": "deloitte-hku-ai-adoption-index-2026",
+        "reason": "Both pieces center on the gap between AI's promised value and measurable organizational outcomes, identifying executional and structural barriers rather than technical ones as the primary constraint on scaling.",
+        "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+        "url": "https://camo.hku.hk/ai-adoption-survey/"
+      },
+      {
+        "id": "bad-job-economy-2026",
+        "reason": "CEO-level decisions to 'reimagine organizations' around AI have direct implications for job design and compensation structures, which this CAMO paper models formally — showing that efficiency gains at the firm level can coincide with worker welfare losses.",
+        "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+        "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+      }
+    ],
+    "pillar": "AI Adoption",
+    "primary_camo_id": "bad-job-economy-2026",
+    "primary_camo_reason": "CEO-level decisions to 'reimagine organizations' around AI have direct implications for job design and compensation structures, which this CAMO paper models formally — showing that efficiency gains at the firm level can coincide with worker welfare losses.",
+    "primary_camo_title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+    "primary_camo_url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+    "published_display": "May 13, 2026",
+    "source": "McKinsey Insights",
+    "state": "queued",
+    "title": "The AI assembly line: Strategic imperatives for CEOs",
+    "visual_concept": "An aerial view of a large factory floor mid-renovation: some production lines fully operational and automated, others partially assembled, and several zones still configured for older manual workflows — showing uneven progress across a single organization rather than a clean before-and-after.",
+    "x_caption_draft": "AI value is proven. Scaling it isn't. McKinsey says CEOs must reimagine their organizations — not just expand pilots. CAMO's own C-suite survey found the same wall: org design, not tech, is the binding constraint. https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos\n\nNearly half of executives in CAMO's AI Adoption Index said their AI initiatives fell short of expected ROI. The culprits: siloed teams, cultural resistance, poor data quality. The org problem is real. https://camo.hku.hk/ai-adoption-survey/"
   }
 }
