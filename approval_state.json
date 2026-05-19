@@ -1,0 +1,146 @@
+{
+  "https://arxiv.org/abs/2506.22440": {
+    "approved_at": "2026-05-19",
+    "approved_in_digest": "digests/2026-05/2026-05-11_2026-05-18.md",
+    "authors": "Sharique Hasan, Alexander Oettl, Sampsa Samila",
+    "centre_angle": "This paper argues that deploying LLMs does not eliminate complexity but redistributes it — from the user interface to organizational infrastructure, compliance, and specialist roles. From CAMO's perspective on AI adoption, this reframes the central managerial challenge: the question is not whether to adopt AI but how to design the internal structures that absorb the complexity AI ostensibly hides. This aligns with findings from CAMO's Deloitte-HKU AI Adoption Index, which identifies organizational and executional barriers — siloed departments, poor data quality, lack of quick wins — as the primary reasons AI initiatives fall short of expected returns; the GAS framework offers a theoretical account of why those barriers are structurally inevitable rather than merely implementation failures.",
+    "claude_summary": "When firms deploy large language models, complexity does not disappear — it relocates. This paper introduces a Generality-Accuracy-Simplicity (GAS) framework to show that LLMs' apparently simple interfaces shift hidden costs onto organizational infrastructure, compliance functions, and specialist staff. The authors argue that competitive advantage no longer comes from adopting AI but from managing this redistributed complexity through deliberate decisions about abstraction layers, workflow design, and complementary human expertise. Treating AI purely as an input-cost reduction misses both the inherent trade-offs among generality, accuracy, and simplicity, and the organizational burden created when user-facing simplicity is achieved by pushing complexity inward.",
+    "cluster_file": null,
+    "key_takeaway": "AI does not eliminate organizational complexity — it relocates it to infrastructure, compliance, and specialist staff, making the design of internal workflows and expertise the true source of competitive advantage.",
+    "link": "https://arxiv.org/abs/2506.22440",
+    "linkedin_caption_draft": "AI looks simple from the outside. Inside the organization, it is anything but.\n\nA new paper from Hasan, Oettl, and Samila introduces the Generality-Accuracy-Simplicity (GAS) framework to explain why: when LLMs offer broad capability through easy interfaces, the underlying complexity does not vanish — it shifts to infrastructure, compliance, and specialist personnel inside the firm.\n\nThe implication for strategy is direct. Competitive advantage no longer comes from being an early adopter. It comes from mastering the redistribution — designing abstraction layers, aligning workflows, and building the human expertise that makes AI outputs reliable in high-stakes contexts.\n\nCAMO's own survey of C-suite executives in China and Hong Kong found exactly this: the dominant barriers to AI value are organizational and executional, not technical. This paper offers a framework for understanding why that pattern is structural.\n\nFor leaders planning AI investments: where is the complexity landing in your organization, and who is responsible for absorbing it?\n\n#AIStrategy #AIAdoption #OrganizationalDesign #GenerativeAI #ManagementResearch",
+    "matched_camo": [
+      {
+        "id": "deloitte-hku-ai-adoption-index-2026",
+        "reason": "Both works converge on the finding that AI adoption failures are organizational rather than technical, and that shallow deployment produces shallow returns — directly illustrated by the GAS framework's claim that user-facing simplicity relocates rather than removes complexity.",
+        "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+        "url": "https://camo.hku.hk/ai-adoption-survey/"
+      },
+      {
+        "id": "bad-job-economy-2026",
+        "reason": "The GAS paper's argument that AI creates new demand for specialized complementary expertise connects to CAMO's finding that AI reshapes job design and the distribution of high-skill versus low-skill roles within firms.",
+        "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+        "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+      }
+    ],
+    "pillar": "AI Adoption",
+    "primary_camo_id": "deloitte-hku-ai-adoption-index-2026",
+    "primary_camo_reason": "Both works converge on the finding that AI adoption failures are organizational rather than technical, and that shallow deployment produces shallow returns — directly illustrated by the GAS framework's claim that user-facing simplicity relocates rather than removes complexity.",
+    "primary_camo_title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+    "primary_camo_url": "https://camo.hku.hk/ai-adoption-survey/",
+    "published_display": "May 18, 2026",
+    "source": "arXiv: Economics (econ.GN)",
+    "state": "queued",
+    "title": "From Model Design to Organizational Design: Complexity Redistribution and Trade-Offs in Generative AI",
+    "visual_concept": "A cross-section diagram of a multi-story building: the ground floor is a clean, open lobby representing the simple user interface, while the floors above are densely packed with pipes, wiring conduits, and load-bearing columns representing compliance, infrastructure, and specialist roles — the same structural weight, redistributed upward and out of sight.",
+    "x_caption_draft": "AI doesn't remove complexity — it relocates it. New GAS framework shows LLMs shift burden from users to org infrastructure, compliance & specialist staff. Competitive edge comes from managing that redistribution, not just adopting the tool. https://arxiv.org/abs/2506.22440\n\nCAMO's C-suite survey found org & execution barriers — not tech — explain why AI underdelivers. This paper gives the structural explanation for why that finding holds. https://camo.hku.hk/ai-adoption-survey/"
+  },
+  "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization": {
+    "approved_at": "2026-05-19",
+    "approved_in_digest": "digests/2026-05/2026-05-11_2026-05-18.md",
+    "authors": "Unknown",
+    "centre_angle": "This case documents how a large enterprise moved from near-zero habitual AI use to near-universal monthly adoption, and what managerial interventions were required to close that gap. From CAMO's perspective on AI adoption, the Microsoft experience illustrates a recurring pattern: technical deployment is the easy part; the organizational and behavioral work of changing how thousands of employees actually operate is where most initiatives stall. Our Deloitte-HKU AI Adoption Index finds that the dominant barriers facing executives today are similarly organizational — siloed departments, cultural resistance, and the absence of visible quick wins — rather than anything technical. Microsoft's two-year arc is a large-scale test of what it takes to move past those barriers.",
+    "claude_summary": "Two years into deploying Microsoft Copilot across its 62,000-person sales organization, Microsoft reached daily active AI usage above 60% and monthly active usage above 98%. The path was not straightforward: six months after launch, adoption had stalled and the company had to rethink its deployment strategy based on early evidence. A Harvard Business School case study examines how Microsoft evolved its approach, what it took to shift entrenched working habits at scale, and what challenges remain as the organization moves toward integrating autonomous sales agents. The excerpt is drawn from a podcast discussion of the case and does not detail specific mechanisms or quantitative causal findings.",
+    "cluster_file": null,
+    "key_takeaway": "Getting to 98% monthly AI usage across a 62,000-person sales force took Microsoft two years of adaptive management, not just a product rollout — the organizational work dwarfed the technical work.",
+    "link": "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization",
+    "linkedin_caption_draft": "Microsoft launched Copilot across 62,000 salespeople in 2023. Six months later, adoption had barely moved.\n\nTwo years on, daily active usage exceeds 60% and monthly usage tops 98%. The gap between those two data points is the real story — and it has almost nothing to do with the technology.\n\nA new HBS case study traces the management decisions that closed the gap: how the company read early deployment signals, adjusted its approach, and eventually changed how tens of thousands of people actually work day to day. The harder problem now is integrating autonomous sales agents — where the stakes around accountability and workflow redesign are higher still.\n\nCAMO's own research with Deloitte finds the same pattern across the region: AI adoption is nearly universal in intent among C-suite executives, but only 4% of firms describe themselves as fully operational. The bottleneck is organizational, not technical.\n\nFor leaders managing their own deployments: what did your early adoption data actually tell you — and did you act on it? 🔍\n\n#AIAdoption #EnterpriseAI #ChangeManagement #FutureOfWork #CAMOHKU",
+    "matched_camo": [
+      {
+        "id": "deloitte-hku-ai-adoption-index-2026",
+        "reason": "The Microsoft case directly mirrors the index's central finding that AI adoption is widespread in intent but shallow in measurable impact, with organizational and executional factors — not technology — as the binding constraint.",
+        "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+        "url": "https://camo.hku.hk/ai-adoption-survey/"
+      },
+      {
+        "id": "hidden-penalty-ai-work-2025",
+        "reason": "The stalled early adoption at Microsoft is consistent with CAMO's finding that social penalties for visible AI use create friction that access, training, and infrastructure alone cannot resolve.",
+        "title": "Research: The Hidden Penalty of Using AI at Work",
+        "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+      }
+    ],
+    "pillar": "AI Adoption",
+    "primary_camo_id": "deloitte-hku-ai-adoption-index-2026",
+    "primary_camo_reason": "The Microsoft case directly mirrors the index's central finding that AI adoption is widespread in intent but shallow in measurable impact, with organizational and executional factors — not technology — as the binding constraint.",
+    "primary_camo_title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+    "primary_camo_url": "https://camo.hku.hk/ai-adoption-survey/",
+    "published_display": "May 12, 2026",
+    "source": "HBR Cold Call (podcast)",
+    "state": "queued",
+    "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization",
+    "visual_concept": "A floor plan of a large open-plan office rendered as a heat map, with color saturation representing AI tool usage spreading unevenly across departments over time — dense in some clusters, sparse in others — illustrating diffusion as an organizational topology problem rather than a switch being flipped.",
+    "x_caption_draft": "Microsoft got 98% monthly AI usage across 62,000 salespeople — but it took 2 years and a mid-course correction. The tech wasn't the problem. The org was. CAMO's research finds the same barrier at firms across the region. https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization\n\nEarly adoption data told Microsoft its rollout wasn't working. The real question for any leader: do you have the measurement infrastructure to catch that signal at month 6 — before 18 months of momentum is lost? #AIAdoption #EnterpriseAI"
+  },
+  "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/": {
+    "approved_at": "2026-05-19",
+    "approved_in_digest": "digests/2026-05/2026-05-11_2026-05-18.md",
+    "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+    "centre_angle": "This article argues that responsible AI requires organizations to move beyond procedural oversight toward cultivating genuine domain expertise capable of interrogating AI outputs. From CAMO's perspective on AI adoption, this points to an underappreciated organizational design problem: deploying AI is relatively tractable, but building the internal human capacity to hold AI accountable is a distinct and harder challenge. CAMO's work on the Dingdong VOC case illustrates this concretely—AI-driven attribution raised precision but created new demands on managerial judgment for edge cases, suggesting that responsible deployment redistributes, rather than eliminates, the burden on human experts.",
+    "claude_summary": "Drawing on five years of MIT SMR and BCG research on responsible AI implementation, this article argues that human oversight of AI systems cannot be reduced to verification—simply checking whether outputs are accurate or compliant. Instead, genuine responsibility requires human experts to exercise substantive judgment: understanding when AI recommendations are appropriate, when context changes the calculus, and when to override or escalate. The authors contend that organizations have overinvested in procedural compliance and underinvested in building the expert capacity needed to interrogate AI outputs meaningfully. Note: the full article is behind a paywall; the summary is based on the RSS excerpt and stated research framing.",
+    "cluster_file": null,
+    "key_takeaway": "Responsible AI demands organizations invest in expert judgment that can genuinely interrogate AI outputs—not just processes that create the appearance of oversight.",
+    "link": "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/",
+    "linkedin_caption_draft": "Oversight is not the same as understanding.\n\nA new MIT Sloan Management Review piece from a five-year BCG research collaboration argues that responsible AI has a structural gap: organizations have built compliance layers around AI systems, but have not invested equally in the expert capacity needed to interrogate those systems with genuine judgment.\n\nChecking that outputs look correct is not the same as knowing when the question itself was wrong—or when a confident AI recommendation is operating outside the conditions it was designed for.\n\nAt CAMO, we see this dynamic at the organizational level. Our research on AI-driven performance evaluation at Dingdong found that automation raised precision but redistributed—rather than reduced—the burden on human judgment, particularly for contested attribution cases. The demand for expert oversight did not disappear; it moved.\n\nFor leaders designing AI governance, the question may be less 'do we have a review process?' and more 'do we have people capable of reviewing meaningfully?'\n\n#ResponsibleAI #AIGovernance #AIAdoption #OrganizationalDesign #FutureOfWork",
+    "matched_camo": [
+      {
+        "id": "nanocase-dingdong-2026",
+        "reason": "Dingdong's case shows how AI automation of attribution does not remove the need for expert judgment—managers retain discretion and employees can appeal, illustrating the organizational mechanics of substantive human oversight the article calls for.",
+        "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+        "url": "https://camo.hku.hk/nanocase-dingdong/"
+      },
+      {
+        "id": "hidden-penalty-ai-work-2025",
+        "reason": "Both pieces identify a gap between how organizations formally frame AI adoption and the social or institutional dynamics that shape whether human expertise is actually applied in practice.",
+        "title": "Research: The Hidden Penalty of Using AI at Work",
+        "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+      }
+    ],
+    "pillar": "AI Adoption",
+    "primary_camo_id": "nanocase-dingdong-2026",
+    "primary_camo_reason": "Dingdong's case shows how AI automation of attribution does not remove the need for expert judgment—managers retain discretion and employees can appeal, illustrating the organizational mechanics of substantive human oversight the article calls for.",
+    "primary_camo_title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+    "primary_camo_url": "https://camo.hku.hk/nanocase-dingdong/",
+    "published_display": "May 12, 2026",
+    "source": "MIT Sloan Management Review",
+    "state": "queued",
+    "title": "Beyond Verification — What Responsible AI Really Demands of Human Experts",
+    "visual_concept": "A tiered organizational chart where the upper layers are transparent glass floors—figures standing on them can see the automated processes running below, but some floors are cracked or frosted, suggesting uneven visibility. The image conveys hierarchical oversight as a structural, not merely procedural, property.",
+    "x_caption_draft": "Responsible AI isn't a compliance checklist—it requires experts who can actually interrogate AI outputs, not just verify them. New MIT SMR research argues orgs are overbuilt on procedure and underbuilt on judgment. https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/\n\nCAMO research echoes this: when Dingdong automated performance attribution, AI precision rose—but so did the demand on managers to handle edge cases. Deployment shifts where expert judgment is needed, not whether it's needed. #AIGovernance #ResponsibleAI"
+  },
+  "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho": {
+    "approved_at": "2026-05-19",
+    "approved_in_digest": "digests/2026-05/2026-05-11_2026-05-18.md",
+    "authors": "Unknown",
+    "centre_angle": "This McKinsey interview raises the question of where AI-driven productivity in cognitive work actually accrues — to firms, workers, or neither. From CAMO's perspective on AI adoption, the organizational challenge is not simply deploying AI but redesigning roles and incentive structures so that productivity gains translate into durable value rather than dissipating through coordination failures or eroded effort. CAMO's work on job design — including findings that AI can systematically shift firms toward lower-effort, lower-wage equilibria even when higher-effort configurations create more total surplus — suggests that 'capturing value at scale' depends as much on compensation architecture as on technical capability.",
+    "claude_summary": "Oxford economist Jean-Paul Carvalho, speaking with McKinsey, examines how AI is restructuring cognitive work and what that means for organizational strategy and business value creation. The excerpt is limited, but the framing centers on where AI creates leverage in knowledge-intensive tasks, how firms should position themselves to capture that value at scale, and what the redistribution of cognitive labor implies for workforce design. Because only the RSS excerpt is available, specific empirical findings cannot be confirmed; the conversation appears to be analytical and conceptual rather than data-driven.",
+    "cluster_file": null,
+    "key_takeaway": "Capturing value from AI in cognitive work is primarily an organizational and incentive design challenge, not a technical one.",
+    "link": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho",
+    "linkedin_caption_draft": "AI is reshaping cognitive work — but who actually captures the value?\n\nOxford economist Jean-Paul Carvalho's conversation with McKinsey puts the strategic question plainly: as AI absorbs more knowledge-intensive tasks, the firms that benefit are those that redesign their organizations around the new division of labor, not just the ones that deploy the tools fastest.\n\nThe catch is that organizational redesign is harder than technology adoption. CAMO's own survey of C-suite executives in China and Hong Kong found that nearly half reported AI initiatives fell short of expected ROI — and the barriers were almost entirely organizational: siloed teams, cultural resistance, and poorly sequenced implementation. Separately, CAMO research on job design suggests AI can quietly shift firms toward lower-effort role structures even when higher-effort configurations would create more total value.\n\nThe strategic question, then, is not 'how much AI can we deploy?' but 'what kind of organization are we building around it?'\n\nHow is your firm thinking about that second question? 🔍\n\n#AIStrategy #FutureOfWork #OrganizationalDesign #AIAdoption #ManagementResearch",
+    "matched_camo": [
+      {
+        "id": "bad-job-economy-2026",
+        "reason": "Carvalho's framing of AI reshaping cognitive work and organizational value capture directly intersects with CAMO's finding that AI can induce firms to substitute high-effort, high-wage roles with low-effort, low-wage ones, complicating the assumption that AI adoption straightforwardly benefits firms and workers.",
+        "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+        "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+      },
+      {
+        "id": "deloitte-hku-ai-adoption-index-2026",
+        "reason": "The interview's focus on why firms struggle to capture AI value at scale mirrors CAMO's survey finding that nearly half of C-suite executives report AI initiatives fell short of expected ROI, with organizational barriers — not technical ones — as the primary cause.",
+        "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+        "url": "https://camo.hku.hk/ai-adoption-survey/"
+      }
+    ],
+    "pillar": "AI Adoption",
+    "primary_camo_id": "bad-job-economy-2026",
+    "primary_camo_reason": "Carvalho's framing of AI reshaping cognitive work and organizational value capture directly intersects with CAMO's finding that AI can induce firms to substitute high-effort, high-wage roles with low-effort, low-wage ones, complicating the assumption that AI adoption straightforwardly benefits firms and workers.",
+    "primary_camo_title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+    "primary_camo_url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+    "published_display": "May 06, 2026",
+    "source": "McKinsey Insights",
+    "state": "queued",
+    "title": "AI, strategy, and the future of work: Oxford economist Jean-Paul Carvalho",
+    "visual_concept": "An overhead floor plan of an open-plan office gradually dissolving into a sparse, modular grid — a few occupied nodes connected by thin lines, with large empty zones where desks once clustered. The geometry suggests contraction and redistribution rather than growth.",
+    "x_caption_draft": "AI reshapes cognitive work — but value capture depends on org design, not just deployment. Oxford economist Carvalho via McKinsey. CAMO research finds the barriers are almost always organizational, not technical. https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho\n\nCAMO finding worth pairing here: firms may rationally shift to lower-effort job structures as AI cuts the cost of 'good enough' performance — even when high-effort roles create more total surplus. The value-capture question runs deeper than strategy decks suggest."
+  }
+}
