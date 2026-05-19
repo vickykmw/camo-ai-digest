@@ -63,7 +63,10 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add approval_state.json clusters/ || true
+          # Stage state files. `clusters/` may not exist on the first runs,
+          # so guard with -e so the git add never fails the whole step.
+          git add approval_state.json QUEUE_STATUS.md
+          [ -d clusters ] && git add clusters/
           if git diff --cached --quiet; then
             echo "[approval workflow v1] No state changes to commit."
             exit 0
@@ -75,15 +78,18 @@ jobs:
           STASH=/tmp/approval-stash
           rm -rf "$STASH" && mkdir -p "$STASH"
           [ -f approval_state.json ] && cp    approval_state.json "$STASH/" || true
+          [ -f QUEUE_STATUS.md ]     && cp    QUEUE_STATUS.md     "$STASH/" || true
           [ -d clusters ]            && cp -r clusters            "$STASH/" || true
 
           git fetch origin main
           git reset --hard origin/main
 
           [ -f "$STASH/approval_state.json" ] && cp    "$STASH/approval_state.json" .
+          [ -f "$STASH/QUEUE_STATUS.md" ]     && cp    "$STASH/QUEUE_STATUS.md"     .
           [ -d "$STASH/clusters" ]            && cp -r "$STASH/clusters"            .
 
-          git add approval_state.json clusters/ || true
+          git add approval_state.json QUEUE_STATUS.md
+          [ -d clusters ] && git add clusters/
           if git diff --cached --quiet; then
             echo "[approval workflow v1] No changes after sync."
             exit 0
