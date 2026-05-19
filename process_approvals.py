@@ -83,8 +83,14 @@ QUEUE_STATUS_FILE = REPO_ROOT / "QUEUE_STATUS.md"
 # Items are introduced by "### 1. Title", "### 2. Title", etc.
 ITEM_HEADING_RE = re.compile(r"^###\s+\d+\.\s+", re.MULTILINE)
 
-# Checkbox line: "- [x] **APPROVE FOR SOCIAL**" (case-insensitive on x).
-APPROVE_BOX_RE = re.compile(r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*")
+# Checkbox line: "- [x] **APPROVE FOR SOCIAL**" optionally followed by
+# "→ `<camo-id>`" when the editor picked a specific match. Case-insensitive
+# on the x. The optional capture group gets the chosen camo id (or is None
+# for the legacy single-checkbox form, i.e. 0- or 1-match items).
+APPROVE_BOX_RE = re.compile(
+    r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*"
+    r"(?:[^\n]*?→\s*`([^`]+)`)?"
+)
 
 # Link line: "- **Link:** <https://example.com/path>"
 LINK_LINE_RE = re.compile(r"-\s+\*\*Link:\*\*\s+<([^>]+)>")
@@ -117,10 +123,17 @@ def save_approval_state(state: dict) -> None:
 # ---------------------------------------------------------------------------
 
 def parse_approved_links_from_md(md_path: Path) -> list:
-    """Return a list of links whose item block contains [x] APPROVE FOR SOCIAL.
+    """Return a list of (link, chosen_camo_id) tuples for each item block
+    that has at least one [x] APPROVE FOR SOCIAL tick.
 
-    Logic: split the file into per-item blocks at "### N. ..." headings, then
-    in each block look for both the approval checkbox and a Link line."""
+    chosen_camo_id is the explicit CAMO id the editor selected by ticking
+    a "→ `<id>`" checkbox (used when an article has 2+ matches). For the
+    legacy / single-match form (`[x] APPROVE FOR SOCIAL` with no arrow),
+    chosen_camo_id is None and the caller falls back to the article's
+    primary match.
+
+    Multi-tick handling (option a): if two or more boxes are ticked on the
+    same article block, the first one wins and a warning is logged."""
     text = md_path.read_text(encoding="utf-8", errors="replace")
     # Find item heading positions; split into per-item segments.
     positions = [m.start() for m in ITEM_HEADING_RE.finditer(text)]
@@ -130,14 +143,24 @@ def parse_approved_links_from_md(md_path: Path) -> list:
     approved = []
     for start, end in zip(positions[:-1], positions[1:]):
         block = text[start:end]
-        if not APPROVE_BOX_RE.search(block):
+        ticks = list(APPROVE_BOX_RE.finditer(block))
+        if not ticks:
             continue
         link_match = LINK_LINE_RE.search(block)
         if not link_match:
-            print(f"[warn]   item in {md_path.name} has an approval tick "
+            print(f"[warn] item in {md_path.name} has an approval tick "
                   f"but no parseable Link line; skipping")
             continue
-        approved.append(link_match.group(1).strip())
+        link = link_match.group(1).strip()
+        # Option (a): if multiple boxes ticked, take the first; warn.
+        if len(ticks) > 1:
+            chosen = ticks[0].group(1) or "(no id; will use first match)"
+            others = [m.group(1) or "(no id)" for m in ticks[1:]]
+            print(f"[warn] {md_path.name}: multiple APPROVE FOR SOCIAL "
+                  f"ticks on '{link[:60]}' -- taking '{chosen}', "
+                  f"ignoring {others}")
+        chosen_camo_id = ticks[0].group(1)  # None for the simple form
+        approved.append((link, chosen_camo_id))
     return approved
 
 
@@ -161,15 +184,33 @@ def load_sidecar(md_path: Path) -> dict:
 # Queueing approved items
 # ---------------------------------------------------------------------------
 
-def primary_camo(item: dict) -> dict:
-    """Return the article's primary CAMO match (first entry) or {} if none."""
+def resolve_chosen_camo(item: dict, chosen_camo_id: str | None) -> tuple:
+    """Pick the CAMO entry to anchor this article to.
+
+    If chosen_camo_id is given (from a "→ `<id>`" tick), validate it
+    against the article's matched_camo list and return that entry. If the
+    id is missing, unmatched, or unsupplied, fall back to the article's
+    primary (first) match. Returns (chosen_dict, was_explicit_bool)."""
     matched = item.get("matched_camo") or []
-    return matched[0] if matched else {}
+    if chosen_camo_id:
+        for m in matched:
+            if m.get("id") == chosen_camo_id:
+                return m, True
+        print(f"[warn] chosen camo id '{chosen_camo_id}' not in "
+              f"matched_camo for '{item.get('title','')[:60]}' -- "
+              f"falling back to primary match")
+    return (matched[0] if matched else {}), False
 
 
-def build_state_record(item: dict, source_md: Path, today_iso: str) -> dict:
-    """Reduce an enrichment record to the subset we need to keep in state."""
-    pcamo = primary_camo(item)
+def build_state_record(item: dict, source_md: Path, today_iso: str,
+                       chosen_camo_id: str | None = None) -> dict:
+    """Reduce an enrichment record to the subset we need to keep in state.
+
+    chosen_camo_id (when not None) is the id of the CAMO paper the editor
+    explicitly selected by ticking the matching "→ `<id>`" box. If None
+    or unmatched, falls back to the article's primary (first) match --
+    preserves backward compatibility with legacy single-checkbox digests."""
+    chosen, was_explicit = resolve_chosen_camo(item, chosen_camo_id)
     return {
         "approved_at": today_iso,
         "approved_in_digest": str(source_md.relative_to(REPO_ROOT).as_posix()),
@@ -178,10 +219,11 @@ def build_state_record(item: dict, source_md: Path, today_iso: str) -> dict:
         "link": item.get("link", ""),
         "authors": item.get("authors", ""),
         "published_display": item.get("published_display", ""),
-        "primary_camo_id": pcamo.get("id"),
-        "primary_camo_title": pcamo.get("title"),
-        "primary_camo_url": pcamo.get("url"),
-        "primary_camo_reason": pcamo.get("reason"),
+        "primary_camo_id": chosen.get("id"),
+        "primary_camo_title": chosen.get("title"),
+        "primary_camo_url": chosen.get("url"),
+        "primary_camo_reason": chosen.get("reason"),
+        "chosen_camo_explicitly": was_explicit,
         "matched_camo": item.get("matched_camo") or [],
         "pillar": item.get("pillar"),
         "centre_angle": item.get("centre_angle"),
@@ -201,28 +243,32 @@ def scan_and_queue_new_approvals(state: dict, today_iso: str) -> int:
     if not DIGESTS_DIR.exists():
         print("[info] no digests/ directory yet -- nothing to scan")
         return 0
+
     md_files = sorted(DIGESTS_DIR.rglob("*.md"))
     print(f"[info] scanning {len(md_files)} digest .md file(s) for approvals")
+
     added = 0
     for md in md_files:
-        approved_links = parse_approved_links_from_md(md)
-        if not approved_links:
+        approved_pairs = parse_approved_links_from_md(md)
+        if not approved_pairs:
             continue
         # Only load the sidecar if at least one link in this file is NEW.
-        new_links_here = [l for l in approved_links if l not in state]
-        if not new_links_here:
+        new_pairs_here = [(l, cid) for (l, cid) in approved_pairs if l not in state]
+        if not new_pairs_here:
             continue
         sidecar_map = load_sidecar(md)
-        for link in new_links_here:
+        for link, chosen_camo_id in new_pairs_here:
             item = sidecar_map.get(link)
             if not item:
                 print(f"[warn] {md.name}: approved link {link[:60]} not "
                       f"found in sidecar -- skipping")
                 continue
-            state[link] = build_state_record(item, md, today_iso)
+            state[link] = build_state_record(item, md, today_iso, chosen_camo_id)
             added += 1
-            print(f"[ok]  queued: {state[link]['title'][:60]}  "
-                  f"(camo: {state[link]['primary_camo_id'] or 'none'})")
+            chose_label = "explicit" if state[link].get("chosen_camo_explicitly") else "default-first-match"
+            print(f"[ok] queued: {state[link]['title'][:60]} "
+                  f"(camo: {state[link]['primary_camo_id'] or 'none'}, "
+                  f"{chose_label})")
     return added
 
 
