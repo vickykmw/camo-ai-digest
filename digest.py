@@ -11,10 +11,23 @@ Diversity: cap of MAX_PER_SOURCE in the daily top N.
 v5 adds a Claude enrichment step: after the top N is selected, each item is
 sent to the Claude API together with the CAMO research index (camo_index.json).
 Claude returns a structured summary, a pillar tag, a CAMO "centre angle",
-matched CAMO papers, draft LinkedIn/X captions, and a visual concept. The
-enriched markdown carries an "[ ] APPROVE FOR SOCIAL" checkbox per item for
-the editorial team, and a machine-readable sidecar (<date>.enriched.json) is
+matched CAMO papers, a key takeaway, and a visual concept. The enriched
+markdown carries an "[ ] APPROVE FOR SOCIAL" checkbox per item for the
+editorial team, and a machine-readable sidecar (<date>.enriched.json) is
 written alongside it for the downstream Higgsfield step.
+
+v6.1 drops the LinkedIn / X caption drafts from the per-item enrichment
+output. Captions are now meant to be generated downstream -- only for the
+articles that survive editorial approval into a cluster. Trims ~40-50% of
+the output tokens per item and avoids paying to draft captions for items
+that get rejected.
+
+v6.2 tightens the visual_concept brief: 3-5 sentence paragraph that
+strongly prefers a concrete focal subject, an explicit position-in-frame,
+ONE supporting compositional device, a simple backdrop, and a lighting
+mood. Aimed at fixing "no anchor for the eye" outputs in downstream image
+generation. An escape hatch keeps pure data-shape abstraction viable for
+articles where it genuinely fits better.
 
 Enrichment degrades gracefully: if the anthropic package is missing or
 ANTHROPIC_API_KEY is unset, the digest is still written using the raw RSS
@@ -47,7 +60,7 @@ except ImportError:
 # Version stamp -- check the workflow log for "DIGEST SCRIPT v5" to confirm
 # this file is the one running.
 # ---------------------------------------------------------------------------
-VERSION = "v6 (2026-05-18)"
+VERSION = "v6.2 (2026-05-20)"
 
 # ---------------------------------------------------------------------------
 # Sources
@@ -93,7 +106,7 @@ REAPPEAR_LOOKBACK_DAYS = 7
 
 ENABLE_ENRICHMENT = True                     # master switch for the Claude step
 ANTHROPIC_MODEL = "claude-sonnet-4-6"        # Opus-level quality at Sonnet price
-ENRICH_MAX_TOKENS = 1500                     # generous headroom for the JSON payload
+ENRICH_MAX_TOKENS = 1000                     # v6.1: captions removed -> tighter ceiling
 ENRICH_RETRIES = 2                           # attempts per item before giving up
 
 # Enrichment cache: re-appearing items reuse their prior enrichment instead of
@@ -388,16 +401,26 @@ exactly these fields:
       "policy_makers": "high|medium|low",
       "general_econ_public": "high|medium|low"
   },
-  "visual_concept": "1-2 sentence brief for an image generator. A concrete
-             metaphor or scene. Avoid cliches: robotic hands, glowing brains,
-             handshakes, lightbulbs, binary streams, circuit boards. Prefer
-             architectural, geometric, organizational, or data-shape
-             metaphors.",
-  "linkedin_caption_draft": "120-200 words. Hook line, 2-3 lines of substance,
-             one line of CAMO angle, a closing question, then 3-5 hashtags.
-             At most 1-2 emoji.",
-  "x_caption_draft": "1-2 posts, max 280 characters each. Hook + finding +
-             CAMO take + link. Separate a second post with a blank line.",
+  "visual_concept": "A paragraph (3-5 sentences) briefing an image generator.
+             Strongly prefer to include: (1) one concrete focal subject the
+             eye lands on first -- an object, a single figure, or a clear
+             architectural element (not a pattern or texture); (2) the
+             subject's position in the frame (centered, off-center
+             golden-ratio, foreground vs background) and rough scale; (3)
+             ONE supporting compositional device drawing attention to that
+             subject -- leading lines, a vanishing point behind it, framing
+             through a doorway, light pooling onto it, shadow falling away
+             from it (pick a single device, not several); (4) the
+             surrounding environment kept simple enough not to compete with
+             the subject; (5) lighting mood and palette direction
+             (warm/cool, hard/soft, daylight/dusk). Exception: where pure
+             data-shape abstraction genuinely serves the article better
+             (e.g. a statistical distribution visualization), abstraction
+             without a literal subject is acceptable. Avoid cliches:
+             robotic hands, glowing brains, handshakes, lightbulbs, binary
+             streams, circuit boards. Prefer architectural, geometric,
+             organizational, or data-shape metaphors anchored to a single
+             readable subject.",
   "red_flags": ["any concerns: paywalled, not peer-reviewed, contested
              finding, conflict of interest, near-duplicate of recent
              coverage; empty list if none"]
@@ -469,10 +492,13 @@ def enrich_one_item(client, article: dict, camo_context: str) -> dict:
 
 
 # Fields written onto each article dict by the enrichment step (internal names).
+# v6.1: caption drafts removed. Captions are now generated downstream, only for
+# items that survive editorial approval into a cluster -- so we don't spend
+# output tokens drafting captions for articles that get rejected.
 ENRICH_FIELDS = (
     "claude_summary", "pillar", "pillar_relevance", "centre_angle",
     "matched_camo", "key_takeaway", "audience_relevance", "visual_concept",
-    "linkedin_caption_draft", "x_caption_draft", "red_flags",
+    "red_flags",
 )
 
 
@@ -528,8 +554,6 @@ def _normalize_enrichment(data: dict) -> dict:
         "key_takeaway": (data.get("key_takeaway") or "").strip(),
         "audience_relevance": data.get("audience_relevance") or {},
         "visual_concept": (data.get("visual_concept") or "").strip(),
-        "linkedin_caption_draft": (data.get("linkedin_caption_draft") or "").strip(),
-        "x_caption_draft": (data.get("x_caption_draft") or "").strip(),
         "red_flags": data.get("red_flags") or [],
     }
 
@@ -713,16 +737,6 @@ def render_item_md(i: int, art: dict) -> list:
         lines.append(f"**Key takeaway:** {art.get('key_takeaway', '')}")
         lines.append("")
         lines.append(f"**Visual concept:** {art.get('visual_concept', '')}")
-        lines.append("")
-
-        lines.append("**Draft LinkedIn caption:**")
-        lines.append("")
-        lines.extend(_blockquote(art.get("linkedin_caption_draft", "")))
-        lines.append("")
-
-        lines.append("**Draft X post:**")
-        lines.append("")
-        lines.extend(_blockquote(art.get("x_caption_draft", "")))
         lines.append("")
 
         flags = art.get("red_flags") or []
