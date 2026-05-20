@@ -1,0 +1,411 @@
+{
+  "week_start": "2026-05-13",
+  "week_end": "2026-05-20",
+  "script_version": "v6.2 (2026-05-20)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "Addressing the Reality Gap: A Three-Tension Framework for Agentic AI Adoption",
+      "link": "https://arxiv.org/abs/2604.27245",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "May 20, 2026",
+      "authors": "Jason Fournier (Imagine Learning), Kacper {\\L}odzikowski (Adam Mickiewicz University, Pozna\\'n, Poland)",
+      "summary": "arXiv:2604.27245v2 Announce Type: replace \nAbstract: Generative AI has rapidly entered education through free consumer tools, outpacing the ability of schools and universities to respond. Now a new wave of more autonomous agentic AI systems--with the capacity to plan and act towards goals--promises both greater educational personalization and greater disruption. This chapter argues that successfully navigating these innovations requires balancing three core tensions: (1) Implementation Feasibility, or the practical capacity to integrate AI sustainably into real classrooms; (2) Adaptation Speed, or the mismatch between fast-evolving AI capabilities and the slower pace of educational change; and (3) Mission Alignment, or the need to ensure AI applications uphold educational values such as equity, privacy, and pedagogical integrity. First, we review early evidence of generative and agentic AI in various sectors and in frontline education to illustrate these tensions in context. Then, we present a three-tension framework to guide decision-makers in evaluating and designing AI initiatives across K-12 and higher education. We provide examples of how the framework can be applied to plan responsible AI deployments, and we identify emerging trends--such as curriculum-linked AI agents and educator-informed AI design--along with open research directions. We conclude the chapter with recommendations for educational leaders to proactively engage with the opportunities and challenges of AI, so that this technology can be harnessed to enhance teaching and learning in the decade ahead.",
+      "ai_strong": 16,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "score": 16.89,
+      "reappear": false,
+      "claude_summary": "Schools and universities are racing to keep up with AI tools that students are already using — and agentic AI systems capable of planning and acting autonomously are arriving before institutions have processed the first wave. This chapter proposes a three-tension framework to help educational leaders make coherent adoption decisions: Implementation Feasibility (can schools actually sustain this?), Adaptation Speed (can institutions change fast enough?), and Mission Alignment (does the AI serve educational values?). Drawing on early evidence from education and other sectors, the authors argue that the framework can guide responsible deployment of AI across K-12 and higher education. The piece is practitioner-oriented rather than empirically driven; its contribution is conceptual scaffolding for decision-makers rather than new data.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This chapter argues that educational institutions face a structural lag problem: AI capabilities are advancing faster than organizational capacity to evaluate, integrate, and govern them. From CAMO's perspective on AI adoption, the three tensions the authors identify — feasibility, speed, and mission alignment — are recognizable features of enterprise AI adoption more broadly, not just education. CAMO's Deloitte-HKU AI Adoption Index 2026 found that the dominant barriers to AI adoption in large organizations are organizational and executional rather than technical, a finding that maps closely onto the feasibility and adaptation-speed tensions described here. The education context adds a distinctive wrinkle: mission alignment pressure is more explicit and politically visible than in most corporate settings, making it a useful stress-test of frameworks designed for deployment decisions.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both works identify organizational and cultural barriers — not technical ones — as the primary obstacles to moving from AI access to meaningful AI impact, with institutions struggling to convert broad adoption into measurable outcomes."
+        }
+      ],
+      "key_takeaway": "Educational institutions adopting agentic AI need a structured way to balance what is operationally feasible, how fast they can genuinely change, and whether the technology serves their core mission — and the same logic applies to most large organizations.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single weathered compass placed off-center at the golden-ratio point on a wide, flat institutional desk surface — the compass needle pointing toward the upper-left corner of the frame. The surrounding desk is mostly empty: a few stacked documents blurred softly in the background provide depth without competing. Diffuse cool-white daylight enters from the upper left, pooling directly onto the compass and casting a clean shadow to the lower right. The palette is muted institutional — grey-white desk, warm brass compass body, pale blue ambient light. The image should read as navigation under uncertainty, not urgency.",
+      "red_flags": [
+        "Not peer-reviewed: this is a book chapter posted to arXiv (cs.CY), not a journal article with blind review.",
+        "Primarily conceptual: the framework is proposed rather than empirically validated; no original data are reported.",
+        "Limited generalizability to non-education settings without adaptation."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Quantifying the Climate Risk of Generative AI: Region-Aware Carbon Accounting with G-TRACE and the AI Sustainability Pyramid",
+      "link": "https://arxiv.org/abs/2511.04776",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "May 20, 2026",
+      "authors": "Zahida Kausar, Seemab Latif, Raja Khurram Shahzad, Mehwish Fatima",
+      "summary": "arXiv:2511.04776v3 Announce Type: replace \nAbstract: Generative Artificial Intelligence (GenAI) represents a rapidly expanding digital infrastructure whose energy demand and associated CO2 emissions are emerging as a new category of climate risk. This study introduces G-TRACE (GenAI Transformative Carbon Estimator), a cross-modal, region-aware framework that quantifies training- and inference-related emissions across modalities and deployment geographies. Using real-world analytics and microscopic simulation, G-TRACE measures energy use and carbon intensity per output type (text, image, video) and reveals how decentralized inference amplifies small per-query energy costs into system-level impacts. Through the Ghibli-style image generation trend (2024-2025), we estimate 4,309 MWh of energy consumption and 2,068 tCO2 emissions, illustrating how viral participation inflates individual digital actions into tonne-scale consequences. Building on these findings, we propose the AI Sustainability Pyramid, a seven-level governance model linking carbon accounting metrics (L1-L7) with operational readiness, optimization, and stewardship. This framework translates quantitative emission metrics into actionable policy guidance for sustainable AI deployment. The study contributes to the quantitative assessment of emerging digital infrastructures as a novel category of climate risk, supporting adaptive governance for sustainable technology deployment. By situating GenAI within climate-risk frameworks, the work advances data-driven methods for aligning technological innovation with global decarbonization and resilience objectives.",
+      "ai_strong": 9,
+      "ai_booster": 1,
+      "domain_matches": 2,
+      "score": 11.92,
+      "reappear": false,
+      "claude_summary": "How much CO2 does a viral AI image trend actually produce? This paper introduces G-TRACE, a framework for estimating the carbon emissions of generative AI across modalities (text, image, video) and deployment regions. Applying it to the 2024–2025 Ghibli-style image generation trend, the authors estimate 4,309 MWh of energy use and roughly 2,068 tonnes of CO2 — illustrating how individually trivial queries aggregate into material climate costs. The paper also proposes an 'AI Sustainability Pyramid,' a seven-level governance model intended to translate emission metrics into operational and policy guidance. The core argument is that decentralized inference, not just model training, is where emissions scale unpredictably with user behaviour.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 52,
+      "centre_angle": "This paper argues that the carbon footprint of generative AI is a measurable, system-level risk that current governance frameworks are not equipped to track — particularly because emissions compound through decentralized inference at scale, not only through the well-documented costs of training. From CAMO's perspective on the data and algorithmic foundations of trustworthy AI deployment, the finding reinforces a broader point: decisions about where and how to deploy AI carry quantifiable externalities that organisations rarely account for in adoption calculus. The proposed G-TRACE framework is a step toward making those externalities legible to decision-makers, though the governance pyramid rests on a single case study and warrants scrutiny before being applied prescriptively.",
+      "matched_camo": [],
+      "key_takeaway": "A single viral AI image trend can generate over 2,000 tonnes of CO2, meaning organisations need carbon accounting built into AI deployment decisions, not treated as an afterthought.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large industrial cooling tower occupies the left-center of the frame at medium scale, its concrete bulk slightly off-center toward the golden-ratio vertical. A single broad shaft of cold blue-white light falls vertically onto the tower from above, drawing the eye directly to its mass while the surrounding landscape — a flat, featureless plain — remains in soft shadow and does not compete. Emerging from the tower's top, a column of white vapor rises and disperses into a grey-blue overcast sky. The palette is cool and industrial: slate greys, muted blues, pale whites. The mood is measured rather than alarming — heavy infrastructure rendered as a quiet accounting problem, not a disaster image.",
+      "red_flags": [
+        "Not peer-reviewed: this is an arXiv preprint (cs.CY); findings have not undergone formal peer review.",
+        "The core empirical case (Ghibli-style image trend) relies on estimates derived from 'real-world analytics and microscopic simulation' — methodology details are not verifiable from the abstract alone.",
+        "The 'AI Sustainability Pyramid' governance model is conceptual and built primarily on a single trend case; generalisability is unestablished.",
+        "No disclosure of data sources or methodology for the 4,309 MWh / 2,068 tCO2 estimates is visible in the excerpt; figures should be treated as illustrative rather than authoritative."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Automated Grading of Handwritten Mathematics Using Vision-Capable LLMs",
+      "link": "https://arxiv.org/abs/2605.19043",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "May 20, 2026",
+      "authors": "Jacob Levine, Miguel Aenlle, Craig Zilles, Matthew West, Mariana Silva",
+      "summary": "arXiv:2605.19043v1 Announce Type: new \nAbstract: Automated grading systems have enabled scalable assessment for many response types, but handwritten mathematics remains a barrier due to the complexity of multi-step solutions. Vision-capable large language models (LLMs) offer new opportunities here, yet their reliability in authentic instructional settings remains poorly understood. We present an empirical evaluation of an LLM-based grader for handwritten mathematical work using instructor-defined rubrics. Extending a prior pipeline for typed responses, we integrate transcription and rubric-based evaluation of photographic submissions within a single LLM call, evaluating on student work from two university STEM courses. Comparing AI grading decisions against human-assigned ground truth at the rubric-item level, we observe high overall accuracy, with most errors -- 87\\% in the best model -- attributable to transcription failures rather than rubric misapplication. We categorize common error modes, including image quality issues, hallucinated content, and incorrect handling of equivalent expressions. These findings highlight both the promise and limitations of LLM-based grading for handwritten mathematics, providing guidance for system design, prompt refinement, and deployment in educational settings.",
+      "ai_strong": 7,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "score": 8.94,
+      "reappear": false,
+      "claude_summary": "Can a vision-capable large language model reliably grade handwritten mathematics? This empirical study tests an LLM-based grading pipeline against instructor-defined rubrics on student work from two university STEM courses. Overall accuracy is high, but 87% of errors in the best-performing model trace to transcription failures—the model misreading handwriting—rather than to faulty rubric application. Common failure modes include poor image quality, hallucinated content, and mishandling of mathematically equivalent expressions. The findings suggest that LLM grading of handwritten work is operationally viable at scale, but system design must prioritize transcription robustness before rubric logic becomes the binding constraint.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This study provides a careful empirical audit of where LLM-based graders actually fail: not in understanding assessment criteria, but in reliably reading the inputs. From CAMO's perspective on AI Algorithms & Data, this error decomposition matters for deployment design—knowing that transcription is the binding constraint, not rubric comprehension, has direct implications for how educational institutions should validate and monitor such systems before trusting them at scale. The broader lesson echoes themes in CAMO's work on algorithmic decision-making: understanding the structure of a model's errors is more useful than headline accuracy figures alone.",
+      "matched_camo": [],
+      "key_takeaway": "LLMs can grade handwritten math with high overall accuracy, but the dominant failure mode is misreading the handwriting itself—a system-design problem, not an AI reasoning problem.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single A4 exam sheet placed slightly off-center in the lower foreground of the frame, covered in handwritten mathematical expressions—integrals, fractions, and step-by-step working in pencil. The sheet is the clear focal subject, lit by a soft, cool daylight from the upper left that pools onto the paper and creates a gentle shadow falling away to the lower right. Behind and above the sheet, a clean, neutral desk surface recedes toward a vanishing point at the upper center of the frame, drawing the eye down onto the handwritten work. The environment is spare—no clutter, no screens—keeping all attention on the texture and density of the written mathematics. Palette is muted: off-white paper, graphite pencil marks, pale grey desk, cool ambient light.",
+      "red_flags": [
+        "Not yet peer-reviewed — arXiv preprint only.",
+        "Evaluation limited to two university STEM courses; generalizability to other subjects, hand-writing styles, or educational levels is untested.",
+        "Error rate decomposition relies on human-assigned ground truth, which may itself carry inconsistency not acknowledged in the excerpt."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Are Rationales Necessary and Sufficient? Tuning LLMs for Explainable Misinformation Detection",
+      "link": "https://arxiv.org/abs/2605.19285",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "May 20, 2026",
+      "authors": "Bing Wang, Rui Miao, Ximing Li, Chen Shen, Shaotian Yan, Changchun Li, Kaiyuan Liu, Xiaosong Yuan, Jieping Ye",
+      "summary": "arXiv:2605.19285v1 Announce Type: cross \nAbstract: The rapid spread of misinformation on social media platforms has become a formidable challenge. To mitigate its proliferation, Misinformation Detection (MD) has emerged as a critical research topic. Traditional MD approaches based on small models typically perform binary classification through a black-box process. Recently, the rise of Large Language Models (LLMs) has enabled explainable MD, where models generate rationales that explain their decisions, thereby enhancing transparency. Existing explainable MD methods primarily focus on crafting sophisticated prompts to elicit rationales from off-the-shelf LLMs. In this work, we propose a pipeline to fine-tune a dedicated LLM specifically for explainable MD. Our pipeline begins by collecting large-scale fact-checked articles, and then uses multiple strong LLMs to produce veracity predictions and rationales. To ensure high-quality training data, we leverage a filtering strategy that selects only the correct instances for fine-tuning. While this pipeline is intuitive and prevalent, our experiments reveal that naive filtering based solely on label correctness is insufficient in practice and suffers from two critical limitations: (1) Coarse-grained labels cause insufficient rationales: Rationales filtered solely based on binary labels are insufficient to adequately support their decisions; (2) Over-verification behavior causes unnecessary rationales: Stronger LLMs tend to exhibit over-verification behavior, producing excessively verbose and unnecessary rationales. To address these issues, we introduce LONSREX, a novel data synthesis pipeline to Locate Necessary and Sufficient Rationales for Explainable MD. Specifically, we propose a metric that quantifies the contribution of each verification step to the final prediction, thereby evaluating its necessity and sufficiency. Experimental results demonstrate the effectiveness of LONSREX.",
+      "ai_strong": 7,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "score": 8.94,
+      "reappear": false,
+      "claude_summary": "When large language models explain why a piece of content is misinformation, those explanations can be either too thin to justify the verdict or bloated with unnecessary verification steps. This paper identifies both failure modes in standard fine-tuning pipelines for misinformation detection and proposes LONSREX, a data synthesis method that scores each reasoning step by how much it actually contributes to the final prediction. By keeping only reasoning steps that are both necessary and sufficient, the resulting model produces explanations that are tighter, more accurate, and better calibrated to the evidence. Experiments confirm the approach outperforms naive label-filtered baselines. The work addresses a practical bottleneck: deploying LLMs as credible fact-checking tools requires not just correct verdicts but defensible reasoning chains.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This paper argues that explainable AI for misinformation detection fails not because models reach wrong conclusions, but because the reasoning they generate is either under-supported or unnecessarily verbose—and that filtering training data on label correctness alone does not solve either problem. From CAMO's perspective on algorithmic trustworthiness, this is a concrete illustration of why accuracy metrics are insufficient proxies for decision quality: the reasoning chain that accompanies a prediction carries its own validity requirements, and organizations deploying AI for content moderation or compliance will inherit liability for that reasoning, not just for the binary output. The LONSREX contribution—quantifying each verification step's marginal contribution—offers a design principle applicable well beyond misinformation, wherever AI-generated rationales are used to justify consequential decisions.",
+      "matched_camo": [
+        {
+          "id": "ai-persuasion-doctors-2025",
+          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/",
+          "reason": "Both papers examine how the quality and interpretability of AI-generated reasoning shapes whether human decision-makers can meaningfully evaluate and act on an AI's output—one in medical diagnosis, the other in fact-checking."
+        }
+      ],
+      "key_takeaway": "Getting an AI to flag misinformation correctly is only half the problem; the reasoning it offers must also be traceable and proportionate, or the system cannot be trusted in practice.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single printed document centered in the frame, slightly off-center to the golden-ratio left, its text rendered as abstract lines of varying density—some passages highlighted in sharp amber, others dimmed to near-grey—with a narrow strip of unnecessary highlighted lines visibly crossed out along the right margin. The document rests on a plain pale stone surface, lit by a focused cool-white overhead light that pools directly onto the page and lets the surrounding surface fall into soft shadow. The overall palette is cool grey and white with amber as the sole accent, keeping the eye on the page itself and the selective illumination of its content.",
+      "red_flags": [
+        "Preprint only — arXiv submission, not yet peer-reviewed.",
+        "Experimental results are described but not detailed in the excerpt; effect sizes and benchmark comparisons cannot be independently assessed from available information.",
+        "Scope is narrow (misinformation detection fine-tuning); generalizability to broader enterprise AI contexts is asserted implicitly but not demonstrated."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization",
+      "link": "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "May 12, 2026",
+      "authors": "Unknown",
+      "summary": "In early 2024, six months after the highly anticipated launch of Microsoft Copilot across the 62,000-person Microsoft Customer and Partner Solutions (MCAPS) organization—one of the world’s largest sales organizations—the initial excitement had not yet materialized into widespread adoption and transformation. But, two years after initiating their AI transformation journey, the organization’s daily active usage of AI tools had reached over 60% and monthly active usage over 98%, significantly altering how sales professionals approached their work. The path to adoption had required Microsoft to evolve its approach based on early deployment insights. Harvard Business School Associate Professors Iav Bojinov and Shunyuan Zhang join Brian Kenny to discuss the case, “Microsoft Customer and Partner Solutions: The Deployment of Copilot and Agents.” They explore the company’s journey to successfully mobilizing AI adoption within the sales process, the challenges it faces integrating autonomous sales agents, what it takes to get thousands of employees to fundamentally change how they work.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 6,
+      "score": 8.84,
+      "reappear": true,
+      "claude_summary": "Two years after launching Microsoft Copilot across its 62,000-person Customer and Partner Solutions (MCAPS) sales organization, Microsoft achieved daily active AI usage above 60% and monthly active usage above 98%. The path was not linear: initial excitement six months post-launch had not translated into meaningful adoption, forcing the organization to revise its rollout approach based on early deployment data. A Harvard Business School case study examines how Microsoft mobilized change at scale, the organizational friction that slowed uptake, and the emerging challenges of integrating autonomous sales agents. The excerpt is based on a podcast discussion of a teaching case; empirical details and methodology are not disclosed in the available summary.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 85,
+      "centre_angle": "This case documents how a large sales organization moved from near-zero habitual AI use to near-universal monthly engagement — and how that transition required iterative organizational redesign, not just tool deployment. From CAMO's perspective on AI adoption, the Microsoft experience illustrates a pattern consistent with our Deloitte-HKU AI Adoption Index finding: the dominant barriers to AI adoption are organizational and executional rather than technical, with cultural resistance and the absence of early wins explaining why promising pilots stall. The pending challenge of integrating autonomous sales agents also raises the job-boundary questions examined in CAMO's work on how AI reshapes roles and accountability within firms.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the Microsoft case and the CAMO index identify the gap between initial AI enthusiasm and measurable organizational impact, attributing slow progress to executional and cultural barriers rather than technical ones."
+        },
+        {
+          "id": "nanocase-kfc-china-2026",
+          "title": "Scaling Managers with AI at KFC China",
+          "url": "https://camo.hku.hk/nanocase-kfcchina/",
+          "reason": "Both cases trace how embedding AI into frontline workers' daily routines — rather than positioning it as an add-on — was the mechanism that converted pilot access into sustained behavioral change at scale."
+        }
+      ],
+      "key_takeaway": "Reaching near-universal AI adoption across a large sales force required Microsoft to treat deployment as an iterative organizational problem, not a one-time technology rollout.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large open-plan office floor viewed from a slightly elevated angle, with one central desk in the mid-foreground as the clear focal subject — occupied by a lone figure leaning toward a screen, lit by a pool of cool blue-white monitor light. The rest of the floor recedes into a soft background of warm ambient overhead lighting, rows of workstations gradually blurring toward a vanishing point at the far wall, which draws the eye back to the foregrounded figure. The surrounding environment is minimal — no clutter, no signage — to keep attention on the contrast between individual engagement and organizational scale. Palette: desaturated blues and grays for the broader floor, with a single warm accent of amber light at the horizon line to suggest continuity beyond the frame.",
+      "red_flags": [
+        "Source is a podcast discussion of a teaching case, not a peer-reviewed study; empirical claims cannot be independently verified from the excerpt.",
+        "Adoption metrics (60% DAU, 98% MAU) are self-reported by Microsoft and presented through a Harvard case format; no independent audit or control group is mentioned.",
+        "Potential conflict of interest: Microsoft is both the subject and a major sponsor of AI tools discussed; HBS case studies are sometimes developed with corporate cooperation that may shape narrative framing."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "A Need for Nuance: The Economist’s Andrew Palmer",
+      "link": "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 19, 2026",
+      "authors": "Sam Ransbotham. <p><cite>Me, Myself, and AI</cite> is a podcast produced by <cite>MIT Sloan Management Review</cite> and hosted by Sam Ransbotham. It is engineered by David Lishansky and produced by Allison Ryder.</p>\n<p><a href=\"https://sloanreview.mit.edu/sam-ransbotham/\">Sam Ransbotham</a> is a professor in the information systems department at the Carroll School of Management at Boston College, as well as guest editor for <cite>MIT Sloan Management Review</cite>’s Artificial Intelligence and Business Strategy Big Ideas initiative.</p>",
+      "summary": "On today’s episode of the Me, Myself, and AI podcast, Andrew Palmer, senior editor at The Economist, describes how organizations can experiment with generative AI while balancing speed, quality, and risk. At his own organization, Andrew and others test artificial intelligence with human oversight to develop editing and publishing efficiencies. As the host of The [&#8230;]",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "score": 5.82,
+      "reappear": false,
+      "claude_summary": "Andrew Palmer, senior editor at The Economist, argues that organizations experimenting with generative AI need to balance speed, quality, and risk rather than rushing adoption. Drawing on his own newsroom's experience, Palmer describes a model of controlled experimentation with human oversight, aimed at improving editing and publishing workflows. The conversation is a podcast episode rather than a research study, so specific findings are not available from the excerpt. The core argument appears to be that nuanced, measured AI deployment—rather than wholesale or hasty adoption—is what allows organizations to capture genuine efficiency gains without sacrificing quality or introducing unacceptable risk.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 58,
+      "centre_angle": "This podcast episode makes a practitioner case for deliberate, human-supervised AI experimentation in editorial workflows. From CAMO's perspective on AI adoption, the tension Palmer describes—between moving quickly and maintaining quality—echoes a broader organizational challenge: firms that deploy AI without redesigning oversight structures often find that efficiency gains come with hidden costs. CAMO's Deloitte-HKU AI Adoption Index found that organizational and executional barriers, not technical ones, are the primary reason AI initiatives fall short of expected returns, which aligns with Palmer's emphasis on process discipline over speed.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the podcast and the index highlight the gap between AI's promised efficiency and actual organizational outcomes, pointing to execution discipline and cultural readiness as the determining factors."
+        }
+      ],
+      "key_takeaway": "Thoughtful AI adoption requires matching the pace of deployment to an organization's capacity for oversight, not simply moving as fast as the technology allows.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden editor's desk, centered in a spare, well-lit room, shot from a slightly elevated angle so the surface dominates the foreground. On the desk sits one open notebook and a single glowing laptop screen—the screen's cool blue light pools softly across the desk surface, contrasting with warm ambient daylight entering from a window set back in the middle distance. The surrounding room is minimal: bare walls, no clutter, so the desk reads immediately as the focal subject. The window behind the desk creates a natural vanishing point that draws the eye toward the laptop screen. The overall palette is muted warm neutrals punctuated by the one cool light source, conveying deliberation and measured attention rather than urgency.",
+      "red_flags": [
+        "Podcast episode rather than research study or peer-reviewed article — no empirical findings to evaluate.",
+        "Excerpt is thin; specific claims and evidence are not accessible without listening to the full episode.",
+        "Practitioner perspective from a single media organization (The Economist) limits generalizability to other industries.",
+        "No disclosure of conflicts of interest, but guest is promoting a perspective consistent with his own organization's practices."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Beyond Verification — What Responsible AI Really Demands of Human Experts",
+      "link": "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 12, 2026",
+      "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+      "summary": "For the fifth year in a row, MIT Sloan Management Review and Boston Consulting Group (BCG) have assembled an international panel of AI experts that includes academics and practitioners to help us understand how responsible artificial intelligence is being implemented across organizations worldwide. In our first post this year, we explored how organizations should think [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "score": 4.42,
+      "reappear": true,
+      "claude_summary": "Drawing on five years of MIT SMR and BCG research on responsible AI, this article argues that meaningful human oversight goes well beyond simple output verification. The authors contend that responsible AI demands genuine expert engagement — not just sign-off — requiring human specialists to understand context, catch systemic failures, and apply domain judgment that AI cannot replicate. The piece pushes back against the widespread organizational habit of treating human oversight as a compliance checkbox rather than a substantive professional responsibility. The full article is behind a partial paywall, so specific empirical findings and case evidence are not available for assessment from the excerpt alone.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that organizations routinely underinvest in the human expertise side of AI governance, treating oversight as procedural rather than substantive. From CAMO's perspective on AI adoption, this echoes a pattern visible across our case research: the bottleneck in AI deployment is rarely the algorithm itself but the organizational design around it — who is accountable, how judgment is exercised, and whether incentive structures reward genuine engagement or mere compliance. Our work on mandatory AI adoption at a Chinese medical device firm (nanocase-medtech-2026) illustrates precisely this failure mode, where mandated usage metrics displaced authentic expert use.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/",
+          "reason": "Both pieces address the gap between nominal AI engagement and genuine expert oversight, and how organizational incentives can produce the appearance of responsible use without the substance."
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "The social and reputational dynamics around AI use shape whether employees exercise real expert judgment or default to surface-level compliance, directly relevant to the article's concern about hollow oversight."
+        }
+      ],
+      "key_takeaway": "Organizations that treat human oversight of AI as a sign-off ritual rather than a substantive expert responsibility are building governance structures that look accountable without being so.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single human figure, small in scale, seated at a plain desk positioned off-center to the left at roughly golden-ratio placement, facing a tall institutional window that fills most of the right side of the frame. The window acts as the sole compositional device, casting a column of cool, diffuse daylight that falls directly onto the desk and figure, pulling the eye there while leaving the surrounding room in quiet shadow. The room is sparse — bare walls, no signage, no screens visible — so nothing competes with the figure's solitary act of reading or reviewing a document. Palette is muted grey-blue with the one warm note being a pool of reflected light on the desk surface. The mood is contemplative and serious, suggesting the weight of individual judgment in an otherwise institutional setting.",
+      "red_flags": [
+        "Article is partially paywalled — specific findings, data, and case evidence cannot be independently verified from the excerpt alone.",
+        "Not peer-reviewed; published in a practitioner outlet with BCG as co-producer, which has a commercial interest in responsible AI consulting services.",
+        "Summary and analysis here are based on the RSS excerpt only; the full argument may be more or less nuanced than represented."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Where AI is creating real value in real estate",
+      "link": "https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate",
+      "source": "McKinsey Insights",
+      "published_display": "May 15, 2026",
+      "authors": "Unknown",
+      "summary": "Agentic AI is moving real estate beyond isolated tools toward full workflow transformation—unlocking new value, redefining roles, and reshaping how organizations operate.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "score": 3.28,
+      "reappear": true,
+      "claude_summary": "Agentic AI is moving real estate operations beyond isolated point tools toward integrated workflow automation — affecting property search, deal underwriting, asset management, and tenant services simultaneously. The McKinsey piece argues that the sector's historically fragmented data and siloed processes are now both the primary obstacle to AI adoption and, once addressed, the primary source of competitive advantage. Early movers are reportedly seeing value in areas like automated lease abstraction, predictive maintenance, and market analytics. The article frames this as a role-redefinition moment: AI handles data-heavy routine work while human professionals concentrate on judgment-intensive decisions. The excerpt is relatively thin on empirical evidence; the piece appears to be advisory rather than research-based.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This McKinsey advisory piece argues that agentic AI is beginning to restructure real estate workflows end-to-end rather than automating discrete tasks in isolation. From CAMO's perspective on AI adoption, the more consequential question is whether workflow integration actually changes organizational hierarchies and job boundaries — or merely accelerates existing processes without redistributing authority. CAMO's nano-case on Decathlon China offers a cautionary parallel: coding efficiency rose 20–40% once AI was introduced, yet overall delivery speed increased by only 10–15%, because the real bottleneck was coordination between tasks, not task execution itself. Real estate firms would be well served to ask the same question before concluding that agentic AI translates directly into organizational value.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both pieces center on the gap between task-level AI gains and system-level performance improvement, with coordination bottlenecks identified as the limiting factor."
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "The article's claim that AI redefines professional roles in real estate connects to CAMO's theoretical work on how AI-driven effort-cost reductions can reshape job design and compensation structures, not always in workers' favor."
+        }
+      ],
+      "key_takeaway": "Agentic AI may be ready for real estate workflows, but the firms that capture value will be those that redesign coordination and accountability structures, not just deploy new tools.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single architectural scale model of a mid-rise commercial building sits centered and slightly forward in the frame on a clean white table, rendered in matte white with fine structural detail. Behind it, a large floor-to-ceiling window provides soft, diffuse daylight that pools directly onto the model, casting a gentle shadow away from the viewer and leaving the background interior dim and uncluttered. The model functions as the focal subject; the receding window mullions behind it create a vertical leading-line effect that draws the eye inward toward the structure. The surrounding space is minimal — a bare work surface and neutral wall — so nothing competes with the model. Overall palette is cool white and pale grey with warm natural light concentrated on the subject, suggesting analytical precision rather than warmth.",
+      "red_flags": [
+        "Source is a McKinsey Insights explainer, not peer-reviewed research — findings are advisory and may reflect McKinsey's consulting interests in the sector.",
+        "RSS excerpt is thin; specific empirical claims (magnitude of value created, methodology) cannot be verified from available text.",
+        "Potential conflict of interest: McKinsey advises real estate firms on AI strategy, which may bias framing toward adoption optimism."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Calibrate AI Use to the Decision at Hand",
+      "link": "https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 06, 2026",
+      "authors": "Pedro Amorim, Amr Saleh, and Ulrika Cederskog Sundling. <p>Pedro Amorim is a professor at the University of Porto and cofounder of LTPlabs. Amr Saleh is a generative AI and optimization consultant at LTPlabs. Ulrika Cederskog Sundling is an investor, a board director, and a member of LTPlabs’s advisory board.</p>",
+      "summary": "PPaint/Ikon Images On a rainy Tuesday in London, the leadership team of a consumer goods company reviewed two business decisions: “Where should we open our next five stores?” and “Should we pivot the brand toward wellness?” Generative AI had been used to support the decision-making process for addressing both questions. The team ended up with [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "score": 3.22,
+      "reappear": true,
+      "claude_summary": "Not all decisions benefit equally from AI assistance. Using a consumer goods company's London boardroom as its entry point, this MIT Sloan article argues that leaders must calibrate AI involvement to the nature of the decision at hand — distinguishing, for instance, between a data-rich site-selection problem (where AI adds clear value) and a strategically ambiguous brand pivot (where AI may obscure the human judgment required). The authors propose a framework for matching AI tool types to decision characteristics, warning that indiscriminate AI use can create false confidence in outputs whose limitations are invisible to the people relying on them. The excerpt is limited; full argument and framework detail sit behind a paywall.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that AI's contribution to organizational decision-making depends critically on the structural properties of the decision itself — not on AI capability alone. From CAMO's perspective on AI adoption, this maps onto a recurring finding in our research: organizations tend to treat AI deployment as a uniform intervention, when in practice the organizational and incentive consequences vary sharply by task type. Our work on seesaw experimentation and on A/B test design ('Seesaw Experimentation: A/B Tests with Spillovers') shows a related dynamic — optimizing on measurable dimensions can degrade outcomes in unmeasured ones, a risk that is especially acute when AI outputs look authoritative but omit strategically important soft variables.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/",
+          "reason": "Both pieces address the risk that improving performance on a measured dimension — via AI or systematic experimentation — can degrade outcomes in unmeasured dimensions, a problem that is especially consequential for high-ambiguity strategic decisions."
+        }
+      ],
+      "key_takeaway": "AI is not a general-purpose decision tool — its value depends on whether the decision is structured enough for data patterns to be meaningful, and leaders who ignore that distinction risk confident-sounding answers to the wrong questions.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single large wooden boardroom table photographed from a low angle at one end, centered in the frame and receding toward a vanishing point at the far end of the room. The table surface is mostly bare except for two distinct objects placed at opposite ends — one a dense sheaf of printed data reports, the other a blank legal pad with a pen resting on it — visually anchoring the contrast between analytical and judgment-driven decisions. Soft, cool daylight enters from tall windows along one side, casting long parallel shadows across the table that draw the eye toward the vanishing point. The surrounding room is spare and neutral — dark wood paneling, no figures present — keeping all compositional weight on the table and its two objects. Palette is muted grey-blue and warm amber from the paper, with no saturated colors.",
+      "red_flags": [
+        "Article is paywalled on MIT Sloan Management Review — full framework and evidence base are not accessible from the RSS excerpt alone.",
+        "Not peer-reviewed; practitioner-oriented consulting perspective (two of three authors are affiliated with LTPlabs, a commercial consultancy they co-founded or advise).",
+        "Summary and pillar assessment are based on a thin excerpt; central claims and supporting evidence could not be fully verified."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The AI assembly line: Strategic imperatives for CEOs",
+      "link": "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos",
+      "source": "McKinsey Insights",
+      "published_display": "May 13, 2026",
+      "authors": "Unknown",
+      "summary": "AI has proven its potential, but value remains hard to scale. To turn experimentation into sustained performance, CEOs must reimagine their organizations.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "score": 3.02,
+      "reappear": true,
+      "claude_summary": "Scaling AI from isolated experiments to organization-wide performance remains the central challenge for CEOs, according to this McKinsey piece. The article argues that AI has demonstrated its potential at the project level but that sustained value creation requires CEOs to fundamentally reimagine how their organizations are structured, governed, and operated — treating AI deployment less as a technology initiative and more as an organizational redesign challenge. The excerpt is thin on specifics, so the precise prescriptions McKinsey offers are not available for independent assessment here, but the framing squarely targets C-suite leaders navigating the gap between pilot success and enterprise-scale impact.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This McKinsey article argues that the bottleneck to AI value at scale is organizational rather than technical — a claim well-supported by CAMO's own survey evidence. The Deloitte-HKU AI Adoption Index 2026 finds that among C-suite executives in mainland China and Hong Kong, the dominant barriers to AI returns are siloed departments, cultural resistance, and poor data quality, not missing algorithms. The implication is that CEOs who frame scaling as an engineering problem will keep falling short; the harder work is redesigning accountability structures, coordination mechanisms, and incentive systems so that AI capability translates into measurable performance.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both pieces identify the same core paradox — near-universal AI adoption among large firms paired with disappointing ROI — and attribute it to organizational rather than technical failures."
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "The Decathlon case concretely illustrates the McKinsey argument: task-level AI gains did not translate into system-level performance gains until coordination bottlenecks — an organizational design problem — were addressed."
+        }
+      ],
+      "key_takeaway": "AI's value ceiling is set by organizational design, not algorithmic capability — CEOs who treat scaling as a structural challenge rather than a technical one are more likely to move from pilots to lasting performance.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single mid-century factory floor seen from a slightly elevated angle, mostly cleared of machinery except for one modern, clean workstation placed off-center to the left at golden-ratio position in the foreground. The eye lands on that solitary workstation first. A long receding row of empty assembly-line stations stretches behind it toward a vanishing point at the far wall, serving as the sole compositional device drawing depth and attention forward to the occupied station. The surrounding space is open and spare — concrete floor, high industrial windows along one side — so nothing competes with the contrast between the single active point and the idle scale behind it. Lighting is cool and directional, entering from the high windows as soft daylight that pools onto the foreground workstation and fades gradually into the background. Palette: muted greys and slate blues with a single warm accent on the lit surface of the workstation.",
+      "red_flags": [
+        "McKinsey Insights is a consultancy publication, not peer-reviewed research; findings may reflect client positioning or proprietary methodology without independent replication.",
+        "The RSS excerpt is very thin — specific claims, data, and prescriptions in the full article could not be assessed; summary and relevance scores are based on framing only.",
+        "Potential conflict of interest: McKinsey has a commercial interest in advising CEOs on AI strategy, which may shape the recommendations presented."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}

@@ -3,6 +3,9 @@
     "2026-05-18",
     "2026-05-19"
   ],
+  "https://arxiv.org/abs/2511.04776": [
+    "2026-05-20"
+  ],
   "https://arxiv.org/abs/2511.08565": [
     "2026-05-16"
   ],
@@ -16,6 +19,9 @@
   "https://arxiv.org/abs/2603.18221": [
     "2026-05-18",
     "2026-05-19"
+  ],
+  "https://arxiv.org/abs/2604.27245": [
+    "2026-05-20"
   ],
   "https://arxiv.org/abs/2605.11155": [
     "2026-05-13",
@@ -66,6 +72,12 @@
     "2026-05-18",
     "2026-05-19"
   ],
+  "https://arxiv.org/abs/2605.19043": [
+    "2026-05-20"
+  ],
+  "https://arxiv.org/abs/2605.19285": [
+    "2026-05-20"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -77,7 +89,8 @@
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
-    "2026-05-19"
+    "2026-05-19",
+    "2026-05-20"
   ],
   "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/": [
     "2026-05-17",
@@ -90,7 +103,8 @@
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
-    "2026-05-19"
+    "2026-05-19",
+    "2026-05-20"
   ],
   "https://sloanreview.mit.edu/article/calibrate-ai-use-to-the-decision-at-hand/": [
     "2026-05-13",
@@ -99,11 +113,15 @@
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
-    "2026-05-19"
+    "2026-05-19",
+    "2026-05-20"
   ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
     "2026-05-18"
+  ],
+  "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/": [
+    "2026-05-20"
   ],
   "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho": [
     "2026-05-13",
@@ -117,7 +135,8 @@
     "2026-05-16",
     "2026-05-17",
     "2026-05-18",
-    "2026-05-19"
+    "2026-05-19",
+    "2026-05-20"
   ],
   "https://www.mckinsey.com/industries/agriculture/our-insights/how-agility-and-ai-could-rewire-agriculture-trading": [
     "2026-05-13",
@@ -134,6 +153,7 @@
     "2026-05-15",
     "2026-05-17",
     "2026-05-18",
-    "2026-05-19"
+    "2026-05-19",
+    "2026-05-20"
   ]
 }
