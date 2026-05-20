@@ -10,7 +10,7 @@ Reads:
 
 Writes:
   approval_state.json                 -- updated state
-  clusters/<date>-<camo-id>.md        -- a new cluster file when one fires
+  ready_for_visual/<date>-<camo>.md   -- a new cluster file when one fires
   (optional) opens a GitHub issue per new cluster via the `gh` CLI
 
 Pipeline:
@@ -24,9 +24,14 @@ Pipeline:
      (matched_camo[0].id). Items with no CAMO match are skipped
      (SKIP_NO_CAMO_CLUSTERS = True).
   4. For any CAMO id that has accumulated CLUSTER_THRESHOLD (3) or more
-     queued items, fire a cluster: call Claude to suggest 3 shared keyword
-     tags, write a cluster .md, mark the items state="clustered", and
-     (if GH_TOKEN is set) open a GitHub issue.
+     queued items, FIRE a cluster:
+       - call Claude to suggest 3 shared keyword tags
+       - call Claude to draft one LinkedIn post PER article (3 captions
+         per cluster, posting strategy: one post per article anchored
+         to the same CAMO paper)
+       - write a cluster .md to ready_for_visual/
+       - mark the items state="clustered"
+       - (if GH_TOKEN is set) open a GitHub issue
 
 Design notes:
   - Once an item is in the state file, it is never re-processed. Un-ticking
@@ -38,6 +43,22 @@ Design notes:
     grouping. This avoids one article counting toward multiple clusters.
   - Cluster files have their own `[ ] APPROVE FOR VISUAL CREATION` checkbox
     for the next stage (Higgsfield), which is not yet built.
+
+v2 changes (2026-05-20):
+  - Cluster folder renamed from `clusters/` to `ready_for_visual/` to
+    better describe what the folder contains (cluster files awaiting
+    editorial sign-off for visual generation).
+  - audience_relevance now stored on state records (used to inform LinkedIn
+    caption tone).
+  - At cluster firing, Claude drafts ONE LinkedIn carousel caption for the
+    whole cluster, in the recurring "Reading Room" series voice (peer-
+    among-peers, sharing companion research from the field alongside the
+    centre's recent work; NOT making an argument or pressure-testing other
+    work). The downstream visual stage produces three images (one per
+    article) as the carousel slides; the caption is a single post body.
+    Caption stored on state records as `cluster_linkedin_caption_draft`.
+  - Series name + hashtag are constants (SERIES_NAME, SERIES_HASHTAG) so
+    the brand can evolve without prompt edits.
 """
 from __future__ import annotations
 
@@ -59,19 +80,31 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v1 (2026-05-18)"
+VERSION = "v2 (2026-05-20)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
 
 ANTHROPIC_MODEL = "claude-sonnet-4-6"
 KEYWORDS_MAX_TOKENS = 400
+LINKEDIN_MAX_TOKENS = 1500           # 3 captions x ~250 tokens + JSON overhead
+
+# Series identity for the LinkedIn carousel post. The centre treats each
+# cluster's post as an installment of this recurring series -- a peer/companion
+# framing where CAMO research is shared alongside related work from the field.
+# Edit these two values if the brand evolves; the prompt picks them up
+# automatically. SERIES_HASHTAG should be the CamelCase version of the name
+# with a leading '#'.
+SERIES_NAME = "Reading Room"
+SERIES_HASHTAG = "#ReadingRoom"
 
 OPEN_GITHUB_ISSUE = True             # set False to skip the gh CLI step
 
 REPO_ROOT = Path(__file__).parent
 DIGESTS_DIR = REPO_ROOT / "digests"
-CLUSTERS_DIR = REPO_ROOT / "clusters"
+# Folder name change in v2: was "clusters/", now "ready_for_visual/".
+# Conceptually still a "cluster" in code; folder name reflects what it holds.
+CLUSTERS_DIR = REPO_ROOT / "ready_for_visual"
 APPROVAL_STATE_FILE = REPO_ROOT / "approval_state.json"
 QUEUE_STATUS_FILE = REPO_ROOT / "QUEUE_STATUS.md"
 
@@ -83,14 +116,8 @@ QUEUE_STATUS_FILE = REPO_ROOT / "QUEUE_STATUS.md"
 # Items are introduced by "### 1. Title", "### 2. Title", etc.
 ITEM_HEADING_RE = re.compile(r"^###\s+\d+\.\s+", re.MULTILINE)
 
-# Checkbox line: "- [x] **APPROVE FOR SOCIAL**" optionally followed by
-# "→ `<camo-id>`" when the editor picked a specific match. Case-insensitive
-# on the x. The optional capture group gets the chosen camo id (or is None
-# for the legacy single-checkbox form, i.e. 0- or 1-match items).
-APPROVE_BOX_RE = re.compile(
-    r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*"
-    r"(?:[^\n]*?→\s*`([^`]+)`)?"
-)
+# Checkbox line: "- [x] **APPROVE FOR SOCIAL**" (case-insensitive on x).
+APPROVE_BOX_RE = re.compile(r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*")
 
 # Link line: "- **Link:** <https://example.com/path>"
 LINK_LINE_RE = re.compile(r"-\s+\*\*Link:\*\*\s+<([^>]+)>")
@@ -123,17 +150,10 @@ def save_approval_state(state: dict) -> None:
 # ---------------------------------------------------------------------------
 
 def parse_approved_links_from_md(md_path: Path) -> list:
-    """Return a list of (link, chosen_camo_id) tuples for each item block
-    that has at least one [x] APPROVE FOR SOCIAL tick.
+    """Return a list of links whose item block contains [x] APPROVE FOR SOCIAL.
 
-    chosen_camo_id is the explicit CAMO id the editor selected by ticking
-    a "→ `<id>`" checkbox (used when an article has 2+ matches). For the
-    legacy / single-match form (`[x] APPROVE FOR SOCIAL` with no arrow),
-    chosen_camo_id is None and the caller falls back to the article's
-    primary match.
-
-    Multi-tick handling (option a): if two or more boxes are ticked on the
-    same article block, the first one wins and a warning is logged."""
+    Logic: split the file into per-item blocks at "### N. ..." headings, then
+    in each block look for both the approval checkbox and a Link line."""
     text = md_path.read_text(encoding="utf-8", errors="replace")
     # Find item heading positions; split into per-item segments.
     positions = [m.start() for m in ITEM_HEADING_RE.finditer(text)]
@@ -143,24 +163,14 @@ def parse_approved_links_from_md(md_path: Path) -> list:
     approved = []
     for start, end in zip(positions[:-1], positions[1:]):
         block = text[start:end]
-        ticks = list(APPROVE_BOX_RE.finditer(block))
-        if not ticks:
+        if not APPROVE_BOX_RE.search(block):
             continue
         link_match = LINK_LINE_RE.search(block)
         if not link_match:
-            print(f"[warn] item in {md_path.name} has an approval tick "
+            print(f"[warn]   item in {md_path.name} has an approval tick "
                   f"but no parseable Link line; skipping")
             continue
-        link = link_match.group(1).strip()
-        # Option (a): if multiple boxes ticked, take the first; warn.
-        if len(ticks) > 1:
-            chosen = ticks[0].group(1) or "(no id; will use first match)"
-            others = [m.group(1) or "(no id)" for m in ticks[1:]]
-            print(f"[warn] {md_path.name}: multiple APPROVE FOR SOCIAL "
-                  f"ticks on '{link[:60]}' -- taking '{chosen}', "
-                  f"ignoring {others}")
-        chosen_camo_id = ticks[0].group(1)  # None for the simple form
-        approved.append((link, chosen_camo_id))
+        approved.append(link_match.group(1).strip())
     return approved
 
 
@@ -184,33 +194,15 @@ def load_sidecar(md_path: Path) -> dict:
 # Queueing approved items
 # ---------------------------------------------------------------------------
 
-def resolve_chosen_camo(item: dict, chosen_camo_id: str | None) -> tuple:
-    """Pick the CAMO entry to anchor this article to.
-
-    If chosen_camo_id is given (from a "→ `<id>`" tick), validate it
-    against the article's matched_camo list and return that entry. If the
-    id is missing, unmatched, or unsupplied, fall back to the article's
-    primary (first) match. Returns (chosen_dict, was_explicit_bool)."""
+def primary_camo(item: dict) -> dict:
+    """Return the article's primary CAMO match (first entry) or {} if none."""
     matched = item.get("matched_camo") or []
-    if chosen_camo_id:
-        for m in matched:
-            if m.get("id") == chosen_camo_id:
-                return m, True
-        print(f"[warn] chosen camo id '{chosen_camo_id}' not in "
-              f"matched_camo for '{item.get('title','')[:60]}' -- "
-              f"falling back to primary match")
-    return (matched[0] if matched else {}), False
+    return matched[0] if matched else {}
 
 
-def build_state_record(item: dict, source_md: Path, today_iso: str,
-                       chosen_camo_id: str | None = None) -> dict:
-    """Reduce an enrichment record to the subset we need to keep in state.
-
-    chosen_camo_id (when not None) is the id of the CAMO paper the editor
-    explicitly selected by ticking the matching "→ `<id>`" box. If None
-    or unmatched, falls back to the article's primary (first) match --
-    preserves backward compatibility with legacy single-checkbox digests."""
-    chosen, was_explicit = resolve_chosen_camo(item, chosen_camo_id)
+def build_state_record(item: dict, source_md: Path, today_iso: str) -> dict:
+    """Reduce an enrichment record to the subset we need to keep in state."""
+    pcamo = primary_camo(item)
     return {
         "approved_at": today_iso,
         "approved_in_digest": str(source_md.relative_to(REPO_ROOT).as_posix()),
@@ -219,19 +211,22 @@ def build_state_record(item: dict, source_md: Path, today_iso: str,
         "link": item.get("link", ""),
         "authors": item.get("authors", ""),
         "published_display": item.get("published_display", ""),
-        "primary_camo_id": chosen.get("id"),
-        "primary_camo_title": chosen.get("title"),
-        "primary_camo_url": chosen.get("url"),
-        "primary_camo_reason": chosen.get("reason"),
-        "chosen_camo_explicitly": was_explicit,
+        "primary_camo_id": pcamo.get("id"),
+        "primary_camo_title": pcamo.get("title"),
+        "primary_camo_url": pcamo.get("url"),
+        "primary_camo_reason": pcamo.get("reason"),
         "matched_camo": item.get("matched_camo") or [],
         "pillar": item.get("pillar"),
         "centre_angle": item.get("centre_angle"),
         "claude_summary": item.get("claude_summary"),
         "key_takeaway": item.get("key_takeaway"),
         "visual_concept": item.get("visual_concept"),
-        "linkedin_caption_draft": item.get("linkedin_caption_draft"),
-        "x_caption_draft": item.get("x_caption_draft"),
+        # v2: audience_relevance carried forward so cluster-stage LinkedIn
+        # caption drafting can pick tone (managers/policy/general weighting).
+        "audience_relevance": item.get("audience_relevance") or {},
+        # Cluster-level fields (cluster_keywords, cluster_linkedin_caption_draft,
+        # cluster_file, clustered_at) are populated when the cluster fires,
+        # not here.
         "state": "queued",
         "cluster_file": None,
     }
@@ -243,32 +238,28 @@ def scan_and_queue_new_approvals(state: dict, today_iso: str) -> int:
     if not DIGESTS_DIR.exists():
         print("[info] no digests/ directory yet -- nothing to scan")
         return 0
-
     md_files = sorted(DIGESTS_DIR.rglob("*.md"))
     print(f"[info] scanning {len(md_files)} digest .md file(s) for approvals")
-
     added = 0
     for md in md_files:
-        approved_pairs = parse_approved_links_from_md(md)
-        if not approved_pairs:
+        approved_links = parse_approved_links_from_md(md)
+        if not approved_links:
             continue
         # Only load the sidecar if at least one link in this file is NEW.
-        new_pairs_here = [(l, cid) for (l, cid) in approved_pairs if l not in state]
-        if not new_pairs_here:
+        new_links_here = [l for l in approved_links if l not in state]
+        if not new_links_here:
             continue
         sidecar_map = load_sidecar(md)
-        for link, chosen_camo_id in new_pairs_here:
+        for link in new_links_here:
             item = sidecar_map.get(link)
             if not item:
                 print(f"[warn] {md.name}: approved link {link[:60]} not "
                       f"found in sidecar -- skipping")
                 continue
-            state[link] = build_state_record(item, md, today_iso, chosen_camo_id)
+            state[link] = build_state_record(item, md, today_iso)
             added += 1
-            chose_label = "explicit" if state[link].get("chosen_camo_explicitly") else "default-first-match"
-            print(f"[ok] queued: {state[link]['title'][:60]} "
-                  f"(camo: {state[link]['primary_camo_id'] or 'none'}, "
-                  f"{chose_label})")
+            print(f"[ok]  queued: {state[link]['title'][:60]}  "
+                  f"(camo: {state[link]['primary_camo_id'] or 'none'})")
     return added
 
 
@@ -357,7 +348,153 @@ def call_claude_for_keywords(items: list, camo_title: str) -> list:
         return ["#AI", "#research", "#management"]
 
 
-def render_cluster_md(camo_id: str, items: list, keywords: list, today_iso: str) -> str:
+def _aggregate_audience(items: list) -> dict:
+    """Roll up audience_relevance across the cluster's articles by taking the
+    strongest signal for each audience type. Used to weight caption tone."""
+    rank = {"high": 3, "medium": 2, "low": 1}
+    inv_rank = {v: k for k, v in rank.items()}
+    aggregated = {}
+    for key in ("managers_csuite", "policy_makers", "general_econ_public"):
+        best = 0
+        for it in items:
+            v = (it.get("audience_relevance") or {}).get(key, "")
+            best = max(best, rank.get(v, 0))
+        if best:
+            aggregated[key] = inv_rank[best]
+    return aggregated
+
+
+def call_claude_for_linkedin_caption(items: list, camo_title: str,
+                                     camo_url: str, pillars: list,
+                                     keywords: list) -> str:
+    """Generate ONE LinkedIn carousel caption for the whole cluster, in the
+    Reading Room series voice.
+
+    Voice direction: peer-among-peers. The centre is sharing its recent work
+    alongside companion pieces from the field on a shared theme, NOT making
+    an argument or pressure-testing other research. Punchy but invitational.
+    The downstream visual stage will produce one image per article (three
+    slides); this caption is the single post body anchoring all three.
+
+    Returns the caption string, or empty string on any failure (cluster
+    still fires; rendering just omits the section)."""
+    if anthropic is None:
+        print("[warn] anthropic package not installed -- skipping LinkedIn caption")
+        return ""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        print("[warn] ANTHROPIC_API_KEY not set -- skipping LinkedIn caption")
+        return ""
+
+    aggregated_aud = _aggregate_audience(items)
+    aud_str = ", ".join(f"{k}={v}" for k, v in aggregated_aud.items()) \
+        if aggregated_aud else "unspecified"
+    pillars_str = ", ".join(pillars) if pillars else "unspecified"
+    keyword_line = "  ".join(keywords)
+
+    article_blocks = []
+    for i, it in enumerate(items, 1):
+        article_blocks.append(
+            f"COMPANION PIECE {i}:\n"
+            f"  title: {it.get('title', '')}\n"
+            f"  source: {it.get('source', '')}\n"
+            f"  pillar: {it.get('pillar', '')}\n"
+            f"  summary: {(it.get('claude_summary') or '')[:500]}\n"
+            f"  key takeaway: {it.get('key_takeaway', '')}\n"
+            f"  thematic link to our paper: {it.get('primary_camo_reason', '')}"
+        )
+
+    prompt = (
+        "You are an editorial assistant for the HKU Centre for AI, "
+        f"Management and Organization (CAMO). Draft ONE LinkedIn carousel "
+        f"caption for the recurring \"{SERIES_NAME}\" series.\n\n"
+        f"VOICE of {SERIES_NAME}: peer-among-peers. The centre shares a "
+        f"piece of its own recent work alongside companion pieces from "
+        f"across the field, on a shared theme. We are NOT making an "
+        f"argument or testing other research; we are generously sharing "
+        f"what we've been thinking with, noticing what's resonating in the "
+        f"field, and inviting the reader into the conversation. Punchy "
+        f"but invitational. Never adversarial.\n\n"
+        f"CENTRE'S RECENT PAPER (our contribution to this theme):\n"
+        f"  title: {camo_title}\n"
+        f"  url: {camo_url}\n"
+        f"  pillars: {pillars_str}\n\n"
+        f"CLUSTER KEYWORDS (use exactly as hashtags):\n  {keyword_line}\n\n"
+        f"AGGREGATE AUDIENCE WEIGHTING (strongest signal across the 3 pieces):\n"
+        f"  {aud_str}\n\n"
+        f"COMPANION PIECES on the same theme (the three carousel slides):\n\n"
+        + "\n\n".join(article_blocks) + "\n\n"
+        "Caption requirements:\n"
+        f"- 180-260 words total.\n"
+        f"- OPEN with the series tag, naming the shared theme of this "
+        f"  edition. Example forms: \"{SERIES_NAME} — <short theme>:\" or "
+        f"  \"From the {SERIES_NAME}: <short theme>.\" Lead with the THEME "
+        f"  or question shared across all four pieces, NOT with a finding "
+        f"  from any one piece.\n"
+        f"- Note the centre's paper briefly as our recent thinking on this "
+        f"  theme (1-2 sentences). Visible but humble -- \"we've been "
+        f"  working on\" / \"our recent paper examines\", NOT \"we argue "
+        f"  that\" or \"our finding shows\".\n"
+        f"- Bridge to the slides: \"Three pieces in this conversation:\" "
+        f"  (or similar) followed by ONE short phrase per companion piece "
+        f"  (max 8 words each).\n"
+        f"- A line of generous synthesis -- a curator's noticing, not a "
+        f"  conclusion. What do these pieces together suggest about the "
+        f"  theme? Use plain prose.\n"
+        f"- Close with a reader-centred invitation. Examples: \"What are "
+        f"  you reading on this?\" / \"What would you add to the "
+        f"  conversation?\" / \"What's resonating in your context?\"\n"
+        f"- End the post with hashtags in this exact order: {SERIES_HASHTAG} "
+        f"  + the three cluster keywords above (as given) + 1-2 pillar-"
+        f"  specific hashtags.\n"
+        f"- Do NOT include the paper URL in the body -- it goes in a "
+        f"  separate first comment on LinkedIn.\n\n"
+        "Tone weighting (use AGGREGATE AUDIENCE WEIGHTING above):\n"
+        "  high managers_csuite      => decision-relevant framing\n"
+        "  high policy_makers        => systemic / institutional framing\n"
+        "  high general_econ_public  => accessible explainer framing\n"
+        "  multiple high             => blend proportionally\n\n"
+        "Restrained, peer voice. BANNED words and phrases:\n"
+        "  - hype: \"fascinating\", \"must-read\", \"game-changing\", "
+        "\"transformative\", \"revolutionary\", \"unlock\", \"harness\", "
+        "\"leverage\" (as verb), \"in today's fast-paced world\"\n"
+        "  - adversarial: \"argue\", \"argues\", \"argument\", \"challenge\", "
+        "\"pushback\", \"contrarian\", \"wrong\", \"vs.\", \"debunk\", "
+        "\"counter\", \"against\"\n\n"
+        "0-2 emoji maximum. None preferred.\n\n"
+        'Return ONLY a JSON object: {"caption": "<the full post body>"}'
+    )
+
+    try:
+        client = anthropic.Anthropic(api_key=api_key)
+        resp = client.messages.create(
+            model=ANTHROPIC_MODEL,
+            max_tokens=LINKEDIN_MAX_TOKENS,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = "".join(b.text for b in resp.content
+                       if getattr(b, "type", None) == "text").strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```(?:json)?\s*", "", text)
+            text = re.sub(r"\s*```$", "", text)
+        if not text.startswith("{"):
+            s, e = text.find("{"), text.rfind("}")
+            if s != -1 and e != -1:
+                text = text[s:e + 1]
+        data = json.loads(text)
+        caption = (data.get("caption") or "").strip()
+        if caption:
+            print(f"[ok]  {SERIES_NAME} caption: {len(caption)} chars drafted")
+        else:
+            print(f"[warn] {SERIES_NAME} caption returned empty")
+        return caption
+    except Exception as e:  # noqa: BLE001
+        print(f"[warn] {SERIES_NAME} caption generation failed: {e}")
+        return ""
+
+
+def render_cluster_md(camo_id: str, items: list, keywords: list,
+                      caption: str, today_iso: str) -> str:
     first = items[0]
     camo_title = first.get("primary_camo_title") or "(unknown CAMO paper)"
     camo_url = first.get("primary_camo_url") or ""
@@ -383,13 +520,32 @@ def render_cluster_md(camo_id: str, items: list, keywords: list, today_iso: str)
     lines.append("")
     lines.append("  ".join(keywords))
     lines.append("")
+    lines.append("## Draft LinkedIn carousel caption")
+    lines.append("")
+    if caption:
+        lines.append(f"_The single post body for this {SERIES_NAME} edition. "
+                     f"Edit inline if needed. The three companion pieces below "
+                     f"will become the three carousel slides._")
+        lines.append("")
+        for ln in caption.split("\n"):
+            lines.append(f"> {ln}" if ln.strip() else ">")
+        lines.append("")
+    else:
+        lines.append("_Caption draft was not generated this run (API failure "
+                     "or missing key). Write one here manually, or re-run the "
+                     "approval workflow once the issue is resolved._")
+        lines.append("")
     lines.append("## Final approval")
     lines.append("")
     lines.append("- [ ] **APPROVE FOR VISUAL CREATION**")
     lines.append("")
-    lines.append("_Tick the box once the framing below is editorially sound. "
-                 "The next stage (Higgsfield image generation) reads this file, "
-                 "but is not yet wired up._")
+    lines.append("_Tick the box once the caption above is editorially sound. "
+                 "The next stage (Higgsfield image generation) will produce "
+                 "**three images, one per article**, used as the slides of a "
+                 "**single LinkedIn carousel post** anchored to the CAMO "
+                 "paper. The caption above drives that post; the article "
+                 "blocks below brief each slide. The visual stage is not yet "
+                 "wired up._")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -491,21 +647,35 @@ def fire_clusters(state: dict, ready: dict, today_iso: str) -> int:
     created = 0
     for camo_id, items in sorted(ready.items()):
         camo_title = items[0].get("primary_camo_title") or camo_id
+        camo_url = items[0].get("primary_camo_url") or ""
+        pillars = sorted({i.get("pillar", "") for i in items if i.get("pillar")})
         print(f"[info] firing cluster: {camo_id}  ({len(items)} items) — {camo_title[:60]}")
 
         keywords = call_claude_for_keywords(items, camo_title)
-        body = render_cluster_md(camo_id, items, keywords, today_iso)
+
+        # v2: ONE carousel caption per cluster (the CAMO paper is the post's
+        # anchor; the three articles become the slides). Stored on each
+        # clustered item's state record as `cluster_linkedin_caption_draft`
+        # -- same value on all three, parallel to how cluster_keywords is
+        # stored. Empty string on API failure; renderer handles that.
+        caption = call_claude_for_linkedin_caption(
+            items, camo_title, camo_url, pillars, keywords
+        )
+
+        body = render_cluster_md(camo_id, items, keywords, caption, today_iso)
         cluster_path = CLUSTERS_DIR / f"{today_iso}-{camo_id}.md"
         cluster_path.write_text(body, encoding="utf-8")
         print(f"[ok]  wrote {cluster_path.relative_to(REPO_ROOT).as_posix()}")
 
-        # Mark items as clustered
+        # Mark items as clustered + persist cluster-level fields onto each.
         rel = cluster_path.relative_to(REPO_ROOT).as_posix()
         for item in items:
-            state[item["link"]]["state"] = "clustered"
-            state[item["link"]]["cluster_file"] = rel
-            state[item["link"]]["clustered_at"] = today_iso
-            state[item["link"]]["cluster_keywords"] = keywords
+            link = item["link"]
+            state[link]["state"] = "clustered"
+            state[link]["cluster_file"] = rel
+            state[link]["clustered_at"] = today_iso
+            state[link]["cluster_keywords"] = keywords
+            state[link]["cluster_linkedin_caption_draft"] = caption
 
         open_github_issue(camo_title, cluster_path, items, keywords)
         created += 1
