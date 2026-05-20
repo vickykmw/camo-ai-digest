@@ -114,7 +114,7 @@ ENRICH_RETRIES = 2                           # attempts per item before giving u
 # call for every item -- do this after editing the prompt below, so the change
 # actually takes effect on items already in the cache. A model change is
 # detected automatically (cached entries from a different model are ignored).
-REUSE_CACHED_ENRICHMENT = False
+REUSE_CACHED_ENRICHMENT = True
 ENRICHMENT_CACHE_MAX_AGE_DAYS = 60           # prune cache entries older than this
 
 # ---------------------------------------------------------------------------
