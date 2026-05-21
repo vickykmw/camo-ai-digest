@@ -1,0 +1,103 @@
+name: Repair Approval State
+
+# One-off cleanup workflow. Triggered manually via the Actions tab.
+#
+# This re-reads every digest .md with the v2.1 parser and corrects any
+# entries in approval_state.json that were mis-anchored under the v2 bug.
+# Queued items only; clustered items are never touched.
+#
+# Default behaviour is DRY-RUN -- the script reports what it would change
+# but writes nothing. To actually apply, run again with the `apply` input
+# set to `true`.
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Apply the changes? (false = dry-run, true = write to repo)'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-approval-state
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run repair (dry-run or apply)
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            echo "=== Applying repairs ==="
+            python repair_approval_state.py --apply
+          else
+            echo "=== Dry-run only -- no files will be written ==="
+            python repair_approval_state.py
+          fi
+
+      - name: Commit and push (only when apply=true)
+        if: ${{ inputs.apply == 'true' }}
+        run: |
+          echo "[repair workflow] starting commit step"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add approval_state.json QUEUE_STATUS.md
+          if git diff --cached --quiet; then
+            echo "[repair workflow] No state changes to commit -- nothing was actually wrong."
+            exit 0
+          fi
+
+          # Stash + rebase pattern, same as the other workflows.
+          STASH=/tmp/repair-stash
+          rm -rf "$STASH" && mkdir -p "$STASH"
+          [ -f approval_state.json ] && cp approval_state.json "$STASH/" || true
+          [ -f QUEUE_STATUS.md ]     && cp QUEUE_STATUS.md     "$STASH/" || true
+
+          git fetch origin main
+          git reset --hard origin/main
+
+          [ -f "$STASH/approval_state.json" ] && cp "$STASH/approval_state.json" .
+          [ -f "$STASH/QUEUE_STATUS.md" ]     && cp "$STASH/QUEUE_STATUS.md"     .
+
+          git add approval_state.json QUEUE_STATUS.md
+          if git diff --cached --quiet; then
+            echo "[repair workflow] No changes after sync."
+            exit 0
+          fi
+          git commit -m "Repair approval_state.json (v2 multi-match bug) [repair v1]"
+
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              echo "[repair workflow] Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "[repair workflow] Push failed on attempt $attempt -- pulling and retrying..."
+            git pull --rebase origin main || true
+            sleep $((attempt * 2))
+          done
+
+          echo "[repair workflow] Push failed after 3 attempts." >&2
+          exit 1
