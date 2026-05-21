@@ -71,6 +71,45 @@
     "visual_concept": "A floor plan of a large open-plan office rendered as a heat map, with color saturation representing AI tool usage spreading unevenly across departments over time — dense in some clusters, sparse in others — illustrating diffusion as an organizational topology problem rather than a switch being flipped.",
     "x_caption_draft": "Microsoft got 98% monthly AI usage across 62,000 salespeople — but it took 2 years and a mid-course correction. The tech wasn't the problem. The org was. CAMO's research finds the same barrier at firms across the region. https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization\n\nEarly adoption data told Microsoft its rollout wasn't working. The real question for any leader: do you have the measurement infrastructure to catch that signal at month 6 — before 18 months of momentum is lost? #AIAdoption #EnterpriseAI"
   },
+  "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/": {
+    "approved_at": "2026-05-21",
+    "approved_in_digest": "digests/2026-05-17.md",
+    "audience_relevance": {
+      "general_econ_public": "medium",
+      "managers_csuite": "high",
+      "policy_makers": "high"
+    },
+    "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+    "centre_angle": "This article argues that responsible AI governance has a blind spot: it evaluates models but not the workforce consequences of deploying them. From CAMO's perspective on AI and jobs, this gap is well-evidenced in practice — our research on the hidden competency penalty for AI users (see 'Research: The Hidden Penalty of Using AI at Work') shows that even when organizations provide AI access, the social and evaluative dynamics around its use can harm the very workers it is meant to help. Extending RAI frameworks to include job design, accountability attribution, and adoption incentives is not peripheral to responsible AI — it is central to whether deployment produces net benefit for organizations and the people inside them.",
+    "claude_summary": "A fifth consecutive annual survey by MIT Sloan Management Review and Boston Consulting Group examines how organizations are implementing responsible AI (RAI) worldwide. This year's edition shifts attention toward workforce impact as an underexamined dimension of RAI — arguing that responsible AI frameworks have focused heavily on model-level concerns (bias, explainability, safety) while neglecting the organizational and human consequences of deployment: job displacement, skill degradation, shifting accountability, and uneven distribution of AI's benefits and burdens. The article draws on an international panel of academics and practitioners to assess RAI maturity and calls on organizations to extend their governance frameworks to cover how AI reshapes work itself. Note: the full findings are behind a paywall; this summary is based on the RSS excerpt and title framing.",
+    "cluster_file": null,
+    "key_takeaway": "Responsible AI frameworks that stop at the model layer — ignoring how deployment reshapes jobs, accountability, and worker welfare — are incomplete governance, not just incomplete ethics.",
+    "link": "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/",
+    "matched_camo": [
+      {
+        "id": "hidden-penalty-ai-work-2025",
+        "reason": "Both pieces identify a gap between organizational AI access/adoption policy and the social dynamics that determine whether employees can use AI without penalty — a direct illustration of why workforce impact belongs inside RAI frameworks.",
+        "title": "Research: The Hidden Penalty of Using AI at Work",
+        "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+      },
+      {
+        "id": "bad-job-economy-2026",
+        "reason": "The article's call to include workforce impact in RAI governance aligns with this paper's finding that AI adoption can systematically degrade job quality and worker welfare even when firms act rationally — a structural risk that model-level RAI checklists would not capture.",
+        "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+        "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+      }
+    ],
+    "pillar": "AI & Jobs",
+    "primary_camo_id": "hidden-penalty-ai-work-2025",
+    "primary_camo_reason": "Both pieces identify a gap between organizational AI access/adoption policy and the social dynamics that determine whether employees can use AI without penalty — a direct illustration of why workforce impact belongs inside RAI frameworks.",
+    "primary_camo_title": "Research: The Hidden Penalty of Using AI at Work",
+    "primary_camo_url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+    "published_display": "Apr 21, 2026",
+    "source": "MIT Sloan Management Review",
+    "state": "queued",
+    "title": "Beyond the Model — Why Responsible AI Must Address Workforce Impact",
+    "visual_concept": "A cross-section architectural diagram of a building: the lower floors (labeled 'model governance') are densely detailed with rooms, walls, and regulations, while the upper floors (labeled 'workforce impact') are shown as an unfinished open frame — structural columns visible but no interior walls, no occupants. The contrast between completed infrastructure below and empty, ungoverned space above carries the central argument."
+  },
   "https://sloanreview.mit.edu/article/beyond-verification-what-responsible-ai-really-demands-of-human-experts/": {
     "approved_at": "2026-05-19",
     "approved_in_digest": "digests/2026-05/2026-05-11_2026-05-18.md",
