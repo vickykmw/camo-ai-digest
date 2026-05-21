@@ -92,7 +92,7 @@ _Tick the box once the caption above is editorially sound. The next stage (Higgs
 
 **Summary:**
 
-> McKinsey argues that AI's value creation potential has been demonstrated but remains difficult to scale across organizations. The central challenge for CEOs is moving from isolated experimentation to sustained, enterprise-wide performance improvement. The article frames this as a strategic and organizational design problem rather than a technical one: firms must reimagine structures, workflows, and operating models to capture AI's benefits systematically. The excerpt is thin on specific findings or data, so the precise mechanisms McKinsey recommends are not fully visible from the RSS summary alone. The overall argument is that AI deployment is now a CEO-level organizational transformation challenge, not a pilot program to be managed at the margin.
+> McKinsey argues that while AI's value is proven, scaling it remains a challenge when treated as an isolated tech pilot. To achieve enterprise-wide impact, CEOs must lead a strategic transformation akin to Henry Ford's assembly line, shifting from artisanal workflows to an "agentic orchestration layer" that manages cognitive tasks across the organization. The article outlines specific mechanisms for this redesign, including breaking down silos, eliminating bureaucracy, standardizing data, and resetting talent expectations. Supported by robust case studies—such as a US automaker gaining a $200 million profit increase and Chinese OEMs cutting R&D cycles to 24 months—McKinsey demonstrates that systemic, CEO-led AI deployment is essential for competitive survival
 
 **CAMO angle:**
 
