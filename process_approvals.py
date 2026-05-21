@@ -88,6 +88,15 @@ v2.2 changes (2026-05-21):
   - `primary_camo_reason` is still stored on state records (for traceability
     and potential future use); it's just not surfaced in the cluster .md
     or used in the caption prompt anymore.
+
+v2.3 changes (2026-05-21):
+  - Cluster .md now includes richer anchor metadata pulled from
+    camo_index.json at firing time: authors, year, type (working paper /
+    survey report / nano case), the paper's own pillars, and the full
+    abstract. Downstream automations (image generation, post composition,
+    archival) can read either the rendered .md or the structured state.
+  - Falls back gracefully to title + url only if camo_index.json is missing
+    or doesn't contain the anchor paper's id.
 """
 from __future__ import annotations
 
@@ -109,7 +118,7 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v2.2 (2026-05-21)"
+VERSION = "v2.3 (2026-05-21)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
@@ -136,6 +145,9 @@ DIGESTS_DIR = REPO_ROOT / "digests"
 CLUSTERS_DIR = REPO_ROOT / "ready_for_visual"
 APPROVAL_STATE_FILE = REPO_ROOT / "approval_state.json"
 QUEUE_STATUS_FILE = REPO_ROOT / "QUEUE_STATUS.md"
+# Read at cluster-firing time so the rendered cluster .md can include the
+# anchor paper's authors / year / abstract, which aren't stored in state.
+CAMO_INDEX_FILE = REPO_ROOT / "camo_index.json"
 
 
 # ---------------------------------------------------------------------------
@@ -169,6 +181,28 @@ def save_approval_state(state: dict) -> None:
     APPROVAL_STATE_FILE.write_text(
         json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True)
     )
+
+
+def load_camo_index_by_id() -> dict:
+    """Read camo_index.json and return a dict keyed by paper id, so we can
+    look up the anchor paper's full metadata (authors, year, abstract,
+    pillars) when rendering a cluster .md.
+
+    Returns {} if the file is missing or malformed; callers must handle the
+    empty case (the cluster will fall back to showing just title + url)."""
+    if not CAMO_INDEX_FILE.exists():
+        print(f"[warn] {CAMO_INDEX_FILE.name} not found -- anchor block will "
+              f"fall back to title/url only")
+        return {}
+    try:
+        data = json.loads(CAMO_INDEX_FILE.read_text())
+        if not isinstance(data, list):
+            print(f"[warn] {CAMO_INDEX_FILE.name} is not a JSON list -- ignoring")
+            return {}
+        return {it.get("id"): it for it in data if it.get("id")}
+    except Exception as e:  # noqa: BLE001
+        print(f"[warn] could not parse {CAMO_INDEX_FILE.name}: {e}")
+        return {}
 
 
 # ---------------------------------------------------------------------------
@@ -583,14 +617,29 @@ def call_claude_for_linkedin_caption(items: list, camo_title: str,
 
 
 def render_cluster_md(camo_id: str, items: list, keywords: list,
-                      caption: str, today_iso: str) -> str:
+                      caption: str, today_iso: str,
+                      camo_index_map: dict = None) -> str:
     first = items[0]
     camo_title = first.get("primary_camo_title") or "(unknown CAMO paper)"
     camo_url = first.get("primary_camo_url") or ""
-    pillars = sorted({i.get("pillar", "") for i in items if i.get("pillar")})
+    cluster_article_pillars = sorted(
+        {i.get("pillar", "") for i in items if i.get("pillar")}
+    )
+
+    # v2.3: pull richer metadata for the anchor paper from camo_index.json
+    # (title prefer-overrides the cached one, authors/year/abstract/paper-
+    # pillars only available here). Gracefully degrade if the index isn't
+    # available or doesn't have this paper id.
+    anchor_meta = (camo_index_map or {}).get(camo_id, {}) if camo_id else {}
+    anchor_title = anchor_meta.get("title") or camo_title
+    anchor_authors = anchor_meta.get("authors") or []
+    anchor_year = anchor_meta.get("year")
+    anchor_abstract = anchor_meta.get("abstract") or ""
+    anchor_pillars = anchor_meta.get("pillars") or []
+    anchor_type = anchor_meta.get("type") or ""
 
     lines = []
-    lines.append(f"# Content Cluster — {camo_title}")
+    lines.append(f"# Content Cluster — {anchor_title}")
     lines.append("")
     lines.append(f"_Created: {today_iso}  ·  Cluster id: `{camo_id}`  ·  "
                  f"{len(items)} articles_")
@@ -598,12 +647,36 @@ def render_cluster_md(camo_id: str, items: list, keywords: list,
     lines.append("## Anchor CAMO research")
     lines.append("")
     if camo_url:
-        lines.append(f"**[{camo_title}]({camo_url})**")
+        lines.append(f"**[{anchor_title}]({camo_url})**")
     else:
-        lines.append(f"**{camo_title}**")
+        lines.append(f"**{anchor_title}**")
+    # Author / year / type line (only when index lookup succeeded)
+    byline_parts = []
+    if anchor_authors:
+        byline_parts.append(", ".join(anchor_authors))
+    if anchor_year:
+        byline_parts.append(str(anchor_year))
+    if anchor_type:
+        # human-friendly: working_paper -> "Working Paper", etc.
+        byline_parts.append(anchor_type.replace("_", " ").title())
+    if byline_parts:
+        lines.append(f"_{'  ·  '.join(byline_parts)}_")
     lines.append("")
-    if pillars:
-        lines.append(f"_Pillars represented: {', '.join(pillars)}_")
+    if anchor_pillars:
+        lines.append(f"**Pillars:** {', '.join(anchor_pillars)}")
+        lines.append("")
+    if anchor_abstract:
+        lines.append("**Abstract:**")
+        lines.append("")
+        for ln in anchor_abstract.split("\n"):
+            lines.append(f"> {ln}" if ln.strip() else ">")
+        lines.append("")
+    # Carry the article-pillar aggregation through as a separate, smaller
+    # line -- different signal from the paper's own pillars, kept in case
+    # the editor wants to see what pillars the three companions span.
+    if cluster_article_pillars:
+        lines.append(f"_Pillars across the three companion pieces: "
+                     f"{', '.join(cluster_article_pillars)}_")
         lines.append("")
     lines.append("## Shared keywords (Claude-suggested)")
     lines.append("")
@@ -737,6 +810,12 @@ def fire_clusters(state: dict, ready: dict, today_iso: str) -> int:
     if not ready:
         return 0
     CLUSTERS_DIR.mkdir(exist_ok=True)
+    # Load camo_index once per run -- shared across all clusters fired in
+    # this run. Falls through to {} cleanly if the file is missing.
+    camo_index_map = load_camo_index_by_id()
+    if camo_index_map:
+        print(f"[info] camo_index.json loaded: {len(camo_index_map)} papers "
+              f"available for anchor metadata")
     created = 0
     for camo_id, items in sorted(ready.items()):
         camo_title = items[0].get("primary_camo_title") or camo_id
@@ -755,7 +834,8 @@ def fire_clusters(state: dict, ready: dict, today_iso: str) -> int:
             items, camo_title, camo_url, pillars, keywords
         )
 
-        body = render_cluster_md(camo_id, items, keywords, caption, today_iso)
+        body = render_cluster_md(camo_id, items, keywords, caption, today_iso,
+                                 camo_index_map=camo_index_map)
         cluster_path = CLUSTERS_DIR / f"{today_iso}-{camo_id}.md"
         cluster_path.write_text(body, encoding="utf-8")
         print(f"[ok]  wrote {cluster_path.relative_to(REPO_ROOT).as_posix()}")
