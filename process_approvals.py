@@ -59,6 +59,19 @@ v2 changes (2026-05-20):
     Caption stored on state records as `cluster_linkedin_caption_draft`.
   - Series name + hashtag are constants (SERIES_NAME, SERIES_HASHTAG) so
     the brand can evolve without prompt edits.
+
+v2.1 changes (2026-05-21):
+  - Multi-match parser fix: the per-match checkbox UI in the digest now
+    drives the anchor. Previously the parser ignored the editor's pick and
+    always used matched_camo[0]. Now the parser captures the chosen CAMO
+    id from the ticked line ("[x] APPROVE FOR SOCIAL -> `<id>` -- Title")
+    and threads it through to build_state_record. If multiple checkboxes
+    are ticked on the same item (multi-match misuse), only the first is
+    honoured (Option B: deliberate over forgiving). Single-match items
+    still render with one checkbox and no `-> <id>`; parser falls back to
+    matched_camo[0] cleanly.
+  - See repair_approval_state.py for the one-time cleanup of existing
+    state records affected by the v2 bug.
 """
 from __future__ import annotations
 
@@ -80,7 +93,7 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v2 (2026-05-20)"
+VERSION = "v2.1 (2026-05-21)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
@@ -116,11 +129,8 @@ QUEUE_STATUS_FILE = REPO_ROOT / "QUEUE_STATUS.md"
 # Items are introduced by "### 1. Title", "### 2. Title", etc.
 ITEM_HEADING_RE = re.compile(r"^###\s+\d+\.\s+", re.MULTILINE)
 
-# Checkbox line: "- [x] **APPROVE FOR SOCIAL**" (case-insensitive on x).
-APPROVE_BOX_RE = re.compile(r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*")
-
-# Link line: "- **Link:** <https://example.com/path>"
-LINK_LINE_RE = re.compile(r"-\s+\*\*Link:\*\*\s+<([^>]+)>")
+# APPROVE_BOX_RE and LINK_LINE_RE are defined alongside the parser further
+# below, since their shape is tied to the parsing strategy.
 
 
 # ---------------------------------------------------------------------------
@@ -149,28 +159,61 @@ def save_approval_state(state: dict) -> None:
 # Parsing the digest markdown for approved items
 # ---------------------------------------------------------------------------
 
-def parse_approved_links_from_md(md_path: Path) -> list:
-    """Return a list of links whose item block contains [x] APPROVE FOR SOCIAL.
+# Two ticked-box patterns the digest can produce:
+#
+#   Single-match items (only one CAMO match):
+#     "- [x] **APPROVE FOR SOCIAL** (pillar: `AI & Jobs`)"
+#     -> chosen_camo_id is implicit (use matched_camo[0])
+#
+#   Multi-match items (2+ CAMO matches, one checkbox per match):
+#     "- [x] **APPROVE FOR SOCIAL** → `bad-job-economy-2026` — Title goes here"
+#     -> chosen_camo_id is explicit, captured from the `id` between backticks
+#
+# A single regex with an OPTIONAL trailing capture handles both forms.
+APPROVE_BOX_RE = re.compile(
+    r"-\s*\[\s*[xX]\s*\]\s*\*\*APPROVE FOR SOCIAL\*\*"
+    r"(?:[^\n`]*?→\s*`([^`]+)`)?",   # optional: '→ `chosen-camo-id`'
+    re.MULTILINE,
+)
 
-    Logic: split the file into per-item blocks at "### N. ..." headings, then
-    in each block look for both the approval checkbox and a Link line."""
+LINK_LINE_RE = re.compile(r"-\s+\*\*Link:\*\*\s+<([^>]+)>")
+
+
+def parse_approved_links_from_md(md_path: Path) -> list:
+    """Return a list of (link, chosen_camo_id_or_None) tuples for each item
+    block that contains a ticked APPROVE FOR SOCIAL checkbox.
+
+    Per v2 multi-match handling: if MORE than one checkbox is ticked in the
+    same item block (user disregarded the "tick one" instruction), only the
+    FIRST tick is honoured -- subsequent ticks are logged and ignored. This
+    is Option B in the design discussion: one anchor per article, deliberate
+    over forgiving.
+
+    chosen_camo_id is None for single-match items (no `→ id` in the line);
+    the caller falls back to matched_camo[0] in that case."""
     text = md_path.read_text(encoding="utf-8", errors="replace")
-    # Find item heading positions; split into per-item segments.
     positions = [m.start() for m in ITEM_HEADING_RE.finditer(text)]
     if not positions:
         return []
     positions.append(len(text))
+
     approved = []
     for start, end in zip(positions[:-1], positions[1:]):
         block = text[start:end]
-        if not APPROVE_BOX_RE.search(block):
+        ticks = list(APPROVE_BOX_RE.finditer(block))
+        if not ticks:
             continue
+        if len(ticks) > 1:
+            print(f"[warn]   item in {md_path.name} has {len(ticks)} ticked "
+                  f"checkboxes (multi-match: tick only ONE). Honouring the "
+                  f"first; ignoring the rest.")
+        chosen_camo_id = ticks[0].group(1)  # may be None for single-match
         link_match = LINK_LINE_RE.search(block)
         if not link_match:
             print(f"[warn]   item in {md_path.name} has an approval tick "
                   f"but no parseable Link line; skipping")
             continue
-        approved.append(link_match.group(1).strip())
+        approved.append((link_match.group(1).strip(), chosen_camo_id))
     return approved
 
 
@@ -200,9 +243,36 @@ def primary_camo(item: dict) -> dict:
     return matched[0] if matched else {}
 
 
-def build_state_record(item: dict, source_md: Path, today_iso: str) -> dict:
-    """Reduce an enrichment record to the subset we need to keep in state."""
-    pcamo = primary_camo(item)
+def _select_camo_match(item: dict, chosen_camo_id) -> dict:
+    """Pick the CAMO match that anchors this approval.
+
+    For single-match items: chosen_camo_id is None, return the only match.
+    For multi-match items: chosen_camo_id is the editor's pick (parsed from
+    the ticked checkbox line). Find it in matched_camo. If it's somehow not
+    in the list -- which would only happen if the digest .md was hand-edited
+    after enrichment -- fall back to matched_camo[0] with a warning."""
+    matches = item.get("matched_camo") or []
+    if not matches:
+        return {}
+    if chosen_camo_id is None:
+        return matches[0]
+    for m in matches:
+        if m.get("id") == chosen_camo_id:
+            return m
+    print(f"[warn]   ticked CAMO id {chosen_camo_id!r} not found in this "
+          f"article's matched_camo list; falling back to first match "
+          f"{matches[0].get('id')!r}.")
+    return matches[0]
+
+
+def build_state_record(item: dict, source_md: Path, today_iso: str,
+                       chosen_camo_id=None) -> dict:
+    """Reduce an enrichment record to the subset we need to keep in state.
+
+    chosen_camo_id is parsed from the multi-match checkbox UI -- the
+    specific CAMO paper the editor ticked the article under. For single-
+    match items, chosen_camo_id is None and matched_camo[0] is used."""
+    pcamo = _select_camo_match(item, chosen_camo_id)
     return {
         "approved_at": today_iso,
         "approved_in_digest": str(source_md.relative_to(REPO_ROOT).as_posix()),
@@ -242,24 +312,28 @@ def scan_and_queue_new_approvals(state: dict, today_iso: str) -> int:
     print(f"[info] scanning {len(md_files)} digest .md file(s) for approvals")
     added = 0
     for md in md_files:
-        approved_links = parse_approved_links_from_md(md)
-        if not approved_links:
+        approved_entries = parse_approved_links_from_md(md)
+        if not approved_entries:
             continue
         # Only load the sidecar if at least one link in this file is NEW.
-        new_links_here = [l for l in approved_links if l not in state]
-        if not new_links_here:
+        new_entries_here = [(l, cid) for (l, cid) in approved_entries
+                            if l not in state]
+        if not new_entries_here:
             continue
         sidecar_map = load_sidecar(md)
-        for link in new_links_here:
+        for link, chosen_camo_id in new_entries_here:
             item = sidecar_map.get(link)
             if not item:
                 print(f"[warn] {md.name}: approved link {link[:60]} not "
                       f"found in sidecar -- skipping")
                 continue
-            state[link] = build_state_record(item, md, today_iso)
+            state[link] = build_state_record(item, md, today_iso,
+                                             chosen_camo_id=chosen_camo_id)
             added += 1
+            anchor = state[link]['primary_camo_id'] or 'none'
+            note = " (editor's pick)" if chosen_camo_id else ""
             print(f"[ok]  queued: {state[link]['title'][:60]}  "
-                  f"(camo: {state[link]['primary_camo_id'] or 'none'})")
+                  f"(camo: {anchor}{note})")
     return added
 
 
