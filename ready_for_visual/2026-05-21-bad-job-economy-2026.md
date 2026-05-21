@@ -72,7 +72,7 @@ _Tick the box once the caption above is editorially sound. The next stage (Higgs
 
 **Summary:**
 
-> Oxford economist Jean-Paul Carvalho, speaking with McKinsey, examines how AI is restructuring cognitive work and what that means for organizational strategy and business value creation. The excerpt is limited, but the framing centers on where AI creates leverage in knowledge-intensive tasks, how firms should position themselves to capture that value at scale, and what the redistribution of cognitive labor implies for workforce design. Because only the RSS excerpt is available, specific empirical findings cannot be confirmed; the conversation appears to be analytical and conceptual rather than data-driven.
+> Oxford economist Jean-Paul Carvalho, speaking with McKinsey, examines how AI's unprecedented automation of cognitive work will radically restructure organizations and redefine business value creation. Anchored by recent empirical studies and field experiments, the discussion illustrates how AI is currently driving task-level productivity and labor substitution, which triggers deep organizational restructuring rather than massive aggregate job losses. Carvalho stresses that leaders must prioritize human-complementary AI over pure automation to preserve the junior talent pipeline, noting that competitive advantage will ultimately stem from eliminating bureaucratic inefficiency rather than simply deploying new tools.
 
 **CAMO angle:**
 
