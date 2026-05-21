@@ -59,16 +59,16 @@ jobs:
 
       - name: Commit and push
         run: |
-          echo "[approval workflow v1] starting commit step"
+          echo "[approval workflow v2] starting commit step"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage state files. `clusters/` may not exist on the first runs,
+          # Stage state files. `ready_for_visual/` may not exist on the first runs,
           # so guard with -e so the git add never fails the whole step.
           git add approval_state.json QUEUE_STATUS.md
-          [ -d clusters ] && git add clusters/
+          [ -d ready_for_visual ] && git add ready_for_visual/
           if git diff --cached --quiet; then
-            echo "[approval workflow v1] No state changes to commit."
+            echo "[approval workflow v2] No state changes to commit."
             exit 0
           fi
 
@@ -79,32 +79,32 @@ jobs:
           rm -rf "$STASH" && mkdir -p "$STASH"
           [ -f approval_state.json ] && cp    approval_state.json "$STASH/" || true
           [ -f QUEUE_STATUS.md ]     && cp    QUEUE_STATUS.md     "$STASH/" || true
-          [ -d clusters ]            && cp -r clusters            "$STASH/" || true
+          [ -d ready_for_visual ]    && cp -r ready_for_visual    "$STASH/" || true
 
           git fetch origin main
           git reset --hard origin/main
 
           [ -f "$STASH/approval_state.json" ] && cp    "$STASH/approval_state.json" .
           [ -f "$STASH/QUEUE_STATUS.md" ]     && cp    "$STASH/QUEUE_STATUS.md"     .
-          [ -d "$STASH/clusters" ]            && cp -r "$STASH/clusters"            .
+          [ -d "$STASH/ready_for_visual" ]            && cp -r "$STASH/ready_for_visual"            .
 
           git add approval_state.json QUEUE_STATUS.md
-          [ -d clusters ] && git add clusters/
+          [ -d ready_for_visual ] && git add ready_for_visual/
           if git diff --cached --quiet; then
-            echo "[approval workflow v1] No changes after sync."
+            echo "[approval workflow v2] No changes after sync."
             exit 0
           fi
           git commit -m "Process approvals $(date -u +%Y-%m-%d) [approval v1]"
 
           for attempt in 1 2 3; do
             if git push origin main; then
-              echo "[approval workflow v1] Push succeeded on attempt $attempt."
+              echo "[approval workflow v2] Push succeeded on attempt $attempt."
               exit 0
             fi
-            echo "[approval workflow v1] Push failed on attempt $attempt -- pulling and retrying..."
+            echo "[approval workflow v2] Push failed on attempt $attempt -- pulling and retrying..."
             git pull --rebase origin main || true
             sleep $((attempt * 2))
           done
 
-          echo "[approval workflow v1] Push failed after 3 attempts." >&2
+          echo "[approval workflow v2] Push failed after 3 attempts." >&2
           exit 1
