@@ -72,6 +72,22 @@ v2.1 changes (2026-05-21):
     matched_camo[0] cleanly.
   - See repair_approval_state.py for the one-time cleanup of existing
     state records affected by the v2 bug.
+
+v2.2 changes (2026-05-21):
+  - Removed `primary_camo_reason` ("Connection to anchor") from BOTH the
+    cluster .md article blocks AND the LinkedIn caption prompt. The reason
+    sentence was written during weekly enrichment under the old
+    "supporting evidence" framing -- carrying it forward could subtly nudge
+    Claude away from the Reading Room peer voice. Caption-writing Claude
+    derives the thematic link freshly from summary + centre_angle +
+    key_takeaway, all of which it already receives.
+  - Added `key_takeaway` display to the cluster .md article blocks, right
+    after the CAMO angle. Same one-sentence takeaway the editor saw at
+    digest approval time. Useful as on-image overlay text for the
+    downstream visual stage.
+  - `primary_camo_reason` is still stored on state records (for traceability
+    and potential future use); it's just not surfaced in the cluster .md
+    or used in the caption prompt anymore.
 """
 from __future__ import annotations
 
@@ -93,7 +109,7 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v2.1 (2026-05-21)"
+VERSION = "v2.2 (2026-05-21)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
@@ -474,8 +490,7 @@ def call_claude_for_linkedin_caption(items: list, camo_title: str,
             f"  source: {it.get('source', '')}\n"
             f"  pillar: {it.get('pillar', '')}\n"
             f"  summary: {(it.get('claude_summary') or '')[:500]}\n"
-            f"  key takeaway: {it.get('key_takeaway', '')}\n"
-            f"  thematic link to our paper: {it.get('primary_camo_reason', '')}"
+            f"  key takeaway: {it.get('key_takeaway', '')}"
         )
 
     prompt = (
@@ -632,8 +647,6 @@ def render_cluster_md(camo_id: str, items: list, keywords: list,
         lines.append(f"- **Link:** <{it.get('link', '')}>")
         lines.append(f"- **Published:** {it.get('published_display', '')}")
         lines.append(f"- **Pillar:** {it.get('pillar', '')}")
-        if it.get("primary_camo_reason"):
-            lines.append(f"- **Connection to anchor:** {it['primary_camo_reason']}")
         lines.append("")
         if it.get("claude_summary"):
             lines.append("**Summary:**")
@@ -646,6 +659,12 @@ def render_cluster_md(camo_id: str, items: list, keywords: list,
             lines.append("")
             for ln in it["centre_angle"].split("\n"):
                 lines.append(f"> {ln}" if ln.strip() else ">")
+            lines.append("")
+        if it.get("key_takeaway"):
+            # Pulled forward from the weekly digest enrichment -- the same
+            # single-sentence takeaway the editor saw at approval time. Useful
+            # downstream (e.g. as on-image overlay text in the visual stage).
+            lines.append(f"**Key takeaway:** {it['key_takeaway']}")
             lines.append("")
         if it.get("visual_concept"):
             lines.append(f"**Suggested visual:** {it['visual_concept']}")
