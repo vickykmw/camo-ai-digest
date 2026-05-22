@@ -40,14 +40,14 @@ from higgsfield_client_wrapper import HiggsfieldClient
 REPO_ROOT = Path(__file__).parent.parent
 READY_DIR = REPO_ROOT / "ready_for_visual"
 
-DEFAULT_MODEL = "seedream_v4_5"
+DEFAULT_MODEL = "bytedance/seedream/v4/text-to-image"
 DEFAULT_ASPECT_RATIO = "1:1"
 DEFAULT_RESOLUTION = "1K"
 
 ESTIMATED_COST_PER_IMAGE = {
-    "seedream_v4_5": 1,
-    "flux_2": 1,
-    "nano_banana_2": 1.5,
+    "bytedance/seedream/v4/text-to-image": 1,
+    "black-forest-labs/flux-pro/text-to-image": 1,
+    "google/nano-banana-2/text-to-image": 1.5,
 }
 
 
@@ -293,11 +293,14 @@ def main() -> int:
 
     client = None
     if not args.dry_run:
-        creds = os.environ.get("HF_CREDENTIALS")
-        if not creds:
-            log.error("HF_CREDENTIALS not set in environment")
+        from higgsfield_client_wrapper import credentials_present
+        if not credentials_present():
+            log.error(
+                "Higgsfield credentials not found in environment. "
+                "Set HF_KEY=KEY_ID:KEY_SECRET as a repo secret."
+            )
             return 2
-        client = HiggsfieldClient(credentials=creds)
+        client = HiggsfieldClient()
 
     summaries = []
     for md_path in targets:
