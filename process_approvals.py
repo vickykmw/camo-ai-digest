@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 process_approvals.py -- Stage 2 of the CAMO content pipeline.
-
 Reads:
   digests/**/*.md                     -- weekly digests with [x] ticks
   digests/**/*.enriched.json          -- the matching sidecar enrichments
