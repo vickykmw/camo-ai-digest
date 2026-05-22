@@ -43,7 +43,7 @@ _The single post body for this Reading Room edition. Edit inline if needed. The 
 
 ## Final approval
 
-- [ ] **APPROVE FOR VISUAL CREATION**
+- [x] **APPROVE FOR VISUAL CREATION**
 
 _Tick the box once the caption above is editorially sound. The next stage (Higgsfield image generation) will produce **three images, one per article**, used as the slides of a **single LinkedIn carousel post** anchored to the CAMO paper. The caption above drives that post; the article blocks below brief each slide. The visual stage is not yet wired up._
 
