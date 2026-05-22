@@ -192,18 +192,40 @@ def parse_markdown(md_text: str) -> dict[str, Any]:
     if not cluster_id:
         raise ParseError("Missing 'Cluster id: `...`' in header")
 
-    primary_pillar = _find_line(md_text, r"Primary pillar:\*?\*?\s*(.+?)$")
-    if not primary_pillar:
-        raise ParseError(
-            "Missing 'Primary pillar: ...' field. "
-            "Add a line near the top: 'Primary pillar: AI & Jobs' (or another valid pillar)."
+    # Primary pillar — supports two formats:
+    #   NEW (preferred): a ticked checkbox under a "Primary pillar" header
+    #       - [x] AI & Jobs
+    #   OLD (still works): an inline value
+    #       **Primary pillar:** AI & Jobs
+    # The gatekeeper template uses the checkbox style; this parser tolerates both.
+    ticked_pillars = [
+        pillar for pillar in VALID_PILLARS
+        if re.search(
+            rf"^[-*]\s*\[\s*[xX]\s*\]\s*{re.escape(pillar)}\s*$",
+            md_text,
+            re.MULTILINE,
         )
-    # Clean trailing markdown emphasis if any
-    primary_pillar = primary_pillar.rstrip("*_ ").strip()
-    if primary_pillar not in VALID_PILLARS:
+    ]
+    if len(ticked_pillars) > 1:
         raise ParseError(
-            f"Primary pillar '{primary_pillar}' is not one of {sorted(VALID_PILLARS)}"
+            f"Multiple Primary pillars are ticked: {ticked_pillars}. "
+            "Tick exactly one in the 'Primary pillar' section."
         )
+    if ticked_pillars:
+        primary_pillar = ticked_pillars[0]
+    else:
+        # Backward compatibility: inline 'Primary pillar: X' format
+        primary_pillar = _find_line(md_text, r"Primary pillar:\*?\*?\s*(.+?)$")
+        if not primary_pillar:
+            raise ParseError(
+                "No Primary pillar selected. Tick exactly one pillar in the "
+                "'Primary pillar' section of the markdown, e.g. '- [x] AI & Jobs'."
+            )
+        primary_pillar = primary_pillar.rstrip("*_ ").strip()
+        if primary_pillar not in VALID_PILLARS:
+            raise ParseError(
+                f"Primary pillar '{primary_pillar}' is not one of {sorted(VALID_PILLARS)}"
+            )
 
     camo_anchor = parse_anchor_section(md_text)
     papers = parse_articles(md_text)
