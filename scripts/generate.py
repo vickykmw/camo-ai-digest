@@ -34,21 +34,10 @@ from typing import Any
 
 from approval_to_gen_visual import parse_markdown, is_approved, ParseError
 from style_envelopes import synthesize_prompt
-from higgsfield_client_wrapper import HiggsfieldClient
 
 
 REPO_ROOT = Path(__file__).parent.parent
 READY_DIR = REPO_ROOT / "ready_for_visual"
-
-DEFAULT_MODEL = "seedream_v4_5"
-DEFAULT_ASPECT_RATIO = "1:1"
-DEFAULT_RESOLUTION = "1K"
-
-ESTIMATED_COST_PER_IMAGE = {
-    "seedream_v4_5": 1,
-    "flux_2": 1,
-    "nano_banana_2": 1.5,
-}
 
 
 logging.basicConfig(
@@ -116,17 +105,22 @@ def write_bridge_csv(path: Path, anchor: dict, total_slides: int) -> None:
 
 
 def write_report(path: Path, carousel: dict, dry_run: bool) -> None:
-    """Preview report — image link + prompt + takeaway per paper.
-    Human checks this in Higgsfield/GitHub and regens any bad images."""
+    """Preview report — surfaces the Seedream prompt per paper so the gatekeeper
+    can paste each into Higgsfield's web UI, generate, and copy the URL back
+    into the article CSV."""
     c = carousel
     article_csv_name = path.name.replace("-report.md", "-article-canva.csv")
     lines = [
         f"# Visual production report — {c['id']}",
         "",
-        f"_Pillar: **{c['pillar']}**  ·  Model: `{c.get('model_used', DEFAULT_MODEL)}`  ·  Papers: {len(c['papers'])}_",
+        f"_Pillar: **{c['pillar']}**  ·  Papers: {len(c['papers'])}_",
         "",
-        f"_Preview each image below. If any image is off, regenerate it in Higgsfield's media library, "
-        f"copy the new URL, and replace the URL in the corresponding row of `{article_csv_name}`._",
+        "## How to use this report",
+        "",
+        f"For each paper below, copy the prompt into Higgsfield's web UI "
+        f"(model: **Seedream 4.5**, resolution: **1K**, aspect: **1:1**), "
+        f"generate the image, then paste the resulting CDN URL into the "
+        f"`hero_image_url` column of `{article_csv_name}` on the matching row.",
         "",
         "---",
         "",
@@ -139,32 +133,11 @@ def write_report(path: Path, carousel: dict, dry_run: bool) -> None:
             "",
             f"**Key takeaway:** {p['takeaway']}",
             "",
-        ])
-        url = p.get("hero_image_url", "")
-        if url and not dry_run:
-            lines.extend([
-                f"**Generated image:** {url}",
-                "",
-                f"![Slide {p['slide_position']} hero]({url})",
-                "",
-            ])
-        elif dry_run:
-            lines.extend(["_Dry-run — no image generated._", ""])
-        else:
-            lines.extend([
-                "**⚠ Image generation failed for this paper.** "
-                "Regenerate in Higgsfield manually and update the article CSV.",
-                "",
-            ])
-        lines.extend([
-            "<details>",
-            "<summary>Prompt used</summary>",
+            "**Prompt for Higgsfield (Seedream 4.5, 1K, 1:1):**",
             "",
             "```",
             p.get("prompt_used", "(not recorded)"),
             "```",
-            "",
-            "</details>",
             "",
             "---",
             "",
@@ -184,7 +157,6 @@ def write_report(path: Path, carousel: dict, dry_run: bool) -> None:
 
 def process_file(
     md_path: Path,
-    client: HiggsfieldClient | None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     """End-to-end for one approved markdown file."""
@@ -198,40 +170,17 @@ def process_file(
     data = parse_markdown(md_text)
     c = data["carousel"]
     pillar = c["pillar"]
-    model = c.get("model_override", DEFAULT_MODEL)
-    c["model_used"] = model
 
     log.info(
         f"Carousel: {c['id']} | pillar: {pillar} | papers: {len(c['papers'])} | "
-        f"total slides: {c['total_slides']} | model: {model}"
+        f"total slides: {c['total_slides']}"
     )
-
-    total_cost = 0.0
-    errors = []
 
     for paper in c["papers"]:
         prompt = synthesize_prompt(paper["visual_concept"], pillar)
         paper["prompt_used"] = prompt
-
-        if dry_run:
-            log.info(f"  [DRY] '{paper['title'][:60]}...' — prompt {len(prompt)} chars")
-            paper["hero_image_url"] = ""
-            total_cost += ESTIMATED_COST_PER_IMAGE.get(model, 1)
-        else:
-            try:
-                result = client.generate_image(
-                    prompt=prompt,
-                    model=model,
-                    aspect_ratio=DEFAULT_ASPECT_RATIO,
-                    resolution=DEFAULT_RESOLUTION,
-                )
-                paper["hero_image_url"] = result.image_url
-                total_cost += result.cost or 0
-                log.info(f"  ✓ '{paper['title'][:60]}...' → image generated")
-            except Exception as e:
-                log.error(f"  ✗ '{paper['title'][:60]}...' failed: {e}")
-                errors.append({"title": paper["title"], "error": str(e)})
-                paper["hero_image_url"] = ""
+        paper["hero_image_url"] = ""  # Filled manually by gatekeeper from Higgsfield UI
+        log.info(f"  · '{paper['title'][:60]}...' — prompt {len(prompt)} chars")
 
     stem = output_stem(md_path)
     write_report(stem.parent / f"{stem.name}-report.md", c, dry_run)
@@ -245,8 +194,6 @@ def process_file(
         "file": str(md_path),
         "carousel_id": c["id"],
         "papers_processed": len(c["papers"]),
-        "errors": errors,
-        "total_cost_credits": round(total_cost, 2),
         "dry_run": dry_run,
     }
 
@@ -289,23 +236,12 @@ def main() -> int:
         log.info("No approved files found. Exiting cleanly.")
         return 0
 
-    log.info(f"Found {len(targets)} approved file(s). Dry-run: {args.dry_run}")
-
-    client = None
-    if not args.dry_run:
-        from higgsfield_client_wrapper import credentials_present
-        if not credentials_present():
-            log.error(
-                "Higgsfield credentials not found in environment. "
-                "Set HF_KEY=KEY_ID:KEY_SECRET as a repo secret."
-            )
-            return 2
-        client = HiggsfieldClient()
+    log.info(f"Found {len(targets)} approved file(s)")
 
     summaries = []
     for md_path in targets:
         try:
-            summary = process_file(md_path, client, dry_run=args.dry_run)
+            summary = process_file(md_path, dry_run=args.dry_run)
             summaries.append(summary)
         except ParseError as e:
             log.error(f"{md_path}: parse error: {e}")
