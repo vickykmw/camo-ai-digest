@@ -107,6 +107,15 @@ v2.4 changes (2026-05-22):
     Multi-tick handling: honour the first ticked pillar, warn about the
     rest. The approval workflow trigger now also fires on commits to
     ready_for_visual/**/*.md so pillar ticks pick up automatically.
+
+v2.5 changes (2026-05-22):
+  - Cluster files now land in a monthly subfolder, mirroring the
+    `digests/2026-MM/` convention. New layout:
+      ready_for_visual/2026-05/2026-05-21-bad-job-economy-2026.md
+    The cluster_file value persisted in approval_state.json reflects this
+    full nested path. Scanner switched from glob() to rglob() so monthly
+    subfolders are searched. Flat files at the top level (legacy) still
+    match -- nothing existing breaks.
 """
 from __future__ import annotations
 
@@ -128,7 +137,7 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v2.4 (2026-05-22)"
+VERSION = "v2.5 (2026-05-22)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
@@ -215,7 +224,9 @@ def scan_cluster_ticks(state: dict) -> int:
     edit approval_state.json manually."""
     if not CLUSTERS_DIR.exists():
         return 0
-    cluster_files = sorted(CLUSTERS_DIR.glob("*.md"))
+    # v2.5: rglob (not glob) so monthly subfolders like ready_for_visual/2026-05/
+    # are searched. Flat files at the top level (legacy / v2.4 layout) still match.
+    cluster_files = sorted(CLUSTERS_DIR.rglob("*.md"))
     if not cluster_files:
         return 0
 
@@ -940,7 +951,11 @@ def fire_clusters(state: dict, ready: dict, today_iso: str) -> int:
 
         body = render_cluster_md(camo_id, items, keywords, caption, today_iso,
                                  camo_index_map=camo_index_map)
-        cluster_path = CLUSTERS_DIR / f"{today_iso}-{camo_id}.md"
+        # v2.5: organise cluster files by month, mirroring the digests/2026-MM/
+        # convention. today_iso is YYYY-MM-DD, so today_iso[:7] is YYYY-MM.
+        month_subdir = CLUSTERS_DIR / today_iso[:7]
+        month_subdir.mkdir(parents=True, exist_ok=True)
+        cluster_path = month_subdir / f"{today_iso}-{camo_id}.md"
         cluster_path.write_text(body, encoding="utf-8")
         print(f"[ok]  wrote {cluster_path.relative_to(REPO_ROOT).as_posix()}")
 
