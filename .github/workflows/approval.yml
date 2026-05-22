@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - 'digests/**/*.md'
+      - 'ready_for_visual/**/*.md'
       - 'process_approvals.py'
       - '.github/workflows/approval.yml'
   workflow_dispatch:
