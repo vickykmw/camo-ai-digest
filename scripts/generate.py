@@ -40,14 +40,14 @@ from higgsfield_client_wrapper import HiggsfieldClient
 REPO_ROOT = Path(__file__).parent.parent
 READY_DIR = REPO_ROOT / "ready_for_visual"
 
-DEFAULT_MODEL = "bytedance/seedream/v4/text-to-image"
+DEFAULT_MODEL = "seedream_v4_5"
 DEFAULT_ASPECT_RATIO = "1:1"
 DEFAULT_RESOLUTION = "1K"
 
 ESTIMATED_COST_PER_IMAGE = {
-    "bytedance/seedream/v4/text-to-image": 1,
-    "black-forest-labs/flux-pro/text-to-image": 1,
-    "google/nano-banana-2/text-to-image": 1.5,
+    "seedream_v4_5": 1,
+    "flux_2": 1,
+    "nano_banana_2": 1.5,
 }
 
 
