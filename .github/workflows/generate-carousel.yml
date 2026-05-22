@@ -42,8 +42,6 @@ jobs:
           pip install -r requirements-pipeline.txt
 
       - name: Run pipeline
-        env:
-          HF_KEY: ${{ secrets.HF_CREDENTIALS }}
         run: |
           DRY_FLAG=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
