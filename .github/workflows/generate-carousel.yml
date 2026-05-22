@@ -43,7 +43,7 @@ jobs:
 
       - name: Run pipeline
         env:
-          HF_CREDENTIALS: ${{ secrets.HF_CREDENTIALS }}
+          HF_KEY: ${{ secrets.HF_CREDENTIALS }}
         run: |
           DRY_FLAG=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
