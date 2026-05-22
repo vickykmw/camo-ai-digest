@@ -97,6 +97,16 @@ v2.3 changes (2026-05-21):
     archival) can read either the rendered .md or the structured state.
   - Falls back gracefully to title + url only if camo_index.json is missing
     or doesn't contain the anchor paper's id.
+
+v2.4 changes (2026-05-22):
+  - Primary-pillar selection: cluster .md now renders one tickable
+    checkbox per pillar in the anchor section (only when the paper has 2+
+    pillars in camo_index.json -- single-pillar papers render as plain
+    info, no checkboxes). The editor ticks one; the next approval workflow
+    run writes `primary_pillar` onto every clustered item's state record.
+    Multi-tick handling: honour the first ticked pillar, warn about the
+    rest. The approval workflow trigger now also fires on commits to
+    ready_for_visual/**/*.md so pillar ticks pick up automatically.
 """
 from __future__ import annotations
 
@@ -118,7 +128,7 @@ except ImportError:
 # Configuration
 # ---------------------------------------------------------------------------
 
-VERSION = "v2.3 (2026-05-21)"
+VERSION = "v2.4 (2026-05-22)"
 
 CLUSTER_THRESHOLD = 3                # fire a cluster at >= this many queued items
 SKIP_NO_CAMO_CLUSTERS = True         # items without a CAMO match never auto-cluster
@@ -181,6 +191,87 @@ def save_approval_state(state: dict) -> None:
     APPROVAL_STATE_FILE.write_text(
         json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True)
     )
+
+
+# v2.4: regex for the primary-pillar checkbox lines inside a cluster .md.
+# Matches lines like "- [x] AI & Incentives" (case-insensitive on x).
+# Anchored inside the "Primary pillar — tick one ..." block by the caller.
+PILLAR_TICK_RE = re.compile(r"-\s*\[\s*[xX]\s*\]\s*(.+?)\s*$", re.MULTILINE)
+
+
+def scan_cluster_ticks(state: dict) -> int:
+    """Re-read every cluster .md in ready_for_visual/, parse any newly-ticked
+    primary-pillar checkbox, and apply the choice to the matching state
+    records. Returns the number of state records updated this run.
+
+    Matching: each clustered item in approval_state.json carries a
+    `cluster_file` path pointing at its cluster .md. We use that to map
+    cluster files back to their items.
+
+    Multi-tick handling: same Option B rule as multi-match approvals --
+    honour the first ticked pillar, log a warning about the rest. Single-
+    pillar papers render as plain info (no checkboxes) and are unaffected.
+    Editor un-ticking the box does NOT clear primary_pillar -- to undo,
+    edit approval_state.json manually."""
+    if not CLUSTERS_DIR.exists():
+        return 0
+    cluster_files = sorted(CLUSTERS_DIR.glob("*.md"))
+    if not cluster_files:
+        return 0
+
+    # Build a cluster_file -> [state records] map once, so we update
+    # in-memory state and persist once at the end.
+    by_cluster_file = defaultdict(list)
+    for url, rec in state.items():
+        cf = rec.get("cluster_file")
+        if cf:
+            by_cluster_file[cf].append(rec)
+
+    updates = 0
+    for cf in cluster_files:
+        rel = cf.relative_to(REPO_ROOT).as_posix()
+        members = by_cluster_file.get(rel, [])
+        if not members:
+            # Cluster file exists on disk but no state record references it
+            # (e.g. orphan from manual file creation). Skip silently.
+            continue
+
+        text = cf.read_text(encoding="utf-8", errors="replace")
+        # Limit the pillar-tick search to the anchor section -- avoids
+        # accidentally matching ticks elsewhere in the file.
+        section_start = text.find("**Primary pillar — tick one")
+        if section_start == -1:
+            # Either a single-pillar paper (no checkboxes rendered) or an
+            # older-format file. Skip.
+            continue
+        # End of pillar block is the next blank line followed by a
+        # non-checkbox line, but the simpler rule is "find ticks before the
+        # next ## header" which is robust enough.
+        section_end = text.find("\n## ", section_start)
+        if section_end == -1:
+            section_end = len(text)
+        section = text[section_start:section_end]
+
+        ticks = list(PILLAR_TICK_RE.finditer(section))
+        if not ticks:
+            continue
+        if len(ticks) > 1:
+            print(f"[warn]   {rel}: {len(ticks)} pillars ticked (tick only "
+                  f"ONE). Honouring the first; ignoring the rest.")
+        chosen_pillar = ticks[0].group(1).strip()
+
+        # Apply to every state record in this cluster. Skip records that
+        # already have the same pillar -- idempotent.
+        changed_here = 0
+        for rec in members:
+            if rec.get("primary_pillar") != chosen_pillar:
+                rec["primary_pillar"] = chosen_pillar
+                changed_here += 1
+        if changed_here:
+            updates += changed_here
+            print(f"[ok]  {rel}: primary_pillar set to '{chosen_pillar}' "
+                  f"({changed_here} record(s) updated)")
+    return updates
 
 
 def load_camo_index_by_id() -> dict:
@@ -663,7 +754,20 @@ def render_cluster_md(camo_id: str, items: list, keywords: list,
         lines.append(f"_{'  ·  '.join(byline_parts)}_")
     lines.append("")
     if anchor_pillars:
-        lines.append(f"**Pillars:** {', '.join(anchor_pillars)}")
+        if len(anchor_pillars) == 1:
+            # Single-pillar paper: nothing to choose, render as plain info
+            # (skips the checkbox UI; downstream automations can still infer
+            # primary_pillar from the camo_index if they need to).
+            lines.append(f"**Primary pillar:** {anchor_pillars[0]}")
+        else:
+            # Multi-pillar paper: render one tickable checkbox per pillar.
+            # Parser honours the FIRST ticked one (Option B, same as multi-
+            # match approval boxes). Tick anytime; the next approval workflow
+            # run writes primary_pillar onto each clustered item's state.
+            lines.append("**Primary pillar — tick one to anchor the visual + lead hashtag:**")
+            lines.append("")
+            for p in anchor_pillars:
+                lines.append(f"- [ ] {p}")
         lines.append("")
     if anchor_abstract:
         lines.append("**Abstract:**")
@@ -1018,6 +1122,15 @@ def main() -> None:
               f"({', '.join(f'{cid}={len(items)}' for cid, items in ready.items())})")
     created = fire_clusters(state, ready, today_iso)
 
+    # Step 5 (v2.4): scan existing cluster .md files for primary-pillar
+    # ticks. Lets the editor pick a primary pillar at any time after a
+    # cluster has fired; the workflow auto-picks it up on the next run.
+    # Cluster files written above by fire_clusters get scanned too -- a no-op
+    # in practice since they have no ticks yet, but harmless.
+    pillar_updates = scan_cluster_ticks(state)
+    if pillar_updates:
+        print(f"[info] primary_pillar set/changed on {pillar_updates} state record(s)")
+
     # Persist state regardless of whether anything changed -- cheap, safer.
     save_approval_state(state)
 
@@ -1027,7 +1140,8 @@ def main() -> None:
     save_queue_status(state)
 
     print(f"[ok] approval_state.json saved.  "
-          f"Summary this run: +{added} queued, +{created} clusters created.")
+          f"Summary this run: +{added} queued, +{created} clusters created, "
+          f"+{pillar_updates} primary-pillar update(s).")
 
 
 if __name__ == "__main__":
