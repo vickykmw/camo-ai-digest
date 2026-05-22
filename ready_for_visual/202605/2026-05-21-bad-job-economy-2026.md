@@ -7,7 +7,11 @@ _Created: 2026-05-21  ·  Cluster id: `bad-job-economy-2026`  ·  3 articles_
 **[Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design](https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/)**
 _Matthias Fahn, Jin Li, Chang Sun  ·  2026  ·  Working Paper_
 
-**Pillars:** AI & Incentives, AI Adoption, AI & Jobs
+**Primary pillar — tick one to anchor the visual + lead hashtag:**
+
+- [ ] AI & Incentives
+- [ ] AI Adoption
+- [x] AI & Jobs
 
 **Abstract:**
 
