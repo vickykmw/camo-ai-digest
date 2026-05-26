@@ -29,6 +29,12 @@ mood. Aimed at fixing "no anchor for the eye" outputs in downstream image
 generation. An escape hatch keeps pure data-shape abstraction viable for
 articles where it genuinely fits better.
 
+v6.3 adds:
+- Anthropic Research as a new source (third-party scraped feed; see comment
+  in FEED_URLS for the dependency caveat).
+- A BLOCK_PATTERNS list applied during candidate collection: items
+  mentioning "geopolitical" / "geopolitics" are dropped before scoring.
+
 Enrichment degrades gracefully: if the anthropic package is missing or
 ANTHROPIC_API_KEY is unset, the digest is still written using the raw RSS
 excerpts (v4 behaviour). A failure on one item never blocks the others.
@@ -60,7 +66,7 @@ except ImportError:
 # Version stamp -- check the workflow log for "DIGEST SCRIPT v5" to confirm
 # this file is the one running.
 # ---------------------------------------------------------------------------
-VERSION = "v6.2 (2026-05-20)"
+VERSION = "v6.3 (2026-05-26)"
 
 # ---------------------------------------------------------------------------
 # Sources
@@ -92,6 +98,14 @@ FEED_URLS = [
 
     # McKinsey Insights (includes McKinsey Global Institute items)
     "https://www.mckinsey.com/insights/rss",
+
+    # Anthropic Research -- Anthropic does not publish an official RSS feed
+    # for /research. This is a third-party scrape from the Olshansk/rss-feeds
+    # repo, regenerated hourly. Dependency risk: if that repo stops being
+    # maintained, this feed dies. Articles here are mostly AI safety /
+    # interpretability / capabilities; only items that also touch the
+    # business-domain keyword list will survive the filter.
+    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml",
 ]
 
 PER_FEED_ITEM_LIMIT = 30
@@ -99,6 +113,15 @@ TOP_N = 10
 MAX_PER_SOURCE = 4              # diversity cap: no more than this many items from any one source in the top N
 RECENCY_WINDOW_DAYS = 30
 REAPPEAR_LOOKBACK_DAYS = 7
+
+# Items matching any BLOCK_PATTERNS term in title/summary are dropped at
+# candidate collection time, before scoring. Use this for categories you
+# never want in the digest regardless of how well they match the AI/domain
+# pools. Patterns are case-insensitive, word-boundary aware.
+BLOCK_PATTERNS = [
+    r"\bgeopolitical\b",
+    r"\bgeopolitics\b",
+]
 
 # ---------------------------------------------------------------------------
 # Enrichment configuration
@@ -272,6 +295,8 @@ def feed_label(url: str) -> str:
         return "arXiv: Computers & Society (cs.CY)"
     if "mckinsey.com" in url:
         return "McKinsey Insights"
+    if "feed_anthropic_research" in url:
+        return "Anthropic Research"
     return url
 
 
@@ -793,6 +818,7 @@ def build_digest() -> None:
 
     seen_links = set()
     candidates = []
+    skipped_blocked = 0
     skipped_ai = 0
     skipped_domain = 0
     skipped_age = 0
@@ -805,6 +831,11 @@ def build_digest() -> None:
         title = (entry.get("title") or "").strip()
         summary = strip_html(entry.get("summary") or entry.get("description") or "")
         haystack = f"{title}\n{summary}"
+
+        # --- block-keyword filter: drop before scoring ------------------------
+        if count_matches(haystack, BLOCK_PATTERNS) > 0:
+            skipped_blocked += 1
+            continue
 
         # --- AI side: strong required; booster counts only if strong present ---
         ai_strong = count_matches(haystack, AI_STRONG_PATTERNS)
@@ -847,8 +878,8 @@ def build_digest() -> None:
         })
 
     print(f"[info] candidates passing all filters: {len(candidates)}  "
-          f"(skipped -- no AI: {skipped_ai}, no domain: {skipped_domain}, "
-          f"no/old date: {skipped_age})")
+          f"(skipped -- blocked: {skipped_blocked}, no AI: {skipped_ai}, "
+          f"no domain: {skipped_domain}, no/old date: {skipped_age})")
 
     candidates.sort(key=lambda x: x["score"], reverse=True)
 
