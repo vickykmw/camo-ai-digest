@@ -467,6 +467,183 @@
     "model": "claude-sonnet-4-6",
     "title": "AI-Mediated Communication Can Steer Collective Opinion"
   },
+  "https://arxiv.org/abs/2605.16283": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This paper argues that generative AI may be the first general-purpose technology to threaten not just current jobs but the formation of the capabilities that allow future workers to hold jobs at all. From CAMO's perspective on AI and careers, the distinction the author draws between performance and learning is critical: if AI assistance raises output while eroding the underlying cognitive development that produces skilled professionals, organizations face a pipeline problem that no amount of retraining can fix after the fact. This concern connects directly to CAMO's finding in 'Better Technology, Worse Motivation' that AI assistance can flatten quality curves and reduce the sustained effort through which excellence is built — a motivational dynamic that, at population scale, may have structural consequences for skill formation across generations.",
+      "claude_summary": "This paper asks whether society's traditional recovery mechanism from technological displacement — educating workers to perform tasks beyond what machines can do — can survive generative AI, which now operates at the cognitive ceiling itself. The author develops a stock-versus-flow framework showing that while current workers appear largely augmented by AI, the developmental pipeline for the next generation is under pressure. A reanalysis of cross-platform AI conversation data and learning experiments finds that AI consistently improves task performance without improving actual learning (effect size d = 1.21). The paper argues that AI's deepest societal risk is eliminating 'productive struggle' — the effortful cognitive process through which human capability forms — and proposes new measurement frameworks to capture what standard economic and educational data currently miss.",
+      "key_takeaway": "AI may raise what students and workers produce today while quietly degrading the cognitive development that determines what they are capable of tomorrow.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both papers document a shared mechanism: AI assistance improves measured output while reducing the effortful engagement through which deeper capability — whether creative quality or genuine learning — is developed.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint, currently at version 2 with no indication of journal acceptance.",
+        "Empirical base for the learning-outcome claims is thin by the author's own admission: the three studies measuring learning outcomes each have n < 200, and the cross-platform reanalysis pools heterogeneous conversation data whose comparability is unclear.",
+        "Single-author paper with broad disciplinary scope (labor economics, cognitive science, education, AI deployment data); claims span multiple fields without co-authors specializing in each.",
+        "The stock-versus-flow framework and extended cognitive taxonomy are theoretical constructs introduced by this paper and not yet validated or replicated by independent research."
+      ],
+      "visual_concept": "A single wooden ladder, centered in the frame and photographed from a low angle so it recedes toward a pale overcast sky, with its upper rungs fading into soft mist. The ladder is the sole focal subject, occupying the vertical axis of the image. A single shaft of cool diffused light falls along the front face of the ladder, drawing the eye upward along the rungs while the surrounding environment — bare grey floor below, empty atmosphere above — is kept deliberately sparse. The palette is cool and desaturated, silver-grey with faint blue undertones, suggesting ambiguity rather than crisis. The topmost rungs disappear into the mist, visualizing the idea of a cognitive ceiling that is now obscured rather than absent."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Can the Recovery Mechanism Survive AI? Skill Formation, Labor, and What Current Measurement Misses"
+  },
+  "https://arxiv.org/abs/2605.22841": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper uses multi-agent LLM simulation and inverse game theory to benchmark how different frontier models encode social preferences — reciprocity, inequality aversion, norm respect — when playing adversarial geopolitical roles. From CAMO's perspective on algorithmic behavior and decision-making, the more consequential finding for practitioners is the systematic divergence between model families: the utility parameters recovered are not neutral, and organizations deploying LLMs for strategic analysis or scenario planning should treat model provenance as a material variable in their evaluation framework, not a background detail.",
+      "claude_summary": "When eight frontier LLMs are assigned geopolitical roles in a simulated Greenland sovereignty crisis — spanning the U.S., Denmark, NATO, Russia, Canada, and Greenland itself — their behavior reveals systematic differences in how AI models handle coercion and alliance norms. Across 3,604 completed games, all eight models became significantly more escalatory under coercive framing (four-action escalation rising from 10.7% to 28.6%). Chinese-origin models weighted power differently from Western-origin models when playing the U.S. role, and peaceful acquisition emerged in only 1.9% of clean games. The paper uses inverse game theory to recover each model's structural utility parameters, positioning the exercise as a behavioral benchmark for LLMs in high-stakes strategic settings.",
+      "key_takeaway": "All tested LLMs escalate significantly under coercive framing, and the structural preferences they encode vary meaningfully by model origin — a practical warning for any organization using frontier AI in strategic or policy analysis.",
+      "matched_camo": [],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 42,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint with no indication of journal submission or external review.",
+        "Geopolitical AI simulation is a methodologically contested area — recovered utility parameters from LLM behavior may not map cleanly onto real strategic decision-making.",
+        "The article's relevance to CAMO's four pillars is a significant stretch; the subject matter (LLM geopolitics, NATO, sovereignty) falls substantially outside the centre's organizational and management focus.",
+        "Findings on Chinese-origin vs. Western-origin model differences are likely to attract controversy and require careful editorial framing to avoid misrepresentation."
+      ],
+      "visual_concept": "A single large chess king piece, rendered in cool silver-grey, positioned slightly left of center in the foreground of a spare, minimal composition. Behind it, receding toward a single vanishing point at the center of the frame, a row of smaller chess pieces in alternating light and dark tones diminishes into the distance, drawing the eye through depth and creating a clear hierarchy of scale. The background is a flat, near-black surface with no texture competing for attention. Lighting is cold and directional — a single hard source from the upper left casting a long shadow from the king piece toward the viewer, reinforcing the asymmetry of power the article examines. Palette is desaturated steel and charcoal with a faint blue undertone."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Strategic Coercion Within Alliances: The Greenland Sovereignty Game as an AI Stress Test"
+  },
+  "https://arxiv.org/abs/2605.22995": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This survey argues that agentic AI systems proposed for social good are systematically under-specified: they invoke universal goals while omitting the geographic and institutional context that determines whether those goals can be meaningfully pursued. From CAMO's perspective on AI Algorithms & Data, the finding points to a structural design problem — when systems are trained and evaluated without grounding in local legal, political, or cultural conditions, accountability becomes unenforceable by design. The paper's call for minimal reporting standards resonates with CAMO's broader interest in the conditions under which algorithmic decisions can be trusted and audited; as CAMO's work on dynamic selection and reinforcement bias shows, ignoring the context in which data is generated and decisions are made produces systematic distortions that are invisible until deployment.",
+      "claude_summary": "A structured survey of 112 papers on agentic AI for social good finds a troubling pattern: the systems most likely to affect vulnerable communities are least likely to be grounded in any specific geographic, legal, or cultural context. Seventy-three percent of papers specify no geographic setting at all. The gap is sharpest in institutional domains — papers addressing peace, justice, and governance (SDG 16) specify geography only 13% of the time, compared with 37–40% for health and ecological papers. Only 25% of papers report any real-world deployment. The authors argue this constitutes 'moral abstraction': treating institutional good as universally portable in ways that health interventions are not. They propose a minimal reporting standard for context-specific, participatory, and accountable agentic AI.",
+      "key_takeaway": "AI systems designed for social good that omit geographic and institutional context cannot be held accountable to the communities they claim to serve — and the evidence suggests most currently do.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers are concerned with how the context of data generation and deployment shapes the reliability and accountability of algorithmic decisions — the survey at the institutional level, CAMO's paper at the statistical level.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 58,
+      "red_flags": [
+        "Preprint only — arXiv submission, not yet peer-reviewed.",
+        "Survey is limited to published papers and may inherit publication bias toward positive or aspirational framings of agentic AI.",
+        "The 'moral abstraction' framing is interpretive; the underlying empirical finding (low geographic specification rates) is descriptive and the causal mechanism is inferred rather than demonstrated.",
+        "The proposed 'minimal reporting standard' is normative and untested — no evidence is presented on whether it would improve outcomes."
+      ],
+      "visual_concept": "A large, empty world map printed on aged paper, positioned centrally and filling most of the frame, with the vast majority of its surface left unmarked and pale. In the foreground, slightly off-center to the left, a single bureaucratic rubber stamp rests face-down on the map's surface, its ink impression creating a small dark circle on one region — the only mark on an otherwise blank expanse. A single overhead light source pools directly onto the stamp and its impression, leaving the surrounding map in soft shadow. The palette is muted and institutional: cream, slate grey, and a deep ink-blue for the stamp mark. The background is a plain, dark surface with no competing detail."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Whose Good, Whose Place? The Moral Geography of Agentic AI for Social Good"
+  },
+  "https://arxiv.org/abs/2605.23123": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study argues that sustained AI use in academic settings produces a compounding fatigue that erodes motivation and attentional capacity — not merely technical friction, but a structural disincentive to effortful engagement. From CAMO's perspective on AI and incentives, the finding maps onto a broader pattern: AI tools can weaken the conditions for sustained, high-quality work rather than simply augmenting them. CAMO's own experimental work with professional illustrators — published as 'Better Technology, Worse Motivation' — found that AI assistance reduced the returns to effort and prompted a strategic retreat to lower-quality outputs; the AI fatigue construct offers a complementary mechanism through which that demotivation may accumulate in repeated-use settings.",
+      "claude_summary": "What happens when students use AI tools so extensively that the tools themselves become a source of exhaustion? This grounded-theory study of 1,054 university students across three Philippine universities identifies five distinct dimensions of AI fatigue: Cognitive Overload, Motivational Disengagement, Moral Unease, Physical Strain, and Attentional Drift. Crucially, the researchers argue these pressures do not operate independently but accumulate and reinforce one another in a stage-based progression. The study positions AI fatigue as a construct separate from technostress or digital fatigue — one specific to sustained, mediated interaction with AI in goal-oriented tasks. The conceptual model is exploratory and based on self-reported open-ended responses; instrument validation and scale development are flagged as necessary next steps.",
+      "key_takeaway": "Repeated AI use may not just save effort — it may erode the motivation and attention needed for high-quality work, a dynamic that managers deploying AI tools at scale should not assume will self-correct.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both studies identify AI use as a mechanism that diminishes sustained motivational effort — the CAMO paper through experimental evidence with illustrators, this paper through a conceptual model of motivational disengagement as a fatigue dimension.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI & Incentives",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Grounded theory on open-ended survey responses — findings are conceptual and exploratory, not yet validated with a psychometric instrument; authors acknowledge this limitation explicitly.",
+        "Sample is limited to university students in the Philippines; cross-cultural and professional generalizability is unestablished.",
+        "Not yet peer-reviewed (arXiv preprint); no peer review status indicated.",
+        "Reliance on self-reported retrospective accounts introduces recall and social-desirability bias, particularly for the Moral Unease dimension (likely connected to AI misuse anxiety)."
+      ],
+      "visual_concept": "A single wooden student desk, centered slightly left of frame and occupying the middle ground, with a open laptop screen casting cool blue-white light upward onto an empty chair. The desk is positioned at the end of a long, narrow classroom corridor whose receding rows of identical empty desks form a natural vanishing point behind it, drawing the eye inward toward the lit screen. The surrounding classroom is dim and spare — bare walls, no figures, no clutter — so the glowing screen is the sole source of light and the only focal subject. Palette is muted grey-beige for the physical environment against the cool luminescence of the screen; the contrast is soft, not harsh, suggesting depletion rather than drama. No human figures present."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Defining AI Fatigue in Academic Contexts: Dimensions, Indicators, and a Stage-Based Model Using Grounded Theory"
+  },
+  "https://arxiv.org/abs/2605.23616": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper addresses a genuine gap in decision-support methodology: optimisation models find efficient solutions but not necessarily stakeholder-relevant ones, while participatory methods consult stakeholders but explore too narrow a solution space. From CAMO's perspective on algorithmic decision-making, the deeper question the paper raises is one of legitimacy—how quantitative models should be designed so that the alternatives they surface reflect the objectives of the people who must live with the outcome. The work is methodologically careful but sits at the edge of CAMO's core focus on AI-driven organisational and labour decisions; its connections to AI specifically are indirect.",
+      "claude_summary": "Complex planning decisions—such as how to decarbonise a university campus energy system—typically force a choice between rigorous optimisation models and structured stakeholder consultation. This paper proposes a method called Value-Focused Modelling to Generate Alternatives (VF-MGA) that runs both in tandem: stakeholder objectives shape which alternatives an optimisation algorithm generates, and those alternatives are then scored against stakeholder preferences through multi-criteria analysis. Applied to a real campus case with eleven stakeholder groups, the method produced 691 near-optimal configurations, surfaced options that pure optimisation would have ignored, and revealed where stakeholder preferences genuinely converge or conflict. The framework is presented as generalisable beyond energy systems to any complex planning domain.",
+      "key_takeaway": "Combining stakeholder objective-setting with large-scale optimisation generates planning alternatives that are both technically near-optimal and genuinely relevant to the people affected by the decision.",
+      "matched_camo": [],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 38,
+      "red_flags": [
+        "Not peer-reviewed: posted as arXiv preprint (econ.GN), no journal acceptance confirmed.",
+        "Topical fit with CAMO's AI-and-organisations focus is weak — the paper is primarily an operations research / energy systems methodology contribution with no direct AI or labour-market content.",
+        "Single case study (one university campus, one country context) limits generalisability claims made in the abstract.",
+        "No AI methods used or evaluated; inclusion under an AI-focused centre would require editorial framing that the paper itself does not support."
+      ],
+      "visual_concept": "A large architectural floor plan or campus map occupies the centre of the frame, printed on drafting paper and slightly worn at the edges, positioned on a wide table viewed from a low angle so it recedes to a vanishing point at the far end. Eleven small colour-coded markers—each a distinct hue—are placed at scattered points across the plan, their distribution suggesting diverse priorities rather than consensus. The vanishing point behind the plan draws the eye through the composition, reinforcing the idea of multiple paths toward a single distant outcome. The surrounding table surface is bare and neutral, keeping attention on the plan and markers. Lighting is cool and diffuse, like north-facing daylight through a window, with soft shadows falling away from the markers."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Value-focused modelling to generate alternatives -- Coupling multi-criteria decision analysis and optimisation models to support strategic decisions"
+  },
+  "https://arxiv.org/abs/2605.23684": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This audit finds that generative search engines are routinely citing AI-generated web sources — at a rate of roughly one in six citations — without distinguishing them from authoritative human-produced content. From CAMO's perspective on the statistical and governance foundations of trustworthy AI-driven decisions, this is a data-quality problem with systemic consequences: if the retrieval layer of AI systems cannot reliably filter synthetic content, downstream inferences and recommendations built on those outputs inherit an invisible layer of circularity. Organisations deploying AI for research, compliance, or market intelligence need to treat citation provenance as an auditable input, not an assumed given.",
+      "claude_summary": "An audit of four generative search engines — ChatGPT, Copilot, Gemini, and Perplexity — finds that roughly 16% of sources cited in responses to real-world queries show evidence of being AI-generated, across health, politics, and environmental topics. The study used 712 human-generated queries and identified specific web domains that repeatedly surface as synthetic sources. The engines also exhibit a narrow citation pattern: a small set of domains is cited frequently, while a large tail of domains appears only once or twice. The finding raises a structural reliability problem: when AI-generated content is treated as equivalent to authoritative sources inside the response loop, errors can compound without users being aware of the origin or quality of the underlying information.",
+      "key_takeaway": "About one in six sources cited by leading generative search engines shows evidence of being AI-generated, meaning decisions informed by these tools may be grounded in content with no independent authoritative basis.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "reason": "Both papers examine how optimising on a measured primary dimension — search relevance or test improvement — can produce unmeasured secondary harms, here the contamination of cited sources with AI-generated content.",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Preprint only — posted on arXiv, not yet peer-reviewed; findings should be treated as preliminary.",
+        "AI-generated content detection methods are contested in the literature; the 16% figure depends on the reliability of classifiers used to identify synthetic sources, which the excerpt does not detail.",
+        "Audit conducted at a single point in time; generative search engine behaviour updates frequently, so findings may not reflect current system versions."
+      ],
+      "visual_concept": "A single printed page centered in the frame, occupying roughly the lower two-thirds of the image, resting on a plain pale grey surface. The page displays a short numbered list of citations in clean serif type; one line in the middle of the list is visibly repeated — identical text appearing twice — subtly highlighted by a narrow pool of cool, diffuse daylight falling from above-left directly onto that duplicated line, leaving the rest of the page in softer shadow. The surrounding environment is minimal: a bare desk surface, no clutter, no other objects competing for attention. The palette is cool and muted — off-white, slate grey, with a faint blue cast in the lit area — conveying clinical scrutiny rather than alarm."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Synthetic Sources?: Auditing Generative Search Engine Citations for Evidence of AI-Generated Sources"
+  },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
       "audience_relevance": {
@@ -685,6 +862,37 @@
     "enriched_at": "2026-05-17",
     "model": "claude-sonnet-4-6",
     "title": "The Innovation Advantage GenAI Can’t Give You"
+  },
+  "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This podcast episode argues that responsible AI adoption in knowledge-intensive organizations requires deliberate experimentation under human oversight, rather than wholesale deployment or blanket avoidance. From CAMO's perspective on AI adoption, the real organizational challenge is not access to the technology but the governance structures—who tests, who oversees, and how quality standards are maintained—that determine whether AI integration adds genuine value. Our Deloitte-HKU AI Adoption Index finds that the dominant barriers to AI adoption are organizational and executional rather than technical, a pattern consistent with Palmer's emphasis on nuance over speed.",
+      "claude_summary": "Andrew Palmer, senior editor at The Economist, discusses how news organizations can experiment with generative AI while managing the tension between speed, quality, and editorial risk. Speaking on the MIT Sloan Management Review podcast, Palmer draws on his own organization's experience of testing AI tools under human oversight to find efficiencies in editing and publishing workflows. The conversation centers on the need for organizational nuance—avoiding both uncritical enthusiasm and reflexive skepticism—when integrating AI into professional knowledge work. The excerpt is thin on specific findings or data; the discussion appears to be practitioner-level reflection rather than empirical research.",
+      "key_takeaway": "Effective AI adoption in professional knowledge work depends less on the technology itself and more on building organizational structures that allow controlled experimentation without sacrificing quality or accountability.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the episode and the index identify organizational execution—not technical capability—as the central obstacle to realizing value from AI, and both emphasize that measured, structured experimentation is preferable to undifferentiated rollout.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 58,
+      "red_flags": [
+        "Podcast episode, not peer-reviewed research; findings are practitioner reflections, not empirical results.",
+        "RSS excerpt is very thin—summary relies on limited disclosed content; core arguments cannot be fully verified without listening to the full episode.",
+        "No quantitative evidence or organizational data cited in the available excerpt."
+      ],
+      "visual_concept": "A single broadsheet page or printed proof sheet centered in the lower-middle third of the frame, lying flat on a plain light-grey desk surface. The page is rendered in crisp black-and-white editorial type, with one short paragraph visibly struck through in red pencil—suggesting revision and human judgment at work. A single overhead light source falls directly onto the page, creating a soft pool of warm white light that fades into cool grey shadow at the frame edges, keeping the surrounding environment bare and uncluttered. The composition uses the contrast between the illuminated page and the receding grey surface as the sole compositional device, drawing the eye immediately to the act of editing. Palette: cool grey background, warm neutral paper tone, single accent of editorial red."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "A Need for Nuance: The Economist’s Andrew Palmer"
   },
   "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/ai-strategy-and-the-future-of-work-oxford-economist-jean-paul-carvalho": {
     "data": {
