@@ -1,4 +1,35 @@
 {
+  "https://arxiv.org/abs/2409.08379": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study shows that LLM assistance does not lift all contributions equally — it disproportionately amplifies incremental, comprehension-based work while leaving substantive, exploratory contributions relatively unchanged. From CAMO's perspective on AI and incentives, this mirrors a concern raised in our work on generative AI and professional effort: when AI compresses the cost of adequate-quality output, agents may rationally redirect effort away from harder, higher-value tasks. In open-source settings, where contributors self-select tasks without managerial oversight, the reallocation toward exploitation over exploration may be especially difficult to correct because there is no principal able to reprice the incentive for frontier contributions.",
+      "claude_summary": "A natural experiment around GitHub Copilot's October 2021 launch — where Copilot supported Python but not R for business reasons — provides causal evidence that LLM coding assistance increases open-source contributions by 28 to 40 percent. The growth is uneven: incremental contributions (maintaining and refining existing code) rise significantly more than substantive contributions (introducing genuinely new functionality). This gap widens in high-activity projects and after model upgrades, suggesting LLMs are most effective when rich existing context defines the problem and constrains solutions. The implication is that AI tilts collaborative innovation toward exploitation of established codebases rather than exploration of new territory — a structural shift in how open knowledge communities produce and extend ideas.",
+      "key_takeaway": "AI coding tools grow the volume of open-source contributions substantially, but the gains concentrate in routine maintenance rather than original invention — a pattern managers and platform designers should account for when forecasting AI's net effect on innovation pipelines.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both studies find that AI assistance flattens ambition toward lower-effort, adequate-quality output rather than sustaining the effort required for genuinely novel work.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI & Incentives",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Working paper (arXiv preprint, not yet peer-reviewed in a journal); findings should be treated as preliminary until formal publication.",
+        "Study is limited to open-source software (Python vs R ecosystems), so generalizability to proprietary organizational settings or non-coding knowledge work requires caution.",
+        "Classification of contributions as 'substantive' vs 'incremental' relies on automated approaches whose validity is not fully assessable from the abstract alone."
+      ],
+      "visual_concept": "A single large forking tree diagram rendered as a clean architectural blueprint — white lines on a deep navy background — centered in the frame at medium scale. The trunk and lower branches are thick and densely annotated, representing the established codebase; the upper branches taper and thin sharply, conveying the relative scarcity of new exploratory growth. A diffuse pool of cool white light falls from above onto the mid-section of the tree, where the branching is most active, while the sparse upper tips recede into shadow. The surrounding space is empty blueprint grid, quiet and uncluttered, so the contrast between the dense lower structure and the sparse upper canopy reads immediately."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot"
+  },
   "https://arxiv.org/abs/2506.22440": {
     "data": {
       "audience_relevance": {
@@ -36,6 +67,37 @@
     "enriched_at": "2026-05-18",
     "model": "claude-sonnet-4-6",
     "title": "From Model Design to Organizational Design: Complexity Redistribution and Trade-Offs in Generative AI"
+  },
+  "https://arxiv.org/abs/2508.12479": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This paper contributes a theoretically grounded algorithm for global min-max optimization, addressing a gap where gradient-based methods reliably fail in non-convex settings. From CAMO's perspective on the statistical and algorithmic foundations of trustworthy AI-driven decisions, the relevance lies in the downstream: robust adversarial machine learning and multi-agent game equilibria depend on exactly this kind of global-solution guarantee rather than approximate convergence. The connection is more foundational than applied — the work is unlikely to reach managers directly, but the class of problems it solves underpins reliability claims in deployed AI systems.",
+      "claude_summary": "A new algorithm called EXOTIC tackles a class of optimization problems — min-max problems — that appear throughout game theory and adversarial machine learning, but where standard gradient-based methods can get stuck far from the true best solution. The core challenge: when the problem lacks certain mathematical properties (convexity or concavity), existing approaches settle for approximate solutions that may be nowhere near the global optimum. EXOTIC combines a tree-search strategy for the outer problem with a convex solver for the inner problem, and can handle the messy, biased errors that arise in real computation. The authors show it finds global solutions and demonstrate its value in computing security strategies in multi-player games — a problem prior methods could not solve exactly.",
+      "key_takeaway": "Standard gradient methods can settle far from the true optimum in adversarial and game-theoretic settings; EXOTIC offers a tree-based alternative with global guarantees, which matters for any AI system whose reliability rests on finding true equilibria rather than approximate ones.",
+      "matched_camo": [
+        {
+          "id": "asymptotic-theory-iv-rl-2024",
+          "reason": "Both papers develop algorithmic frameworks with formal theoretical guarantees for sequential decision-making problems modeled as dynamic optimization processes, addressing failure modes of standard methods.",
+          "title": "Asymptotic Theory for IV-Based Reinforcement Learning with Potential Endogeneity",
+          "url": "https://camo.hku.hk/asymptotic-theory-for-iv-based-reinforcement-learning-with-potential-endogeneity/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal acceptance.",
+        "Highly technical algorithmic paper with limited direct relevance to organizational or managerial AI topics — audience fit for CAMO's primary readership is weak.",
+        "Empirical benchmarks described but underlying datasets and competitor implementations not independently verified from the excerpt alone."
+      ],
+      "visual_concept": "A single bare decision tree rendered in cool steel-blue, centered in the frame at medium scale, its branches extending symmetrically outward against a plain off-white background. A vanishing point placed directly behind the tree's root node draws the eye inward along converging perspective lines on a flat geometric floor plane, suggesting depth and systematic search. The environment is stripped of clutter — no labels, no figures — letting the tree's architecture carry the meaning. Lighting is soft and diffuse, with a gentle gradient from pale grey at the edges to near-white at the focal root, reinforcing the sense of convergence toward a solution."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "EXOTIC: An Exact, Optimistic, Tree-Based Algorithm for Min-Max Optimization"
   },
   "https://arxiv.org/abs/2511.08565": {
     "data": {
@@ -643,6 +705,164 @@
     "enriched_at": "2026-05-26",
     "model": "claude-sonnet-4-6",
     "title": "Synthetic Sources?: Auditing Generative Search Engine Citations for Evidence of AI-Generated Sources"
+  },
+  "https://arxiv.org/abs/2605.23921": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study documents a structural concentration in how Claude selects and presents health information sources — a small set of institutional names dominates nearly 60% of all citations, while commercial sources appear to benefit from SEO-style authority signals that may influence retrieval. From CAMO's perspective on AI Algorithms & Data, the finding raises a quiet but important question about whether LLM citation behavior reflects genuine epistemic quality or proxies for institutional brand visibility and technical markup. As AI systems move into high-stakes decision contexts like clinical health information, understanding the mechanics of source selection — and its potential biases — becomes a governance concern as much as a technical one.",
+      "claude_summary": "When consumers ask Claude health questions, where do its citations actually come from — and how credible are those sources? Analyzing 10,038 citations generated from 3,075 health questions, this study finds that 97.8% of Claude's citations point to established institutional sources: medical institutions (36.5%), government resources (31.6%), and professional associations (28.4%). The top 10 organizations account for 57.8% of all citations, with Mayo Clinic alone representing nearly one in four. Commercial health sources, while rare, display more overt authority signals — medical review statements, schema markup — than traditional institutions, which appear in citations regardless of such markers. The study establishes a baseline for evaluating Claude's citation behavior as Anthropic pursues HIPAA-ready healthcare deployments.",
+      "key_takeaway": "Claude's health citations are heavily concentrated in a handful of trusted institutions, but commercial sources appear to earn inclusion through SEO-style signals rather than traditional credibility markers — a distinction that matters as AI enters clinical settings.",
+      "matched_camo": [],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Preprint — arXiv submission, not yet peer-reviewed; findings should be treated as preliminary.",
+        "Descriptive cross-sectional design limits causal inference; the study documents patterns but cannot establish why Claude selects sources it does.",
+        "Sample is drawn from a single LLM (Claude) at a single point in time; generalizability to other models or future Claude versions is limited.",
+        "The Authority Signals Framework cited (Jacques et al., 2026) appears to be the authors' own instrument, creating a potential circularity in validation."
+      ],
+      "visual_concept": "A single open reference book centered in the frame, slightly off-center to the left at golden-ratio position, its pages fanning open and casting a long shadow to the right across a clean white surface. Behind the book, a sparse vertical hierarchy of faintly labeled rectangular blocks — like a simple org chart or citation stack — recedes toward a single vanishing point at the top-center of the image, drawing the eye from the book upward. The environment is minimal: a flat, uncluttered surface with no competing objects. Lighting is cool and directional, a soft daylight from the upper left that pools on the book's open pages, suggesting clinical clarity rather than warmth. Palette is white, cool grey, and a single muted institutional blue on the topmost block in the hierarchy."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Authority Signals in Claude AI Health Citations: A Descriptive Analysis Using the Authority Signals Framework"
+  },
+  "https://arxiv.org/abs/2605.23958": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study offers one of the largest behavioral maps of enterprise AI use to date, showing that adoption has moved past curiosity and into daily workflow — but that penetration remains uneven across task types and occupations. From CAMO's perspective on AI adoption, the uneven distribution matters as much as the aggregate: organizations that understand which tasks and roles are underserved by current tools are better positioned to close the gap between nominal deployment and genuine organizational impact. CAMO's Deloitte-HKU AI Adoption Index similarly found that adoption is nearly universal yet shallow in most firms, and this study's task-level data helps explain why — the tools are present, but uptake concentrates in a narrow band of activities.",
+      "claude_summary": "Drawing on anonymized data from roughly 5.5 million M365 Copilot Chat sessions, this study maps what knowledge workers actually do with enterprise AI. Writing tasks dominate, but usage also spans information retrieval, analysis, decision support, and diagnosing systems. A notable time trend shows users shifting away from treating the tool as a search engine and toward content creation and communication tasks. Usage is broad across occupational groups but uneven — some tasks are occupation-specific, others cut across job types. Where Copilot is underrepresented relative to actual labor market work provides a signal, the authors argue, of where enterprise AI will expand next.",
+      "key_takeaway": "Enterprise AI is becoming a genuine daily work tool for knowledge workers, but usage concentrates in writing and information tasks — the gaps in coverage show where the next wave of adoption will, and must, occur.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both studies document the gap between broad nominal AI adoption and shallow or uneven actual use, making them natural complements for understanding why enterprise AI underdelivers on ROI.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case illustrates how AI optimizes individual tasks but leaves coordination bottlenecks untouched — a structural parallel to this study's finding that Copilot usage clusters in discrete task categories rather than reshaping end-to-end workflows.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 85,
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint, posted May 2026; findings have not yet undergone formal peer review.",
+        "Authors are affiliated with Microsoft, which develops and sells M365 Copilot; findings should be read with that conflict of interest in mind.",
+        "Data is observational and drawn from a proprietary, non-public sample; replication by independent researchers is not currently possible.",
+        "The excerpt does not detail how 'sessions' are defined or how the classification model was validated, limiting assessment of measurement reliability."
+      ],
+      "visual_concept": "A single open-plan office desk, centered slightly left of frame at mid-ground scale, with a monitor displaying a minimal document interface — no brand markings. The desk is surrounded by a sparse, softly blurred open-plan environment that recedes into near-darkness, so no competing elements draw the eye. A single overhead light pools directly onto the desk surface and screen, creating a cone of cool white illumination that falls away into warm shadow at the edges of the frame. The lighting palette is cool-white at the focal point grading to amber at the periphery, suggesting concentration amid a larger, quieter organizational space. The mood is workday-functional rather than futuristic — grounded, routine, slightly solitary."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "AI in the Enterprise: How People Use M365 Copilot Chat"
+  },
+  "https://arxiv.org/abs/2605.24325": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper argues that AI disclosure in research has stalled at the level of output attribution—documenting what AI wrote or generated—while the more consequential question of cognitive agency remains unaddressed. From CAMO's perspective on AI adoption, the implication is organizational as much as scholarly: the same ambiguity that undermines academic accountability also surfaces inside firms deploying AI in knowledge work, where it is rarely clear whether a decision was originated by a human or proposed by a system. CAMO's work on the hidden competence penalties employees face when AI use is visible (see 'Research: The Hidden Penalty of Using AI at Work') suggests that without credible process-level disclosure, organizations will continue to conflate AI-assisted output with unassisted capability—with real consequences for evaluation, trust, and incentive design.",
+      "claude_summary": "Scientific publishing has no standard way to document how AI was used during research—only what it produced. This paper identifies that gap as substantive, not cosmetic: current disclosure norms cannot distinguish a researcher who independently conceived a study from one who adopted an AI-suggested direction, or one who critically evaluated AI outputs from one who accepted them uncritically. The proposed PAIRED framework reorients disclosure around decision points in the research process, generates both an author log and a publisher-facing summary from the same inputs, and embeds logging triggers into the workflow to prevent selective omission. The authors demonstrate the framework through worked examples and propose embedding it directly into AI research platforms.",
+      "key_takeaway": "Without process-level records of how AI was used—not just what it produced—neither research institutions nor organizations can reliably assess the intellectual contribution behind AI-assisted work.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "Both papers grapple with how organizations interpret and evaluate AI-assisted work: PAIRED addresses the absence of process-level disclosure that would let evaluators distinguish genuine intellectual contribution from AI delegation, which is precisely the attribution problem that drives the competence penalty documented in the CAMO study.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 58,
+      "red_flags": [
+        "Not peer-reviewed: preprint posted to arXiv, no indication of journal acceptance or external review.",
+        "Proposal paper only: PAIRED is a conceptual framework demonstrated through worked examples; no empirical validation of adoption, compliance rates, or real-world effectiveness is reported.",
+        "Single author with no disclosed institutional affiliation visible in the excerpt; potential for limited peer scrutiny.",
+        "Relevance to CAMO's core management and organizational audience is indirect; the framework targets academic publishing norms rather than firm-level AI governance."
+      ],
+      "visual_concept": "A single open research notebook centered in the lower-middle of the frame, its pages filled with handwritten annotations and printed text, positioned on a plain matte desk with minimal surroundings. A narrow shaft of cool, directional daylight falls directly onto the notebook from the upper left, leaving the edges of the frame in soft shadow and pulling the eye to the document as the sole focal subject. The lighting palette is cool grey-white with a faint warm tone on the paper itself, suggesting careful scrutiny rather than urgency. The scene is spare—no figures, no devices visible—conveying the idea of documentation and process record rather than technology."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "PAIRED: A Process-Anchored Framework for Transparent Reporting of AI Contributions in Scientific Research"
+  },
+  "https://arxiv.org/abs/2605.24837": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper argues that the binary choice between banning and permitting GenAI in assessment is a false dilemma, and that governance should instead follow the logic of what a valid inference requires. From CAMO's perspective on AI & Jobs, the deeper implication is organizational: as workplaces increasingly embed GenAI in professional workflows, educational institutions face the same challenge firms do — how to design evaluation systems that remain meaningful when AI assistance is ubiquitous. CAMO's research on the hidden competence penalties associated with AI use at work ('Research: The Hidden Penalty of Using AI at Work') suggests that how AI use is signaled and interpreted matters enormously; a generation trained under inconsistent AI-governance norms will enter firms where those ambiguities have real career consequences.",
+      "claude_summary": "How should institutions govern generative AI in STEM assessments — ban it, permit it, or require it? This paper proposes a framework rooted in Evidence-Centered Design that treats GenAI as a built-in design variable rather than an external threat. The core argument: the right governance stance depends on what skill is being measured. Restrict GenAI when it would short-circuit the inference between student output and target ability. Allow bounded use when it handles peripheral demands without revealing the core skill. Require it when the target competency is disciplinary AI interaction itself — prompting, critiquing, revising — and when process artifacts can be captured and scored. The framework is demonstrated in an introductory physics course, where AI-interaction competencies proved observable and scorable.",
+      "key_takeaway": "Governing GenAI in assessment is not about prohibition or permission but about specifying precisely which competency is being measured and designing tasks where human reasoning remains visible regardless of AI involvement.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "Both the paper and this article grapple with the social and institutional norms surrounding visible AI use — one in educational assessment, the other in professional evaluation — and both find that how AI assistance is perceived shapes behavior and outcomes in ways institutions have not yet resolved.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 58,
+      "red_flags": [
+        "Preprint only — posted to arXiv, not yet peer-reviewed; findings from a single introductory physics course limit generalizability.",
+        "Empirical demonstration is narrow in scope; the rubric-scoring claims would benefit from independent replication across disciplines and institutions.",
+        "Primary audience and contribution are in educational assessment research; relevance to business management or policy audiences requires an explicit bridging argument not fully present in the paper itself."
+      ],
+      "visual_concept": "A single examination desk, centered in the frame and shot from a slight high angle, holds one open notebook with a partially completed handwritten problem set alongside a tablet displaying a GenAI chat interface. The desk sits in an otherwise spare, softly lit classroom — rows of empty chairs recede toward a vanishing point behind the desk, pulling the eye back to it. Light falls in a cool, diffuse wash from a high window at the upper left, casting a soft shadow from the notebook toward the lower right, distinguishing the handwritten work from the screen's faint blue glow. The surrounding environment is deliberately uncluttered: pale concrete walls, no decorative elements, so the tension between the two work surfaces — pen and screen — carries the full visual weight."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Generative AI as a Design Variable: An Evidence-Centered Framework for Principled Governance in STEM Assessment"
+  },
+  "https://arxiv.org/abs/2605.25505": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study argues that GenAI's arrival in high-cognitive labor markets is producing a 'high-skill trap': workers with the credentials to use AI continue to cluster in exposed districts, but the wage premium for their skills is being eroded by task de-skilling and crowding. From CAMO's perspective on AI and jobs, this spatial evidence from Beijing gives empirical texture to a concern that is often argued theoretically — that AI can simultaneously attract talent and compress the returns to that talent. CAMO's working paper 'Toward a Bad Job Economy' models a structurally similar dynamic: AI lowers the cost of satisfactory performance, weakening the economic case for sustaining high-effort, high-wage roles, even when those roles generate more total surplus.",
+      "claude_summary": "Using 5 million job postings from Beijing (2018–2024), this study builds a neighborhood-level index of GenAI exposure and finds that the technology's impact is spatially uneven and paradoxical. Districts with the highest GenAI exposure have seen wage growth stall since 2023, even as they continue drawing highly skilled workers — a dynamic the authors call a 'high-skill trap.' The mechanism is task de-skilling and labor-market crowding: GenAI erodes the cognitive premium that once justified high wages in knowledge-intensive roles. A difference-in-differences design using ChatGPT's release as a natural experiment supports a causal reading. The findings challenge standard skill-biased technological change theory and suggest that GenAI may deepen rather than bridge intra-urban economic divides.",
+      "key_takeaway": "GenAI is stalling wages in Beijing's most knowledge-intensive neighborhoods by de-skilling cognitive tasks and flooding those districts with workers whose premium is now harder to justify — a warning that AI exposure and economic benefit do not automatically coincide.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both works identify a mechanism by which AI depresses wages in skilled roles — the Beijing paper through labor-market crowding and task de-skilling, the CAMO paper through the rising incentive cost of sustaining high effort — pointing to a shared structural concern about AI and wage polarization.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 85,
+      "red_flags": [
+        "Preprint only — posted on arXiv, not yet peer-reviewed; findings should be treated as preliminary.",
+        "Exposure index is constructed from LLM task-level assessments, which introduces model-dependent measurement assumptions that may not be fully validated.",
+        "Study is limited to Beijing; generalizability to other cities or labor markets requires caution.",
+        "The difference-in-differences design uses ChatGPT's release as an exogenous shock, but the plausibility of the parallel-trends assumption is not assessable from the abstract alone."
+      ],
+      "visual_concept": "A single elevated walkway or pedestrian bridge — concrete, utilitarian, shot from slightly below and off-center at the golden-ratio left — stretching toward a dense cluster of glass office towers in the middle distance, with the towers rendered in cool, desaturated blue-grey tones. The bridge itself is the focal subject, positioned in the lower foreground and leading the eye via a single-point perspective toward the corporate core. The surrounding city falls into soft focus and shadow on either side, keeping visual weight on the path and the towers it leads to. Lighting is flat overcast daylight — diffuse, no strong shadows — giving the scene an ambiguous, neither-promising-nor-threatening mood. The overall palette is cool grey and muted steel-blue, with a faint warmth only at the horizon where the towers meet the sky, suggesting aspiration that is structurally constrained."
+    },
+    "enriched_at": "2026-05-26",
+    "model": "claude-sonnet-4-6",
+    "title": "Generative AI impacts on intra-urban inequality and skill premium in Beijing"
   },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
