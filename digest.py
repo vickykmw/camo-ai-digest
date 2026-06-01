@@ -35,6 +35,17 @@ v6.3 adds:
 - A BLOCK_PATTERNS list applied during candidate collection: items
   mentioning "geopolitical" / "geopolitics" are dropped before scoring.
 
+v6.4 adds a soft sibling to BLOCK_PATTERNS: EDU_DEMOTION_PATTERNS, a list
+of education-specific vocabulary (student, classroom, pedagogy, curriculum,
+grading, K-12, EdTech, etc.) that applies a 0.4x score multiplier rather
+than a hard exclude. Motivation: arXiv: Computers & Society was producing
+40% of the top 10, with 67% of those items being education / classroom AI.
+Source-agnostic; surgical vocabulary chosen to avoid colliding with
+legitimate business uses ("education", "learning", "assessment",
+"training", "teaching" all deliberately excluded). Demoted items still
+qualify if they score exceptionally well -- the bar is just substantially
+higher.
+
 Enrichment degrades gracefully: if the anthropic package is missing or
 ANTHROPIC_API_KEY is unset, the digest is still written using the raw RSS
 excerpts (v4 behaviour). A failure on one item never blocks the others.
@@ -66,7 +77,7 @@ except ImportError:
 # Version stamp -- check the workflow log for "DIGEST SCRIPT v5" to confirm
 # this file is the one running.
 # ---------------------------------------------------------------------------
-VERSION = "v6.3 (2026-05-26)"
+VERSION = "v6.4 (2026-05-26)"
 
 # ---------------------------------------------------------------------------
 # Sources
@@ -122,6 +133,49 @@ BLOCK_PATTERNS = [
     r"\bgeopolitical\b",
     r"\bgeopolitics\b",
 ]
+
+# v6.4: education-theme score DEMOTION (sibling to BLOCK_PATTERNS above; this
+# one is a soft penalty rather than a hard exclude). When an item's title or
+# RSS summary matches any EDU_DEMOTION_PATTERNS term, its final score is
+# multiplied by EDU_DEMOTION_MULTIPLIER. Source-agnostic.
+#
+# Background: arXiv: Computers & Society (cs.CY) was producing ~40% of the
+# top 10 across recent weeks, with ~67% of those items being education /
+# classroom AI -- a vertical adjacent to CAMO's management focus but rarely
+# centrally relevant. Source-level capping (MAX_PER_SOURCE=4) didn't fix it
+# because cs.CY hit the cap every week. The demotion shifts which cs.CY
+# items survive: non-education cs.CY (e.g. climate risk of GenAI, AI in
+# corporate R&D) continues to surface; classroom / pedagogy / grading
+# content gets pushed below the cutoff.
+#
+# Vocabulary deliberately narrow to avoid colliding with legitimate
+# business uses. Excluded on purpose:
+#   "education" (collides with executive education, education + training)
+#   "learning"  (machine learning, organizational learning)
+#   "assessment" (risk assessment, performance assessment, talent assessment)
+#   "training"  (staff training, training programs)
+#   "teaching"  (sometimes used metaphorically in management)
+#   "course"    (course of action, intermediate course)
+# The terms below are clearly K-12 / undergraduate / pedagogical.
+EDU_DEMOTION_PATTERNS = [
+    r"\bstudents?\b",
+    r"\bclassrooms?\b",
+    r"\bpedagog(?:y|ies|ical|ue|ues)\b",
+    r"\bcurricul(?:um|a)\b",
+    r"\binstructors?\b",
+    r"\btutor(?:s|ing|ee|ees)?\b",
+    r"\bcoursework\b",
+    r"\bsyllab(?:us|i|uses)\b",
+    r"\bgrading\b",
+    r"\b(?:home|school)work\b",
+    r"\bSTEM\s+(?:education|assessment)\b",
+    r"\bK[\-\s]?12\b",
+    r"\bundergrad(?:s|uates?)?\b",
+    r"\bgraduate\s+education\b",
+    r"\bEdTech\b",
+    r"\bschoolteachers?\b",
+]
+EDU_DEMOTION_MULTIPLIER = 0.4   # 60% score penalty for education-themed items
 
 # ---------------------------------------------------------------------------
 # Enrichment configuration
@@ -864,6 +918,17 @@ def build_digest() -> None:
 
         score = (ai_count + domain_count) * recency
 
+        # v6.4: education-theme demotion. Source-agnostic, applied AFTER the
+        # base score and BEFORE candidates are sorted. count_matches gives us
+        # the per-item term hit count for transparency in the log.
+        edu_matches = count_matches(haystack, EDU_DEMOTION_PATTERNS)
+        edu_demoted = edu_matches > 0
+        if edu_demoted:
+            raw_score = score
+            score = score * EDU_DEMOTION_MULTIPLIER
+            print(f"[demote] {EDU_DEMOTION_MULTIPLIER:.2f}x: '{title[:60]}'  "
+                  f"({raw_score:.2f} -> {score:.2f}, {edu_matches} edu term(s))")
+
         candidates.append({
             "title": title,
             "link": link,
@@ -874,6 +939,7 @@ def build_digest() -> None:
             "ai_strong": ai_strong,
             "ai_booster": ai_booster,
             "domain_matches": domain_count,
+            "edu_demoted": edu_demoted,    # v6.4: visible in .enriched.json for diagnostics
             "score": round(score, 2),
         })
 
