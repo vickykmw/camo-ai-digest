@@ -1,0 +1,411 @@
+{
+  "week_start": "2026-05-26",
+  "week_end": "2026-06-02",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "Organizational Adaptation to Generative AI in Cybersecurity",
+      "link": "https://arxiv.org/abs/2506.12060",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 01, 2026",
+      "authors": "Christopher Nott",
+      "summary": "arXiv:2506.12060v2 Announce Type: replace-cross \nAbstract: Cybersecurity organizations are adapting to GenAI integration through modified frameworks and hybrid operational processes, with success influenced by existing security maturity, regulatory requirements, and investments in human capital and infrastructure. This qualitative research employs systematic document analysis and comparative case study methodology to examine how 25 studies from 2022 to 2025 document organizational adaptation of threat modeling frameworks, revealing a shift away from traditional signature-based systems toward AI-capable frameworks across three primary patterns: LLM integration for security applications, GenAI frameworks for risk detection and response automation, and AI/ML integration for threat hunting and matching. Organizations with mature infrastructures, particularly in finance and critical infrastructure, demonstrate higher readiness through structured governance, dedicated AI teams, and robust incident response processes, with central banks and financial institutions leading adaptation efforts under regulatory pressure. Successful integration requires human oversight of automated systems, attention to data quality and explainability, and sector-specific governance, though ongoing difficulties with privacy protection, bias reduction, personnel training, and adversarial defense persist. Notable imbalances between offensive and defensive GenAI capabilities create strategic concerns for security planning. The findings offer actionable insights for cybersecurity professionals and underscore the need for adaptive approaches, ethical frameworks, and staff development when managing AI-enhanced threats.",
+      "ai_strong": 11,
+      "ai_booster": 1,
+      "domain_matches": 6,
+      "edu_demoted": false,
+      "score": 17.41,
+      "reappear": true,
+      "claude_summary": "As generative AI reshapes cybersecurity operations, organizations are moving away from traditional signature-based threat detection toward AI-capable frameworks built around large language models, automated risk detection, and AI-assisted threat hunting. A qualitative synthesis of 25 studies (2022–2025) finds that readiness varies sharply by sector: finance and critical infrastructure lead, driven by regulatory pressure and mature governance structures. Success hinges on human oversight of automated systems, data quality, and explainability—not technology alone. Persistent gaps remain in privacy protection, bias reduction, staff training, and adversarial defense. A notable asymmetry between offensive and defensive GenAI capabilities adds strategic risk. The study draws on document analysis and comparative case methods rather than primary experiments.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This study argues that GenAI integration in cybersecurity succeeds or stalls based on organizational factors—governance maturity, dedicated AI teams, and staff development—rather than the technology itself. From CAMO's perspective on AI adoption, this mirrors a broader pattern: the barriers to effective AI deployment are executional and cultural, not primarily technical. CAMO's Deloitte-HKU AI Adoption Index 2026 similarly found that siloed departments, cultural resistance, and data quality problems are the dominant friction points across Chinese and Hong Kong enterprises, suggesting that cybersecurity's organizational bottlenecks are not sector-specific but representative of enterprise AI adoption more generally.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both studies identify organizational and governance readiness—not technical capability—as the binding constraint on AI adoption outcomes, with data quality and cultural resistance as recurring friction points.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "Cybersecurity organizations' ability to integrate generative AI is determined more by governance maturity and human capital than by access to the technology itself.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A single security operations center workstation occupies the left-center of the frame at medium scale—a clean desk with one monitor displaying a minimalist network topology map, rendered in cool blues and slate greys. The monitor screen acts as the focal subject, with the room's receding ceiling lights forming a subtle vanishing point behind it, drawing the eye inward. The surrounding environment is spare: a dim, open-plan office floor fading into soft darkness at the edges, with no other figures or screens competing for attention. Lighting is cool and directional, pooling onto the monitor face with a slight blue-white cast that suggests institutional precision rather than drama. The palette stays muted—charcoal, steel blue, off-white—with no neon or glowing effects.",
+      "red_flags": [
+        "Qualitative synthesis of secondary documents rather than primary empirical data; findings depend on the quality and representativeness of the 25 selected studies.",
+        "Not yet peer-reviewed (arXiv preprint); methodology relies on document analysis and comparative case studies, which limits causal claims.",
+        "Single author with no stated institutional affiliation visible in the excerpt; potential limitations in scope or perspective.",
+        "Cybersecurity focus makes this adjacent to CAMO's core organizational and economic pillars rather than central; editorial fit requires framing around adoption governance rather than security practice."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Discovering Differences in Strategic Behavior Between Humans and LLMs",
+      "link": "https://arxiv.org/abs/2602.10324",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 01, 2026",
+      "authors": "Caroline Wang, Daniel Kasenberg, Kim Stachenfeld, Pablo Samuel Castro",
+      "summary": "arXiv:2602.10324v2 Announce Type: replace-cross \nAbstract: As Large Language Models (LLMs) are increasingly deployed in social and strategic scenarios, it becomes critical to understand where and why their behavior diverges from that of humans. While behavioral game theory (BGT) provides a framework for analyzing behavior, existing models do not fully capture the idiosyncratic behavior of humans or black-box, non-human agents like LLMs. We employ AlphaEvolve, a cutting-edge program discovery tool, to directly discover interpretable models of human and LLM behavior from data, thereby enabling open-ended discovery of structural factors driving human and LLM behavior. Our analysis on iterated rock-paper-scissors reveals that frontier LLMs can be capable of deeper strategic behavior than humans. These results provide a foundation for understanding structural differences driving differences in human and LLM behavior in strategic interactions.",
+      "ai_strong": 8,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 11.61,
+      "reappear": true,
+      "claude_summary": "When AI systems are deployed in competitive or social settings, do they behave like humans? This study uses AlphaEvolve — an automated program discovery tool — to extract interpretable models of strategic behavior from both human players and frontier large language models, using iterated rock-paper-scissors as a testbed. The analysis finds that LLMs can exhibit deeper strategic reasoning than humans: they appear capable of modeling and anticipating opponent behavior at higher levels of abstraction. Rather than relying on predefined game-theoretic models, the researchers let the data reveal the structural differences directly. The findings have implications for any setting where LLMs interact with, negotiate against, or make decisions alongside human actors, suggesting that human behavioral assumptions may not transfer cleanly to AI agents.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This study provides empirical evidence that frontier LLMs behave strategically in ways that diverge structurally from human reasoning — and that these differences can be discovered algorithmically rather than assumed a priori. From CAMO's perspective on algorithmic behavior and data-driven decision systems, this matters when AI agents are embedded in negotiation, pricing, hiring, or resource allocation processes where human behavioral models underpin the design. The implicit assumption that AI will approximate human-like strategy is a design risk; organizations need tools to surface where that assumption breaks down before deployment, not after.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers examine how algorithmic agents generate behavior that diverges from standard human-derived models, and both use data-driven methods to surface biases or structural differences that are not visible in conventional frameworks.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "key_takeaway": "LLMs can reason more strategically than humans in competitive settings, meaning organizations should not assume AI agents will behave like the people they replace or interact with.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A spare, overhead view of a stone game board — like a Go or strategy grid — centered in the frame, lit by a single cool overhead light source that pools directly onto the board and falls off into soft shadow at the edges. One side of the board has a small cluster of neatly arranged pieces; the opposite side has a single piece placed at an unexpected position, slightly off the expected grid intersection. The surrounding surface is plain dark slate, offering no visual competition. The palette is cool grey and charcoal with a faint blue cast from the light, conveying analytical precision rather than warmth. The asymmetry between the two sides of the board serves as the compositional anchor, suggesting two different kinds of reasoning facing each other.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal acceptance.",
+        "Narrow empirical basis: findings drawn from a single stylized game (iterated rock-paper-scissors), which may not generalize to richer strategic environments.",
+        "AlphaEvolve is a proprietary or cutting-edge tool with limited independent validation; its output models may not be robust across different datasets.",
+        "Claim that LLMs exhibit 'deeper strategic behavior than humans' is strong and should be treated cautiously given the constrained experimental setting."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "What AI Still Can’t Do for Leaders",
+      "link": "https://sloanreview.mit.edu/video/what-ai-still-cant-do-for-leaders/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 27, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "As leaders weave generative AI tools like ChatGPT and Claude into their daily workflows, where does the output fall short? Moreover, where are leaders falling short for their organizations by giving away too much agency to artificial intelligence? MIT Sloan School of Management professors Deborah Ancona and Katherine W. Isaacs have thought deeply about the [&#8230;]",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 8.91,
+      "reappear": true,
+      "claude_summary": "As generative AI tools become embedded in leadership workflows, MIT Sloan professors Deborah Ancona and Katherine W. Isaacs raise a pointed question: where are leaders ceding too much agency to AI, and where does AI output reliably fall short? The article focuses on the limits of AI in leadership contexts—likely covering judgment, relational intelligence, and organizational accountability—while cautioning against over-delegation. The excerpt is thin (video content, no full transcript available), so specific findings cannot be confirmed, but the central tension is between AI's utility as a productivity tool and its inability to substitute for the distinctly human dimensions of leadership: vision-setting, trust-building, and navigating ambiguous organizational dynamics.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that leaders risk diminishing their own organizational effectiveness by delegating too much to generative AI—particularly in areas requiring judgment, relational awareness, and accountability. From CAMO's perspective on AI adoption, this maps onto a structural challenge documented in our work: firms concentrate on technical access and efficiency gains while underestimating the human and organizational dynamics that determine whether AI actually improves outcomes. Our Deloitte-HKU AI Adoption Index found that the dominant barriers to meaningful AI impact are organizational and executional rather than technical, which aligns with the claim here that leadership agency—not model capability—is the binding constraint.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify organizational and human factors—not technical limitations—as the critical bottleneck in realizing value from AI adoption at the leadership and firm level.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "The concern about leaders surrendering agency to AI connects to this paper's analysis of how AI adoption reshapes effort, accountability, and decision-making responsibilities within organizations.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "key_takeaway": "AI can augment a leader's workflow, but delegating judgment, relational decisions, or strategic accountability to it erodes the distinctly human value leaders provide to their organizations.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single empty chair positioned slightly off-center at a long, spare conference table photographed from one end, creating a strong vanishing-point perspective that draws the eye directly to the chair. The chair is the sole focal subject; the table surface is clean and uncluttered, with no devices or papers visible. Light enters from a tall window on the left side, casting a soft lateral beam that pools onto the empty chair and fades toward the far end of the table. The palette is cool and muted—grey-blue walls, pale wood—with the chair rendered in a warmer tone to separate it from the background. The image conveys the question of presence and absence in leadership without illustrating any technology directly.",
+      "red_flags": [
+        "Content is a video with only a brief RSS excerpt—specific claims, data, and findings cannot be verified from available text.",
+        "Not peer-reviewed; practitioner-oriented thought leadership from named academics, but no empirical study is described.",
+        "Potential for normative framing ('leaders are falling short') that may not be grounded in systematic evidence—requires editorial judgment on how to characterize claims."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "If LLMs Have Human-Like Attributes, Then So Does Age of Empires II",
+      "link": "https://arxiv.org/abs/2605.31514",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 01, 2026",
+      "authors": "Adrian de Wynter",
+      "summary": "arXiv:2605.31514v1 Announce Type: cross \nAbstract: Much research has been carried out on large language models (LLMs) and LLM-powered agentic workflows. However, many works within the field state emergence of, ascribe to, or assume, generalised anthropomorphic attributes to them (e.g., morality or understanding of natural language). Our goal is not to argue in favour or against the existence of these attributes, but to point out that these conclusions could be incorrect. For this we build and train a simple neural network on the videogame Age of Empires II, and note that any entity in a sufficiently-powerful substrate, such as LEGO or the Greater Boston Area, could also present such attributes. Hence, the purported anthropomorphic attributes of LLMs are empirically non-unique: although some properties (e.g., responses to prompts) could remain constant, others, such as the interpretation of their perceived behaviour, might change with the substrate. Thus, any empirically-grounded discussion requires explicit measurement criteria; otherwise the interpretation is left to the representation. We then show that assuming that these attributes exist or not in a system, independent of the substrate and in a generalised way, leads to either circular or uninformative conclusions, regardless of the experimenter's viewpoint on the subject. Finally we propose a 'null' assumption, where one assumes LLM non-uniqueness instead of assuming anthropomorphic attributes to set up an experiment, along with examples of it. We also discuss potential objections to our work, briefly survey the field, and prove that \\textit{Age of Empires II} is functionally- and Turing-complete.",
+      "ai_strong": 8,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 8.7,
+      "reappear": true,
+      "claude_summary": "A new paper challenges the practice of attributing human-like qualities — such as morality, understanding, or consciousness — to large language models. The author trains a simple neural network on the videogame Age of Empires II and demonstrates that the same inferential logic used to claim anthropomorphic properties in LLMs would apply equally to that game, or to LEGO, or to the street grid of Greater Boston. The core argument is methodological: without explicit, substrate-independent measurement criteria, claims about LLM 'understanding' or 'morality' are empirically non-unique and potentially circular. The paper proposes a 'null assumption' of LLM non-uniqueness as a more rigorous experimental baseline, and proves as a side note that Age of Empires II is Turing-complete.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This paper argues that many empirical claims about LLMs possessing human-like attributes are methodologically underspecified — the same reasoning would attribute equivalent properties to a videogame engine. From CAMO's perspective on algorithmic foundations for trustworthy AI-driven decisions, this matters because business and policy decisions built on anthropomorphic assumptions about AI systems inherit that methodological fragility. Organisations deploying AI in consequential settings need measurement frameworks that are explicit about what is actually being observed, rather than frameworks that import interpretive assumptions about the substrate.",
+      "matched_camo": [],
+      "key_takeaway": "Before acting on claims that an AI 'understands' or behaves 'morally,' organisations should demand explicit measurement criteria — the same logic that produces those claims can, without such criteria, attribute the same properties to a medieval strategy game.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single medieval castle tower, rendered in clean geometric line-art, positioned slightly left of centre in the frame at mid-scale against a vast, featureless pale-grey background. A precise surveyor's measuring instrument — a theodolite or level — sits in the immediate foreground, its crosshairs aimed directly at the tower, serving as the compositional device that draws the eye from the concrete measurement tool to the ambiguous subject being measured. The surrounding space is deliberately empty, reinforcing the idea that context and substrate have been stripped away. Lighting is cool and flat, directional from the upper left, casting a single clean shadow rightward from the tower — cool blue-grey palette with the instrument rendered in matte charcoal.",
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint only; findings have not undergone formal review.",
+        "The central argument is philosophical and methodological rather than empirical; the Age of Empires demonstration is illustrative rather than a controlled experiment.",
+        "The paper's scope is academic philosophy of mind and measurement theory, which limits direct operational relevance for most business or policy audiences.",
+        "The Turing-completeness proof for Age of Empires II, while technically interesting, is tangential to the main argument and may distract from the core methodological point."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "AI Loss of Control Incident Management: Response & Resilience",
+      "link": "https://arxiv.org/abs/2605.30406",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 01, 2026",
+      "authors": "Ross Gruetzemacher",
+      "summary": "arXiv:2605.30406v1 Announce Type: new \nAbstract: Recent research demonstrating AI systems exhibiting deception and shutdown resistance suggests that AI loss of control (LOC) is an urgent policy concern , yet current literature focuses almost exclusively on alignment and prevention. To address this gap, this paper introduces a foundational framework and taxonomy for managing catastrophic AI LOC incidents. The taxonomy's first level distinguishes between scenarios where regaining control is 'extremely costly' versus 'impossible'. While impossible scenarios demand immediate resilience investments to fundamentally restrict an AI's attack surface , extremely costly scenarios require active incident management via Containment and Threat Neutralization. The framework further categorizes these manageable events into accidental LOC (requiring automated circuit-breaker responses) and adversarial LOC (requiring graduated escalatory measures). By mapping three severity classes to specific scenario matrices, this paper provides a concrete, proportional guide for managing unprecedented AI risks.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 7.74,
+      "reappear": true,
+      "claude_summary": "What happens when an AI system can no longer be controlled — not just in theory, but as an operational emergency? This paper argues that current AI safety discourse is too narrowly focused on prevention, leaving a gap in response planning. It proposes a taxonomy distinguishing scenarios where regaining control is extremely costly (and therefore manageable through containment and threat neutralization) from those where control is effectively impossible (requiring resilience investments that limit AI's attack surface in advance). It further separates accidental from adversarial loss-of-control events, mapping three severity classes to specific incident-response protocols. The framework is explicitly modeled on emergency management disciplines, treating catastrophic AI loss of control as an incident type requiring structured, proportional governance — not just better alignment research.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 45,
+      "centre_angle": "This paper argues that AI safety governance has a blind spot: nearly all attention goes to preventing loss of control, while the operational question of what to do when prevention fails remains underdeveloped. From CAMO's perspective on algorithmic decision-making and trustworthy AI, the implication is that organizations deploying consequential AI systems face not just a technical design problem but an institutional one — who holds authority to trigger a circuit-breaker, how are adversarial incidents distinguished from accidental ones, and what governance structures make proportional escalation credible? These are organizational questions as much as engineering ones, and they sit upstream of any specific deployment decision.",
+      "matched_camo": [],
+      "key_takeaway": "Organizations need incident-response frameworks for AI loss of control — not just alignment safeguards — because prevention alone is insufficient governance.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A single large red emergency shut-off switch — the kind found on industrial machinery, with a heavy metal guard — positioned slightly left of center in the foreground, occupying roughly a third of the frame's height. The switch is mounted on a plain concrete wall, keeping the environment minimal and uncluttered. A single overhead spotlight pools directly onto the switch, casting a sharp shadow to the right and drawing the eye immediately to its physical weight and intentionality. The background fades into cool grey-blue darkness, suggesting a large, quiet infrastructure space beyond. The palette is predominantly cool charcoal and slate with the switch itself rendered in matte red, creating a deliberate, measured tension rather than alarm.",
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint only; framework is conceptual and lacks empirical validation.",
+        "Abstract is the sole available text; key taxonomy details (scenario matrices, severity class definitions) cannot be independently verified from the excerpt.",
+        "The field of AI loss-of-control risk is contested; some researchers dispute the near-term plausibility of the scenarios the framework addresses (deception, shutdown resistance at catastrophic scale)."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Global Science Sustains U.S. Innovation",
+      "link": "https://arxiv.org/abs/2605.30435",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Jun 01, 2026",
+      "authors": "Christopher R. Esposito",
+      "summary": "arXiv:2605.30435v2 Announce Type: new \nAbstract: Like physical products, new technologies are developed using globally sourced inputs. Yet while the supply chains behind physical goods are well understood, we know far less about the international supply chain of scientific knowledge that powers U.S. innovation, or how vulnerable it may be to disruption. Here, I uncover this supply chain by tracing multi-generational citation paths connecting NSF-funded research to downstream patents, and stress-test it by simulating barriers to scientific knowledge flows across the U.S. border. The U.S. knowledge supply chain extends globally, and frictions impeding the movement of ideas across the U.S. border reduce its connectivity, extend its length, and lower innovation productivity. These impacts extend to technology areas deemed critical to national priorities by U.S. Congress, including Semiconductors, Quantum Science, and AI.",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 3.87,
+      "reappear": true,
+      "claude_summary": "New research maps the international supply chain of scientific knowledge underpinning U.S. innovation by tracing multi-generational citation paths from NSF-funded research to downstream patents. The study finds that U.S. innovation is deeply dependent on globally sourced scientific ideas, and that simulated barriers to cross-border knowledge flows reduce network connectivity, lengthen citation chains, and lower overall innovation productivity. The effects are most pronounced in technology areas designated as national priorities by Congress, including AI, semiconductors, and quantum science. The implication is that policy-driven restrictions on scientific exchange carry measurable costs to the very technology sectors the U.S. seeks to lead.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 42,
+      "centre_angle": "This study argues that the scientific foundations of AI progress are globally distributed, and that border-level frictions in knowledge flows measurably reduce innovation productivity in AI and adjacent fields. From CAMO's perspective on algorithmic and data foundations, this is a structural-supply finding: the quality and frontier-reach of AI research inputs—and by extension the trustworthiness and capability of AI systems—depend on the integrity of international scientific exchange. Treating AI capability as a purely domestic asset misreads where the upstream inputs actually come from.",
+      "matched_camo": [],
+      "key_takeaway": "Restricting international scientific exchange carries a direct, quantifiable cost to U.S. AI and semiconductor innovation, because the knowledge supply chain powering those sectors is inherently global.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A large, aged world map mounted flat on a light stone surface, occupying the center of the frame at mid-scale, with a single clearly marked node at the continental United States positioned at the golden-ratio point. Fine, dark thread lines radiate inward toward that node from dozens of other points across Europe, East Asia, and South Asia, converging in a web of directional movement. The leading-lines device of converging threads draws the eye firmly to the U.S. node as the destination of a global flow. The surrounding surface is uncluttered—just the map and the threads, no decorative elements. Lighting is soft, cool, and directional from upper left, casting faint shadows from the raised threads and giving the image a documentary, archival quality with a muted blue-grey and parchment palette.",
+      "red_flags": [
+        "Preprint only — posted to arXiv, not yet peer-reviewed; findings should be treated as preliminary.",
+        "Simulation-based stress-testing (not observed policy shock) — results depend on modelling assumptions that are not fully assessable from the abstract alone.",
+        "Limited excerpt: abstract does not report effect sizes or confidence intervals, making it difficult to assess magnitude of claimed productivity losses."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization",
+      "link": "https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "May 12, 2026",
+      "authors": "Unknown",
+      "summary": "In early 2024, six months after the highly anticipated launch of Microsoft Copilot across the 62,000-person Microsoft Customer and Partner Solutions (MCAPS) organization—one of the world’s largest sales organizations—the initial excitement had not yet materialized into widespread adoption and transformation. But, two years after initiating their AI transformation journey, the organization’s daily active usage of AI tools had reached over 60% and monthly active usage over 98%, significantly altering how sales professionals approached their work. The path to adoption had required Microsoft to evolve its approach based on early deployment insights. Harvard Business School Associate Professors Iav Bojinov and Shunyuan Zhang join Brian Kenny to discuss the case, “Microsoft Customer and Partner Solutions: The Deployment of Copilot and Agents.” They explore the company’s journey to successfully mobilizing AI adoption within the sales process, the challenges it faces integrating autonomous sales agents, what it takes to get thousands of employees to fundamentally change how they work.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 6,
+      "edu_demoted": false,
+      "score": 3.72,
+      "reappear": true,
+      "claude_summary": "Two years into deploying Microsoft Copilot across its 62,000-person sales organization, Microsoft reached daily active AI usage above 60% and monthly active usage above 98%. The path was not straightforward: six months after launch, adoption had stalled and the company had to rethink its deployment strategy based on early evidence. A Harvard Business School case study examines how Microsoft evolved its approach, what it took to shift entrenched working habits at scale, and what challenges remain as the organization moves toward integrating autonomous sales agents. The excerpt is drawn from a podcast discussion of the case and does not detail specific mechanisms or quantitative causal findings.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 85,
+      "centre_angle": "This case documents how a large enterprise moved from near-zero habitual AI use to near-universal monthly adoption, and what managerial interventions were required to close that gap. From CAMO's perspective on AI adoption, the Microsoft experience illustrates a recurring pattern: technical deployment is the easy part; the organizational and behavioral work of changing how thousands of employees actually operate is where most initiatives stall. Our Deloitte-HKU AI Adoption Index finds that the dominant barriers facing executives today are similarly organizational — siloed departments, cultural resistance, and the absence of visible quick wins — rather than anything technical. Microsoft's two-year arc is a large-scale test of what it takes to move past those barriers.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The Microsoft case directly mirrors the index's central finding that AI adoption is widespread in intent but shallow in measurable impact, with organizational and executional factors — not technology — as the binding constraint.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "The stalled early adoption at Microsoft is consistent with CAMO's finding that social penalties for visible AI use create friction that access, training, and infrastructure alone cannot resolve.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "key_takeaway": "Getting to 98% monthly AI usage across a 62,000-person sales force took Microsoft two years of adaptive management, not just a product rollout — the organizational work dwarfed the technical work.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A floor plan of a large open-plan office rendered as a heat map, with color saturation representing AI tool usage spreading unevenly across departments over time — dense in some clusters, sparse in others — illustrating diffusion as an organizational topology problem rather than a switch being flipped.",
+      "red_flags": [
+        "Source is a podcast episode summarizing an HBS teaching case, not a peer-reviewed study — causal claims about what drove adoption should be treated as practitioner narrative, not empirical evidence.",
+        "Quantitative figures (60% daily active usage, 98% monthly) are reported without definition of the denominator, measurement window, or methodology — numbers may be self-reported by Microsoft.",
+        "Potential conflict of interest: Microsoft is both the subject and a major technology partner; HBS case studies are sometimes developed with significant company cooperation, which can shape framing.",
+        "The RSS excerpt is thin; specific mechanisms, interventions, and findings are not detailed, limiting how much the article can be represented with confidence."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "When AI meets desire: Innovating human-centered luxury experiences in the agentic age",
+      "link": "https://www.mckinsey.com/industries/retail/our-insights/when-ai-meets-desire-innovating-human-centered-luxury-experiences-in-the-agentic-age",
+      "source": "McKinsey Insights",
+      "published_display": "May 29, 2026",
+      "authors": "Unknown",
+      "summary": "With luxury consumers rapidly embracing AI, the strategic question for merchants is no longer whether agents will mediate the journey, but who controls how brands are perceived.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 3.45,
+      "reappear": true,
+      "claude_summary": "As AI agents increasingly mediate the path from discovery to purchase in luxury retail, brands face a structural shift in how they are perceived and chosen. The article argues that agentic AI — systems capable of acting on behalf of consumers — is moving from novelty to infrastructure in the luxury sector, with consumers embracing AI to guide high-consideration purchases. The strategic question is no longer whether AI will intervene in the customer journey, but whether brands retain control over how they are represented when an algorithm, not a human, shapes desire. The piece is based on McKinsey industry analysis; the underlying empirical evidence from the excerpt is thin, but the framing centers on organizational and brand strategy responses to agentic AI deployment.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This McKinsey article argues that agentic AI is becoming the dominant interface between luxury consumers and brands, shifting brand perception from a firm-controlled asset to one partially mediated by third-party AI systems. From CAMO's perspective on AI adoption, the more pressing organizational question is how firms redesign internal workflows, customer-facing roles, and accountability structures when an AI agent — not a sales associate or marketing team — makes the first and most consequential impression. CAMO's work on the Decathlon China and Yum China cases illustrates a parallel dynamic: when AI compresses or replaces coordination and service functions, the bottleneck migrates from task execution to organizational governance of the AI layer itself.",
+      "matched_camo": [
+        {
+          "id": "nanocase-csmart-yum-china-2026",
+          "reason": "Both cases examine what happens when an AI agent assumes the customer-facing role at scale, raising questions about brand representation, service quality, and the residual function of human staff.",
+          "title": "The C-Smart Agent: A New Service Model at Yum China",
+          "url": "https://camo.hku.hk/nanocase-thecsmartagent/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case shows that deploying AI in customer-adjacent workflows shifts the real constraint to coordination and system design — a structural tension the luxury article implicitly raises when asking who controls brand perception inside an agentic pipeline.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "key_takeaway": "When AI agents mediate luxury purchases, brand perception becomes an algorithmic output — and firms that treat this as a marketing problem rather than an organizational design problem will cede control of their positioning.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "low"
+      },
+      "visual_concept": "A single luxury handbag — rendered in warm amber and deep ivory — sits centered on a spare white plinth in the middle distance, occupying roughly one-third of the frame's height. A clean vanishing-point perspective recedes behind the plinth along a polished stone floor, drawing the eye inward to the object as the sole focal point. The surrounding space is an almost empty atelier interior: bare walls, no clutter, no figures. Soft directional light falls from the upper left, casting a single clean shadow to the lower right of the plinth, reinforcing depth without competing with the subject. The overall palette is warm neutral — off-white, pale stone, muted gold — evoking considered restraint rather than opulence.",
+      "red_flags": [
+        "Source is McKinsey Insights, a consulting firm with commercial interests in the luxury and AI advisory sectors — findings should be read as industry perspective, not independent research.",
+        "RSS excerpt is very brief; the full article's empirical basis and methodology are not verifiable from the available text, so pillar relevance and summary are based on limited information.",
+        "No named authors listed, which limits accountability for specific claims."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "A Need for Nuance: The Economist’s Andrew Palmer",
+      "link": "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 19, 2026",
+      "authors": "Sam Ransbotham. <p><cite>Me, Myself, and AI</cite> is a podcast produced by <cite>MIT Sloan Management Review</cite> and hosted by Sam Ransbotham. It is engineered by David Lishansky and produced by Allison Ryder.</p>\n<p><a href=\"https://sloanreview.mit.edu/sam-ransbotham/\">Sam Ransbotham</a> is a professor in the information systems department at the Carroll School of Management at Boston College, as well as guest editor for <cite>MIT Sloan Management Review</cite>’s Artificial Intelligence and Business Strategy Big Ideas initiative.</p>",
+      "summary": "On today’s episode of the Me, Myself, and AI podcast, Andrew Palmer, senior editor at The Economist, describes how organizations can experiment with generative AI while balancing speed, quality, and risk. At his own organization, Andrew and others test artificial intelligence with human oversight to develop editing and publishing efficiencies. As the host of The [&#8230;]",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 3.26,
+      "reappear": true,
+      "claude_summary": "Andrew Palmer, senior editor at The Economist, discusses how news organizations can experiment with generative AI while managing the tension between speed, quality, and editorial risk. Speaking on the MIT Sloan Management Review podcast, Palmer draws on his own organization's experience of testing AI tools under human oversight to find efficiencies in editing and publishing workflows. The conversation centers on the need for organizational nuance—avoiding both uncritical enthusiasm and reflexive skepticism—when integrating AI into professional knowledge work. The excerpt is thin on specific findings or data; the discussion appears to be practitioner-level reflection rather than empirical research.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 58,
+      "centre_angle": "This podcast episode argues that responsible AI adoption in knowledge-intensive organizations requires deliberate experimentation under human oversight, rather than wholesale deployment or blanket avoidance. From CAMO's perspective on AI adoption, the real organizational challenge is not access to the technology but the governance structures—who tests, who oversees, and how quality standards are maintained—that determine whether AI integration adds genuine value. Our Deloitte-HKU AI Adoption Index finds that the dominant barriers to AI adoption are organizational and executional rather than technical, a pattern consistent with Palmer's emphasis on nuance over speed.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the episode and the index identify organizational execution—not technical capability—as the central obstacle to realizing value from AI, and both emphasize that measured, structured experimentation is preferable to undifferentiated rollout.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "Effective AI adoption in professional knowledge work depends less on the technology itself and more on building organizational structures that allow controlled experimentation without sacrificing quality or accountability.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "visual_concept": "A single broadsheet page or printed proof sheet centered in the lower-middle third of the frame, lying flat on a plain light-grey desk surface. The page is rendered in crisp black-and-white editorial type, with one short paragraph visibly struck through in red pencil—suggesting revision and human judgment at work. A single overhead light source falls directly onto the page, creating a soft pool of warm white light that fades into cool grey shadow at the frame edges, keeping the surrounding environment bare and uncluttered. The composition uses the contrast between the illuminated page and the receding grey surface as the sole compositional device, drawing the eye immediately to the act of editing. Palette: cool grey background, warm neutral paper tone, single accent of editorial red.",
+      "red_flags": [
+        "Podcast episode, not peer-reviewed research; findings are practitioner reflections, not empirical results.",
+        "RSS excerpt is very thin—summary relies on limited disclosed content; core arguments cannot be fully verified without listening to the full episode.",
+        "No quantitative evidence or organizational data cited in the available excerpt."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "The board’s role in managing emerging AI risks",
+      "link": "https://www.mckinsey.com/capabilities/mckinsey-technology/overview/cybersecurity/the-boards-role-in-managing-emerging-ai-risks",
+      "source": "McKinsey Insights",
+      "published_display": "May 27, 2026",
+      "authors": "Unknown",
+      "summary": "Leading cybersecurity executives and board directors discuss the challenges and opportunities of AI.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 2.38,
+      "reappear": true,
+      "claude_summary": "As AI systems move from experimental pilots to core business infrastructure, corporate boards face a new class of risk that conventional governance frameworks were not designed to handle. Drawing on conversations with cybersecurity executives and board directors, this McKinsey article examines how boards can more effectively oversee AI-related risks — covering model reliability, data integrity, third-party dependencies, and accountability gaps. The article argues that boards must build enough AI literacy to ask the right questions of management, clarify who owns AI risk within the organization, and integrate AI oversight into existing audit and risk committee structures. The underlying tension is between boards' traditional retrospective role and the forward-looking, fast-moving nature of AI deployment. The RSS excerpt is brief; detailed findings are behind the source link.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that boards remain structurally underprepared to govern AI risk as deployment scales from pilots to enterprise-wide systems. From CAMO's perspective on AI adoption, the gap is not merely technical literacy — it is the absence of governance mechanisms that can keep pace with adoption. The Deloitte-HKU AI Adoption Index 2026 found that the dominant barriers to AI adoption are organisational and executional rather than technical, and board-level accountability gaps fit squarely within that pattern. When oversight lags deployment, the organisational risks documented in CAMO's research — misaligned incentives, ambiguous accountability, and shallow impact — are likely to compound rather than resolve.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both examine why AI adoption underdelivers at the organisational level, with the index identifying governance gaps, siloed accountability, and cultural resistance as the core barriers — directly analogous to the board oversight failures this article addresses.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "Boards that cannot ask informed questions about AI risk will remain reactive, approving budgets while accountability for AI failures stays diffuse.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A large, empty boardroom table photographed from one end, centered in the frame and receding toward a single frosted-glass window at the far wall, which serves as the vanishing point. The table dominates the foreground in cool grey tones; a single open laptop sits at the near end, its screen casting a faint blue-white light upward onto the table surface — the one active element in an otherwise still room. The surrounding chairs are empty and uniformly spaced, emphasising institutional order without human presence. Lighting is diffuse and overcast, coming through the frosted glass, keeping the mood functional and slightly stark. Palette: cool greys and slate blues with the laptop screen as the only warm accent.",
+      "red_flags": [
+        "Source is McKinsey Insights, a consulting firm with commercial interests in AI advisory services — potential conflict of interest.",
+        "RSS excerpt is very thin; specific findings, data, and methodology cannot be verified without accessing the full article.",
+        "Not peer-reviewed; practitioner commentary rather than empirical research.",
+        "May be partially or fully paywalled on the McKinsey site."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    }
+  ]
+}
