@@ -1,0 +1,438 @@
+{
+  "week_start": "2026-06-02",
+  "week_end": "2026-06-09",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "AI Sovereignty: A Qualitative Model of Strategic Competition as AI Becomes an Instrument of National Power",
+      "link": "https://arxiv.org/abs/2606.07245",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Timothy Clancy, Asmeret Naugle",
+      "summary": "arXiv:2606.07245v1 Announce Type: new \nAbstract: AI sovereignty is the extent to which a nation independently controls its artificial intelligence (AI) technologies. The race toward ever-more-sophisticated frontier AI models is of increasing strategic importance, with nations considering how AI might improve their economic situations, competitive advantage, and overall national power. However, the costs of AI sovereignty are enormous, and we lack definitions and conceptual models to navigate evolving AI sovereignty dynamics. We address this gap with definitions relevant to AI sovereignty, along with a first-of-its-kind qualitative model that incorporates micro, meso, and macro contributors. Model-based qualitative forecasts highlight competitive dynamics and evolving potential for AI-driven national power. The model identifies key leverage points that nations can use to enhance their own growth or degrade an adversary's, including consideration of accelerators, electricity, water, data sets and skilled workforce. These leverage points can be activated at strategic and operational levels through both direct kinetic actions, such as Iran's targeting of data centers with drones, and indirect non-kinetic effects including cyber, space, information, economic coercion and diplomacy. If our assumptions and hypotheses are valid, this strategic competition may come to define how nations improve their economic situations, competitive advantage, and overall national power in the 21st Century.",
+      "ai_strong": 11,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 15.49,
+      "reappear": false,
+      "claude_summary": "How much control a nation has over its own AI technologies — its 'AI sovereignty' — is becoming a core dimension of geopolitical competition. This paper offers a qualitative model spanning micro, meso, and macro levels to map the drivers of AI-driven national power, identifying critical leverage points including energy infrastructure, water supply, data availability, and skilled labour. Nations can act on these leverage points through both direct means (e.g., physical attacks on data centres) and indirect ones (cyber operations, economic coercion, diplomacy). The authors argue that without clear conceptual frameworks, policymakers are navigating this competition without adequate maps. The paper is a theoretical and descriptive contribution, not an empirical study, so findings are model-based forecasts rather than tested results.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 42,
+      "centre_angle": "This paper argues that AI sovereignty — independent national control over AI technologies — is emerging as a defining axis of 21st-century strategic competition, shaped by infrastructure constraints, workforce capacity, and geopolitical coercion. From CAMO's perspective on AI adoption, the macro forces described here form the boundary conditions within which firms actually deploy AI: energy costs, data access regimes, and talent availability are not just national policy concerns but direct determinants of whether enterprise AI adoption can scale. The article sits at significant distance from CAMO's organisational focus, but the infrastructure and workforce leverage points it identifies are upstream of the adoption challenges that CAMO's survey work — including the Deloitte-HKU AI Adoption Index 2026 — documents at the firm level.",
+      "matched_camo": [],
+      "key_takeaway": "Control over AI infrastructure — energy, data, and skilled workers — is rapidly becoming as strategically contested as territory, and firms operating across borders will feel those constraints directly.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large electrical transmission tower stands centered in the mid-ground of a wide, spare landscape — flat terrain, minimal horizon detail — occupying roughly one-third of the frame's height. A tight beam of cool, directional light falls from upper-left onto the tower, casting a long geometric shadow toward the viewer in the foreground. The surrounding environment is kept deliberately empty: muted grey-blue sky, no vegetation, no other structures. The palette is cold and industrial — steel grey, slate blue, a faint amber at the horizon suggesting distance rather than warmth. The image should read as physical infrastructure under quiet tension, not technological spectacle.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint with no indication of journal submission or external review.",
+        "Findings are model-based qualitative forecasts, not empirically tested — conclusions depend heavily on unvalidated assumptions acknowledged by the authors.",
+        "Geopolitical framing and national-security focus sit well outside CAMO's organisational and managerial scope; pillar fit is a stretch.",
+        "Limited academic precedent cited for the sovereignty framework; described as 'first-of-its-kind', which warrants editorial caution."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Sustainability by Design in Decentralized Autonomous Organizations: An Empirical Review of Governance, Innovation, and Institutional Design",
+      "link": "https://arxiv.org/abs/2606.05667",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Yutian Wang, Luyao Zhang",
+      "summary": "arXiv:2606.05667v1 Announce Type: cross \nAbstract: Recent innovation theories on economics remain largely grounded in assumptions of hierarchical firms and closed organizational boundaries, offering limited insight into how innovation unfolds within decentralized, digitally native organizations. Decentralized Autonomous Organizations (DAOs) represent an emerging form of innovation ecosystem characterized by blockchain-based transparency, open participation, and token-driven governance, in which sustainability can be embedded directly into organizational design. This study compares two standards, ERC-8004 and Google A2A, who address the same agent interoperability question, while the former is governed by DAO and the latter by corporation consortium. They are examined through an LLM-powered comparative pipeline for large-scale governance discourse analysis, integrating automated annotation, neural topic modeling, and multi-layer network analysis to study socio-technical power structures. The study provides evidence-based insights for scholars, policymakers, and designers seeking to align innovation, technological governance, and sustainability in future organizational forms.",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 12,
+      "edu_demoted": false,
+      "score": 12.59,
+      "reappear": false,
+      "claude_summary": "This paper asks whether decentralized governance produces better technological standards than corporate consortia. It compares two competing agent-interoperability standards — ERC-8004, governed by a DAO on blockchain, and Google's A2A, governed by a corporate consortium — using an LLM-powered pipeline combining automated annotation, neural topic modeling, and network analysis to map power structures in each community's discourse. The central claim is that sustainability and accountability can be embedded directly into organizational design through open, token-driven governance rather than added as afterthoughts. The empirical scope is limited by the excerpt, but the study positions itself as evidence-based guidance for policymakers and designers shaping the next generation of AI agent governance.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 42,
+      "centre_angle": "This study argues that the governance architecture chosen for AI agent standards — decentralized and token-driven versus corporate-consortium — shapes how power, accountability, and sustainability are distributed in the resulting ecosystem. From CAMO's perspective on AI adoption, the more practically pressing question for most organizations is not whether to build a DAO, but what the proliferation of competing, governance-diverse standards means for firms trying to integrate AI agents into existing workflows. The coordination bottlenecks documented in CAMO's Decathlon China case — where AI optimized tasks but left cross-team dependencies unresolved — suggest that governance design at the standards level can either compress or compound the organizational coordination costs that firms already struggle to manage.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both pieces grapple with how the architecture governing AI agent interoperability — whether at the standards or workflow level — determines whether coordination costs are absorbed or merely displaced."
+        }
+      ],
+      "key_takeaway": "The governance model behind AI agent standards — open DAO versus corporate consortium — shapes accountability and power distribution in ways that will affect how organizations can actually adopt and coordinate those agents.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single forking path rendered as a clean architectural floor plan viewed from directly above, centered in the frame at roughly one-third scale against a pale concrete-grey background. The fork splits into two clearly distinct corridors — one laid out in an open radial pattern suggesting distributed access, the other in a tighter linear corridor suggesting centralized flow — with the branching node itself as the focal subject. A single overhead light source pools onto the branching node, casting soft diverging shadows down each corridor to draw the eye outward from the center. The surrounding space is bare and minimal, with no furniture or signage, so the geometry of the choice carries the entire visual argument. Palette: cool off-white and slate grey, with a faint amber warmth in the pooled light at the fork.",
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint with no indicated journal review process.",
+        "Empirical conclusions are difficult to assess from the excerpt alone; the paper's analytic pipeline (LLM annotation, neural topic modeling) is described but no key findings are quoted, making the strength of evidence unclear.",
+        "Narrow comparative case (two standards, ERC-8004 vs Google A2A) may limit generalizability; findings could reflect idiosyncrasies of those specific communities rather than DAO governance broadly.",
+        "Topic sits at the periphery of CAMO's core pillars; relevance to mainstream business management audiences is limited without a clearer bridge to firm-level AI adoption decisions."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+      "link": "https://arxiv.org/abs/2606.07489",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Jeremy Yang, Kate Zyskowski, Noah Yonack, Jerry Ma",
+      "summary": "arXiv:2606.07489v1 Announce Type: cross \nAbstract: Frontier AI systems are bridging the gap between intelligence and utility by shifting from conversational assistants to autonomous agents that execute tasks end to end. Using production data from Perplexity's Search and Computer products, we study this transition by examining how AI agents accelerate and reshape knowledge work. Three key empirical findings emerge. First, using sessions with near-identical initial query pairs as natural experiments for the same underlying task attempted with both products, Computer performs 26 minutes of autonomous work per user session, versus 33 seconds for Search. Computer automates task decomposition and execution that Search users might otherwise manually orchestrate and implement. As a result, Computer shifts follow-up query distribution toward higher-order work such as verification and extension. Autonomy also increases execution quality, with per-query dissatisfaction rates 55% lower on Computer than on Search. Second, due to its autonomy advantage, Computer reduces completion time from 269 to 36 minutes on matched tasks, lowering estimated time and cost by 87% and 94%, respectively, compared to humans equipped with Search alone. Third, Computer changes the scope of work that users attempt: Computer queries more often cross occupational boundaries, require higher-order cognition, draw on broader expertise, take the form of composite tasks that bundle interdependent subtasks into a single query, and unlock work activities that are essentially absent from Search usage among the same users. Together, the evidence indicates that AI agents accelerate workflows, enhance output quality, reduce costs, and expand the breadth and depth of automated work.",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 7,
+      "edu_demoted": false,
+      "score": 10.65,
+      "reappear": false,
+      "claude_summary": "A study using production data from Perplexity's Search and Computer products finds that autonomous AI agents do substantially more than accelerate existing workflows — they alter the nature of work itself. In matched-task comparisons, the autonomous agent (Computer) performs 26 minutes of work per session versus 33 seconds for the conversational Search product, reducing task completion time by 87% and estimated cost by 94%. Dissatisfaction rates fall 55%. Crucially, the agent also changes what users attempt: queries cross occupational boundaries more often, require higher-order cognition, and bundle interdependent subtasks that users would not have attempted with Search alone. The evidence suggests AI agents compress not just execution time but the cognitive overhead of task decomposition, raising questions about how knowledge work and job scope are defined.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This study argues that the shift from conversational AI to autonomous agents represents a qualitative change in how knowledge work is structured, not merely a speed improvement. From CAMO's perspective on AI adoption, the finding that agents expand the scope of tasks users attempt — crossing occupational boundaries and bundling complex subtasks — raises a practical challenge for organizations: the unit of work, and therefore the unit of accountability, changes when AI handles decomposition and execution. CAMO's nano-case on Decathlon China makes a parallel point: AI optimizes tasks, but the deeper organizational effect comes from compressing coordination overhead, which is precisely what autonomous agents appear to do at the individual worker level.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both the study and this case find that the primary organizational effect of more capable AI is compressing coordination and decomposition overhead rather than raw task execution, shifting where human attention is directed."
+        },
+        {
+          "id": "nanocase-cimc-2026",
+          "title": "Scaling Expert Knowledge with AI at CIMC",
+          "url": "https://camo.hku.hk/nanocase-scalingexpertknowledgewithaiatcimc/",
+          "reason": "CIMC's deployment similarly shows AI agents absorbing work that previously required experienced specialists, paralleling the study's finding that autonomous agents enable users to cross occupational boundaries and attempt higher-order tasks."
+        }
+      ],
+      "key_takeaway": "Autonomous AI agents do not just speed up existing knowledge work — they expand what workers attempt and dissolve the occupational boundaries that previously defined task scope.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden desk, centered and filling the lower two-thirds of the frame, photographed from a slightly elevated angle. On the desk sits one open notebook with a clean to-do list — most items crossed out — serving as the focal subject. A strong single overhead light pools directly onto the notebook, leaving the desk edges and background in soft shadow. The surrounding space is bare: no computer, no clutter, just the desk surface receding toward a plain matte wall. The palette is cool and neutral — grey-white walls, warm wood grain — suggesting clarity after complexity. The composition implies work completed and scope expanded without showing any AI system directly.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal submission or external review.",
+        "Data sourced exclusively from one commercial platform (Perplexity); generalizability to enterprise or non-consumer knowledge work settings is unconfirmed.",
+        "Authors' institutional affiliations not visible in the excerpt; potential conflict of interest if any authors are affiliated with or funded by Perplexity should be verified before publication.",
+        "Natural experiment design (near-identical query pairs) is described but not fully evaluable from the abstract alone; identification assumptions warrant scrutiny."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The Geography of Algorithmic Judgment: LLM Intermediaries, Place Identity, and Racial Steering in Housing Search",
+      "link": "https://arxiv.org/abs/2606.06694",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Hana Samad, Trung Lam, Christoph M\\\"ugge-Durum, Michael Akinwumi",
+      "summary": "arXiv:2606.06694v1 Announce Type: cross \nAbstract: Large language models (LLMs) are rapidly assuming an intermediary role in housing search through the integration of listing platforms within conversational interfaces, mediating access to information, search, and recommendations within urban settings. We expand on prior work on racial steering in LLMs by conducting a behavioral audit of seven open-weight and closed-source LLMs across four U.S. cities, testing location recommendations across three iterative prompting conditions that progressively add lifestyle preference context and reflect fair housing paired-testing methodologies. We find that steering is an emergent behavior of the model's interpretive license rather than primarily a static property. Steering results from the interaction of a user's identity, preference articulation, and the spatial logic that a model has internalized about learned representations of place, preference, and opportunity in a given city, and how different types of users relate to it. While steering was present, it was not uniform in direction or magnitude across evaluated conditions. Preference-conditioned testing often increased or reconfigured the number of models that exhibited steering behaviors relative to baseline conditions, suggesting that LLMs may interpret what the same housing preference means differently depending on the racial identity of the user. Our findings also demonstrate that the city is not a neutral testing unit for LLM evaluation in place-based sectors, and results from one local market cannot be assumed to generalize to another. Local and domain expertise will be required in the housing sector to ensure that legal and institutional commitments to fair housing are not undermined while adopting AI tools that mediate spatial access.",
+      "ai_strong": 9,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 9.68,
+      "reappear": false,
+      "claude_summary": "When LLMs mediate housing searches, they can steer users toward different neighborhoods depending on the racial identity implied by the query — even when stated preferences are identical. A behavioral audit of seven LLMs across four U.S. cities found that steering is not a fixed model property but an emergent one: it arises from how a model interprets the interaction between a user's apparent identity, their expressed lifestyle preferences, and the spatial logic the model has internalized about a given city. Steering varied in direction and magnitude across cities and prompting conditions, and adding preference context often intensified rather than reduced it. The study concludes that city-specific expertise will be needed to ensure AI-mediated housing tools do not undermine fair-housing obligations.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This audit argues that racial steering in LLM-powered housing search is not a static bias baked into model weights but an emergent product of how models jointly interpret user identity, preference language, and learned spatial representations — and that this interaction varies significantly by city. From CAMO's perspective on algorithmic decision-making, the finding extends a concern running through work like our research on dynamic selection bias: when an algorithm's outputs are shaped by contextual signals that interact in opaque ways, standard auditing methods that test one variable at a time may systematically understate the problem. Organizations deploying LLMs in any place-based or context-sensitive domain should treat domain and local expertise not as a post-deployment nicety but as a precondition for responsible rollout.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/",
+          "reason": "Both papers examine how algorithmic outputs become biased not through a single fixed mechanism but through the interaction of contextual inputs and learned data patterns — the self-fulfilling bias in contextual bandits is a structural analogue to the emergent, preference-conditioned steering identified here."
+        }
+      ],
+      "key_takeaway": "LLMs used as housing-search intermediaries can produce racially differentiated neighborhood recommendations as an emergent effect of how they process identity and preference together — a risk that static bias testing alone will not catch.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "high"
+      },
+      "visual_concept": "A single residential street address marker or brass door number, centered in the frame at medium scale, photographed from a slightly low angle against the facade of an indistinct urban apartment building. Soft, overcast daylight pools onto the number plate while the surrounding building face falls into gentle shadow, directing the eye to that one object. The architectural background — concrete or brick, neutral grey-beige — is kept deliberately plain and out of focus so it does not compete. The palette is cool and muted, with the brass number providing the only warm accent. The composition conveys the idea that a seemingly neutral data point — a location — carries weight that is far from neutral.",
+      "red_flags": [
+        "arXiv preprint — not yet peer-reviewed; findings should be treated as preliminary.",
+        "Behavioral audit methodology relies on prompting conditions designed by the authors; results may be sensitive to prompt framing choices.",
+        "Scope is limited to four U.S. cities; authors themselves caution against generalizing across local markets."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "What AI Still Can’t Do for Leaders",
+      "link": "https://sloanreview.mit.edu/video/what-ai-still-cant-do-for-leaders/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "May 27, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "As leaders weave generative AI tools like ChatGPT and Claude into their daily workflows, where does the output fall short? Moreover, where are leaders falling short for their organizations by giving away too much agency to artificial intelligence? MIT Sloan School of Management professors Deborah Ancona and Katherine W. Isaacs have thought deeply about the [&#8230;]",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 6.36,
+      "reappear": true,
+      "claude_summary": "As generative AI tools become embedded in leadership workflows, MIT Sloan professors Deborah Ancona and Katherine W. Isaacs raise a pointed question: where are leaders ceding too much agency to AI, and where does AI output reliably fall short? The article focuses on the limits of AI in leadership contexts—likely covering judgment, relational intelligence, and organizational accountability—while cautioning against over-delegation. The excerpt is thin (video content, no full transcript available), so specific findings cannot be confirmed, but the central tension is between AI's utility as a productivity tool and its inability to substitute for the distinctly human dimensions of leadership: vision-setting, trust-building, and navigating ambiguous organizational dynamics.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that leaders risk diminishing their own organizational effectiveness by delegating too much to generative AI—particularly in areas requiring judgment, relational awareness, and accountability. From CAMO's perspective on AI adoption, this maps onto a structural challenge documented in our work: firms concentrate on technical access and efficiency gains while underestimating the human and organizational dynamics that determine whether AI actually improves outcomes. Our Deloitte-HKU AI Adoption Index found that the dominant barriers to meaningful AI impact are organizational and executional rather than technical, which aligns with the claim here that leadership agency—not model capability—is the binding constraint.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify organizational and human factors—not technical limitations—as the critical bottleneck in realizing value from AI adoption at the leadership and firm level.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "The concern about leaders surrendering agency to AI connects to this paper's analysis of how AI adoption reshapes effort, accountability, and decision-making responsibilities within organizations.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "key_takeaway": "AI can augment a leader's workflow, but delegating judgment, relational decisions, or strategic accountability to it erodes the distinctly human value leaders provide to their organizations.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single empty chair positioned slightly off-center at a long, spare conference table photographed from one end, creating a strong vanishing-point perspective that draws the eye directly to the chair. The chair is the sole focal subject; the table surface is clean and uncluttered, with no devices or papers visible. Light enters from a tall window on the left side, casting a soft lateral beam that pools onto the empty chair and fades toward the far end of the table. The palette is cool and muted—grey-blue walls, pale wood—with the chair rendered in a warmer tone to separate it from the background. The image conveys the question of presence and absence in leadership without illustrating any technology directly.",
+      "red_flags": [
+        "Content is a video with only a brief RSS excerpt—specific claims, data, and findings cannot be verified from available text.",
+        "Not peer-reviewed; practitioner-oriented thought leadership from named academics, but no empirical study is described.",
+        "Potential for normative framing ('leaders are falling short') that may not be grounded in systematic evidence—requires editorial judgment on how to characterize claims."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Our Guide to the Summer 2026 Issue",
+      "link": "https://sloanreview.mit.edu/article/our-guide-to-the-summer-2026-issue/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 02, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "Create Generative AI Value at Scale Kevin Schmitt, Gregory Vial, and Ivo Blohm Key Insight: Organizations are expanding their GenAI use by implementing coordinated cross-functional structures that draw on domain expertise and user innovation. Top Takeaways: Companies that establish a new kind of internal AI organization that researchers have dubbed the “AI spine” are better [&#8230;]",
+      "ai_strong": 5,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 6.25,
+      "reappear": false,
+      "claude_summary": "The Summer 2026 issue of MIT Sloan Management Review introduces the concept of an 'AI spine' — a coordinated cross-functional internal structure designed to help organizations scale generative AI beyond isolated pilots. The central argument is that companies succeeding with GenAI at scale are not simply deploying more tools; they are building new organizational architectures that integrate domain expertise with user-driven innovation. The excerpt is a table-of-contents guide rather than a full research article, so specific empirical findings are not available. The 'AI spine' framing suggests a structural prescription for how firms should organize internally to realize value from GenAI investments across business units.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This MIT SMR issue argues that scaling GenAI requires firms to build deliberate cross-functional organizational structures — what the authors call an 'AI spine' — rather than relying on ad-hoc or siloed deployments. From CAMO's perspective on AI adoption, this resonates with a pattern documented across our nano-cases: Decathlon China's bottleneck was not coding capability but coordination architecture, and KFC China's gains came from redesigning managerial workflows, not just deploying models. The 'AI spine' concept raises a practical governance question that CAMO's Deloitte-HKU AI Adoption Index also surfaces: when nearly half of executives report AI initiatives falling short of ROI expectations, the missing ingredient is more often organizational design than technical capability.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the MIT SMR piece and the CAMO index identify organizational and executional barriers — not technical ones — as the central obstacle to realizing GenAI value at scale."
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "The Decathlon case concretely illustrates why cross-functional coordination structures — not task-level AI deployment — determine whether organizations capture systemic value from AI, paralleling the 'AI spine' argument."
+        }
+      ],
+      "key_takeaway": "Scaling GenAI is primarily an organizational design challenge: firms that build coordinated cross-functional structures around AI outperform those that treat it as a tool to deploy within existing silos.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A centered overhead view of a building's structural spine or load-bearing column, photographed from directly below looking up, filling roughly two-thirds of the vertical frame. The column is the clear focal subject, rendered in pale concrete or brushed steel. A single source of cool natural light enters from one side — a narrow skylight or clerestory — casting a clean shadow that falls away from the column along the floor, drawing the eye upward along the structure's length. The surrounding space is sparse: empty floor, minimal architectural detail, nothing competing with the vertical element. The palette is cool grey-white with a single band of warm daylight where the light source hits the column's edge, suggesting structural clarity and organizational intentionality.",
+      "red_flags": [
+        "This is a table-of-contents editorial guide, not a standalone research article — the excerpt is thin and the underlying empirical findings are not accessible here.",
+        "Likely paywalled behind the MIT Sloan Management Review subscription.",
+        "The 'AI spine' concept is presented as a research finding but cannot be evaluated for methodological rigor from the excerpt alone.",
+        "No peer-review status confirmed; MIT SMR publishes practitioner-oriented content rather than double-blind academic research."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Training for Technology: Adoption and Productive Use of Generative AI in Legal Analysis",
+      "link": "https://arxiv.org/abs/2603.04982",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Benjamin M. Chen, Hong Bao",
+      "summary": "arXiv:2603.04982v3 Announce Type: replace \nAbstract: Can targeted user training unlock the productive potential of generative artificial intelligence in professional settings? We study this question using a randomized experiment in which 164 law students completed an issue-spotting examination under one of three conditions: no GenAI access, optional access to a large language model (LLM), or LLM access with a brief training intervention.\n  Untrained LLM access proved counterproductive: relative to participants without any LLM access, untrained users wrote significantly shorter answers, committed more case misstatements, and scored marginally lower, though most differences fall short of conventional significance. Training reversed this pattern. Trained participants adopted the LLM at higher rates (41% vs. 26%; p = 0.044), scored 0.27 grade points higher than untrained users--roughly one fine grade--(p = 0.027), and stated applicable rules more accurately (p = 0.014).\n  Principal stratification analysis suggests training operates primarily through adoption rather than effectiveness--the adoption lower bound (1.06) exceeds the effectiveness upper bound (0.42) at strict mean dominance--though confidence intervals are wide.\n  More broadly, these findings challenge the view that GenAI primarily benefits lower-skilled workers: without training, higher-ability practitioners opt out while lower-ability users adopt but unproductively. Realizing GenAI's productivity gains requires investment in both access and instruction.",
+      "ai_strong": 12,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": true,
+      "score": 5.03,
+      "reappear": false,
+      "claude_summary": "A randomized experiment with 164 law students finds that simply giving professionals access to a large language model is not enough — and may actually hurt performance. Untrained LLM users wrote shorter answers, made more case misstatements, and scored marginally lower than those with no AI access at all. A brief targeted training intervention reversed this: trained participants adopted the tool at nearly twice the rate (41% vs. 26%), scored roughly one fine grade higher than untrained users, and stated legal rules more accurately. Notably, without training, higher-ability students avoided the tool while lower-ability students adopted it unproductively — challenging the common assumption that AI disproportionately helps weaker performers. The results suggest productivity gains from GenAI depend more on structured onboarding than on access alone.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 88,
+      "centre_angle": "This study offers rare experimental evidence that ungoverned AI access can be worse than no access at all — a finding with direct implications for how organizations sequence their AI rollouts. From CAMO's perspective on AI adoption, the deeper puzzle is self-selection: high-ability professionals opted out while lower-ability users adopted unproductively, inverting the productivity gains organizations typically project. This connects to findings from CAMO's Deloitte-HKU AI Adoption Index, which identifies execution and change management — not technical infrastructure — as the primary barriers to realizing AI value, and to the hidden-penalty research showing that social and behavioral dynamics shape whether employees actually use AI tools.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both sources find that the gap between AI access and AI-driven performance is explained by organizational and behavioral factors rather than technical ones, with adoption quality mattering more than adoption rate."
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both studies demonstrate that social and contextual dynamics — not tool availability — determine whether professionals actually adopt AI, and that naive adoption assumptions can misfire in skilled professional settings."
+        }
+      ],
+      "key_takeaway": "Providing AI access without structured training can produce worse outcomes than no AI access at all, making onboarding design a core organizational capability, not an afterthought.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden classroom desk positioned slightly off-center in the left third of the frame, shot from a low angle so the desk surface dominates the foreground. On the desk sits one open notebook and a closed laptop — both visible but the laptop screen dark — with the notebook's ruled pages catching a narrow shaft of cool morning light that falls diagonally from upper right, drawing the eye to the contrast between analog and digital tools. The surrounding room recedes into soft shadow: rows of empty desks implied rather than detailed, their perspective lines converging at a vanishing point behind the focal desk. Palette is muted slate and warm ivory, with the light shaft the only bright element. The mood is quiet and deliberate — the calm before a decision is made.",
+      "red_flags": [
+        "Preprint on arXiv; not yet peer-reviewed — findings should be treated as preliminary.",
+        "Sample is 164 law students, limiting generalizability to practicing professionals or other knowledge-work domains.",
+        "Wide confidence intervals acknowledged by the authors in the principal stratification analysis; the adoption vs. effectiveness decomposition is suggestive rather than definitive.",
+        "The training intervention is described as 'brief' but its content and duration are not detailed in the excerpt, making replication or organizational application difficult to assess."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Generative Models Erode Human Temporal Learning Through Market Selection",
+      "link": "https://arxiv.org/abs/2606.06572",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Wenjun Cao",
+      "summary": "arXiv:2606.06572v1 Announce Type: cross \nAbstract: We argue that modern generative models create structural risks for knowledge and cultural production at current, sub-AGI capability levels. We define Human Temporal Learning (HTL) as path-dependent knowledge accumulation through sustained engagement with problems over time. Generative outputs increasingly resemble HTL-intensive work in surface features, so verifying whether a given output reflects genuine human learning grows costly relative to its expected benefit. Once verification loses economic justification, evaluators reward outputs regardless of production mode, and producers who invested years of learning compete on price against outputs that cost almost nothing to generate. We call this pathway value collapse and formalize it through a costly-inspection framework. Cross-domain evidence from academic publishing, legal practice, content platforms, and software security maps onto four stages of verification erosion. Alignment success is orthogonal. Better-aligned models narrow observable gaps between human and AI outputs, making source verification harder and intensifying competitive pressure against HTL-intensive work even when individual AI outputs improve.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 4.84,
+      "reappear": false,
+      "claude_summary": "When generative AI outputs become indistinguishable from work built through years of human learning, the economic case for verifying which is which collapses. The paper formalises this as 'value collapse': once verification costs exceed expected benefits, markets reward outputs regardless of how they were produced, forcing human practitioners who invested heavily in deep expertise to compete on price against near-zero-cost AI generation. The author maps this erosion across academic publishing, law, content platforms, and software security, identifying four stages through which verification gradually loses economic justification. Crucially, the argument holds even as AI improves—better-aligned models narrow observable quality gaps, making source verification harder rather than easier.",
+      "pillar": "AI & Incentives",
+      "pillar_relevance": 82,
+      "centre_angle": "This paper argues that generative AI's surface-level mimicry of expertise-intensive work destroys the market signal that previously rewarded sustained human learning, triggering a race to the bottom in knowledge production. From CAMO's perspective on AI and incentives, this is the career-level analogue of the firm-level dynamic studied in 'Better Technology, Worse Motivation': if effort invested in deep skill-building goes unrewarded—not because it produces worse outputs, but because evaluators can no longer afford to distinguish them—the incentive to invest in that effort disappears. The policy implication is that credentialing, disclosure, and verification infrastructure are not peripheral concerns but load-bearing elements of any AI labour market.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/",
+          "reason": "Both papers identify a paradox in which AI's productivity gains undermine the incentive structure that sustains high-effort, high-quality work—one at the task level for illustrators, the other at the career level for knowledge workers across sectors."
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "The 'value collapse' mechanism—AI eroding returns to sustained human investment in skill—maps directly onto the paper's finding that AI can displace high-effort, high-wage roles even when they generate more total surplus."
+        }
+      ],
+      "key_takeaway": "When verifying whether work reflects genuine expertise becomes too costly to justify, markets stop rewarding expertise—and the incentive to develop it erodes.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single tall bookshelf, floor-to-ceiling and centered in the frame, photographed straight-on with a slight upward tilt so its shelves form strong converging horizontal lines that draw the eye toward the top. The spines on the upper shelves are sharp, clearly lettered, and richly coloured; midway down they grow progressively blurrier and more uniform until, at eye level, the bottom third of the shelf holds rows of identical, undifferentiated pale volumes with no legible titles. The surrounding room is bare—stone or dark wood floor, neutral walls—so nothing competes with the shelf. Lighting is cool and directional, a single soft overhead source pooling brightness on the upper vivid books and fading into flat ambient light at the bottom, reinforcing the gradient from legible to indistinguishable.",
+      "red_flags": [
+        "arXiv preprint — not peer-reviewed; findings should be treated as preliminary.",
+        "Theoretical and cross-domain evidence is illustrative rather than causal; the 'four stages' framework lacks formal empirical testing.",
+        "Single-author paper with no disclosed data collection; the costly-inspection model is presented but the calibration of its parameters is not independently validated."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Why AI Isn’t Transforming Finance Yet",
+      "link": "https://sloanreview.mit.edu/article/why-ai-isnt-transforming-finance-yet/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 02, 2026",
+      "authors": "Stijn Viaene, Kristof Stouthuysen, and Bjorn Cumps. <p>Stijn Viaene is a full professor of digital transformation and head of the Technology and Operations Management Department at Vlerick Business School, and a member of the Research Centre for Information Systems Engineering at KU Leuven. Kristof Stouthuysen is a full professor of management accounting and AI-driven finance at Vlerick Business School and KU Leuven, and director of Vlerick’s Centre for Financial Leadership and Digital Transformation. Bjorn Cumps is a professor of management practice in financial services innovation and fintech at Vlerick Business School.</p>",
+      "summary": "Christian Gralingen The Research The authors engaged in two complementary research streams. One was a multiyear program of action design research conducted with organizations undergoing digital transformation that focused on how leadership work evolves under conditions of technological and market uncertainty. The other,﻿ a study of how AI is introduced into finance functions and how [&#8230;]",
+      "ai_strong": 2,
+      "ai_booster": 1,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 4.69,
+      "reappear": false,
+      "claude_summary": "Finance functions have been slow to realize meaningful gains from AI despite significant investment and enthusiasm. Drawing on two complementary research streams — a multiyear action design research program with organizations undergoing digital transformation, and a study of how AI is introduced into finance functions — the authors examine why the gap between AI's promise and its organizational impact persists. The article points to leadership adaptation, execution barriers, and the difficulty of embedding AI into finance workflows as core explanations. The excerpt is thin on specific findings, so conclusions about the precise mechanisms identified should be treated cautiously pending full-text access.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article addresses a familiar but underexamined question: why does AI adoption in functional departments consistently fall short of projected impact? From CAMO's perspective on AI adoption, the gap is rarely technical — it reflects organizational and executional friction, a pattern documented in the Deloitte-HKU AI Adoption Index 2026, where nearly half of C-suite executives reported AI initiatives falling short of expected ROI, with siloed departments and cultural resistance cited as dominant barriers. The finance function is a particularly instructive case because its combination of structured data, regulatory accountability, and performance-measurement culture should, in theory, favor AI deployment — making the persistent underperformance all the more telling.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the article and the index document the same phenomenon — near-universal AI adoption intent alongside shallow measurable impact — and identify organizational rather than technical barriers as the primary explanation."
+        }
+      ],
+      "key_takeaway": "AI's slow progress in finance is not a technology problem but an organizational one: leadership adaptation and workflow integration lag far behind the tools themselves.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single glass-walled office cubicle sits centered in the frame, occupying roughly the middle third of a wide-angle shot. Inside it, one figure is seated at a desk with a monitor displaying rows of financial data; the rest of the open-plan floor behind the glass is empty and slightly out of focus, creating a sense of organizational stillness rather than momentum. A single overhead light source pools directly onto the cubicle, while the surrounding floor recedes into cooler, dimmer tones — reinforcing isolation and stasis. The palette is muted blue-grey with one warm amber accent from the desk lamp. No robots, no glowing interfaces; the emphasis is on the human and institutional space that AI must navigate, not the technology itself.",
+      "red_flags": [
+        "Article is likely paywalled behind MIT Sloan Management Review subscription",
+        "RSS excerpt is very thin — specific findings, data, and methodology details are not available for verification",
+        "Not peer-reviewed; published in a practitioner management journal",
+        "Authors are affiliated with Vlerick Business School; no disclosed conflicts of interest noted, but institutional positioning toward digital transformation consulting is worth flagging"
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The heterogeneous impact of the EU-Canada agreement with causal machine learning",
+      "link": "https://arxiv.org/abs/2407.07652",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Jun 08, 2026",
+      "authors": "Lionel Fontagn\\'e, Francesca Micocci, Armando Rungi",
+      "summary": "arXiv:2407.07652v5 Announce Type: replace \nAbstract: This paper introduces a causal machine learning approach to investigate the effects of free trade agreements and applies it to the EU-Canada Comprehensive Economic and Trade Agreement (CETA). Previous estimates of the impact of trade liberalization have been found to be unstable and contradictory, possibly due to the presence of heterogeneous treatment effects. The matrix completion estimator computes multidimensional counterfactuals in trade data at the firm, product, and destination levels. Compared with other estimators, it relies on a weaker exogeneity assumption and a more general functional form. In the case of CETA, we obtain both positive and negative idiosyncratic treatment effects at the product-destination level, although the sales-weighted average treatment effect is 6.4% in the year after the agreement. At the same time, we can estimate idiosyncratic treatment effects for the extensive margin at the product-destination level; thus, we find product churning beyond regular entry-exit dynamics: 8.1% that were not previously exported, and about 7.3% that are no longer exported. Finally, we consider the case of multiproduct firms after ranking product portfolios. After CETA, we observe a reallocation of French exports toward the first and most exported products, possibly driven by increased competition in the local market by other European producers after trade liberalization.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 3.87,
+      "reappear": false,
+      "claude_summary": "When the EU-Canada Comprehensive Economic and Trade Agreement (CETA) took effect, did it actually boost trade? Using a causal machine learning method called matrix completion, this paper moves beyond average effects to estimate firm-, product-, and destination-level impacts. The sales-weighted average treatment effect was a 6.4% increase in exports in the year after agreement. But the aggregate masks sharp heterogeneity: 8.1% of exported products were new to Canada post-CETA, while 7.3% of previously exported products dropped out entirely. Among French multiproduct firms, CETA prompted a reallocation toward core, highest-volume products—consistent with intensified competition from other EU producers entering the Canadian market simultaneously. The methodological contribution is significant: matrix completion requires weaker assumptions than standard gravity-model estimators and handles multidimensional counterfactuals that conventional approaches cannot.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This paper demonstrates that causal machine learning—specifically matrix completion—can recover treatment-effect heterogeneity that aggregate trade models systematically obscure. From CAMO's perspective on AI Algorithms & Data, the methodological lesson generalises: when policy or business interventions produce winners and losers simultaneously, average-effect estimators can mislead decision-makers. The weaker exogeneity assumptions and flexible functional form of matrix completion offer a template for applied causal inference in settings where standard panel methods produce unstable or contradictory results. The trade context here is illustrative rather than central to CAMO's mandate, so the connection is adjacent rather than direct.",
+      "matched_camo": [
+        {
+          "id": "asymptotic-theory-iv-rl-2024",
+          "title": "Asymptotic Theory for IV-Based Reinforcement Learning with Potential Endogeneity",
+          "url": "https://camo.hku.hk/asymptotic-theory-for-iv-based-reinforcement-learning-with-potential-endogeneity/",
+          "reason": "Both papers address the bias introduced when standard estimation assumptions—particularly exogeneity—are violated in applied causal inference, and both propose methodological corrections that relax those assumptions."
+        }
+      ],
+      "key_takeaway": "Causal machine learning reveals that trade agreements create simultaneous winners and losers at the product level that aggregate statistics conceal—a warning against relying on average treatment effects for policy design.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large shipping container—painted in a muted steel blue—positioned off-center to the left in the golden-ratio sweet spot of the frame, sitting on a minimal flat surface with no background clutter. Behind it, a single-point perspective of converging dock lines draws the eye toward the container as the focal subject. The surrounding space is kept deliberately spare: a pale, cool-grey ground and an overcast midday sky with diffuse, even lighting that avoids drama. On the container's face, a subtle array of small rectangular panels in slightly warmer and cooler tones suggests heterogeneous outcomes—some brightened, some shadowed—without resorting to data-chart overlays. The palette is cool-neutral overall, with the container's steel blue providing the only anchoring colour.",
+      "red_flags": [
+        "Working paper posted on arXiv (v5 of a 2024 submission); not yet confirmed as peer-reviewed and published in a journal.",
+        "Empirical scope is narrowly trade-economics (CETA/French exporters); relevance to CAMO's organisational AI mandate requires a methodological framing to justify coverage.",
+        "Results are specific to a single trade agreement and one post-implementation year, limiting generalisability of the policy conclusions."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}

@@ -1,4 +1,7 @@
 {
+  "https://arxiv.org/abs/2407.07652": [
+    "2026-06-09"
+  ],
   "https://arxiv.org/abs/2409.08379": [
     "2026-05-26"
   ],
@@ -26,6 +29,9 @@
   "https://arxiv.org/abs/2603.00059": [
     "2026-05-13",
     "2026-05-14"
+  ],
+  "https://arxiv.org/abs/2603.04982": [
+    "2026-06-09"
   ],
   "https://arxiv.org/abs/2603.16659": [
     "2026-05-16"
@@ -143,6 +149,21 @@
     "2026-06-01",
     "2026-06-02"
   ],
+  "https://arxiv.org/abs/2606.05667": [
+    "2026-06-09"
+  ],
+  "https://arxiv.org/abs/2606.06572": [
+    "2026-06-09"
+  ],
+  "https://arxiv.org/abs/2606.06694": [
+    "2026-06-09"
+  ],
+  "https://arxiv.org/abs/2606.07245": [
+    "2026-06-09"
+  ],
+  "https://arxiv.org/abs/2606.07489": [
+    "2026-06-09"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -185,9 +206,15 @@
     "2026-05-19",
     "2026-05-20"
   ],
+  "https://sloanreview.mit.edu/article/our-guide-to-the-summer-2026-issue/": [
+    "2026-06-09"
+  ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
     "2026-05-18"
+  ],
+  "https://sloanreview.mit.edu/article/why-ai-isnt-transforming-finance-yet/": [
+    "2026-06-09"
   ],
   "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/": [
     "2026-05-20",
@@ -197,7 +224,8 @@
   ],
   "https://sloanreview.mit.edu/video/what-ai-still-cant-do-for-leaders/": [
     "2026-06-01",
-    "2026-06-02"
+    "2026-06-02",
+    "2026-06-09"
   ],
   "https://www.mckinsey.com/capabilities/mckinsey-technology/overview/cybersecurity/the-boards-role-in-managing-emerging-ai-risks": [
     "2026-06-01",
