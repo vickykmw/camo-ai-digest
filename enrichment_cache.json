@@ -220,6 +220,38 @@
     "model": "claude-sonnet-4-6",
     "title": "Discovering Differences in Strategic Behavior Between Humans and LLMs"
   },
+  "https://arxiv.org/abs/2603.04555": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This position paper argues that token taxes — usage-based charges on AI inference — could serve as a redistributive counterweight to automation-driven wage erosion and tax base decline. From CAMO's perspective on AI and jobs, the proposal sits upstream of firm-level decisions: it is a governance instrument designed to shape the macro conditions under which organizations adopt AI, rather than a tool managers control directly. CAMO's own work on how AI reshapes job design and compensation — including findings in 'Toward a Bad Job Economy' that AI adoption can lower wages and worker welfare even when it raises firm efficiency — suggests that firm-level incentives alone are unlikely to correct these distributional outcomes, making the case for fiscal policy instruments like token taxes worth serious research attention.",
+      "claude_summary": "Could a tax on AI model usage help offset automation's economic damage? This position paper argues yes, proposing 'token taxes' — usage-based surcharges applied at the point of AI inference — as a practical mechanism for governments to recapture value lost when AI displaces workers and erodes tax bases. The authors draw a parallel to wage stagnation during the first industrial revolution and situate token taxes alongside earlier robot tax proposals. Their key claim is that token taxes have two practical advantages over alternatives: they can be enforced through existing compute governance infrastructure, and they capture value where AI is actually deployed rather than where models are legally domiciled. The paper is a position piece, not an empirical study, and outlines a research roadmap covering audit pipelines, economic modeling of cost pass-through, and international coordination challenges.",
+      "key_takeaway": "A usage-based tax on AI inference could give governments a practical handle on automation's distributional costs, but the technical and political obstacles to enforcement remain largely unsolved.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both works grapple with the same core distributional problem: AI adoption can lower wages and worker welfare even under conditions of rising productivity, and neither market forces nor firm incentives automatically correct this outcome.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "This is a position paper, not an empirical study — findings are normative arguments and a research roadmap, not tested results.",
+        "Not yet peer-reviewed (arXiv preprint, v2).",
+        "The core economic claims — cost pass-through, deadweight loss, enforcement feasibility — are explicitly flagged by the authors themselves as open research questions rather than resolved findings.",
+        "International coordination problem (AI superpowers vetoing measures) is acknowledged but not resolved, limiting near-term policy applicability."
+      ],
+      "visual_concept": "A single large balance scale, centered and filling roughly two-thirds of the frame, shot straight-on against a plain mid-grey background. On the left pan sits a small cluster of identical office chairs, slightly lower; on the right pan sits a simple server rack unit, slightly raised. A single overhead light source casts a clean downward beam onto the fulcrum of the scale, drawing the eye to the pivot point where the weight is being measured. The palette is cool and desaturated — slate grey, off-white, and a faint steel blue — with no warm accents, conveying institutional seriousness rather than alarm. The surrounding space is deliberately empty to keep attention on the balance and its asymmetry."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "Position: Token Taxes Can Mitigate AI's Economic Risks"
+  },
   "https://arxiv.org/abs/2603.04982": {
     "data": {
       "audience_relevance": {
@@ -1233,6 +1265,75 @@
     "model": "claude-sonnet-4-6",
     "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope"
   },
+  "https://arxiv.org/abs/2606.13693": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study finds that deploying expensive reasoning-heavy LLMs for ESG narrative scoring yields outcomes within narrow margins of cheaper consensus-based approaches — questioning a widespread assumption that higher model capability translates to meaningfully better structured outputs. From CAMO's perspective on algorithmic decision-making, the implication is consequential: organizations building AI pipelines for accountability tasks face a practical design choice between marginal accuracy gains and substantial cost inflation, and the evidence here suggests the trade-off rarely favors frontier models for well-defined scoring rubrics. This connects to broader themes in CAMO's work on algorithmic reliability and deployment governance — where the question is not only whether an AI system works, but whether it works proportionately better than the alternatives.",
+      "claude_summary": "When scoring ESG narrative disclosures from Japanese listed firms, does deploying a reasoning-heavy frontier LLM materially improve results over cheaper, reasoning-off alternatives? Across 120 scored data points on three rubric dimensions, the study finds that the mean absolute deviation between the reasoning-on model and its reasoning-off counterparts is only 0.38 on a 5-point scale, with virtually no large disagreements. The reasoning-on model costs roughly 5.6 times more than a three-provider reasoning-off ensemble for outcomes that are statistically indistinguishable. The paper concludes that consensus approaches using standard LLMs offer a cost-effective alternative to frontier reasoning models for structured, span-based ESG scoring tasks — a finding with direct implications for how organizations design and govern AI-driven accountability pipelines.",
+      "key_takeaway": "For structured ESG scoring tasks, a consensus of standard LLMs delivers results nearly identical to expensive reasoning-heavy frontier models at roughly one-fifth the cost.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "reason": "Both papers address how measured performance improvements in AI or algorithmic systems can mask costs or externalities that erode the apparent gains — here, reasoning capability improvements that do not justify their cost premium.",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Small sample: only ten Japanese listed firms across three rubric axes — findings may not generalize to other geographies, industries, or rubric designs.",
+        "Working paper / preprint (arXiv); not yet peer-reviewed at time of publication.",
+        "The study evaluates a specific span-based scoring task; applicability to more open-ended or qualitative ESG assessment frameworks is unclear.",
+        "No disclosed information on author affiliations or potential conflicts of interest with LLM providers evaluated."
+      ],
+      "visual_concept": "A centered overhead shot of three identical, modest weighing scale pans arranged in a tight triangle on a plain matte surface, all sitting visibly level — with a single larger, ornate scale pan placed slightly off-center to the right in the foreground, also level, its elaborate detailing suggesting greater cost or complexity. Shallow depth of field keeps the background a soft, neutral grey so the contrast between the simple trio and the single elaborate pan reads immediately. Cool, diffused studio light falls evenly from above, casting a single clean shadow beneath each pan to emphasize their equal elevation. The palette is desaturated slate and off-white, with a faint warm accent on the ornate pan to signal its premium nature without making it appear superior."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "Limited Marginal Benefit of Reasoning-Heavy LLM Deployment in ESG Narrative Scoring: A 4-Model Consensus Study on Japanese Listed Firms"
+  },
+  "https://arxiv.org/abs/2606.14315": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This paper argues that 'AI alignment' is not a unified technical concept but a contested umbrella covering incompatible research programs with different threat models and normative foundations. From CAMO's perspective on the algorithmic and statistical underpinnings of trustworthy AI decisions, the implication is practical: when organizations adopt AI tools marketed as 'aligned,' they may be purchasing a solution to one alignment problem while unknowingly importing another. The paper's call to separate high-level ideals from empirical proxies maps directly onto challenges CAMO's work addresses — such as how performance metrics in AI evaluation can be gamed or can optimize the wrong objective, as illustrated in CAMO's Dingdong and MedTech nano-cases.",
+      "claude_summary": "The term 'AI alignment' does not refer to a single coherent research goal — it bundles at least three distinct technical concepts, each tied to different threat models and normative assumptions. The paper argues that an intervention advancing alignment under one definition can actively undermine it under another. The authors call for researchers and communicators to be explicit about which conception of alignment they mean, to distinguish high-level ideals from the empirical proxies actually used in experiments, and to acknowledge that disagreements often reflect different values rather than different facts. This conceptual fragmentation is particularly important when AI findings are communicated to non-technical audiences, including policymakers and business leaders, who may assume 'alignment' means one settled thing.",
+      "key_takeaway": "Calling an AI system 'aligned' is not a guarantee of safety or suitability — the word covers competing technical definitions, and solutions built for one can create new problems under another.",
+      "matched_camo": [
+        {
+          "id": "nanocase-dingdong-2026",
+          "reason": "The paper's distinction between alignment as a high-level ideal and the empirical proxies used to measure it parallels Dingdong's experience, where AI-driven performance metrics made accountability explicit but diverged from the underlying goal when applied to shared-responsibility cases.",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/"
+        },
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "The risk of alignment proxies displacing genuine goals — a central warning in the paper — is directly illustrated by the Goodhart's Law dynamics that emerged when query counts became the operational stand-in for meaningful AI use.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint, no indicated journal review process.",
+        "Conceptual rather than empirical: no original data or experiments; conclusions rest on literature analysis and argumentation.",
+        "Abstract alone is thin on specifics — the three distinct alignment concepts are named in the abstract but not defined; summary is necessarily constrained by the excerpt."
+      ],
+      "visual_concept": "A centered architectural subject: a single T-shaped intersection of three narrow corridors converging toward a common entrance, photographed from slightly above eye level so all three paths are visible simultaneously. The corridors are rendered in cool concrete grey with each path subtly differentiated by a distinct floor-level strip light — pale blue, amber, and white — meeting at a small circular landing at the center foreground. A single overhead spotlight pools onto that central landing, drawing the eye to the point where the paths converge but do not fully merge. The surrounding walls are bare and uncluttered, emphasizing the geometry rather than any occupant. The overall palette is cool and institutional — muted greys with the three accent colors as the only warmth — conveying structured complexity rather than confusion."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "'AI Alignment' Encompasses Competing Technical Priorities"
+  },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
       "audience_relevance": {
@@ -1553,6 +1654,80 @@
     "model": "claude-sonnet-4-6",
     "title": "A Need for Nuance: The Economist’s Andrew Palmer"
   },
+  "https://sloanreview.mit.edu/video/agentic-ai-what-leaders-wish-they-knew-sooner/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This practitioner roundup from the 2026 MIT Sloan CIO Symposium surfaces a pattern CAMO's research consistently identifies: AI deployment outpaces organizational readiness, and the bottleneck is rarely technical. From CAMO's perspective on AI adoption, the 'promise versus reality' gap leaders describe mirrors what the Deloitte-HKU AI Adoption Index 2026 found among C-suite executives in China and Hong Kong — nearly half reported initiatives fell short of expected ROI, with siloed departments and cultural resistance as the dominant barriers. The agentic context sharpens this problem: when AI systems act autonomously rather than assist, the cost of misaligned incentives, unclear accountability, and unprepared workflows compounds quickly.",
+      "claude_summary": "At the 2026 MIT Sloan CIO Symposium, technology and business leaders were asked what they have learned this year about deploying agentic AI in real workflows. The consistent theme, based on the excerpt, is a gap between expectation and reality: agents are entering production environments faster than the organizational and human readiness to absorb them. Leaders reflect on what they wish they had understood sooner about agentic AI — suggesting that the friction is less about the technology itself and more about how organizations, processes, and people adapt to systems that act autonomously on their behalf. The excerpt is brief and the full content is video-based, so specific findings cannot be confirmed.",
+      "key_takeaway": "Agentic AI is entering real workflows faster than most organizations have prepared their people, processes, and accountability structures to handle it.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces center on the gap between AI's anticipated impact and measurable organizational outcomes, with C-suite leaders as the primary voice on what impedes real deployment.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case illustrates concretely how agentic or multi-agent systems expose coordination bottlenecks that task-level AI cannot resolve — directly relevant to what leaders describe as readiness gaps in agentic workflows.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Content is a video from a practitioner symposium, not peer-reviewed or based on systematic research — findings should be treated as expert opinion rather than empirical evidence.",
+        "RSS excerpt is very thin; specific claims, speaker identities, and concrete lessons cannot be verified without accessing the full video.",
+        "Potential for selection bias: leaders speaking at a high-profile MIT event may not represent typical organizational experience with agentic AI."
+      ],
+      "visual_concept": "A single empty boardroom chair, centered slightly off-axis at golden-ratio positioning, sits at the near end of a long narrow conference table receding to a vanishing point at the far wall. The chair is the clear focal subject at foreground scale; the table's parallel edges serve as the sole compositional device, drawing the eye from the chair toward the distant end of the room where a softly illuminated screen glows with indistinct content. The surrounding environment is minimal — bare walls, no clutter, no other chairs visible. Lighting is cool and directional, coming from above-left, casting a clean shadow from the chair along the table surface. The palette is muted slate and warm ivory, evoking an institutional setting mid-transition — present but not yet occupied."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "Agentic AI: What Leaders Wish They Knew Sooner"
+  },
+  "https://sloanreview.mit.edu/video/the-ai-atrophy-problem-how-cios-fight-it/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This piece surfaces a practical governance concern for CIOs: that routine reliance on AI tools may quietly erode the critical reasoning skills organizations need for non-routine decisions. From CAMO's perspective on AI adoption, this is not merely a training problem but a job-design problem — when AI absorbs the cognitively demanding parts of a task, the residual work may no longer exercise the judgment firms claim to value. CAMO's work on the 'bad job economy' (bad-job-economy-2026) suggests this dynamic can be structural: AI adoption that reduces effort requirements can shift firms toward lower-skill task configurations even when higher-skill configurations create more value.",
+      "claude_summary": "As organizations embed AI into more workflows, a new concern is emerging among technology and business leaders: the gradual erosion of employees' critical thinking and problem-solving capabilities — what some CIOs are calling 'AI atrophy.' Captured at the 2026 MIT Sloan CIO Symposium, the piece surfaces how leaders are grappling with the tension between AI-driven efficiency gains and the long-term degradation of human cognitive skills that organizations still depend on. The excerpt is brief and video-based, so specific strategies or data points are not available, but the framing reflects a growing leadership preoccupation with whether AI assistance is quietly hollowing out the judgment and reasoning capacity it was meant to augment.",
+      "key_takeaway": "Efficiency gains from AI adoption may come at the cost of the critical thinking skills organizations still need for complex, high-stakes decisions — a trade-off CIOs are only beginning to manage.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both examine how AI adoption reshapes the cognitive and skill demands embedded in jobs, with CAMO's model showing that AI can structurally shift firms toward lower-effort task configurations — a micro-level mechanism underlying the 'atrophy' concern raised by CIOs.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        },
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "CAMO's finding that AI assistance diminishes returns on sustained effort — leading professionals to strategically reduce effort — directly parallels the atrophy concern: both identify AI efficiency as a force that can weaken the conditions for high-quality, effortful work.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Source is a short video excerpt from a symposium panel, not a peer-reviewed study or structured research report — findings are practitioner opinion, not empirical evidence.",
+        "No specific data, survey results, or named strategies are available from the RSS excerpt; summary relies on the framing alone.",
+        "Potential for survivorship or selection bias in symposium settings: CIOs speaking publicly may not represent the median organizational experience."
+      ],
+      "visual_concept": "A single wooden chair positioned slightly off-center in a spare, white-walled room, lit by a narrow beam of cool natural light falling from a high window directly onto the chair. The chair is empty and faces away from the viewer toward a large, plain desk on which a laptop sits open, its screen casting a faint blue glow. The room is otherwise uncluttered — no objects compete for attention. The leading line of the floorboards draws the eye from the foreground toward the chair. The palette is cool and restrained: off-white walls, pale grey floor, with the blue screen glow as the only warm contrast, suggesting the quiet displacement of human presence by a machine left running."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "The AI Atrophy Problem: How CIOs Fight It"
+  },
   "https://sloanreview.mit.edu/video/what-ai-still-cant-do-for-leaders/": {
     "data": {
       "audience_relevance": {
@@ -1589,6 +1764,75 @@
     "enriched_at": "2026-06-01",
     "model": "claude-sonnet-4-6",
     "title": "What AI Still Can’t Do for Leaders"
+  },
+  "https://www.mckinsey.com/capabilities/business-building/our-insights/the-seven-operating-truths-of-ai-native-companies": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This McKinsey article argues that AI performance gaps between firms are organizational rather than technical — that the 'AI-native' edge comes from redesigning operating models, not just deploying tools. From CAMO's perspective on AI adoption, this aligns closely with evidence emerging from our own case research: at Decathlon China, for instance, coding efficiency rose 20–40% with AI, yet overall delivery speed improved by only 10–15% because coordination bottlenecks — not technical execution — remained untouched. The implication for executives is that AI adoption strategies focused on access and tooling are necessary but insufficient; the harder and more consequential work is redesigning how authority, coordination, and judgment are distributed across the organization.",
+      "claude_summary": "What separates companies that extract real value from AI from those that merely deploy it? Drawing on interviews with leaders at 15 AI-savvy firms, this McKinsey article identifies seven operating principles that distinguish AI-native organizations. The excerpt does not detail all seven, but the framing centers on organizational operating models rather than technology itself — how work is structured, how decisions flow, and how firms reconfigure management practices around AI capabilities. The argument is that most companies get AI tools right but organizational design wrong, and that the gap between AI access and AI performance is fundamentally a management and structure problem, not a technology problem.",
+      "key_takeaway": "The gap between companies that succeed with AI and those that stall is not the tools they use — it is how they redesign organizational structure, decision rights, and operating models around those tools.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Decathlon China's experience directly illustrates the McKinsey thesis: AI optimizes individual tasks while organizational structure — coordination bottlenecks between tasks — determines whether system-level performance improves.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The Adoption Index finding that AI impact remains shallow and barriers are organizational rather than technical — siloed departments, cultural resistance, poor data quality — mirrors the McKinsey article's central claim about what AI-native firms get right.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "red_flags": [
+        "Based on a thin RSS excerpt only — the full article's seven operating truths are not available for evaluation; findings summarized here are inferred from framing, not verified content.",
+        "McKinsey Insights is practitioner-oriented and not peer-reviewed; findings from 15 companies are not a representative sample and may reflect selection bias toward successful AI adopters.",
+        "Potential conflict of interest: McKinsey advises large organizations on AI strategy, which may shape how findings are framed and which conclusions are emphasized."
+      ],
+      "visual_concept": "A single mid-century modern office building photographed from street level, positioned off-center to the left in the golden-ratio third, occupying roughly two-thirds of the frame's height. The building's facade is a clean grid of windows, most dark, but a vertical column of lit windows runs from ground floor to rooftop directly down the center of the structure — a single leading line of light drawing the eye upward against a cool dusk sky. The surrounding streetscape is minimal and softly out of focus, providing depth without competing. Lighting is cool blue-grey twilight outside contrasted with warm amber emanating from the lit interior column, suggesting selective activation rather than uniform illumination. Palette: muted steel blue, concrete grey, with a single warm amber vertical accent."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "The seven operating truths of AI-native companies"
+  },
+  "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/europes-new-ecommerce-agenda-how-ai-is-resetting-growth-and-competition": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This article argues that European retailers face a structural inflection point where AI moves from pilot feature to the core logic of how commerce operates—affecting pricing, demand sensing, and customer interaction simultaneously. From CAMO's perspective on AI adoption, the harder challenge is organizational rather than technical: the Deloitte-HKU AI Adoption Index 2026 found that the dominant barriers to realizing AI value in large firms are siloed departments, cultural resistance, and poor data quality—precisely the conditions that would prevent retailers from converting the agentic and omnichannel capabilities described here into durable advantage. The retail setting also raises an under-examined question about job boundary redesign: as AI agents handle more of the customer-facing and merchandising workflow, managerial roles must shift toward oversight and exception-handling rather than routine execution.",
+      "claude_summary": "European e-commerce is entering a new competitive phase as AI reshapes the economics of digital retail. The article, drawing on McKinsey analysis, examines how capabilities such as agentic shopping, retail media networks, and omnichannel intelligence are shifting where value is created and captured. The central argument is that the firms pulling ahead are those converting AI experimentation into systematic operational advantage—not simply deploying tools. The piece is aimed at retail and commerce executives and frames the challenge as organizational and strategic rather than purely technical: winning requires redesigning how data, customer relationships, and channel economics are managed together. The excerpt is thin on empirical evidence; the depth of the underlying analysis is unclear without full access.",
+      "key_takeaway": "Turning AI from retail experiment into competitive advantage is primarily an organizational redesign problem, not a technology procurement one.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces centre on the gap between AI's strategic promise and measurable organizational outcomes, identifying executional and structural barriers—not technical ones—as the primary constraint on realizing value.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Article is from a consulting firm (McKinsey) with commercial interests in AI advisory services—findings may reflect client positioning rather than independent research.",
+        "RSS excerpt is thin; the full article's empirical basis, data sources, and sample scope cannot be verified without access.",
+        "No named authors listed, limiting accountability for specific claims.",
+        "Likely not peer-reviewed; should be treated as practitioner commentary rather than research evidence."
+      ],
+      "visual_concept": "A single shopping trolley positioned off-center to the left in the frame, photographed at floor level so it occupies the middle ground against the long receding perspective of an empty, wide retail aisle stretching to a vanishing point behind it. The aisle's parallel shelf lines act as the sole compositional device, drawing the eye from the trolley toward the distant end of the store. The shelves themselves are clean and lightly stocked—present but not distracting. Lighting is cool and directional, as though from overhead fluorescent strips, with a soft warm accent pooling onto the trolley from the left edge of frame, distinguishing it from the cooler background. Palette: cool greys and whites for the environment, a muted steel-blue tone overall with that single warm highlight on the focal object."
+    },
+    "enriched_at": "2026-06-16",
+    "model": "claude-sonnet-4-6",
+    "title": "Europe’s new e‑commerce agenda: How AI is resetting growth and competition"
   },
   "https://www.mckinsey.com/capabilities/mckinsey-technology/overview/cybersecurity/the-boards-role-in-managing-emerging-ai-risks": {
     "data": {

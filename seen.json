@@ -30,6 +30,9 @@
     "2026-05-13",
     "2026-05-14"
   ],
+  "https://arxiv.org/abs/2603.04555": [
+    "2026-06-16"
+  ],
   "https://arxiv.org/abs/2603.04982": [
     "2026-06-09"
   ],
@@ -164,6 +167,15 @@
   "https://arxiv.org/abs/2606.07489": [
     "2026-06-09"
   ],
+  "https://arxiv.org/abs/2606.12430": [
+    "2026-06-16"
+  ],
+  "https://arxiv.org/abs/2606.13693": [
+    "2026-06-16"
+  ],
+  "https://arxiv.org/abs/2606.14315": [
+    "2026-06-16"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -207,7 +219,8 @@
     "2026-05-20"
   ],
   "https://sloanreview.mit.edu/article/our-guide-to-the-summer-2026-issue/": [
-    "2026-06-09"
+    "2026-06-09",
+    "2026-06-16"
   ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
@@ -222,10 +235,23 @@
     "2026-06-01",
     "2026-06-02"
   ],
+  "https://sloanreview.mit.edu/video/agentic-ai-what-leaders-wish-they-knew-sooner/": [
+    "2026-06-16"
+  ],
+  "https://sloanreview.mit.edu/video/the-ai-atrophy-problem-how-cios-fight-it/": [
+    "2026-06-16"
+  ],
   "https://sloanreview.mit.edu/video/what-ai-still-cant-do-for-leaders/": [
     "2026-06-01",
     "2026-06-02",
-    "2026-06-09"
+    "2026-06-09",
+    "2026-06-16"
+  ],
+  "https://www.mckinsey.com/capabilities/business-building/our-insights/the-seven-operating-truths-of-ai-native-companies": [
+    "2026-06-16"
+  ],
+  "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/europes-new-ecommerce-agenda-how-ai-is-resetting-growth-and-competition": [
+    "2026-06-16"
   ],
   "https://www.mckinsey.com/capabilities/mckinsey-technology/overview/cybersecurity/the-boards-role-in-managing-emerging-ai-risks": [
     "2026-06-01",
