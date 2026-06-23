@@ -1,0 +1,374 @@
+{
+  "week_start": "2026-06-16",
+  "week_end": "2026-06-23",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 8,
+  "items": [
+    {
+      "title": "AI Upskilling at Scale: Bank of America’s Bernard Hampton",
+      "link": "https://sloanreview.mit.edu/audio/ai-upskilling-at-scale-bank-of-americas-bernard-hampton/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 16, 2026",
+      "authors": "Sam Ransbotham. <p><cite>Me, Myself, and AI</cite> is a podcast produced by <cite>MIT Sloan Management Review</cite> and hosted by Sam Ransbotham. It is engineered by David Lishansky and produced by Allison Ryder.</p>\n<p><a href=\"https://sloanreview.mit.edu/sam-ransbotham/\">Sam Ransbotham</a> is a professor in the information systems department at the Carroll School of Management at Boston College, as well as guest editor for <cite>MIT Sloan Management Review</cite>’s Artificial Intelligence and Business Strategy Big Ideas initiative.</p>",
+      "summary": "Today’s episode of the Me, Myself, and AI podcast, the final one of Season 13, explores how Bank of America is preparing a massive global workforce for an AI future through upskilling and reskilling. Bernard Hampton, head of the financial institution’s Academy, explains how the learning and development organization focuses on workforce agility and a [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 4.67,
+      "reappear": false,
+      "claude_summary": "Bank of America's head of its internal Academy, Bernard Hampton, describes how the bank is building AI literacy and capability across a large global workforce through systematic upskilling and reskilling programmes. The episode focuses on how a major financial institution's learning and development function is being repositioned around workforce agility in the face of AI adoption. Hampton outlines the structural and cultural challenges of preparing tens of thousands of employees for shifting job requirements, and the Academy's role in translating AI strategy into day-to-day capability building. Note: this is a podcast episode summary drawn from a brief RSS excerpt; specific findings and data points are not available for review.",
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 72,
+      "centre_angle": "This podcast episode argues that large-scale AI upskilling requires a dedicated institutional apparatus—not ad hoc training—to achieve genuine workforce agility. From CAMO's perspective on AI and jobs, the more consequential question is whether upskilling programmes address the social and incentive dynamics that govern actual tool adoption, not just technical access. CAMO's survey of HR professionals (State of AI in HR, 2026) finds that organisations prioritising time liberation and reframing AI as an upskilling tool see better adoption outcomes, while CAMO's experimental work on the hidden competence penalty for AI use suggests that employee reluctance to adopt may be rooted in social risk, which no amount of technical training alone resolves.",
+      "matched_camo": [
+        {
+          "id": "state-of-ai-in-hr-2026",
+          "title": "The State of AI in HR: Balancing Efficiency and Strategy",
+          "url": "https://camo.hku.hk/surveyreport-thestateofaiinhr/",
+          "reason": "Both examine how organisations build AI capability in their workforce, with the CAMO survey specifically identifying upskilling as a strategic outcome of AI-driven time savings in HR functions."
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Bank of America's upskilling focus implicitly assumes employees will use AI once trained, but CAMO's finding that AI use carries a social competence penalty points to a structural barrier that workforce training programmes typically do not address."
+        }
+      ],
+      "key_takeaway": "Deploying a dedicated institutional learning infrastructure is necessary but not sufficient for AI adoption at scale—organisations must also confront the social and incentive barriers that determine whether employees actually use the tools they are trained on.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wide wooden staircase photographed from a low angle, centered in the frame, ascending toward a large diffuse window at the top that floods the upper steps with cool natural light. The staircase is the focal subject, occupying the full vertical height of the composition, with the vanishing point placed at the lit window behind it drawing the eye upward. The surrounding space—plain walls, no decoration—is kept deliberately spare so nothing competes with the upward movement. The lower steps are in soft shadow with warm ambient light; the upper steps transition to cooler, brighter daylight. The palette is muted grey and warm stone with a single band of bright white light at the summit, evoking progression and institutional scale without literal AI imagery.",
+      "red_flags": [
+        "Source is a podcast episode; no peer review and no quantitative findings are available in the excerpt.",
+        "RSS excerpt is brief—specific claims, programme metrics, and methodology cannot be independently verified from the available text.",
+        "MIT Sloan Management Review content may sit behind a partial paywall for some readers."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "AI is turning every company into a software company",
+      "link": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/ai-is-turning-every-company-into-a-software-company",
+      "source": "McKinsey Insights",
+      "published_display": "Jun 18, 2026",
+      "authors": "Unknown",
+      "summary": "As AI makes software faster and cheaper to build, the real competitive edge shifts to how it’s used—pushing leaders to rethink what work looks like and how teams spend their time.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 4.15,
+      "reappear": false,
+      "claude_summary": "As AI dramatically lowers the cost and time required to build software, McKinsey argues that the traditional distinction between technology firms and non-technology firms is dissolving. When any organization can produce software cheaply, the competitive advantage shifts away from technical build capacity and toward deployment, integration, and intelligent use of those tools. This repositions leaders' core challenge: not whether to adopt AI-enabled software development, but how to redesign work, team structures, and decision-making around it. The excerpt is brief and the full article may contain richer empirical detail, so some of the argument below is inferred from the framing rather than confirmed findings.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "centre_angle": "This McKinsey piece argues that falling software production costs will force every organization to rethink what its people actually do — shifting the locus of value from building to deploying and orchestrating AI tools. From CAMO's perspective on AI adoption, this mirrors a pattern documented in our nano-cases: the productivity gains from AI rarely come from automating discrete tasks in isolation, but from compressing the coordination and judgment work that surrounds those tasks. Our case on Decathlon China, for instance, found that coding efficiency rose 20–40% after AI adoption, yet overall delivery speed increased only 10–15% — the bottleneck was coordination, not execution. Leaders treating AI as a software-cost reducer while leaving organizational structure intact are likely to capture only a fraction of the available gain.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Directly illustrates the article's core claim — cheaper AI-assisted software development alone does not translate into organizational performance gains unless coordination structures are also redesigned."
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Documents the same gap between AI's promised competitive impact and measurable outcomes, attributing underperformance to organizational and executional barriers rather than technical ones — consistent with the article's argument that the edge shifts to how AI is used, not whether it is available."
+        }
+      ],
+      "key_takeaway": "When AI makes software cheap to build, competitive advantage migrates entirely to organizational design — how leaders restructure teams and workflows to act on what the software produces.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A lone blueprint or technical drawing — rendered as a large, crisp architectural floor plan — pinned flat to a plain concrete surface, positioned at center-left of the frame and occupying roughly two-thirds of the image. A single overhead pendant lamp casts a focused pool of warm amber light directly onto the drawing, leaving the surrounding surface in cool shadow so the eye lands immediately on the document. The environment is spare: a bare industrial table edge visible at the far right, nothing else competing for attention. The palette contrasts the warm gold of the illuminated plan against cooler blue-grey surrounds, suggesting both technical precision and the human judgment required to act on it.",
+      "red_flags": [
+        "Source is McKinsey Insights, a consulting firm with commercial interests in AI advisory services — potential conflict of interest.",
+        "Article is not peer-reviewed; findings are practitioner-facing and may reflect McKinsey's client base rather than a representative sample of firms.",
+        "RSS excerpt is very thin; the summary above relies partly on inferred framing rather than confirmed empirical content from the full article.",
+        "Possible partial paywall or gated content depending on user login status."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Capturing Central Europe’s AI opportunity",
+      "link": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/capturing-central-europes-ai-opportunity",
+      "source": "McKinsey Insights",
+      "published_display": "Jun 22, 2026",
+      "authors": "Unknown",
+      "summary": "AI is advancing too quickly to remain a side initiative for businesses. Central European companies can get ahead by redesigning business domains—and the organization—around AI.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 3.85,
+      "reappear": false,
+      "claude_summary": "Central European businesses face a strategic choice: treat AI as an incremental efficiency tool or redesign entire business domains and organizational structures around it. The McKinsey article argues that the latter approach is necessary to capture meaningful value, and that companies moving too slowly risk being outpaced by competitors who have already embedded AI into core operations. The piece outlines a domain-by-domain redesign framework, positioning Central Europe as a region with distinct competitive potential if firms move beyond pilot projects. The excerpt is thin on empirical detail, so specific findings and data points remain unclear from the available text alone.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that AI value creation requires organizational redesign, not merely tool deployment — a claim consistent with what CAMO's survey research keeps surfacing. The Deloitte-HKU AI Adoption Index 2026 found that the dominant barriers to AI impact among C-suite executives in China and Hong Kong are organizational and executional rather than technical: siloed departments, cultural resistance, and the absence of quick wins. The implication is that Central European firms face the same structural challenge identified across Asian markets — and that the bottleneck is change management, not access to technology.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both pieces diagnose the same gap between AI adoption ambition and measurable organizational outcomes, attributing underperformance to structural and executional barriers rather than technical ones."
+        }
+      ],
+      "key_takeaway": "AI adoption stalls when firms treat it as a side initiative rather than a prompt to redesign how work and decisions are organized.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single mid-century modernist office building photographed from street level, positioned slightly left of center in the frame, occupying the middle ground. The building's vertical window columns act as natural leading lines drawing the eye upward to a clear, pale-blue overcast sky. The foreground is an empty, clean plaza — no people, no clutter — keeping attention on the structure itself. Lighting is flat and cool, northern European in character, with soft diffuse shadows that give the architecture a sense of solidity without drama. The palette is muted: concrete grey, steel blue, and a single warm amber light visible through one window.",
+      "red_flags": [
+        "Excerpt is very thin — no specific data, methodology, or empirical findings are visible; summary relies heavily on inferred framing rather than reported results.",
+        "McKinsey Insights is a consulting firm publication, not peer-reviewed research; findings likely reflect proprietary client data with limited independent verification.",
+        "Potential conflict of interest: McKinsey's QuantumBlack division sells AI advisory services to the firms the article targets.",
+        "Geographic focus (Central Europe) may limit direct relevance to CAMO's primary audience in Asia."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The AI Atrophy Problem: How CIOs Fight It",
+      "link": "https://sloanreview.mit.edu/video/the-ai-atrophy-problem-how-cios-fight-it/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 09, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "AI tools can help teams become faster and more efficient. But as organizations race to integrate artificial intelligence into more workflows, a problem is taking shape: the erosion of the critical thinking skills that leaders value. At the 2026 MIT Sloan CIO Symposium, we asked technology and business leaders to answer this question: What is [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 3.81,
+      "reappear": true,
+      "claude_summary": "As organizations embed AI into more workflows, a new concern is emerging among technology and business leaders: the gradual erosion of employees' critical thinking and problem-solving capabilities — what some CIOs are calling 'AI atrophy.' Captured at the 2026 MIT Sloan CIO Symposium, the piece surfaces how leaders are grappling with the tension between AI-driven efficiency gains and the long-term degradation of human cognitive skills that organizations still depend on. The excerpt is brief and video-based, so specific strategies or data points are not available, but the framing reflects a growing leadership preoccupation with whether AI assistance is quietly hollowing out the judgment and reasoning capacity it was meant to augment.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This piece surfaces a practical governance concern for CIOs: that routine reliance on AI tools may quietly erode the critical reasoning skills organizations need for non-routine decisions. From CAMO's perspective on AI adoption, this is not merely a training problem but a job-design problem — when AI absorbs the cognitively demanding parts of a task, the residual work may no longer exercise the judgment firms claim to value. CAMO's work on the 'bad job economy' (bad-job-economy-2026) suggests this dynamic can be structural: AI adoption that reduces effort requirements can shift firms toward lower-skill task configurations even when higher-skill configurations create more value.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both examine how AI adoption reshapes the cognitive and skill demands embedded in jobs, with CAMO's model showing that AI can structurally shift firms toward lower-effort task configurations — a micro-level mechanism underlying the 'atrophy' concern raised by CIOs.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        },
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "CAMO's finding that AI assistance diminishes returns on sustained effort — leading professionals to strategically reduce effort — directly parallels the atrophy concern: both identify AI efficiency as a force that can weaken the conditions for high-quality, effortful work.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "key_takeaway": "Efficiency gains from AI adoption may come at the cost of the critical thinking skills organizations still need for complex, high-stakes decisions — a trade-off CIOs are only beginning to manage.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single wooden chair positioned slightly off-center in a spare, white-walled room, lit by a narrow beam of cool natural light falling from a high window directly onto the chair. The chair is empty and faces away from the viewer toward a large, plain desk on which a laptop sits open, its screen casting a faint blue glow. The room is otherwise uncluttered — no objects compete for attention. The leading line of the floorboards draws the eye from the foreground toward the chair. The palette is cool and restrained: off-white walls, pale grey floor, with the blue screen glow as the only warm contrast, suggesting the quiet displacement of human presence by a machine left running.",
+      "red_flags": [
+        "Source is a short video excerpt from a symposium panel, not a peer-reviewed study or structured research report — findings are practitioner opinion, not empirical evidence.",
+        "No specific data, survey results, or named strategies are available from the RSS excerpt; summary relies on the framing alone.",
+        "Potential for survivorship or selection bias in symposium settings: CIOs speaking publicly may not represent the median organizational experience."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Agentic AI: What Leaders Wish They Knew Sooner",
+      "link": "https://sloanreview.mit.edu/video/agentic-ai-what-leaders-wish-they-knew-sooner/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 11, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "As AI agents go beyond the hypothetical and enter actual workflows, many leaders see a gap between the promise and the reality. Are the agents ready? Moreover, are the humans? At the 2026 MIT Sloan CIO Symposium, we sought expert perspective and advice. We asked technology and business leaders, “What have you learned this year [&#8230;]",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 3.67,
+      "reappear": true,
+      "claude_summary": "At the 2026 MIT Sloan CIO Symposium, technology and business leaders were asked what they have learned this year about deploying agentic AI in real workflows. The consistent theme, based on the excerpt, is a gap between expectation and reality: agents are entering production environments faster than the organizational and human readiness to absorb them. Leaders reflect on what they wish they had understood sooner about agentic AI — suggesting that the friction is less about the technology itself and more about how organizations, processes, and people adapt to systems that act autonomously on their behalf. The excerpt is brief and the full content is video-based, so specific findings cannot be confirmed.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This practitioner roundup from the 2026 MIT Sloan CIO Symposium surfaces a pattern CAMO's research consistently identifies: AI deployment outpaces organizational readiness, and the bottleneck is rarely technical. From CAMO's perspective on AI adoption, the 'promise versus reality' gap leaders describe mirrors what the Deloitte-HKU AI Adoption Index 2026 found among C-suite executives in China and Hong Kong — nearly half reported initiatives fell short of expected ROI, with siloed departments and cultural resistance as the dominant barriers. The agentic context sharpens this problem: when AI systems act autonomously rather than assist, the cost of misaligned incentives, unclear accountability, and unprepared workflows compounds quickly.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces center on the gap between AI's anticipated impact and measurable organizational outcomes, with C-suite leaders as the primary voice on what impedes real deployment.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case illustrates concretely how agentic or multi-agent systems expose coordination bottlenecks that task-level AI cannot resolve — directly relevant to what leaders describe as readiness gaps in agentic workflows.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "key_takeaway": "Agentic AI is entering real workflows faster than most organizations have prepared their people, processes, and accountability structures to handle it.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single empty boardroom chair, centered slightly off-axis at golden-ratio positioning, sits at the near end of a long narrow conference table receding to a vanishing point at the far wall. The chair is the clear focal subject at foreground scale; the table's parallel edges serve as the sole compositional device, drawing the eye from the chair toward the distant end of the room where a softly illuminated screen glows with indistinct content. The surrounding environment is minimal — bare walls, no clutter, no other chairs visible. Lighting is cool and directional, coming from above-left, casting a clean shadow from the chair along the table surface. The palette is muted slate and warm ivory, evoking an institutional setting mid-transition — present but not yet occupied.",
+      "red_flags": [
+        "Content is a video from a practitioner symposium, not peer-reviewed or based on systematic research — findings should be treated as expert opinion rather than empirical evidence.",
+        "RSS excerpt is very thin; specific claims, speaker identities, and concrete lessons cannot be verified without accessing the full video.",
+        "Potential for selection bias: leaders speaking at a high-profile MIT event may not represent typical organizational experience with agentic AI."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "The seven operating truths of AI-native companies",
+      "link": "https://www.mckinsey.com/capabilities/business-building/our-insights/the-seven-operating-truths-of-ai-native-companies",
+      "source": "McKinsey Insights",
+      "published_display": "Jun 11, 2026",
+      "authors": "Unknown",
+      "summary": "Almost every company has AI tools, but few really know how to use them. Leaders at 15 AI-savvy companies say the difference comes down to seven operating truths—that most organizations still get wrong.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 2.98,
+      "reappear": true,
+      "claude_summary": "What separates companies that extract real value from AI from those that merely deploy it? Drawing on interviews with leaders at 15 AI-savvy firms, this McKinsey article identifies seven operating principles that distinguish AI-native organizations. The excerpt does not detail all seven, but the framing centers on organizational operating models rather than technology itself — how work is structured, how decisions flow, and how firms reconfigure management practices around AI capabilities. The argument is that most companies get AI tools right but organizational design wrong, and that the gap between AI access and AI performance is fundamentally a management and structure problem, not a technology problem.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This McKinsey article argues that AI performance gaps between firms are organizational rather than technical — that the 'AI-native' edge comes from redesigning operating models, not just deploying tools. From CAMO's perspective on AI adoption, this aligns closely with evidence emerging from our own case research: at Decathlon China, for instance, coding efficiency rose 20–40% with AI, yet overall delivery speed improved by only 10–15% because coordination bottlenecks — not technical execution — remained untouched. The implication for executives is that AI adoption strategies focused on access and tooling are necessary but insufficient; the harder and more consequential work is redesigning how authority, coordination, and judgment are distributed across the organization.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Decathlon China's experience directly illustrates the McKinsey thesis: AI optimizes individual tasks while organizational structure — coordination bottlenecks between tasks — determines whether system-level performance improves.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The Adoption Index finding that AI impact remains shallow and barriers are organizational rather than technical — siloed departments, cultural resistance, poor data quality — mirrors the McKinsey article's central claim about what AI-native firms get right.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "The gap between companies that succeed with AI and those that stall is not the tools they use — it is how they redesign organizational structure, decision rights, and operating models around those tools.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single mid-century modern office building photographed from street level, positioned off-center to the left in the golden-ratio third, occupying roughly two-thirds of the frame's height. The building's facade is a clean grid of windows, most dark, but a vertical column of lit windows runs from ground floor to rooftop directly down the center of the structure — a single leading line of light drawing the eye upward against a cool dusk sky. The surrounding streetscape is minimal and softly out of focus, providing depth without competing. Lighting is cool blue-grey twilight outside contrasted with warm amber emanating from the lit interior column, suggesting selective activation rather than uniform illumination. Palette: muted steel blue, concrete grey, with a single warm amber vertical accent.",
+      "red_flags": [
+        "Based on a thin RSS excerpt only — the full article's seven operating truths are not available for evaluation; findings summarized here are inferred from framing, not verified content.",
+        "McKinsey Insights is practitioner-oriented and not peer-reviewed; findings from 15 companies are not a representative sample and may reflect selection bias toward successful AI adopters.",
+        "Potential conflict of interest: McKinsey advises large organizations on AI strategy, which may shape how findings are framed and which conclusions are emphasized."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "From anxiety to advantage: A marketing organization that thrives with AI",
+      "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/from-anxiety-to-advantage-a-marketing-organization-that-thrives-with-ai",
+      "source": "McKinsey Insights",
+      "published_display": "Jun 22, 2026",
+      "authors": "Unknown",
+      "summary": "Marketers are using AI, but surface-level enthusiasm is masking the anxiety, indecision, and operating-model gaps holding back meaningful change.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 2.89,
+      "reappear": false,
+      "claude_summary": "Surface-level AI enthusiasm in marketing organizations is concealing deeper problems: anxiety among staff, indecision about where AI genuinely fits, and operating-model gaps that prevent meaningful change. The McKinsey article argues that marketers are using AI tools without the structural, cultural, or workflow changes needed to turn adoption into sustained advantage. The piece diagnoses the gap between individual tool use and organizational readiness, pointing to unclear role boundaries, unresolved questions about accountability, and a failure to redesign how marketing teams actually function. Note: the full article sits behind a soft registration wall, so specific data points and recommendations are drawn from the RSS excerpt only.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This McKinsey piece argues that AI adoption in marketing is stalling not for technical reasons but because operating models, roles, and cultural norms have not been redesigned to match the technology. From CAMO's perspective on AI adoption, this pattern—widespread tool access paired with shallow organizational change—is precisely the dynamic documented in the Deloitte-HKU AI Adoption Index 2026, where nearly half of C-suite executives reported initiatives fell short of expected ROI and the dominant barriers were organizational rather than technical. The implication is that marketing leaders face the same structural challenge as the broader enterprise: access to AI is necessary but not sufficient, and the harder work lies in redesigning workflows, accountability structures, and incentives around the technology.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the article and the index identify the same core problem: AI adoption is nearly universal at the tool level but organizational barriers—siloed teams, cultural resistance, unclear accountability—prevent measurable performance gains."
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "The article's focus on staff anxiety around AI use connects directly to CAMO's finding that social and reputational dynamics—not just access or training—shape whether employees actually adopt AI tools in practice."
+        }
+      ],
+      "key_takeaway": "Giving marketing teams AI tools without redesigning roles, workflows, and accountability structures produces anxiety and marginal gains, not competitive advantage.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large open-plan office desk sits centered and slightly forward in the frame, viewed from a low angle so it fills roughly half the image. On the desk surface, a sparse arrangement of paper documents and a closed laptop suggests work in transition rather than active use. A single overhead pendant light pools warm amber directly onto the desk, while the surrounding office recedes into cool, dim background—empty chairs and blurred architecture that imply a larger organization without competing for attention. The contrast between the warm, isolated focal desk and the cool, unpopulated surroundings conveys the gap between individual tool adoption and organizational readiness. Palette: amber and charcoal, soft directional light, muted blues in the background.",
+      "red_flags": [
+        "Article is from a management consultancy (McKinsey) with commercial interests in AI advisory services — potential conflict of interest; findings should be read as practitioner perspective, not independent research.",
+        "RSS excerpt is thin; specific data, methodology, and recommendations are not accessible without registration, limiting verification of claims summarized here.",
+        "Not peer-reviewed; no disclosed empirical methodology."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Our Guide to the Summer 2026 Issue",
+      "link": "https://sloanreview.mit.edu/article/our-guide-to-the-summer-2026-issue/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Jun 02, 2026",
+      "authors": "MIT Sloan Management Review.",
+      "summary": "Create Generative AI Value at Scale Kevin Schmitt, Gregory Vial, and Ivo Blohm Key Insight: Organizations are expanding their GenAI use by implementing coordinated cross-functional structures that draw on domain expertise and user innovation. Top Takeaways: Companies that establish a new kind of internal AI organization that researchers have dubbed the “AI spine” are better [&#8230;]",
+      "ai_strong": 5,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 2.52,
+      "reappear": true,
+      "claude_summary": "The Summer 2026 issue of MIT Sloan Management Review introduces the concept of an 'AI spine' — a coordinated cross-functional internal structure designed to help organizations scale generative AI beyond isolated pilots. The central argument is that companies succeeding with GenAI at scale are not simply deploying more tools; they are building new organizational architectures that integrate domain expertise with user-driven innovation. The excerpt is a table-of-contents guide rather than a full research article, so specific empirical findings are not available. The 'AI spine' framing suggests a structural prescription for how firms should organize internally to realize value from GenAI investments across business units.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This MIT SMR issue argues that scaling GenAI requires firms to build deliberate cross-functional organizational structures — what the authors call an 'AI spine' — rather than relying on ad-hoc or siloed deployments. From CAMO's perspective on AI adoption, this resonates with a pattern documented across our nano-cases: Decathlon China's bottleneck was not coding capability but coordination architecture, and KFC China's gains came from redesigning managerial workflows, not just deploying models. The 'AI spine' concept raises a practical governance question that CAMO's Deloitte-HKU AI Adoption Index also surfaces: when nearly half of executives report AI initiatives falling short of ROI expectations, the missing ingredient is more often organizational design than technical capability.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the MIT SMR piece and the CAMO index identify organizational and executional barriers — not technical ones — as the central obstacle to realizing GenAI value at scale.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case concretely illustrates why cross-functional coordination structures — not task-level AI deployment — determine whether organizations capture systemic value from AI, paralleling the 'AI spine' argument.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "key_takeaway": "Scaling GenAI is primarily an organizational design challenge: firms that build coordinated cross-functional structures around AI outperform those that treat it as a tool to deploy within existing silos.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A centered overhead view of a building's structural spine or load-bearing column, photographed from directly below looking up, filling roughly two-thirds of the vertical frame. The column is the clear focal subject, rendered in pale concrete or brushed steel. A single source of cool natural light enters from one side — a narrow skylight or clerestory — casting a clean shadow that falls away from the column along the floor, drawing the eye upward along the structure's length. The surrounding space is sparse: empty floor, minimal architectural detail, nothing competing with the vertical element. The palette is cool grey-white with a single band of warm daylight where the light source hits the column's edge, suggesting structural clarity and organizational intentionality.",
+      "red_flags": [
+        "This is a table-of-contents editorial guide, not a standalone research article — the excerpt is thin and the underlying empirical findings are not accessible here.",
+        "Likely paywalled behind the MIT Sloan Management Review subscription.",
+        "The 'AI spine' concept is presented as a research finding but cannot be evaluated for methodological rigor from the excerpt alone.",
+        "No peer-review status confirmed; MIT SMR publishes practitioner-oriented content rather than double-blind academic research."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    }
+  ]
+}
