@@ -162,6 +162,37 @@
     "model": "claude-sonnet-4-6",
     "title": "EXOTIC: An Exact, Optimistic, Tree-Based Algorithm for Min-Max Optimization"
   },
+  "https://arxiv.org/abs/2511.03217": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This paper argues that combining structured knowledge retrieval with LLM classification and web search produces fact-checking systems that are both more accurate and more interpretable than any single component alone. From CAMO's perspective on the statistical and algorithmic foundations of trustworthy AI decisions, the interpretability dimension is the substantive contribution: the pipeline is designed so that each verdict can be traced to a specific evidence source, which matters for contexts where AI-assisted decisions must be audited or contested. The finding that benchmark labels themselves contain errors — uncovered by the same pipeline — is a useful caution for practitioners who treat standard evaluation datasets as ground truth.",
+      "claude_summary": "Can AI systems verify factual claims reliably without being retrained on every new domain? This paper introduces a hybrid pipeline that combines knowledge graph lookups (DBpedia), LLM-based classification, and a real-time web search agent as a fallback when structured data falls short. Tested on the FEVER benchmark, the system achieves an F1 score of 0.93 on supported/refuted claims without task-specific fine-tuning. A secondary finding challenges the benchmark itself: many claims labeled 'Not Enough Information' turn out to be verifiable when the pipeline is given broader retrieval tools. The modular, open-source design is intended to make the reasoning behind each verdict inspectable, addressing a persistent criticism that LLM outputs are fluent but opaque.",
+      "key_takeaway": "A modular fact-checking pipeline that routes claims through knowledge graphs before falling back to LLMs and web search can achieve high accuracy while keeping each verdict auditable.",
+      "matched_camo": [
+        {
+          "id": "ai-persuasion-doctors-2025",
+          "reason": "Both papers centre on AI interpretability as a factor that shapes how users attribute and respond to AI-generated outputs — one in clinical diagnosis, one in automated claim verification.",
+          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Not yet peer-reviewed — arXiv preprint (v2); findings have not undergone formal peer review.",
+        "Evaluation relies primarily on the FEVER benchmark, which the authors themselves flag as containing labeling errors; generalization claims should be read cautiously.",
+        "F1 score of 0.93 is reported on a specific Supported/Refuted split; performance on the full benchmark including NEI cases is less clear from the excerpt alone."
+      ],
+      "visual_concept": "A single large filing index card, centered and slightly off-axis in the frame, with three clearly labelled tabs along its top edge — each tab a different muted colour representing a distinct retrieval layer. The card sits on a plain, dark-toned desk surface, lit by a single overhead light source that pools softly onto the card and lets shadow fall cleanly away behind it. The background is bare and uncluttered. The palette is cool — slate, off-white, and a restrained amber on the lit surface — conveying systematic organisation rather than complexity. The composition uses the card's ruled lines as leading lines that draw the eye from the bottom of the frame upward to the three tabs."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "Hybrid Fact-Checking that Integrates Knowledge Graphs, Large Language Models, and Search-Based Retrieval Agents Improves Interpretable Claim Verification"
+  },
   "https://arxiv.org/abs/2511.08565": {
     "data": {
       "audience_relevance": {
@@ -1334,6 +1365,127 @@
     "model": "claude-sonnet-4-6",
     "title": "'AI Alignment' Encompasses Competing Technical Priorities"
   },
+  "https://arxiv.org/abs/2606.18142": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This benchmark study demonstrates that welfare-relevant reasoning elicited in standard text prompts does not reliably transfer to agentic settings where models must take real actions with tools. From CAMO's perspective on AI algorithms and data, the finding is a concrete illustration of a broader evaluation problem: behavioural benchmarks built on question-answer responses systematically overestimate how models will behave when deployed as autonomous actors. The sharp heterogeneity in prompt-sensitivity across model families also raises a practical design question—whether value alignment in agentic systems is better treated as an architectural property or as a configurable parameter exposed to deploying organisations.",
+      "claude_summary": "When AI agents book travel autonomously rather than just answer questions, do they avoid options that exploit animals? A new benchmark called TAC tests seven frontier models across 48 travel-booking scenarios spanning six categories of animal exploitation. Every model performs below the 64% chance baseline, with the best (Claude Opus 4.7) reaching only 53%. Crucially, adding a single welfare-aware sentence to the system prompt produces dramatic gains in some models (47–63 percentage points for Claude and GPT-5.5) but minimal gains in others (under 12 points for DeepSeek and Gemini). An audit of transcripts found no evidence models recognised they were being evaluated, suggesting the poor results reflect genuine behavioural gaps, not strategic suppression.",
+      "key_takeaway": "AI agents booked to act autonomously on your behalf do not inherit the ethical reasoning those same models display when simply asked about it, and a single sentence in the system prompt can matter more than which frontier model you chose.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "reason": "Both papers identify a structural gap between what a measurement instrument captures and what actually occurs in deployment—TAC in the agentic-vs-text-response domain, Seesaw Experimentation in the primary-vs-secondary-dimension domain—making them natural companions on the limits of standard evaluation design.",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint only; findings have not undergone formal peer review.",
+        "Benchmark is hand-authored with 12 base scenarios (augmented to 48); generalisability beyond the specific scenario set is not established.",
+        "The ethical framing (animal welfare) is values-laden and may not resonate with all managerial or policy audiences as a primary AI-governance concern.",
+        "Model versions evaluated (e.g. Claude Opus 4.7, GPT-5.5) are frontier and rapidly superseded; findings may date quickly."
+      ],
+      "visual_concept": "A single airline boarding pass or printed travel itinerary sits centered and slightly off-axis in the lower foreground, lit by a narrow shaft of cool overhead light that pools directly onto it and leaves the surrounding surface in soft shadow. Behind it, receding toward a single vanishing point, is a spare minimalist desk surface—empty except for the document—that draws the eye forward rather than back. The palette is muted grey-blue with the itinerary itself rendered in crisp white, creating a quiet tension between the mundane object and the weight implied by its contents. No figures, no screens, no animals; the document alone carries the narrative."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "Your AI Travel Agent Would Book You a Bullfight: An Agentic Benchmark for Implicit Animal Welfare in Frontier AI Models"
+  },
+  "https://arxiv.org/abs/2606.22689": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study documents how non-expert users construct and continuously revise their mental models of AI-generated content detection — a crowd-sourced epistemology that is perpetually racing against model improvements. From CAMO's perspective on algorithmic trust and decision quality, the findings matter because organisational AI adoption depends not only on whether AI outputs are trustworthy, but on whether employees and stakeholders can reliably judge when they are not. The mismatch between public detection heuristics and actual model capabilities points to a governance gap: firms deploying generative AI inherit reputational and verification risks that neither the technology nor current user literacy is equipped to resolve.",
+      "claude_summary": "As AI-generated content spreads online, ordinary users are developing their own informal detection strategies — examining fine-grained physical details, tracking characteristic AI artefacts, and reasoning about what current models can and cannot produce. Analysing nearly 2.8 years of posts and comments across two Reddit communities dedicated to AI detection (over 13,000 posts and 222,000 comments), the researchers catalogue 12 distinct crowd-sourced detection strategies and show that these strategies evolve in step with changing AI model capabilities and shifting social trends. The findings reveal that public mental models of AI are dynamic but often lag behind actual model improvements, creating windows where AI-generated content goes undetected. The work offers a systematic baseline for designing user-facing AI literacy guidance.",
+      "key_takeaway": "People's ability to detect AI-generated content is a moving target that lags behind model capabilities, creating persistent verification blind spots that organisations deploying generative AI cannot ignore.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "reason": "Both studies examine how people form judgements about AI-generated or AI-assisted outputs — and how those judgements, even when based on incomplete signals, carry real social and professional consequences.",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 52,
+      "red_flags": [
+        "Not yet peer-reviewed — posted to arXiv as a preprint (v2 suggests revision, but no journal acceptance confirmed).",
+        "Findings are descriptive and community-specific (Reddit); generalisability to broader populations or professional contexts is untested.",
+        "Excerpt is thin on quantitative effect sizes; prevalence claims for the 12 strategies cannot be independently verified from the abstract alone."
+      ],
+      "visual_concept": "A single magnifying glass resting off-centre on a plain light-grey surface, lens facing the viewer and slightly enlarged in the foreground. Behind it, a softly out-of-focus grid of identical small square image thumbnails recedes toward a vanishing point at the centre of the frame, the convergence of lines drawing the eye through the lens. The thumbnails are rendered in muted, near-identical tones so no individual image competes for attention — the magnifying glass is unambiguously the focal subject. Lighting is cool and diffuse, as if from an overcast north-facing window, casting a soft shadow away from the lens and giving the scene a calm, analytical mood. Palette: cool greys and whites with a faint blue undertone."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "Is This AI? Longitudinal Analysis of Strategies Used for AI Detection on Two Subreddits"
+  },
+  "https://arxiv.org/abs/2606.27689": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This study demonstrates that perceived AI deception—distinct from designed deception intensity—exerts a consistent, negative causal effect on user evaluations in a high-engagement digital environment. From CAMO's perspective on the algorithmic and data foundations of trustworthy AI systems, the finding sharpens a measurement problem that matters well beyond gaming: designers and deployers may believe they have calibrated an AI behavior at an acceptable intensity, while users are perceiving something altogether different. The gap between intended system design and user attribution is precisely the kind of confound that rigorous causal identification—of the type explored in CAMO's work on algorithmic decision-making and endogenous data—needs to account for before drawing policy or product conclusions.",
+      "claude_summary": "When players in Baldur's Gate 3 notice that AI-driven game mechanics are designed to deceive them, their satisfaction ratings fall—regardless of how intense that deception actually is. Using six years of Steam reviews and 54 version updates as a quasi-natural experiment, this study separates designer-intended deception intensity from players' perceived deception awareness. The key finding: any degree of deception awareness produces a monotonic negative effect on positive review rates, falsifying the common assumption that moderate perceived deception is tolerable or even enjoyable. High-intensity deception updates appear positive only because they coincide with new content releases—not because players appreciate the deception itself. Player experience does not reliably moderate these effects.",
+      "key_takeaway": "Users who detect AI deception penalize it uniformly—there is no safe level of perceived deception that leaves satisfaction intact.",
+      "matched_camo": [],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 38,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal acceptance or peer review.",
+        "Single-game context (Baldur's Gate 3) limits generalizability to other AI systems or organizational settings.",
+        "Design deception intensity (DDI) coded by human annotators from patch notes—inter-rater reliability and coding protocol details are not assessable from the excerpt.",
+        "The upward right-branch of the DDI U-shape is attributed to content confounding by the authors themselves, weakening the core causal claim about deception intensity.",
+        "Relevance to CAMO's organizational AI mandate is marginal; this is primarily a consumer behavior and HCI study."
+      ],
+      "visual_concept": "A single wooden game board sits centered in the frame, its surface tilted slightly toward the viewer in a three-quarter perspective. On the board, a small carved figurine—a lone player piece—is positioned at the near edge, sharply lit by a narrow beam of cool overhead light that pools directly on it, leaving the rest of the board in graduated shadow. The board's far half shows a faint grid of paths that converge toward a vanishing point at the board's center, drawing the eye inward and suggesting hidden structure. The surrounding surface is bare and dark, offering no competing detail. The overall palette is desaturated blue-grey with the one warm accent falling on the figurine, evoking quiet unease rather than excitement."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "When AI Deceives: A Natural Experiment on the Causal Effects of Perceived Deception on Player Ratings in RPGs"
+  },
+  "https://arxiv.org/abs/2606.27845": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study argues that LLMs, when used as synthetic participants in behavioural games, recover surface-level choice distributions but not the underlying reasoning process — they retrieve a strategic level rather than computing one. From CAMO's perspective on algorithmic foundations for trustworthy AI-driven decisions, this is a calibration problem with practical consequence: any organisation or researcher using LLM-simulated agents to pilot-test incentive schemes, mechanism designs, or market experiments should treat the outputs as category-level approximations, not behavioural ground truth. The gap between simulated cooperation and real end-game defection, for instance, would systematically mislead predictions about how employees or counterparties behave when stakes and horizons become concrete.",
+      "claude_summary": "When LLMs are used as stand-ins for human participants in behavioural economics experiments, do they actually replicate human decision-making? This study tests that assumption across two classic games — a p-beauty contest and a public goods game — varying model scale, temperature, quantisation, and instruction-tuning across 360 conditions. The finding is that LLMs behave as fixed, scale-determined 'level-k' reasoners: larger models reason more steps ahead, but none update beliefs dynamically across rounds or backward-induct from a game's end. Human contributions to public goods decay over rounds; LLMs stay flat or rise. LLMs respond to horizon framing (indefinite vs finite) but ignore their actual position within that horizon, so no end-game defection appears. The implication is that LLMs simulate a cognitive category, not a cognitive process.",
+      "key_takeaway": "LLMs mimic a fixed level of strategic reasoning set by model scale but do not update beliefs or backward-induct, making them unreliable substitutes for human participants in dynamic behavioural experiments.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers are concerned with the gap between what an algorithm produces and what a genuine reasoning process requires — here, LLMs lack within-game belief updating; there, bandit algorithms develop self-fulfilling biases from endogenous data — making both fundamentally about the trustworthiness of algorithmic outputs as proxies for adaptive decision-making.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint, no indication of journal submission or review status.",
+        "Human comparison data is drawn from published third-party studies rather than a concurrent matched sample, which limits direct distributional comparison.",
+        "Testing is confined to one model family; generalisability to other LLM architectures (e.g. GPT-4, Claude) is not established.",
+        "The level-k framing is borrowed from behavioural economics and applied interpretively — the paper does not rule out alternative mechanistic explanations for the observed patterns."
+      ],
+      "visual_concept": "A single chessboard, photographed from a low angle so that one isolated pawn in the foreground dominates the frame, centered and sharply in focus. The remaining pieces on the board recede into soft blur behind it, creating depth without visual competition. A single shaft of cool, directional light falls directly onto the pawn from above-right, casting a long shadow away to the left across the board surface. The surrounding environment is a plain dark studio background — no texture, no table edge visible — so the chessboard occupies a suspended, abstract space. Palette: desaturated charcoal and slate tones with a single pale blue-white highlight on the pawn, reinforcing the idea of a fixed position rather than dynamic play."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "LLM Agents as Static Level-k Players in Behavioural Games"
+  },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
       "audience_relevance": {
@@ -1591,6 +1743,37 @@
     "model": "claude-sonnet-4-6",
     "title": "The Innovation Advantage GenAI Can’t Give You"
   },
+  "https://sloanreview.mit.edu/article/three-approaches-to-measuring-and-managing-ai-roi/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This article addresses one of the most persistent execution failures in enterprise AI: the absence of a coherent framework for measuring returns. From CAMO's perspective on AI adoption, this matters because poor ROI measurement is itself an organizational problem, not a technical one. CAMO's Deloitte-HKU AI Adoption Index 2026 found that nearly half of C-suite executives reported AI initiatives fell short of expected ROI, and identified siloed departments and lack of quick wins—not technology—as the dominant barriers; a structured approach to categorizing and tracking returns could directly address why so many adoption efforts stall before scaling.",
+      "claude_summary": "After years of AI pilots and experiments, most companies still lack a rigorous method for measuring what they actually get back from AI investment. This article by two LUT University strategy researchers argues that AI ROI cannot be captured by a single metric and proposes three distinct measurement approaches, each suited to different types of AI initiatives. The core problem they identify is that executives treat ROI measurement as intuitive rather than systematic—more judgment call than structured analysis. The article is practitioner-oriented and offers a framework for categorizing returns, though the RSS excerpt is thin and the full argument is behind a paywall, so the depth of empirical grounding is unclear.",
+      "key_takeaway": "Measuring AI ROI requires a deliberate, categorized framework—not intuition—and choosing the wrong measurement approach for a given initiative is a structural reason returns disappoint.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "CAMO's own C-suite survey documents precisely the ROI shortfall and organizational barriers that this article's measurement framework is designed to address.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "red_flags": [
+        "Article appears to be paywalled on MIT Sloan Management Review; full argument and evidence base could not be verified from the excerpt alone.",
+        "Not a peer-reviewed empirical study; this is a practitioner framework article by two academics—prescriptive rather than evidence-driven.",
+        "The RSS excerpt is very thin; the three approaches themselves are not described, so the summary and assessment are necessarily limited in specificity."
+      ],
+      "visual_concept": "A centered overhead shot of a simple wooden desk surface, nearly bare, with three distinct objects placed in a row from left to right—a ruler, a small set of balance scales, and a stopwatch—each separated by equal negative space. The objects sit in soft, directional daylight entering from the upper left, casting long parallel shadows to the right that serve as leading lines drawing the eye across all three subjects in sequence. The desk occupies almost the entire frame, with only a thin strip of neutral wall visible at the top edge. The palette is warm but muted—aged oak tones, matte brass, off-white—keeping the composition legible and uncluttered. The mood is analytical and deliberate, suggesting methodical measurement rather than urgency."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "Three Approaches to Measuring and Managing AI ROI"
+  },
   "https://sloanreview.mit.edu/article/why-ai-isnt-transforming-finance-yet/": {
     "data": {
       "audience_relevance": {
@@ -1801,6 +1984,38 @@
     "enriched_at": "2026-06-01",
     "model": "claude-sonnet-4-6",
     "title": "What AI Still Can’t Do for Leaders"
+  },
+  "https://www.anthropic.com/research/economic-index-june-2026-report": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This report from Anthropic examines the temporal and perceptual texture of AI use at work — not just task categories, but when workers reach for AI and whether they believe it helps. From CAMO's perspective on AI adoption, this kind of cadence data is precisely what is missing from most enterprise adoption surveys: organisations measure access and output, rarely the moment-to-moment integration of AI into working routines. The self-perception component echoes a concern raised in CAMO's Deloitte-HKU AI Adoption Index 2026, where shallow adoption was identified even amid near-universal deployment — understanding when and why workers actually engage with AI tools is a prerequisite for moving beyond that shallowness.",
+      "claude_summary": "Anthropic's latest Economic Index report shifts focus from what Claude is used for to when and how people use it, sampling usage patterns hourly for the first time. The report asks three questions: at what points in the day do users turn to Claude, what outputs do they produce, and how do they themselves perceive AI's effect on their work? The excerpt is thin on specific findings, but the methodological move toward temporal sampling and self-reported perception data suggests the report is probing whether AI assistance is concentrated in particular workflow moments or distributed across the working day. This kind of usage-pattern data has direct implications for understanding how AI integrates into — or disrupts — existing work rhythms.",
+      "key_takeaway": "Knowing when workers turn to AI — and whether they think it helps — may matter more for adoption strategy than knowing which tasks they use it for.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces probe the gap between AI availability and genuine integration into work, with the Anthropic report's cadence and perception data complementing CAMO's finding that adoption is wide but shallow.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Excerpt is very thin — no specific findings, statistics, or methodology details are available for independent assessment.",
+        "Published by Anthropic, a commercial AI company with a direct interest in demonstrating broad and positive AI usage; findings should be read with that context in mind.",
+        "Not peer-reviewed; described as an index report rather than academic research.",
+        "Self-reported perception data on AI's impact on work is subject to social desirability bias, which the excerpt does not address."
+      ],
+      "visual_concept": "A single analogue clock face, slightly oversized, centered and tilted a few degrees off-axis in the lower-centre of the frame. The clock hands are frozen at a specific hour — say, mid-morning — and a soft pool of cool daylight falls directly onto the clock face from above-left, leaving the surrounding space in a clean, understated shadow. The background is a minimal office interior suggested by a bare desk surface and a plain wall, neither element competing with the clock. The palette is muted grey-blue with warm amber only on the lit face of the clock, reinforcing the idea of a particular moment being isolated and examined. No people, no screens."
+    },
+    "enriched_at": "2026-06-30",
+    "model": "claude-sonnet-4-6",
+    "title": "Economic ResearchJun 26, 2026Anthropic Economic Index report: CadencesIn our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?"
   },
   "https://www.mckinsey.com/capabilities/business-building/our-insights/the-seven-operating-truths-of-ai-native-companies": {
     "data": {
