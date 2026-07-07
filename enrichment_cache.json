@@ -1560,6 +1560,38 @@
     "model": "claude-sonnet-4-6",
     "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization"
   },
+  "https://hbr.org/podcast/2026/07/leadership-summit-2026-mattels-ceo-on-driving-consumer-engagement-and-cultural-impact": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This podcast interview argues that AI can compress product development timelines in a legacy consumer brand without eroding the creative work that defines the brand's identity. From CAMO's perspective on AI adoption, the more substantive organisational question is whether accelerating execution through AI reshapes job boundaries and managerial roles in ways leaders like Kreiz are not yet measuring — a dynamic explored in CAMO's nano-case on KFC China, where AI freed managerial attention for judgment-intensive work only after deliberate workflow redesign. The Mattel account, based on a single executive's self-reported view rather than systematic evidence, does not yet engage with that harder question.",
+      "claude_summary": "Mattel CEO Ynon Kreiz describes how he repositioned an 80-year-old toy company into an IP-driven entertainment business spanning films, games, live experiences, and digital products. The conversation covers how strategic simplification, talent reshaping, and a deliberate culture of innovation underpinned the turnaround. On AI, Kreiz argues that the technology is accelerating product development cycles without displacing creative work. The episode is drawn from the HBR Leadership Summit 2026 and is based on a podcast interview rather than original research. The AI-related content appears limited to brief commentary, making it a general leadership story with a peripheral AI dimension.",
+      "key_takeaway": "AI can speed up product development in established consumer brands, but the organisational implications for creative roles and managerial structure require more deliberate attention than a single executive's optimism suggests.",
+      "matched_camo": [
+        {
+          "id": "nanocase-kfc-china-2026",
+          "reason": "Both cases involve AI accelerating routine operational work in a large consumer-facing organisation, raising parallel questions about how managerial roles and creative capacity are redistributed rather than simply preserved.",
+          "title": "Scaling Managers with AI at KFC China",
+          "url": "https://camo.hku.hk/nanocase-kfcchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 38,
+      "red_flags": [
+        "Podcast interview, not peer-reviewed research — findings are one executive's self-reported account.",
+        "AI content appears incidental based on the excerpt; article may not warrant a CAMO post on AI adoption grounds.",
+        "Potential hagiographic framing typical of CEO summit appearances; no independent verification of turnaround claims.",
+        "HBR content may be partially paywalled."
+      ],
+      "visual_concept": "A single vintage toy — a classic die-cast car or a simple wooden figure — placed at the centre of a wide, spare tabletop, lit by a single overhead warm spotlight that pools tightly around the object and lets the surrounding surface fall into soft shadow. Behind the object, slightly out of focus, a clean white wall bears the faint geometric shadow of a film reel or stage curtain, suggesting the expansion from physical product into broader entertainment. The palette is warm amber on the focal object cooling to neutral grey at the edges. No people, no screens, no robots."
+    },
+    "enriched_at": "2026-07-07",
+    "model": "claude-sonnet-4-6",
+    "title": "Leadership Summit 2026: Mattel’s CEO on Driving Consumer Engagement and Cultural Impact"
+  },
   "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/": {
     "data": {
       "audience_relevance": {
@@ -1742,6 +1774,43 @@
     "enriched_at": "2026-05-17",
     "model": "claude-sonnet-4-6",
     "title": "The Innovation Advantage GenAI Can’t Give You"
+  },
+  "https://sloanreview.mit.edu/article/the-real-question-to-ask-about-ai-governance/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This article argues that AI governance fails not from a lack of policy but from unresolved accountability — no one owns the decision to stop a harmful model. From CAMO's perspective on AI adoption inside organizations, this maps directly onto a structural problem: firms race to deploy AI while leaving authority structures ambiguous. CAMO's Deloitte-HKU AI Adoption Index found that the dominant barriers to successful AI adoption are organizational and executional rather than technical, and the absence of a named accountability owner is precisely the kind of executional gap that converts promising deployments into liability exposure. The article's framing complements CAMO's broader finding that closing the gap between AI promise and organizational performance requires deliberate redesign of roles and decision rights, not just investment in tools.",
+      "claude_summary": "Most Fortune 500 companies claim to govern their AI, yet few leaders can name who is actually responsible for shutting down a harmful model. The article, written by Adobe's director of AI governance, argues that the operative question in AI governance is not 'are we governing AI?' but 'who has the authority and obligation to act when something goes wrong?' Without a clear accountability owner, governance frameworks become procedural theater — policies exist on paper while no individual bears real consequence for inaction. The piece makes the case that accountability assignment, not policy documentation, is the foundational design problem in enterprise AI governance.",
+      "key_takeaway": "AI governance is only as real as the named individual who can order a model shut down.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both identify organizational and executional gaps — siloed departments, cultural resistance, unclear ownership — as the primary obstacle to realizing AI value, not technical limitations.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "The MedTech case illustrates how poorly designed accountability structures around AI use produce perverse behavioral outcomes, directly echoing the article's argument that governance without real accountability owners is ineffective.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Article is practitioner commentary, not peer-reviewed research — findings are asserted from professional experience rather than empirical data.",
+        "Author is Adobe's director of AI governance; perspective may reflect enterprise software industry context that does not generalize across sectors.",
+        "RSS excerpt is thin; full article content is behind MIT Sloan Management Review access wall, so summary relies on excerpt framing only."
+      ],
+      "visual_concept": "A single, empty executive chair positioned slightly off-center in a spare, modern boardroom, lit by a narrow beam of cool overhead light that pools directly onto the seat. The chair faces a large, dark screen displaying a minimal status dashboard — one amber warning indicator visible — receding to a vanishing point behind the chair. The surrounding room is deliberately bare: a long table edge visible at the frame's periphery, no other figures present. The emptiness of the chair is the focal point, communicating absent ownership without literal symbolism. Palette is cool grey and charcoal with one amber accent; lighting is hard and directional to sharpen the sense of an unanswered question."
+    },
+    "enriched_at": "2026-07-07",
+    "model": "claude-sonnet-4-6",
+    "title": "The Real Question to Ask About AI Governance"
   },
   "https://sloanreview.mit.edu/article/three-approaches-to-measuring-and-managing-ai-roi/": {
     "data": {
@@ -2331,6 +2400,43 @@
     "enriched_at": "2026-05-14",
     "model": "claude-sonnet-4-6",
     "title": "How agility and AI could rewire agriculture trading"
+  },
+  "https://www.mckinsey.com/industries/healthcare/our-insights/the-real-future-of-work-in-healthcare": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This article argues that healthcare's productivity crisis will only be resolved by rethinking human–AI workflows, not by stacking technology on top of existing processes. From CAMO's perspective on AI adoption, this maps precisely to an organizational design problem: AI optimizes tasks, but it is coordination and role structure that determine system-level gains—a dynamic documented in CAMO's Decathlon China case, where coding efficiency rose 20–40% but overall delivery speed improved only 10–15% until coordination work itself was redesigned. The healthcare context adds urgency because misaligned workflows carry patient-safety stakes that go beyond the commercial costs of shallow adoption.",
+      "claude_summary": "Healthcare faces a structural productivity crisis that cannot be resolved by hiring more staff or deploying more technology in isolation. The McKinsey article argues the real opportunity lies in redesigning human–AI workflows so that automation genuinely changes how care is delivered, not just how fast individual tasks are completed. The piece points to the gap between AI's technical potential and its operational impact, suggesting that workflow integration and role redesign—not tool acquisition—are the binding constraints. The excerpt is brief; specific evidence and quantitative claims from the full article are not available for assessment.",
+      "key_takeaway": "In healthcare, the bottleneck to AI-driven productivity is not the technology itself but the organizational work of redesigning how humans and AI share tasks and decisions.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both the article and the Decathlon case identify the same structural insight: AI-driven efficiency gains at the task level fail to translate into system-level productivity when coordination structures and workflow design are left unchanged.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "If healthcare organizations respond to AI-enabled efficiency by restructuring roles downward rather than redesigning workflows upward, the job-design dynamics modelled in this paper—where AI raises the incentive cost of sustaining high-effort roles—become directly relevant.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "red_flags": [
+        "Source is a McKinsey Insights article, not peer-reviewed research; findings may reflect consulting framing and proprietary data not subject to independent scrutiny.",
+        "RSS excerpt is very thin—specific claims, evidence base, and quantitative findings from the full article cannot be verified from available text alone.",
+        "McKinsey has commercial interests in healthcare technology and digital transformation advisory work, which represents a potential conflict of interest."
+      ],
+      "visual_concept": "A single hospital corridor photographed from a low angle, centered on a nursing station in the middle distance, its desk and monitors small but clearly legible against the clean geometry of the hallway. Parallel lines of floor tiles and ceiling panels converge toward the station as the sole vanishing point, drawing the eye directly to it. The surrounding corridor is deliberately spare—bare walls, no figures, no clutter—so the station reads as both a destination and an organizational node. Lighting is cool and institutional with a warm accent pooling onto the station surface from an overhead fixture, suggesting active human presence within an otherwise automated environment. Palette: cool blue-grey walls offset by warm amber at the focal point, evoking the tension between clinical efficiency and human judgment."
+    },
+    "enriched_at": "2026-07-07",
+    "model": "claude-sonnet-4-6",
+    "title": "The real future of work in healthcare"
   },
   "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos": {
     "data": {
