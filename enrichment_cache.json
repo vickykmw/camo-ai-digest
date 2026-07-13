@@ -251,6 +251,37 @@
     "model": "claude-sonnet-4-6",
     "title": "Discovering Differences in Strategic Behavior Between Humans and LLMs"
   },
+  "https://arxiv.org/abs/2602.13241": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study documents what happens when an AI training system moves from controlled evaluation into a live public-safety organization — and finds that the hard problems are organizational and human, not technical. From CAMO's perspective on AI adoption, the finding echoes a consistent pattern: the barriers that determine whether AI deployment succeeds are executional and cultural rather than algorithmic. The paper's emphasis on governance practices and stakeholder engagement aligns with CAMO's Deloitte-HKU AI Adoption Index finding that siloed departments and cultural resistance, not technology gaps, are the dominant obstacles to AI delivering on its promise.",
+      "claude_summary": "Training 911 call-takers is extraordinarily resource-intensive: a single new hire can require up to 720 hours of one-on-one instruction from experienced staff, compounding a staffing crisis already running at 25% vacancy rates. Researchers partnered with Metro Nashville's emergency communications department to deploy a generative AI training system, scaling from a pilot to 190 users across 1,120 sessions over six months. Analysis of nearly 100,000 user interactions identified four recurring challenges — system delivery, rigor, resilience, and human factors — that only surface under real operational conditions, not in controlled simulations. The paper translates these into concrete design and governance guidance for deploying AI-driven training in safety-critical public sector environments.",
+      "key_takeaway": "Deploying AI in safety-critical training environments exposes organizational and human-factor challenges that controlled pilots systematically miss, and governance design matters as much as the AI itself.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both works find that AI deployment in organizations stalls on organizational and executional barriers — cultural resistance, coordination failures, and governance gaps — rather than on the underlying technology.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "arXiv preprint — not peer-reviewed; findings should be treated as preliminary until published in a venue with formal review.",
+        "Single-site deployment (Metro Nashville) limits generalizability; the paper's lessons are grounded but may not transfer to differently resourced or structured emergency communications centers.",
+        "Interaction log analysis is descriptive; causal claims about training effectiveness require controlled comparison data not evidenced in the excerpt."
+      ],
+      "visual_concept": "A single dispatcher's headset resting on a curved desk console, centered in the frame and lit by a focused pool of cool blue-white light from directly above, with the surrounding operations room kept in soft shadow so no competing elements draw the eye. A shallow vanishing point runs along the desk edge from the lower-left corner toward the headset, pulling the viewer's gaze onto the object. The palette is muted blue-grey with the headset rendered in warmer charcoal tones to create subtle contrast. The mood is quiet and procedural — purposeful rather than dramatic — evoking institutional responsibility without crisis imagery."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "Empowering 9-1-1 Calltaking Training with Generative AI: Experiences and Lessons Learned"
+  },
   "https://arxiv.org/abs/2603.04555": {
     "data": {
       "audience_relevance": {
@@ -1486,6 +1517,62 @@
     "model": "claude-sonnet-4-6",
     "title": "LLM Agents as Static Level-k Players in Behavioural Games"
   },
+  "https://arxiv.org/abs/2607.08920": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study provides one of the most methodologically careful estimates of enterprise AI adoption to date, anchoring measurement to legally accountable SEC disclosures rather than survey self-reporting or media mentions. From CAMO's perspective on AI adoption, the finding that only 11% of S&P 500 firms have achieved deep integration — despite near-universal executive interest — is consistent with what our Deloitte-HKU AI Adoption Index 2026 identifies as a paradox of promise and performance: adoption is widespread in rhetoric but shallow in practice, with organisational and executional barriers rather than technical ones doing most of the blocking. The J-curve in profitability, alongside the absence of a productivity signal, also invites caution about linear narratives of AI-driven firm-level gains, and suggests that the transition costs of deep integration are real and unevenly distributed.",
+      "claude_summary": "How deeply has AI actually penetrated large U.S. enterprises, beyond the hype? Analysing SEC 10-K filings from 2016 to 2025 — where firms face legal penalties for misleading disclosures — the study finds that only 11% of S&P 500 companies had AI deeply integrated into their business processes by 2025, with another 10% using it in production or service delivery. Adoption has more than quadrupled since 2022, but remains heavily concentrated in the technology sector, which accounts for two-thirds of deep integration. Profitability follows a J-curve as firms move toward deep adoption, yet no measurable differences in capital expenditure or productivity have emerged. Among tech firms, larger companies and those with higher Tobin's q adopt more aggressively; among non-tech firms, no such pattern holds.",
+      "key_takeaway": "Despite quadrupling since 2022, deep enterprise AI integration reaches only 11% of S&P 500 firms, and no productivity gains are yet visible in the data — suggesting the hard work of embedding AI into business processes is still largely ahead of most companies.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both studies document a sharp gap between broad AI interest among large firms and genuinely deep operational integration, and both find that the barriers are executional rather than technical — directly reinforcing each other's central finding.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 92,
+      "red_flags": [
+        "Not yet peer-reviewed — posted as an arXiv preprint (arXiv:2607.08920v1); findings should be treated as provisional until formally refereed.",
+        "The 10-K disclosure methodology is novel and not yet independently validated; firms may still systematically under- or over-report AI integration even within legally constrained filings.",
+        "Productivity null result may reflect measurement lag rather than genuine absence of effect — the authors acknowledge no differences observed, but the observation window may be too short to capture compounding gains."
+      ],
+      "visual_concept": "A single tall glass-and-steel office tower occupies the left-centre of a wide frame, photographed from street level so it rises sharply toward a pale grey sky. The building face is divided into a grid of uniform windows — most dark, a small cluster near the top lit from within in cool white light, representing the minority of firms that have reached deep integration. A single strong vertical leading line, the tower's nearest edge, draws the eye from the base of the frame upward to that lit cluster. The surrounding cityscape is blurred and low, kept deliberately subordinate so the tower reads alone. Lighting is overcast midday — soft, shadowless, cool blue-grey palette — reinforcing a sober, empirical mood with no warmth or drama."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "AI Adoption in S&P 500 Firms"
+  },
+  "https://arxiv.org/abs/2607.09084": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This survey argues that the environmental cost of large AI models is an engineering and systems problem requiring coordinated solutions across architecture, training, and hardware — not just incremental algorithmic tweaks. From CAMO's perspective on algorithmic foundations for trustworthy AI, the implication is primarily infrastructural: the efficiency constraints documented here shape which AI systems organizations can realistically deploy at scale, and at what cost. The business and policy angle — how energy budgets and sustainability obligations affect enterprise AI strategy — is present but underdeveloped in this technically oriented survey.",
+      "claude_summary": "As large AI models have expanded in capability, their computational and energy costs have grown sharply. This survey maps the full landscape of techniques aimed at making large model development more sustainable: efficient architectural choices (including attention optimization and sparse models), training strategies that reduce data and parameter overhead, and hardware-software co-design approaches that cut energy use at the chip and infrastructure level. The authors also survey applications of these efficient models to sustainability-relevant domains such as remote sensing and national infrastructure. The paper frames green AI not as a single fix but as a stack of interlocking decisions spanning model design, training, deployment, and hardware — and calls for standardized benchmarks to measure progress.",
+      "key_takeaway": "Running large AI models carries substantial and growing energy costs that require deliberate architectural and hardware choices, not just better algorithms — a constraint that will increasingly shape which AI investments organisations can justify.",
+      "matched_camo": [],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 52,
+      "red_flags": [
+        "Survey paper — findings are synthesized from others' work rather than original empirical results; no novel experimental evidence is presented.",
+        "Primarily a technical computer-science survey with limited organizational or managerial analysis; relevance to CAMO's audience requires significant editorial framing.",
+        "Abstract is thin on specific quantitative findings, making it difficult to surface concrete managerial takeaways without access to the full paper.",
+        "Published as an arXiv preprint cross-post; peer-review status of the underlying journal version (Chinese Journal of Electronics) should be confirmed before citing."
+      ],
+      "visual_concept": "A single large server rack, centered and slightly off-center to the left at golden-ratio position, photographed in sharp foreground detail against a softly blurred data-center corridor that recedes to a vanishing point behind it. A single beam of cool blue-white overhead light pools directly onto the rack's front face, leaving the corridor in graduated shadow. The palette is desaturated steel-grey and slate-blue with a faint warm amber glow at the far end of the corridor suggesting heat or energy cost. The rack's scale relative to the narrow corridor emphasizes mass and resource weight rather than sleekness."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design"
+  },
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
     "data": {
       "audience_relevance": {
@@ -1559,6 +1646,76 @@
     "enriched_at": "2026-05-14",
     "model": "claude-sonnet-4-6",
     "title": "Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization"
+  },
+  "https://hbr.org/podcast/2026/07/are-we-entering-a-new-age-of-creativity-with-the-help-of-ai": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "high",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This HBS case uses The Atlantic's OpenAI partnership to examine how media organizations are renegotiating their business models under AI pressure — trading content assets for technology access in arrangements whose long-term value remains unproven. From CAMO's perspective on AI adoption, the case illustrates a recurring pattern: organizations announce AI partnerships before resolving the internal governance and incentive questions that determine whether adoption creates or destroys value. CAMO's Deloitte-HKU AI Adoption Index (2026) found that nearly half of executives reported initiatives fell short of expected ROI, often because organizational and cultural factors were underweighted at the point of commitment — a dynamic The Atlantic's newsroom rebellion makes vivid.",
+      "claude_summary": "When The Atlantic struck a licensing deal with OpenAI in March 2024, its journalists pushed back, framing the arrangement as a 'devil's bargain.' A Harvard Business School case explores the decision facing owner Laurene Powell Jobs: weigh short-term financial relief against long-term reputational and editorial risk. The podcast discussion uses this episode to probe a larger question — whether AI is genuinely creative or merely recombinant — and what that distinction means for journalism's business model and the broader 'ideas landscape.' The excerpt is podcast-length and light on empirical evidence; the framing is conceptual and case-based rather than data-driven.",
+      "key_takeaway": "Signing an AI content deal solves a short-term revenue problem while potentially creating long-term organizational and reputational costs that leaders must weigh before committing.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The Atlantic case mirrors the index's central finding: AI adoption decisions made at the top frequently generate internal resistance and fall short of expected returns because executional and cultural barriers are not addressed upfront.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "The podcast's core question — whether AI undermines the conditions for genuine creative excellence — maps directly onto CAMO's experimental finding that AI assistance can erode the sustained effort required for high-quality creative work.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Source is a podcast excerpt, not a peer-reviewed or primary empirical study — findings are case-based and conceptual.",
+        "Excerpt is thin: key arguments about AI creativity are not summarized, limiting assessment of analytical rigor.",
+        "HBR case studies are pedagogical tools; they are designed to present dilemmas, not resolve them, so conclusions should not be over-indexed.",
+        "Potential conflict of interest: HBR/Harvard Business School operates in the same media-and-ideas economy as The Atlantic, though no direct financial relationship is evident from the excerpt."
+      ],
+      "visual_concept": "A single broadsheet newspaper, centered in the frame at moderate scale, lying open on a plain stone surface in an otherwise empty room. The open pages face upward, with the text visible but not legible. A shaft of cool, directional daylight enters from a high window off to one side, pooling directly onto the newspaper and casting a long shadow behind it toward the viewer. The surrounding space — bare walls, minimal floor — is kept deliberately spare so nothing competes with the paper. Palette is desaturated grey-stone with one warm patch of light on the newsprint, suggesting both the legacy weight of print journalism and the uncertainty of its future."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "Are We Entering a New Age of Creativity with the Help of AI?"
+  },
+  "https://hbr.org/podcast/2026/07/how-leaders-can-use-ai-to-solve-real-business-problems": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This practitioner-focused piece argues that AI adoption fails not because firms choose the wrong model but because they skip the prior step of defining a tractable business problem. From CAMO's perspective on AI adoption, this diagnosis resonates with what our Deloitte-HKU AI Adoption Index 2026 found empirically: among C-suite executives in mainland China and Hong Kong, the dominant barriers to realizing AI's promise are organizational and executional—siloed departments, cultural resistance, and the absence of quick wins—rather than technical shortcomings. The practical implication is that leaders need a problem-first discipline before committing capital, a point that sits squarely in the gap between AI's perceived potential and measurable outcomes.",
+      "claude_summary": "Most organizations investing in AI are asking the wrong question first—focusing on model selection before identifying the specific business problem worth solving. Journalist Josh Tyrangiel, drawing on reporting for his book 'AI for Good,' argues that the executives seeing real returns treat AI as a targeted tool for a defined challenge, not as a strategy in itself. He cautions against pressure to become 'AI-native' overnight and instead recommends disciplined problem identification, measurable targets, and clear internal communication about what change means for staff. Examples from healthcare illustrate how high-impact, bounded applications outperform broad AI mandates. The excerpt is a podcast summary; underlying evidence is largely anecdotal and practitioner-sourced rather than peer-reviewed.",
+      "key_takeaway": "AI creates value when leaders start with a specific, measurable problem—not with the technology itself.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the article and the index identify organizational and executional failures—not technical ones—as the primary reason AI initiatives fall short of expected returns.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Source is a podcast episode summary, not a peer-reviewed or empirical study; findings are practitioner-anecdotal.",
+        "Author is a journalist, not a researcher; the book's evidence base is not assessable from the excerpt.",
+        "No specific data, effect sizes, or methodology are cited in the available excerpt.",
+        "Potential conflict of interest: episode likely tied to book promotion."
+      ],
+      "visual_concept": "A single wooden signpost, slightly off-center to the left in golden-ratio position, standing in a spare open landscape—flat ground, minimal horizon, no clutter. The signpost has two arms pointing in different directions: one labelled simply 'TOOL,' the other 'STRATEGY.' Soft directional morning light falls from the upper right, illuminating the signpost and casting a long clean shadow to the lower left, drawing the eye inward toward the post itself. The surrounding ground is muted gray-beige, the sky pale blue-gray, keeping the palette cool and restrained so the warm-toned wood of the signpost reads immediately as the focal point. The overall mood is deliberate and unhurried—a moment of decision rather than urgency."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "How Leaders Can Use AI to Solve Real Business Problems"
   },
   "https://hbr.org/podcast/2026/07/leadership-summit-2026-mattels-ceo-on-driving-consumer-engagement-and-cultural-impact": {
     "data": {
@@ -1703,6 +1860,76 @@
     "enriched_at": "2026-05-14",
     "model": "claude-sonnet-4-6",
     "title": "Calibrate AI Use to the Decision at Hand"
+  },
+  "https://sloanreview.mit.edu/article/genai-success-metrics-look-beyond-reduced-workload/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This article argues that 'workload reduction' is an inadequate primary metric for GenAI adoption, and that organisations need measurement frameworks sensitive to qualitative shifts in how work is done. From CAMO's perspective on AI adoption, this mirrors a pattern documented across our case research: efficiency gains at the task level frequently obscure coordination costs, incentive distortions, and changes in the nature of remaining human work. CAMO's work on mandatory AI adoption at a Chinese medical device firm (nanocase-medtech-2026) offers a cautionary parallel—when firms measure adoption superficially, employees optimise for the metric rather than for genuine productivity, and the real organisational impact stays hidden.",
+      "claude_summary": "When a large U.S. community college introduced generative AI tools to staff across executive, operational, and student-facing roles, the most visible outcome—reduced workload—turned out to be an incomplete measure of success. Drawing on a four-year observational study conducted while staffing levels and hours held steady, the authors argue that organisations evaluating GenAI primarily through time saved or headcount avoided are likely to misread what is actually happening on the ground. The article calls for a broader measurement framework that captures changes in work quality, decision-making, and staff capacity for higher-value tasks. Note: the RSS excerpt is thin and the full findings are behind a paywall, so specific empirical results cannot be verified here.",
+      "key_takeaway": "Measuring GenAI success by hours saved is likely to mislead; organisations need metrics that capture changes in work quality and decision capacity, not just workload reduction.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "Both pieces centre on the gap between surface-level AI usage metrics and genuine productivity outcomes, and the risks of treating easily measured proxies as evidence of successful adoption.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "The survey's central finding—that AI adoption is nearly universal yet measurable impact remains shallow—directly reinforces the article's argument that organisations are measuring the wrong things.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Article appears to be behind a paywall at MIT Sloan Management Review; full findings could not be verified from the excerpt.",
+        "Described as an observational study, not a randomised or controlled design—causal claims about GenAI's impact should be read cautiously.",
+        "The four-year study window begins in 2026 and GenAI tools were introduced in 2026, suggesting the observational period may be very short or the framing is unclear; temporal details warrant editorial scrutiny.",
+        "Authors are practitioners at the institution studied, raising potential conflict-of-interest concerns around self-reported outcomes."
+      ],
+      "visual_concept": "A single large analogue gauge or dashboard dial—rendered in muted steel-grey and amber—positioned slightly left of centre in the frame at medium scale, its needle pointing decisively past a conventional 'efficiency' marker toward an unmapped zone on the right side of the dial. The gauge sits on a clean, minimal desk surface in soft, directional overhead light that pools onto the instrument face and lets the surrounding desk fall into gentle shadow, drawing the eye inward. The background is a blurred, neutral office interior—indistinct enough not to compete. The overall palette is cool grey with warm amber on the illuminated gauge face, suggesting measurement under scrutiny rather than celebration."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "GenAI Success Metrics: Look Beyond Reduced Workload"
+  },
+  "https://sloanreview.mit.edu/article/leaderships-blind-spot-in-the-age-of-ai/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This article raises a philosophical challenge that sits underneath the operational questions CAMO typically examines: as AI absorbs more cognitive labor, what quality of human judgment remains, and who is responsible for cultivating it? From CAMO's perspective on AI adoption, the concern is not only whether organizations deploy AI effectively, but whether the leadership culture required to govern it is being built at all. Our Deloitte-HKU AI Adoption Index found that the dominant barriers to AI impact are organizational and executional rather than technical — a finding that aligns with Scharmer's diagnosis that the gap is in how leaders think, not just in what tools they use.",
+      "claude_summary": "Drawing on Heidegger's 1951 observation that 'we are still not thinking,' this article argues that AI exposes a structural blind spot in leadership: the tendency to act and decide without genuine reflection on the nature of thought itself. As AI systems take over cognitive tasks, leaders face a harder question — not what AI can do, but what kind of thinking humans must preserve and develop. The article, authored by MIT Sloan's Otto Scharmer, frames this as a leadership challenge rooted in self-awareness and intentionality, suggesting that the most consequential gap in AI-era management is not technical but philosophical. Note: the full article is behind a paywall, so specific findings and recommendations are inferred from the excerpt and author's established work.",
+      "key_takeaway": "AI's real challenge for leaders is not mastering the technology but developing the quality of human reflection that AI itself cannot supply.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the article and the index identify a non-technical gap at the leadership level as the primary obstacle to realizing AI's organizational potential, with the index grounding that claim in survey data from C-suite executives.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 58,
+      "red_flags": [
+        "Article appears to be behind a paywall on MIT Sloan Management Review; full content not accessible from the excerpt.",
+        "Summary and analysis are partially inferred from the RSS excerpt and the author's known intellectual framework (Theory U / presencing) rather than confirmed article content.",
+        "Argument is primarily philosophical and prescriptive; no empirical findings or data are evident from the available excerpt.",
+        "Author affiliation with the Presencing Institute, which teaches and commercializes the frameworks discussed, represents a potential conflict of interest."
+      ],
+      "visual_concept": "A single executive figure, small in scale, seated alone at a large boardroom table viewed from the far end, positioned at the golden-ratio point rather than centered, with the empty length of the table stretching toward the viewer as a leading line that terminates at the figure. The room is spare — no screens, no devices — lit by a single tall window behind the figure that pools cool, diffuse daylight onto the table surface and leaves the walls in soft shadow. The palette is muted: charcoal, slate grey, and pale cream, with the window light as the only warm accent. The emptiness of the table and the solitary scale of the figure convey the weight of reflection in a space built for collective decision-making."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "Leadership’s Blind Spot in the Age of AI"
   },
   "https://sloanreview.mit.edu/article/our-guide-to-the-summer-2026-issue/": {
     "data": {
@@ -2477,6 +2704,44 @@
     "model": "claude-sonnet-4-6",
     "title": "The AI assembly line: Strategic imperatives for CEOs"
   },
+  "https://www.mckinsey.com/industries/industrials/our-insights/the-operating-model-advantage-why-ai-winners-are-rewiring-their-organizations": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This McKinsey piece argues that AI value is unlocked through operating-model redesign, not tool deployment alone. From CAMO's perspective on AI adoption, this aligns with a pattern visible in our own case research: at Decathlon China, the productivity ceiling was hit not because AI lacked capability but because coordination structures around it remained unchanged, and at KFC China, managerial span-of-control had to be deliberately redesigned before AI-freed capacity translated into business gains. The implication for executives is that the organizational question — who decides what, and how work is sequenced — must be addressed in parallel with, not after, the technical one.",
+      "claude_summary": "The real source of competitive advantage from AI is not the technology itself but the redesign of how work flows and how decisions get made. McKinsey argues that organizations winning with AI are fundamentally rewiring their operating models — changing structures, roles, and governance — rather than simply layering AI tools onto existing processes. The excerpt is brief and the full article sits behind a consulting-firm content gate, so specific empirical findings are not available. The core claim, however, is that AI success depends on people and organizational architecture, with technology playing a supporting rather than leading role.",
+      "key_takeaway": "Competitive advantage from AI comes from redesigning operating models and decision rights, not from adopting AI tools while leaving organizational structures intact.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Directly illustrates the McKinsey thesis: AI optimization of individual tasks produced modest overall gains until the coordination structure between tasks was redesigned.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "nanocase-kfc-china-2026",
+          "reason": "Shows how deliberate operating-model change — expanding managerial span of control — was the mechanism through which AI-driven efficiency converted into organizational advantage.",
+          "title": "Scaling Managers with AI at KFC China",
+          "url": "https://camo.hku.hk/nanocase-kfcchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "red_flags": [
+        "Source is McKinsey Insights, a consulting firm with commercial interests in AI transformation engagements — findings may reflect client-facing framing rather than independent research.",
+        "RSS excerpt is too thin to verify specific claims, metrics, or methodology; the summary above is based on the stated premise only.",
+        "Article may be partially or fully gated behind McKinsey registration.",
+        "Not peer-reviewed; no cited empirical data visible in the excerpt."
+      ],
+      "visual_concept": "A single wide organizational chart printed on a large sheet of paper, positioned center-frame on a plain concrete floor, viewed from slightly above and to one side at a low angle. The chart occupies roughly two-thirds of the frame and is mid-process of being redrawn — several boxes crossed out in red, new connecting lines sketched in pencil alongside the printed ones. A single ballpoint pen rests diagonally across the lower-right corner of the sheet, the eye's first landing point. Hard directional light from a high window at frame-left casts a sharp shadow of the pen across the chart, the shadow serving as a leading line drawing attention toward the revised section. The surrounding floor is bare and neutral-grey, keeping focus on the document. Palette is cool and documentary — white paper, graphite pencil marks, muted concrete — with the red markings providing the only warm accent."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "The operating model advantage: Why AI winners are rewiring their organizations"
+  },
   "https://www.mckinsey.com/industries/retail/our-insights/when-ai-meets-desire-innovating-human-centered-luxury-experiences-in-the-agentic-age": {
     "data": {
       "audience_relevance": {
@@ -2513,5 +2778,43 @@
     "enriched_at": "2026-06-01",
     "model": "claude-sonnet-4-6",
     "title": "When AI meets desire: Innovating human-centered luxury experiences in the agentic age"
+  },
+  "https://www.mckinsey.com/mgi/our-research/the-real-ai-advantage": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This McKinsey report argues that competitive AI advantage accrues to firms that restructure around AI rather than layer it onto existing workflows. From CAMO's perspective on AI adoption, the implication is familiar but worth scrutinizing: our research at firms like Decathlon China and KFC China shows that coordination bottlenecks and managerial redesign — not the AI tools themselves — determine whether adoption creates measurable value. The harder question the report likely leaves underexplored is what happens to job quality and worker incentives when organizations are 'redesigned' at speed; CAMO's work on bad-job economy dynamics suggests the organizational gains flagged by McKinsey can coexist with deteriorating employment conditions.",
+      "claude_summary": "Based on a McKinsey Global Institute report, the next wave of AI-driven value will not come from deploying AI tools but from leaders who use AI as a catalyst to redesign business models, remove organizational friction, and build learning-capable organizations. The argument shifts emphasis away from AI as a productivity add-on and toward AI as a structural lever for competitive differentiation. The excerpt is brief and the full report sits behind a registration wall, so specific empirical findings cannot be confirmed; the framing is consistent with McKinsey's broader AI adoption narrative favoring organizational redesign over incremental automation.",
+      "key_takeaway": "AI's competitive edge comes from redesigning how organizations work, not from the tools themselves — but realizing that edge requires confronting organizational and incentive barriers that technology cannot resolve.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Decathlon China's experience directly illustrates the report's core claim that AI value flows from systemic redesign — in that case, compressing coordination rather than optimizing individual tasks.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "CAMO's own C-suite survey documents the gap between AI's promised and realized value, providing an empirical counterweight to McKinsey's prescriptive framing about organizational redesign as the path to advantage.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Full report is behind a McKinsey registration wall; specific data, methodology, and sample details cannot be verified from the excerpt alone.",
+        "McKinsey Global Institute reports are not peer-reviewed and are produced by a consulting firm with commercial interests in AI adoption advisory services.",
+        "The excerpt is a single promotional sentence; the summary and analysis are based on stated framing only — no empirical findings can be confirmed.",
+        "The 'redesign business models' argument is a recurring McKinsey theme; this may cover familiar ground without materially new evidence."
+      ],
+      "visual_concept": "A single mid-size wooden table viewed from slightly above and off-center, positioned in the left-golden-ratio third of the frame, surrounded by empty chairs in a sparse, high-ceilinged room. The table is lit by one strong shaft of natural daylight entering from a tall window behind it, creating a long shadow that stretches diagonally toward the viewer and draws the eye inward. The rest of the room recedes into cool, soft grey tones — bare walls, no decor — keeping attention locked on the table as a site of decision and redesign rather than decoration. Palette is warm amber on the table surface fading to cool slate in the background, daylight with moderate contrast."
+    },
+    "enriched_at": "2026-07-13",
+    "model": "claude-sonnet-4-6",
+    "title": "The real AI advantage"
   }
 }
