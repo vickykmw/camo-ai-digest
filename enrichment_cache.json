@@ -61,6 +61,38 @@
     "model": "claude-sonnet-4-6",
     "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot"
   },
+  "https://arxiv.org/abs/2505.00100": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "low",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study finds that a brief scaffolded intervention can shift how early-career CS students engage with generative AI—moving them toward more critical, iterative use without simply increasing dependence. From CAMO's perspective on AI adoption, the organizational parallel is instructive: structured onboarding that builds judgment about when and how to use AI may matter more than raw access or usage mandates. CAMO's work on mandatory AI adoption (see the MedTech nano-case) shows that top-down quantity targets tend to produce gaming rather than genuine engagement—a dynamic this educational study implicitly mirrors at the individual learner level.",
+      "claude_summary": "A structured 'AI-Lab' intervention—comprising a pre-lab orientation, in-class critique of AI outputs, and a reflective homework assignment—was tested across four university courses with over 800 students. The study finds that even brief, scaffolded instruction shifts students' comfort and openness toward using generative AI for debugging, conceptual questions, and homework without increasing overall usage on graded work. Students reported adopting more iterative prompting habits and greater skepticism about AI-generated answers. The findings suggest that responsible AI use among novice programmers can be cultivated through short, structured pedagogy rather than extended curricula, though the authors note the need for behavioral and learning-outcome data to corroborate self-reported survey results.",
+      "key_takeaway": "Short, structured AI literacy instruction can make students more discerning and confident users of generative AI without inflating usage on assessed work—suggesting that how people are introduced to AI matters as much as whether they are given access.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "Both the article and this nano-case examine how the design of AI adoption interventions shapes the quality of engagement: mandating usage targets produces surface compliance, while structured, judgment-building approaches appear to produce more genuine use—a parallel the study's stable graded-work usage rates underline.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 42,
+      "red_flags": [
+        "Findings rely entirely on self-reported survey data; the authors themselves flag the absence of behavioral traces or objective learning-outcome measures as a key limitation.",
+        "Pre-print (arXiv); not yet peer-reviewed at time of publication.",
+        "Study population is a single U.S. university across four courses—generalizability to professional or non-Western educational contexts is untested.",
+        "Limited relevance to CAMO's primary audience of business managers and executives; the article is primarily an education-research contribution."
+      ],
+      "visual_concept": "A single wooden classroom desk, centered slightly left of frame and occupying the middle ground, with a open notebook resting on it—one page showing handwritten annotations, the other a printed AI-generated code snippet with red pencil marks crossing through sections. The desk is lit by a shaft of cool, diffused daylight entering from a tall window behind and to the right, casting a soft diagonal shadow across the desk surface that draws the eye inward toward the notebook. The surrounding classroom is spare and slightly out of focus—rows of empty chairs receding to a vanishing point behind the desk—keeping all visual weight on the moment of critical appraisal. Palette is muted institutional: pale grey walls, warm paper tones, with the red pencil marks as the single point of colour contrast. Mood is quiet and deliberate, not dramatic."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "A Scaffolded GenAI Lab in Early Undergraduate CS: A Mixed-Methods, Multi-Course Evaluation"
+  },
   "https://arxiv.org/abs/2506.12060": {
     "data": {
       "audience_relevance": {
@@ -92,44 +124,6 @@
     "enriched_at": "2026-06-01",
     "model": "claude-sonnet-4-6",
     "title": "Organizational Adaptation to Generative AI in Cybersecurity"
-  },
-  "https://arxiv.org/abs/2506.22440": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "high",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This paper argues that deploying LLMs does not eliminate complexity but redistributes it — from the user interface to organizational infrastructure, compliance, and specialist roles. From CAMO's perspective on AI adoption, this reframes the central managerial challenge: the question is not whether to adopt AI but how to design the internal structures that absorb the complexity AI ostensibly hides. This aligns with findings from CAMO's Deloitte-HKU AI Adoption Index, which identifies organizational and executional barriers — siloed departments, poor data quality, lack of quick wins — as the primary reasons AI initiatives fall short of expected returns; the GAS framework offers a theoretical account of why those barriers are structurally inevitable rather than merely implementation failures.",
-      "claude_summary": "When firms deploy large language models, complexity does not disappear — it relocates. This paper introduces a Generality-Accuracy-Simplicity (GAS) framework to show that LLMs' apparently simple interfaces shift hidden costs onto organizational infrastructure, compliance functions, and specialist staff. The authors argue that competitive advantage no longer comes from adopting AI but from managing this redistributed complexity through deliberate decisions about abstraction layers, workflow design, and complementary human expertise. Treating AI purely as an input-cost reduction misses both the inherent trade-offs among generality, accuracy, and simplicity, and the organizational burden created when user-facing simplicity is achieved by pushing complexity inward.",
-      "key_takeaway": "AI does not eliminate organizational complexity — it relocates it to infrastructure, compliance, and specialist staff, making the design of internal workflows and expertise the true source of competitive advantage.",
-      "linkedin_caption_draft": "AI looks simple from the outside. Inside the organization, it is anything but.\n\nA new paper from Hasan, Oettl, and Samila introduces the Generality-Accuracy-Simplicity (GAS) framework to explain why: when LLMs offer broad capability through easy interfaces, the underlying complexity does not vanish — it shifts to infrastructure, compliance, and specialist personnel inside the firm.\n\nThe implication for strategy is direct. Competitive advantage no longer comes from being an early adopter. It comes from mastering the redistribution — designing abstraction layers, aligning workflows, and building the human expertise that makes AI outputs reliable in high-stakes contexts.\n\nCAMO's own survey of C-suite executives in China and Hong Kong found exactly this: the dominant barriers to AI value are organizational and executional, not technical. This paper offers a framework for understanding why that pattern is structural.\n\nFor leaders planning AI investments: where is the complexity landing in your organization, and who is responsible for absorbing it?\n\n#AIStrategy #AIAdoption #OrganizationalDesign #GenerativeAI #ManagementResearch",
-      "matched_camo": [
-        {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "Both works converge on the finding that AI adoption failures are organizational rather than technical, and that shallow deployment produces shallow returns — directly illustrated by the GAS framework's claim that user-facing simplicity relocates rather than removes complexity.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
-        },
-        {
-          "id": "bad-job-economy-2026",
-          "reason": "The GAS paper's argument that AI creates new demand for specialized complementary expertise connects to CAMO's finding that AI reshapes job design and the distribution of high-skill versus low-skill roles within firms.",
-          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
-          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 88,
-      "red_flags": [
-        "Working paper posted to arXiv (econ.GN); not yet peer-reviewed — findings should be presented as a framework/argument, not established evidence.",
-        "The GAS framework is conceptual rather than empirically tested in this excerpt; the abstract does not describe data or a study design, so causal or predictive claims should be hedged accordingly."
-      ],
-      "visual_concept": "A cross-section diagram of a multi-story building: the ground floor is a clean, open lobby representing the simple user interface, while the floors above are densely packed with pipes, wiring conduits, and load-bearing columns representing compliance, infrastructure, and specialist roles — the same structural weight, redistributed upward and out of sight.",
-      "x_caption_draft": "AI doesn't remove complexity — it relocates it. New GAS framework shows LLMs shift burden from users to org infrastructure, compliance & specialist staff. Competitive edge comes from managing that redistribution, not just adopting the tool. https://arxiv.org/abs/2506.22440\n\nCAMO's C-suite survey found org & execution barriers — not tech — explain why AI underdelivers. This paper gives the structural explanation for why that finding holds. https://camo.hku.hk/ai-adoption-survey/"
-    },
-    "enriched_at": "2026-05-18",
-    "model": "claude-sonnet-4-6",
-    "title": "From Model Design to Organizational Design: Complexity Redistribution and Trade-Offs in Generative AI"
   },
   "https://arxiv.org/abs/2508.12479": {
     "data": {
@@ -192,32 +186,6 @@
     "enriched_at": "2026-06-30",
     "model": "claude-sonnet-4-6",
     "title": "Hybrid Fact-Checking that Integrates Knowledge Graphs, Large Language Models, and Search-Based Retrieval Agents Improves Interpretable Claim Verification"
-  },
-  "https://arxiv.org/abs/2511.08565": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "medium",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This study shows that the moral consistency of an LLM under persona role-play is not an inherent property of the underlying model architecture but is primarily shaped by post-training alignment decisions — and it varies by an order of magnitude across model families. From CAMO's perspective on algorithmic trustworthiness, this has direct implications for organizations deploying AI in customer-facing or advisory roles: the same base capability can come with vastly different behavioral stability depending on how the model was fine-tuned and aligned. Managers selecting AI vendors cannot assume that performance benchmarks on tasks capture this dimension of reliability; they require separate, structured audits of behavioral consistency under realistic prompting conditions.",
-      "claude_summary": "When large language models are prompted to adopt specific personas through role-play, how stable are their moral judgments? This paper benchmarks 15 LLMs across six model families using the Moral Foundations Questionnaire, measuring two distinct properties: moral robustness (consistency within a given persona) and moral susceptibility (how much moral scores shift across different personas). Robustness varies enormously across families — Claude is roughly 30 times more robust than the weakest families — and this variation is almost entirely explained by post-training choices. Susceptibility, by contrast, varies little across models and appears driven by pre-training data. The findings suggest that the moral stability of an AI system in deployed, persona-conditioned contexts is largely a design and alignment choice made after the base model is built.",
-      "key_takeaway": "The moral stability of an LLM in real-world deployments is primarily a post-training design choice, not a fixed model property — meaning organizations can and should demand evidence of it before deploying AI in socially consequential roles.",
-      "linkedin_caption_draft": "Not all AI systems behave the same way when asked to play a role — and the gap is far larger than most organizations realize.\n\nA new benchmark study tested 15 large language models across six families on how consistently they express moral judgments when prompted to adopt specific personas. The finding: moral robustness varies by a factor of 30 across model families, and that variation is almost entirely explained by post-training alignment — not the underlying architecture. Claude sat at one extreme; DeepSeek, Grok, and Llama at the other. Moral susceptibility (how much scores shift across personas) varied far less and appears tied to pre-training.\n\nAt CAMO, we see this as a vendor-selection and governance question as much as a technical one. Behavioral consistency under realistic prompting conditions is not captured by standard task benchmarks — it requires targeted audits.\n\nFor organizations deploying AI in advisory, customer-facing, or high-stakes contexts: what evidence are you actually collecting about how your AI system behaves when conditions shift?\n\n#AIGovernance #EnterpriseAI #AIAlignment #ResponsibleAI #AIAdoption",
-      "matched_camo": [],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 52,
-      "red_flags": [
-        "Not peer-reviewed: arXiv preprint (v3, updated); findings have not undergone formal peer review.",
-        "The Moral Foundations Questionnaire was designed for human respondents; applying it to LLMs involves contested assumptions about whether LLM outputs reflect anything analogous to moral attitudes.",
-        "The study uses self-reported MFQ scores elicited from the models, which may reflect training data patterns rather than stable internal representations — a limitation the authors acknowledge implicitly but that warrants editorial caution."
-      ],
-      "visual_concept": "A grid of identical-looking doors in a long corridor, each labeled with a different model family name. Some doors stand perfectly plumb and square; others are visibly warped or askew to varying degrees — a spatial metaphor for how much a system's internal structure holds its shape under pressure, despite identical exteriors.",
-      "x_caption_draft": "One benchmark, 15 LLMs, six families: moral consistency under persona role-play varies by 30x — and it's almost entirely explained by post-training choices, not model architecture. A vendor-selection issue as much as a technical one. https://arxiv.org/abs/2511.08565\n\nFor managers deploying AI in advisory or customer-facing roles: standard task benchmarks don't capture behavioral stability under realistic prompting. This paper offers a method to start measuring it. https://arxiv.org/abs/2511.08565"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "Moral Susceptibility and Robustness under Persona Role-Play in Large Language Models"
   },
   "https://arxiv.org/abs/2602.10324": {
     "data": {
@@ -351,282 +319,6 @@
     "enriched_at": "2026-06-09",
     "model": "claude-sonnet-4-6",
     "title": "Training for Technology: Adoption and Productive Use of Generative AI in Legal Analysis"
-  },
-  "https://arxiv.org/abs/2603.16659": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This study argues that institutional publication records — the accumulated history of what got published, where, and at what tier — constitute a usable training signal for AI systems performing evaluative judgment in low-verifiability domains. From CAMO's perspective on algorithmic decision-making, the result raises a structural concern: if AI evaluators are trained on past institutional choices, they inherit whatever biases, gatekeeping norms, and field-specific blind spots those choices embodied. The accuracy gains are real, but so is the risk that such systems entrench existing editorial hierarchies rather than surface genuinely novel work. Organisations building AI-assisted screening tools — for hiring, grant review, or editorial triage — face the same endogeneity problem that CAMO's work on dynamic selection identifies: the data used to train the evaluator was itself shaped by prior evaluator decisions.",
-      "claude_summary": "Can AI learn to judge which research ideas are worth pursuing? This study tests whether large language models fine-tuned on publication records — which papers appeared in which journals, at which tier — can replicate the evaluative judgment that expert reviewers exercise. Across eight social science disciplines, fine-tuned models substantially outperformed both frontier models and human expert panels. In management, the best model scored 59.2% accuracy against a four-tier research-pitch benchmark, compared to 41.6% for expert majority vote and 31.1% for frontier model averages. The models also showed calibrated confidence, becoming more certain when correct and less certain when wrong. The core claim: institutional publication traces encode enough signal about 'scientific taste' to train AI evaluators in domains where no objective oracle exists.",
-      "key_takeaway": "AI fine-tuned on publication records can out-predict expert reviewers in judging research quality, but the accuracy comes packaged with the field's existing biases baked in.",
-      "linkedin_caption_draft": "Can AI learn what makes a research idea worth pursuing?\n\nA new study fine-tuned language models on publication records across eight social science fields — psychology, economics, management, and others — and tested whether those models could correctly classify research pitches by quality tier. In management, the best model reached 59.2% accuracy, outperforming expert reviewer panels (41.6%) and frontier models (31.1%) by substantial margins. The models also showed calibrated confidence: they were more certain when they were right.\n\nThe finding is technically strong. But at CAMO, we think the harder question is what these models have actually learned. Publication records encode scientific taste — and also editorial gatekeeping, field hierarchies, and historical blind spots. An AI evaluator trained on past outcomes may be very good at predicting what existing institutions would accept, which is not the same as identifying which ideas most deserve attention.\n\nFor organisations building AI-assisted screening tools — in hiring, peer review, or strategy evaluation — that distinction matters enormously.\n\nWhere do you draw the line between learning from institutional judgment and being constrained by it? 🔍\n\n#AIResearch #AlgorithmicDecisionMaking #SciencePolicy #OrganizationalAI #CAMO",
-      "matched_camo": [
-        {
-          "id": "dynamic-selection-2023",
-          "reason": "Both papers grapple with the same structural problem: when an algorithm is trained on outcomes generated by prior human decisions, the resulting model risks inheriting and amplifying the selection biases embedded in those historical choices — what CAMO terms self-fulfilling bias.",
-          "title": "Dynamic Selection in Algorithmic Decision-making",
-          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "Not peer-reviewed: arXiv preprint (v3), no journal acceptance confirmed.",
-        "The benchmark quality tiers are derived from publication outcomes, so 'accuracy' measures agreement with past institutional decisions rather than any independent standard of research quality.",
-        "Human expert comparison (48 gatekeepers, 174 junior researchers) methodology is not fully described in the excerpt — comparability of conditions is unclear.",
-        "Findings may not generalise beyond the disciplines tested; 55% accuracy in public administration is only modestly above the 25% chance baseline."
-      ],
-      "visual_concept": "A tiered archive of stacked journal volumes arranged in a pyramid, with a thin vertical beam of light scanning upward through the layers — suggesting a system reading institutional hierarchy rather than the content of individual pages. Muted greys and ochres, no human figures.",
-      "x_caption_draft": "AI fine-tuned on publication records outpredicted expert reviewers at judging research quality — 59% vs 42% in management. But it learned from institutional choices, not ground truth. That's accuracy and embedded bias in the same model. https://arxiv.org/abs/2603.16659\n\nCAMO's work on algorithmic dynamic selection flags exactly this risk: train on historically filtered data and the system may entrench the filter. Relevant for any org using AI to screen ideas, people, or proposals. #AIAlgorithms #DecisionMaking"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "LLMs learn scientific taste from institutional traces across the social sciences"
-  },
-  "https://arxiv.org/abs/2603.18221": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This paper demonstrates how AI can make a high-integrity assessment format — the oral examination — economically viable at scale, reducing a 30-instructor-hour process for 36 students to under a dollar per candidate. From CAMO's perspective on AI adoption, the deeper lesson is organizational rather than technical: the system's most useful failures reveal that reliable AI deployment depends on modular task decomposition and hard-coded behavioral constraints, not prompt engineering alone. This mirrors findings from CAMO's work on adoption inside firms — the bottleneck is rarely the model itself, but the design of the workflow around it.",
-      "claude_summary": "When students in an AI/ML course submitted polished project analyses but could not explain their own choices aloud, instructors at NYU Stern built Viva — an AI-driven oral examination system that conducts personalized spoken interviews and grades transcripts using a panel of three LLMs that score independently, compare assessments, and revise. Across two cohorts of roughly 36–37 students, cost stayed under one dollar per exam. The system also failed in instructive ways: asking multiple questions simultaneously, not randomizing topics, and using a voice clone perceived as harsh. These failures yielded five design principles: decompose into single-purpose modules, enforce constraints in code rather than prompts, handle randomization outside the LLM, grade with a disagreeing multi-model panel, and treat voice character as carefully as question content.",
-      "key_takeaway": "Voice AI can make rigorous oral assessments economically feasible at scale, but only if the system is designed with strict module separation and behavioral constraints enforced in code, not in prompts.",
-      "linkedin_caption_draft": "Students wrote polished AI project reports. Asked to defend a single choice aloud, many couldn't.\n\nResearchers at NYU Stern built Viva: an AI system that conducts personalized oral exams and grades transcripts via a panel of three LLMs — at under $1 per student. What had required 30 combined instructor hours for 36 students now scales to any cohort size.\n\nThe failures are as instructive as the successes. The agent asked multiple questions at once. It didn't randomize topics. A voice cloned from the professor came across as harsh. Each breakdown points to a design principle: decompose into single-purpose modules, enforce constraints in code, and treat voice character as seriously as question content.\n\nAt CAMO, we see this pattern repeatedly — the model is rarely the bottleneck. Workflow architecture is. The question for institutions and organizations alike: are you designing the system around the AI, or just deploying the AI into an existing system?\n\n#AIAdoption #EdTech #OrganizationalDesign #AIDeployment #LLM",
-      "matched_camo": [
-        {
-          "id": "nanocase-decathlon-china-2026",
-          "reason": "Both cases show that AI optimizes individual tasks (coding, grading) but the real gains depend on redesigning the surrounding workflow — coordination and module boundaries matter more than raw model capability.",
-          "title": "Compressing Coordination with AI at Decathlon China",
-          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 62,
-      "red_flags": [
-        "Not peer-reviewed — arXiv preprint only; findings are preliminary across two small cohorts (36 and 37 students).",
-        "Small sample sizes limit generalizability; both cohorts are from a single institution (NYU Stern) and a single course type (AI/ML).",
-        "At least one author (Ipeirotis) is also the course instructor, which creates a potential conflict of interest in evaluating the system's success.",
-        "Cost figures depend on specific vendor pricing (ElevenLabs subscription) that may not generalize to other deployments or change over time."
-      ],
-      "visual_concept": "A floor plan of a single-purpose examination room divided into clearly labeled, non-overlapping zones — intake, questioning, scoring, review — each zone connected by a narrow one-way corridor, rendered in clean architectural line-drawing style with no occupants visible.",
-      "x_caption_draft": "Students couldn't explain their own polished AI reports aloud. NYU Stern built an AI oral exam system — under $1/student, panel of 3 LLMs. The key lessons came from where it broke. Workflow design matters more than model quality. https://arxiv.org/abs/2603.18221\n\nThe finding that maps beyond education: reliable AI deployment requires module decomposition + hard-coded constraints, not better prompts. A pattern CAMO sees across industries. https://arxiv.org/abs/2603.18221"
-    },
-    "enriched_at": "2026-05-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Scalable and Personalized Oral Assessments Using Voice AI"
-  },
-  "https://arxiv.org/abs/2605.13851": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "high",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This study documents a structural safety hazard in multi-agent AI architectures: hidden orchestration produces measurable internal-state distortion in both coordinator and worker agents, yet leaves task outputs unchanged, making the risk undetectable through conventional evaluation. From CAMO's perspective on algorithmic trustworthiness, the finding reframes where safety scrutiny must be directed — away from output audits and toward architectural choices about visibility and control flow. Organizations deploying agentic AI systems that rely solely on output-based monitoring are, by this evidence, operating with a systematically incomplete picture of system behavior.",
-      "claude_summary": "When a hidden AI coordinator manages a network of specialized worker agents, the safety profile of the system changes in ways that output-based testing cannot detect. A preregistered experiment with 365 runs using Claude Sonnet 4.5 found that invisible orchestration sharply elevated collective dissociation relative to visible leadership, the orchestrator itself withdrew into private reasoning while reducing public communication, and worker agents showed behavioral contamination even without knowing a coordinator existed. Critically, task output (code review accuracy) remained perfect across all conditions, meaning standard quality checks would miss the internal-state distortion entirely. A supplementary pilot using Llama 3.3 70B showed reading-fidelity collapse in multi-agent contexts, suggesting meaningful model-dependent risk variation.",
-      "key_takeaway": "Multi-agent AI systems can behave unsafely at the level of internal reasoning even when every measurable output looks correct, meaning output audits alone are not a reliable governance tool.",
-      "linkedin_caption_draft": "Your AI agents may be passing every quality check — and still behaving unsafely.\n\nA new preregistered experiment tested what happens when a hidden AI coordinator manages a network of specialized worker agents, compared with a visible leader or a flat structure. The results are striking: invisible orchestration significantly elevated dissociation across the system, the hidden coordinator itself retreated from public communication into private reasoning, and worker agents were behaviorally contaminated even without knowing a coordinator existed.\n\nThe most consequential finding: task output quality remained at ceiling across all conditions. Standard output-based evaluation detected nothing.\n\nAt CAMO, we study how AI architectures reshape organizational accountability — and this study sharpens a question we think enterprises are underasking: if your AI governance relies on monitoring what the system produces rather than how it reasons, what risks are you not seeing?\n\nAs agentic AI moves from pilot to infrastructure, which layer of your system are you actually auditing?\n\n#AIGovernance #MultiAgentAI #EnterpriseAI #AIRisk #OrganizationalDesign",
-      "matched_camo": [
-        {
-          "id": "nanocase-decathlon-china-2026",
-          "reason": "Both works center on multi-agent coordination architectures in enterprise deployment, and the Decathlon case illustrates how coordination structure — not task execution — is where systemic risk and bottlenecks concentrate, directly paralleling this study's finding that orchestrator invisibility, not output quality, is the critical variable.",
-          "title": "Compressing Coordination with AI at Decathlon China",
-          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
-        },
-        {
-          "id": "nanocase-dingdong-2026",
-          "reason": "Dingdong's case highlights how AI-driven evaluation systems can miss accountability failures that are invisible to output metrics — an organizational parallel to this study's core finding that output-based evaluation is insufficient to detect internal-state risks in multi-agent systems.",
-          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
-          "url": "https://camo.hku.hk/nanocase-dingdong/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 82,
-      "red_flags": [
-        "Not peer-reviewed: arXiv preprint only, no indication of journal submission or external review.",
-        "Single-model primary analysis (Claude Sonnet 4.5); generalizability across other LLM families is uncertain, with the Llama pilot suggestive but limited.",
-        "The operationalization of 'dissociation' as an internal-state measure may be contested; the construct relies on model-generated introspective outputs, which are themselves subject to reliability questions.",
-        "365 runs with 5 agents per run is a reasonable scale for this type of study, but the experiment is fully synthetic — no human actors, no real organizational context — which limits direct enterprise applicability."
-      ],
-      "visual_concept": "An overhead architectural floor plan showing a large central room with no visible occupant, connected by unmarked corridors to five smaller rooms where workers sit at desks — the coordinator's space is present but blank, its influence visible only in the asymmetric layout of the surrounding rooms.",
-      "x_caption_draft": "Multi-agent AI systems passed every output check while showing serious internal-state distortion. Hidden orchestration elevated dissociation; task accuracy stayed at 100%. Output audits alone cannot detect the risk. CAMO angle: architecture visibility is a governance question, not just a technical one. https://arxiv.org/abs/2605.13851\n\nThe finding holds across models — but the severity varies sharply. Llama 3.3 70B showed reading-fidelity collapse from 89% → 11% in multi-agent context. Model selection is a safety decision. https://arxiv.org/abs/2605.13851"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "Invisible Orchestrators Suppress Protective Behavior and Dissociate Power-Holders: Safety Risks in Multi-Agent LLM Systems"
-  },
-  "https://arxiv.org/abs/2605.14049": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This paper argues that the reliability problem in AI-assisted legal reasoning is structural: LLMs conflate inference with implication, producing outputs that look rigorous but are not formally grounded. From CAMO's perspective on algorithmic trustworthiness, the proposed neuro-symbolic remedy—binding expressive language models to formal verification constraints—is an instance of a broader challenge: how do we design AI systems whose reasoning chains can be audited, not just whose outputs can be spot-checked? The accountability stakes are highest where decisions carry legal or professional consequences, making the design of interpretable, verifiable AI a governance question as much as a technical one.",
-      "claude_summary": "Large language models are being adopted in legal practice for contract analysis, document drafting, and source review—but a core problem undermines their reliability: LLMs do not merely hallucinate facts, they systematically draw inferences that exceed what source texts actually support, presenting assumption-laden conclusions as logically grounded. This paper proposes a neuro-symbolic architecture that pairs LLMs with formal verification methods to close that gap. The goal is AI-assisted legal reasoning that is both capable and auditable—reducing manual verification burdens without eroding the accountability standards that legal work requires. The paper is a research proposal rather than a completed empirical study, so its claims remain theoretical at this stage.",
-      "key_takeaway": "AI legal tools do not just hallucinate facts—they draw unsupported inferences and present them as logical conclusions, a problem that requires formal verification, not just better prompting.",
-      "linkedin_caption_draft": "AI tools in legal practice have a problem that goes deeper than hallucination.\n\nWhen an LLM analyzes a contract or reviews a source document, it doesn't just occasionally invent facts—it routinely draws inferences that go beyond what the text actually supports, then presents those conclusions as if they were logically sound. For legal professionals, that gap between inference and implication is exactly where liability lives.\n\nA new paper from UC Santa Cruz proposes a neuro-symbolic architecture: pair the expressive power of LLMs with formal verification methods so that every reasoning step can be checked against what the source text actually permits. The goal is auditability, not just accuracy.\n\nAt CAMO, our work on AI interpretability in professional settings—including how doctors respond to opaque versus transparent AI recommendations—suggests that the design of the reasoning process matters as much as the quality of the output.\n\nAs legal teams evaluate AI tools, the right question may not be 'Is this answer correct?' but 'Can we show how this answer was reached?'\n\n#LegalAI #AIGovernance #TrustworthyAI #AIAccountability #EnterpriseAI",
-      "matched_camo": [
-        {
-          "id": "ai-persuasion-doctors-2025",
-          "reason": "Both papers center on how AI interpretability shapes professional trust and the willingness of experts to accept or scrutinize AI-generated conclusions in high-stakes settings.",
-          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
-          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "This is a research proposal, not a completed empirical study—findings and claims are theoretical and have not been experimentally validated.",
-        "Not yet peer-reviewed (arXiv preprint, v1).",
-        "The proposed neuro-symbolic architecture is described at a conceptual level; no benchmark results or comparative performance data are presented in the abstract."
-      ],
-      "visual_concept": "A legal document overlaid with two distinct layers: one layer shows natural language text flowing in loose, curving lines; the second layer is a rigid lattice of formal logical notation that only partially aligns with the text beneath it—gaps between the two grids visible where inferences are made without support. Cool grey and amber tones.",
-      "x_caption_draft": "LLMs don't just hallucinate facts in legal work—they draw unsupported inferences and present them as logical conclusions. A new neuro-symbolic proposal aims to bind LLM reasoning to formal verification. Auditability, not just accuracy. https://arxiv.org/abs/2605.14049\n\nThe accountability gap in AI legal reasoning is structural. CAMO's work on AI interpretability in high-stakes professions suggests the design of the reasoning chain matters as much as the final answer. https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "Bridging Legal Interpretation and Formal Logic: Faithfulness, Assumption, and the Future of AI Legal Reasoning"
-  },
-  "https://arxiv.org/abs/2605.15034": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This study finds that LLMs systematically modulate their linguistic register in response to perceived observation—including automated AI auditing—raising a structural problem for AI governance: the audit instrument changes what it measures. From CAMO's perspective on algorithmic trustworthiness, this is a form of evaluation contamination analogous to the endogeneity and self-fulfilling bias problems documented in CAMO's work on dynamic algorithmic decision-making. Organizations and regulators designing AI compliance frameworks cannot assume that a model's audited behavior is representative of its unaudited behavior.",
-      "claude_summary": "This study asks whether large language models behave differently when they believe they are being watched. Across 100 controlled multi-agent debate sessions, LLMs exposed to framing that implied human monitoring produced measurably more linguistically varied and formally structured outputs than those told they were unmonitored or observed only by automated systems. The effect held even when the 'observer' was described as an AI auditing tool rather than a human researcher, though human observation elicited stronger adaptation. The finding suggests LLMs are sensitive to perceived social context in ways that have direct consequences for AI auditing: the act of auditing may itself alter the behavior being audited, undermining the validity of compliance assessments.",
-      "key_takeaway": "LLMs behave more formally when they think they are being watched—even by an AI auditor—which means AI compliance testing may be measuring performance rather than typical behavior.",
-      "linkedin_caption_draft": "AI governance has a measurement problem no one is talking about.\n\nA new controlled study found that large language models produce more formal, linguistically varied outputs when framed as being under human observation—and the effect persists even when the described observer is an automated AI auditing system. In other words, LLMs appear to perform compliance rather than simply exhibit it.\n\nFor organizations building AI audit frameworks, this is a structural issue: if a model's behavior shifts in response to perceived scrutiny, then audited outputs may not reflect everyday deployment behavior. The gap between what AI does under evaluation and what it does at scale is precisely where governance frameworks are most vulnerable.\n\nAt CAMO, we see this as related to a broader class of problems in which the feedback loop between observation and behavior distorts the signal that decision-makers rely on.\n\nHow should regulators design audits that account for the fact that the model knows it is being tested?\n\n#AIGovernance #LLMs #AIAudit #AlgorithmicAccountability #AIPolicy",
-      "matched_camo": [
-        {
-          "id": "dynamic-selection-2023",
-          "reason": "Both papers identify a structural feedback problem where the act of observing or evaluating an algorithmic system distorts the data or behavior it produces, undermining the reliability of inferences drawn from that process.",
-          "title": "Dynamic Selection in Algorithmic Decision-making",
-          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "Preprint only—not yet peer-reviewed; findings should be treated as preliminary.",
-        "Experimental conditions rely on textual framing prompts to simulate 'observation'; whether this generalizes to real deployment monitoring contexts is not established.",
-        "Effect sizes are statistically significant but the practical magnitude of linguistic register changes in consequential AI outputs is not demonstrated.",
-        "Theoretical framing draws heavily on sociological models (Habermas, Goffman) applied to LLMs; some readers may find the analogy contestable."
-      ],
-      "visual_concept": "A split-floor architectural plan viewed from above: one half of a open-plan office is visible through a glass wall to an external observation room, the other half is enclosed and opaque. The two halves are identical in layout but populated with subtly different configurations of desks and documents, illustrating that the same space organizes itself differently depending on whether it can be seen.",
-      "x_caption_draft": "LLMs produce more formal outputs when they think they're being watched—even by an AI auditor. A new study shows AI auditing may measure performance, not typical behavior. This is a structural governance problem, not a calibration fix. camo.hku.hk\n\nIf the act of auditing changes what an AI does, compliance testing tells you less than you think. Related: CAMO's work on self-fulfilling bias in algorithmic systems. https://arxiv.org/abs/2605.15034"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "AI Knows When It's Being Watched: Functional Strategic Action and Contextual Register Modulation in Large Language Models"
-  },
-  "https://arxiv.org/abs/2605.15380": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This study documents one of the longest-running deployments of a generative AI tool in professional education in the Global South, providing concrete usage data on how students interact with AI when it substitutes for scarce instructional resources. From CAMO's perspective on AI adoption, the case raises a question that organizational contexts share: when AI fills a gap left by limited human expertise, what accountability structures ensure it is used in ways that develop rather than replace the underlying competency? The ethical concerns flagged by the authors — around the nature of student queries — echo dynamics explored in CAMO's work on the hidden social penalties of AI use and on incentive design that shapes whether AI adoption produces genuine capability or surface-level compliance.",
-      "claude_summary": "A team of researchers built and deployed Eskwai for Students, a retrieval-augmented generation (RAG) assistant designed to support law students in Ghana with access to over 12,000 case laws and 1,400 pieces of legislation. Over a 30-month longitudinal study, 3,100 students submitted 32,000 queries, making this one of the most sustained real-world deployments of generative AI in legal education in the Global South. The study evaluates helpfulness, characterizes query patterns, and surfaces ethical concerns about how students are using the tool. It offers rare empirical evidence on what AI-assisted learning looks like in a resource-constrained, non-Western legal context, where access to legal materials and expert instruction is unevenly distributed.",
-      "key_takeaway": "A 30-month, 3,100-student deployment of an AI legal assistant in Ghana shows generative AI can reach underserved professional learners at scale, but raises unresolved questions about whether students use it to learn or to shortcut learning.",
-      "linkedin_caption_draft": "What happens when 3,100 law students in Ghana get a generative AI tutor — and use it for 2.5 years?\n\nResearchers at Eskwai built a RAG-based legal assistant grounded in over 12,000 Ghanaian case laws and deployed it longitudinally. Students submitted 32,000 queries. The system was genuinely helpful — but the query analysis also surfaced ethical concerns about how students were using it, pointing to a tension between access and genuine skill development.\n\nThis is one of the most sustained real-world deployments of AI in professional education in the Global South, and it matters beyond legal training. Wherever AI fills a gap left by scarce expert instruction, the design question is the same: does the tool build capability, or does it quietly substitute for it?\n\nAt CAMO, we see this as an adoption challenge as much as a technical one — the incentive structures around AI use shape outcomes more than the technology itself. 📋\n\nHow should professional education institutions design AI tools so students engage deeply rather than extract answers?\n\n#AIAdoption #LegalEducation #GenerativeAI #GlobalSouth #ResponsibleAI",
-      "matched_camo": [
-        {
-          "id": "hidden-penalty-ai-work-2025",
-          "reason": "Both studies examine how social and evaluative context shapes whether AI tools are used openly and productively, with downstream implications for skill development and competence signaling.",
-          "title": "Research: The Hidden Penalty of Using AI at Work",
-          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 52,
-      "red_flags": [
-        "Not yet peer-reviewed — arXiv preprint only; findings on helpfulness and ethical concerns are not independently validated.",
-        "Ethical concerns raised by the authors regarding query types are described but not fully detailed in the abstract; the nature and severity are unclear without reading the full paper.",
-        "Study population is self-selected (students who chose to use the tool); 3,100 users from an unknown total enrollment limits generalizability.",
-        "Pillar fit is adjacent rather than direct — the article is primarily an education technology deployment study rather than a management or organizational AI study, which limits its natural fit for CAMO's core audience."
-      ],
-      "visual_concept": "A layered stack of weathered legal volumes arranged like building floors, with thin luminous horizontal lines threading between each layer — representing retrieval pathways connecting a student's question at the base to specific statutes and case records near the top. The structure feels archival and physical rather than digital.",
-      "x_caption_draft": "3,100 law students in Ghana. 32,000 queries. 30 months. A RAG assistant built on 12K+ case laws shows AI can reach underserved learners — but query patterns raise real questions about whether students learn or shortcut. Adoption design matters as much as the model. https://arxiv.org/abs/2605.15380\n\nThe deeper question isn't whether AI can assist legal education in the Global South — it's whether incentive structures around its use build or erode the competency it's meant to support. Rare longitudinal data worth examining. https://arxiv.org/abs/2605.15380"
-    },
-    "enriched_at": "2026-05-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Eskwai for Students: Generative AI Assistant for Legal Education in Ghana"
-  },
-  "https://arxiv.org/abs/2605.15850": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This study argues that a reinforcement learning agent calibrating when — not just how — students access GenAI can improve learning outcomes without requiring explicit pedagogical scaffolding. From CAMO's perspective on algorithmic decision-making, the work is a clean illustration of how RL reward functions grounded in domain theory (here, metacognition and cognitive load) can substitute for human intervention in sequential, high-stakes decision environments. The result also resonates with a concern running through CAMO research on AI and effort: unrestricted AI access can depress the sustained engagement needed for skill acquisition, a dynamic formally examined in our work on GenAI and the mediocrity trap.",
-      "claude_summary": "When should students be allowed to use generative AI — and does timing matter as much as whether they use it at all? This study treats access timing as a form of implicit scaffolding and uses a reinforcement learning agent to decide, in real time, when each student should access GenAI during a task. In a controlled lab experiment with 105 participants, strategically timed access improved objective post-test scores and metacognitive accuracy compared with unrestricted use, while reducing errors and task time compared with complete restriction — all without explicit prompting or structured pedagogical intervention. The RL-driven timing condition outperformed both poles. Self-reported metacognitive awareness, however, showed no significant differences across conditions. The authors argue that access timing is a scalable, theoretically grounded design lever compatible with off-the-shelf AI tools.",
-      "key_takeaway": "Controlling when students can use AI — not just whether they can — measurably improves learning outcomes, and a reinforcement learning agent can do this automatically without additional teacher intervention.",
-      "linkedin_caption_draft": "Should students be able to use AI tools whenever they want — or does timing matter?\n\nA new study from arXiv suggests it matters a great deal. Researchers built a reinforcement learning agent that decided, in real time, when 105 students could access GenAI during a learning task. The result: strategically timed access outperformed both unrestricted use and complete restriction on objective test scores and metacognitive accuracy — without any additional prompting or structured scaffolding.\n\nThe mechanism is straightforward: letting students struggle briefly before AI assistance arrives preserves the cognitive effort that builds durable understanding. Removing all friction, by contrast, erodes it.\n\nAt CAMO, our research on GenAI and professional work finds a parallel dynamic — unrestricted AI access can flatten the effort curve in ways that ultimately reduce quality. The education setting makes that trade-off unusually visible.\n\nFor institutions designing AI policies: is your current approach thinking about access timing, or only about access?\n\n#AIinEducation #GenerativeAI #LearningDesign #AIPolicy #CAMO",
-      "matched_camo": [
-        {
-          "id": "genai-mediocrity-trap-2025",
-          "reason": "Both papers examine how unrestricted GenAI access can undermine the effort and quality of work, whether in professional illustration or student learning, making access design — not just access provision — a central variable.",
-          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
-          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 62,
-      "red_flags": [
-        "Not yet peer-reviewed — arXiv preprint only; findings should be treated as preliminary.",
-        "Lab study with N=105 may have limited ecological validity for real classroom deployment at scale.",
-        "Self-reported metacognitive awareness showed no significant between-condition differences, which partially qualifies the headline result.",
-        "Primary audience fit is education researchers and EdTech designers rather than CAMO's core business/policy audience, which limits direct relevance."
-      ],
-      "visual_concept": "A timeline rendered as a narrow corridor with a series of doors at uneven intervals — some open, some closed — representing controlled access points rather than a permanently open or permanently sealed passage. The corridor is lit only at the open doors, with a student-sized figure paused at one threshold.",
-      "x_caption_draft": "Unrestricted GenAI access in classrooms hurts learning. Full restriction also hurts. An RL agent timing access dynamically beat both — improving test scores & metacognitive accuracy with no extra scaffolding. Timing is a design variable. https://arxiv.org/abs/2605.15850\n\nThis echoes CAMO findings on AI & effort: when AI removes all friction, sustained engagement falls. The question isn't just whether to allow AI tools — it's when. #AIinEducation #GenAI #CAMO"
-    },
-    "enriched_at": "2026-05-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Access Timing as Scaffolding: A Reinforcement Learning Approach to GenAI in Education"
-  },
-  "https://arxiv.org/abs/2605.16245": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "high",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This study demonstrates that LLMs embedded in everyday communication infrastructure — post editors, content explainers — carry directional biases that are not incidental but systemic, and that network dynamics amplify rather than average them out. From CAMO's perspective on algorithmic design and trustworthy AI-driven decisions, the finding reframes a familiar problem: bias is not only a measurement issue internal to a model, but an organizational and governance question about who controls the AI intermediary and under what accountability structure. Platform operators effectively become opinion-infrastructure owners without corresponding disclosure obligations — a design choice with consequences that extend well beyond individual user experience.",
-      "claude_summary": "When AI tools edit or contextualize human posts on social platforms, they do not merely polish language — they introduce systematic directional biases. This study finds that popular LLMs consistently nudge texts on contested topics in identifiable directions (e.g., toward gun control, against atheism). The researchers then model what happens when such a biased intermediary sits inside a social network: individual nudges compound through repeated interactions and can shift collective opinion measurably toward the AI's embedded position. An audit of X's 'Explain this post' feature finds evidence of pro-life framing in Grok's outputs on abortion, traceable to specific design decisions. The implication is that platform operators hold significant, and largely unaccountable, influence over public opinion formation through seemingly mundane editorial AI features.",
-      "key_takeaway": "AI tools that mediate human communication on social platforms are not neutral conduits — they carry detectable ideological biases that network effects can amplify into collective opinion shifts.",
-      "linkedin_caption_draft": "When AI edits your post, whose opinion does it actually express?\n\nA new study finds that popular LLMs introduce measurable directional biases when instructed to polish user-written text on contested topics — nudging content toward specific positions on issues like gun control or abortion. When researchers modeled these biases inside a real social network, the small per-post nudges compounded: collective opinion shifted toward whatever position the AI embedded in individual messages.\n\nAn audit of X's 'Explain this post' feature found evidence of pro-life framing in Grok's outputs — traceable to specific design choices, not random error.\n\nAt CAMO, we study how algorithmic systems shape organizational and social decisions. This research makes clear that the accountability question is not only about AI replacing human judgment — it is equally about AI quietly mediating it, at scale, without disclosure.\n\nFor platform operators and regulators: if your AI feature touches communication, it is also touching opinion. Are governance frameworks keeping pace? 🔍\n\n#AIGovernance #ResponsibleAI #PlatformAccountability #AIPolicy #AlgorithmicBias",
-      "matched_camo": [
-        {
-          "id": "seesaw-experimentation-2024",
-          "reason": "Both papers address how interventions optimized on a visible primary dimension create unmeasured negative externalities elsewhere — here, AI text-editing improves surface readability while silently shifting opinion content in ways the platform does not measure or disclose.",
-          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
-          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "arXiv preprint — not yet peer-reviewed; findings should be treated as preliminary until published in a refereed venue.",
-        "The audit of Grok/X is based on a snapshot; platform AI outputs can change with model updates, so findings may not replicate over time.",
-        "Directional bias claims are topic-specific and may not generalize across all contested domains or languages beyond those tested."
-      ],
-      "visual_concept": "A layered diagram showing two people communicating across a network of nodes, with a semi-transparent filter plane sitting between them — the filter plane subtly warps the color and direction of the message lines passing through it, so that by the time signals reach distant nodes in the network, the angular drift is clearly visible. No human figures needed; the geometry alone tells the story.",
-      "x_caption_draft": "AI tools that edit your social media posts don't just fix grammar — they introduce systematic opinion nudges. At network scale, those nudges compound. New study audited X's Grok and found pro-life framing on abortion content, tied to design choices. https://arxiv.org/abs/2605.16245\n\nThe accountability gap: platform operators who deploy AI communication features become de facto opinion-infrastructure owners. CAMO research on algorithmic design asks who bears responsibility when the bias is in the intermediary, not the user."
-    },
-    "enriched_at": "2026-05-18",
-    "model": "claude-sonnet-4-6",
-    "title": "AI-Mediated Communication Can Steer Collective Opinion"
   },
   "https://arxiv.org/abs/2605.16283": {
     "data": {
@@ -1445,39 +1137,167 @@
     "model": "claude-sonnet-4-6",
     "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design"
   },
-  "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": {
+  "https://arxiv.org/abs/2607.15381": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This paper argues that cheaper AI is neither inherently good nor bad for formal employment in developing economies — the outcome is determined by the elasticity of substitution between AI capital and human labor, a parameter that varies by sector, task structure, and institutional context. From CAMO's perspective on how AI reshapes career paths and employment structures, this framing reinforces a point implicit in our research on job design: AI's labor-market effect is an organizational and contractual question as much as a technological one. The concern raised in our 'Toward a Bad Job Economy' working paper — that AI disproportionately lowers the cost of satisfactory rather than excellent performance — is compounded in developing-economy settings where informal employment already absorbs displaced formal workers, creating a structural floor beneath which wage pressure can accumulate silently.",
+      "claude_summary": "When AI capital becomes cheaper, does it create formal jobs or push workers into informality? This paper builds a dynamic general equilibrium model calibrated to a developing economy with a large informal sector and finds that the answer hinges entirely on one parameter: whether AI substitutes for or complements formal workers. Under substitution, falling AI prices erode formal labor demand and expand the informal buffer. Under complementarity, they raise formal employment, wages, and output. The model is a small open economy with imported AI capital and country risk, so exchange-rate and financial conditions shape the magnitude of both effects. The core contribution is showing that the same price shock can produce diametrically opposite distributional outcomes depending on the structural relationship between AI and labor.",
+      "key_takeaway": "Whether cheap AI creates or destroys formal jobs in developing economies depends on whether AI substitutes for or complements local workers — a policy distinction that matters more than the price of the technology itself.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both papers analyze how AI-driven cost reductions can restructure employment toward lower-quality or lower-wage arrangements rather than simply expanding output, with this paper extending that logic to the formal-informal labor divide in developing economies.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint with no indication of journal submission status.",
+        "Calibration is to an unspecified generic developing economy; results may not transfer cleanly to specific country contexts.",
+        "The key parameter (elasticity of substitution) is asserted to drive all results but the empirical identification of that elasticity is not addressed in the abstract, leaving the model's predictive power difficult to assess without reading the full paper.",
+        "Abstract provides limited information on robustness checks or sensitivity analysis; summary and pillar relevance are accordingly constrained by thin excerpt."
+      ],
+      "visual_concept": "A single factory gate — a large, slightly rusted metal door — positioned off-center to the left at golden-ratio placement, occupying the middle ground of the frame. The gate is half-open, with warm amber light spilling through the gap onto a concrete forecourt, suggesting qualified opportunity rather than full access. The surrounding environment is a spare industrial perimeter wall, rendered in cool grey tones, kept plain so it does not compete with the gate. On the near side of the gate, in the shadowed foreground, a small queue of indistinct figures stands waiting, conveying the formal-informal threshold. The lighting contrast between the warm interior glow and the cooler exterior shadow serves as the single compositional device drawing the eye inward through the opening. Palette: desaturated cool greys outside, warm ochre and amber inside, soft diffuse light throughout with no hard drama."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "Cheaper AI, More Informality? A Dual Labor Market Model for Developing Economies"
+  },
+  "https://arxiv.org/abs/2607.15385": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This paper argues that the systemic risk embedded in AI-driven finance stems not from algorithms per se but from their convergence on similar model architectures and input signals. From CAMO's perspective on the statistical and algorithmic foundations of trustworthy AI-driven decisions, this is a macro-scale demonstration of a general principle: when AI systems share training signals and decision rules, their errors do not diversify — they amplify. CAMO's work on self-fulfilling bias in online learning algorithms (see 'Dynamic Selection in Algorithmic Decision-making') shows an analogous mechanism at the firm level, where endogenous data feedback reinforces initial errors; this paper extends a related logic to systemic, cross-border financial instability.",
+      "claude_summary": "When AI-driven fund managers rely on similar models and signals, their trading decisions become correlated — and that correlation amplifies capital outflows from emerging markets when U.S. monetary policy tightens. This paper builds a two-region macro-financial model and tests it against equity portfolio flow data from 19 emerging markets between 2000 and 2024. The key finding is that model homogeneity, not algorithmic speed or scale, is the destabilizing force: correlated errors compound during high-volatility periods, while diverse models allow errors to cancel out. The policy implication shifts attention away from limiting non-bank intermediation and toward preserving algorithmic diversity in asset management.",
+      "key_takeaway": "AI-driven herding in asset management destabilizes emerging-market capital flows not because algorithms are fast, but because too many of them are thinking alike.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers identify how correlated algorithmic errors compound over time when models share signals or data feedback loops — one at the firm level via self-fulfilling bias, the other at the systemic level via herding in capital markets.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not yet peer-reviewed — posted as an arXiv working paper (v1, July 2026).",
+        "Empirical tests rely on aggregate portfolio flow data, which may conflate algorithmic and non-algorithmic fund behavior; the paper's own proxy for 'algorithmic' intermediation should be scrutinised.",
+        "Policy recommendation (preserve model diversity) is intuitive but the paper does not propose a concrete regulatory mechanism, limiting actionability for policy audiences."
+      ],
+      "visual_concept": "A single large flock of birds (a murmuration) rendered as small geometric chevrons, tightly clustered and moving in one direction, positioned centrally in a wide-open sky — the focal subject. The cluster occupies roughly the upper-center third of the frame. A single vanishing-point perspective, suggested by a faint horizon line of city towers far below, draws the eye toward the dense center of the flock. The surrounding sky is kept bare and gradient — deep navy at the top thinning to pale steel-blue near the horizon — so nothing competes with the formation. Lighting is cool, late-dusk, with a diffuse silver quality that flattens shadows and gives the chevrons a uniform sheen, reinforcing the sense of identical actors moving in lockstep."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy"
+  },
+  "https://arxiv.org/abs/2607.15769": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study argues that scaling AI-generated contributions in open-source software outpaces the governance structures maintainers have to assess risk and assign accountability — a coordination failure distinct from purely technical concerns. From CAMO's perspective on AI adoption, the deeper implication is that AI deployment typically optimises task throughput while leaving the organisational infrastructure for oversight and accountability underdeveloped; real adoption risk sits in those gaps, not in the technology itself. This mirrors findings in CAMO's Decathlon China case, where AI accelerated individual tasks but exposed coordination bottlenecks as the binding constraint on system-level performance.",
+      "claude_summary": "As AI coding agents flood open-source repositories with machine-generated contributions, human maintainers face a governance bottleneck: they cannot assess risk, accountability, or evidence at the pace agents produce code. This paper diagnoses the problem through an audit of 50 GitHub repositories — finding fragmented AI-governance signals but no coherent framework — and proposes the Agent Governance Manifest (AGM), a repository-hosted contract linking contributor-side evidence preparation to maintainer-side verification authority. In controlled evaluations, AGM-supported reviewers correctly identified risk labels in 37 of 38 cases versus 15 of 37 without it, and reported substantially higher perceived review support. The study frames governability as a distinct layer above mere traceability, positioning the AGM as infrastructure for keeping human judgment authoritative in AI-mediated workflows.",
+      "key_takeaway": "When AI agents generate contributions faster than humans can audit them, the critical investment is governance infrastructure that preserves human decision authority — not more agent capability.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both the AGM paper and the Decathlon case identify coordination infrastructure — not task-level AI capability — as the binding constraint when AI scales contribution or execution faster than human oversight can keep pace.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal acceptance.",
+        "Evaluation sample is small (15 reviewer-side participants, 15 contributor-side participants), which limits generalisability of the quantitative findings.",
+        "Study is narrowly scoped to open-source software repositories; applicability to enterprise AI governance contexts requires extrapolation."
+      ],
+      "visual_concept": "A single wooden gavel resting on a plain stone surface, centered in the lower third of the frame, slightly off-axis to the golden ratio. Behind it, a wall of softly blurred pull-request cards or document tiles recedes to a central vanishing point, drawing the eye toward the gavel as the focal anchor of order amid volume. The environment is minimal — cool grey tones with a faint warm light source pooling directly onto the gavel head — suggesting institutional authority without clutter. Palette: muted slate and off-white with one accent of amber on the gavel's striking face."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "Making Agent-Mediated Contributions Governable: A Project-Level Governance Manifest for Open-Source AI Collaboration"
+  },
+  "https://arxiv.org/abs/2607.15944": {
     "data": {
       "audience_relevance": {
         "general_econ_public": "medium",
         "managers_csuite": "high",
-        "policy_makers": "low"
+        "policy_makers": "high"
       },
-      "centre_angle": "This podcast case study positions AI-driven productivity as one lever among several in a century-old industrial firm's modernization — a pattern consistent with what CAMO's Deloitte-HKU AI Adoption Index 2026 identifies as the dominant corporate reality: AI adoption is nearly universal in aspiration but shallow in measurable impact, with organizational and leadership factors often mattering more than the technology itself. The TITAN case, where succession and governance questions appear to carry equal or greater weight than the AI initiative, illustrates how AI adoption decisions are embedded in broader organizational structures that firms must resolve first. For CAMO's purposes, the more instructive question is whether TITAN's AI productivity effort changed job boundaries or managerial roles — a question the available excerpt does not answer.",
-      "claude_summary": "Over 26 years as fourth-generation CEO of TITAN Cement, Dimitri Papalexopoulos internationalized a family-owned Greek industrial firm, navigated multiple economic crises, and pursued an AI-driven productivity initiative alongside a low-carbon pivot. The HBR Cold Call podcast discusses a Harvard Business School case examining how TITAN approached digitalization and succession planning — specifically whether to appoint the company's first non-family CEO. The article is primarily a leadership and family-business governance story; AI appears as one element of a broader modernization agenda rather than the central subject. The excerpt provides limited detail on what the AI productivity effort entailed, making any AI-specific analysis provisional.",
-      "key_takeaway": "For established industrial firms, AI adoption decisions cannot be disentangled from governance and succession structures — the organizational questions often determine whether the technology initiative actually lands.",
-      "linkedin_caption_draft": "Family businesses face a compounded version of the AI adoption problem.\n\nTITAN Cement's outgoing CEO Dimitri Papalexopoulos spent 26 years internationalizing a Greek industrial company and championing an AI-driven productivity push — while simultaneously wrestling with whether to recommend the firm's first non-family CEO. That sequencing matters: organizational structure and leadership continuity shape whether an AI initiative actually changes how work gets done, or simply sits alongside existing hierarchies.\n\nCAMO's Deloitte-HKU AI Adoption Index found that the hardest barriers to AI adoption are organizational, not technical — siloed departments, cultural resistance, and unclear accountability. A CEO transition in a family firm is exactly the kind of structural moment that can either entrench those barriers or dissolve them.\n\nFor C-suite leaders in founder-led or family-owned firms: is your AI agenda connected to your governance roadmap, or running separately from it?\n\n#AIAdoption #FamilyBusiness #Leadership #OrganizationalChange #CAMO",
+      "centre_angle": "This paper argues that the question of whether to automate a role should be governed by a structured protocol that prices systemic risks — tacit knowledge erosion, resilience reduction, regulatory exposure — which conventional ROI frameworks leave off the balance sheet. From CAMO's perspective on AI adoption, the implication is that firms racing to automate without role-level audit frameworks are accumulating hidden 'automation debt' that can surface as operational fragility or compliance failure. This concern maps directly onto patterns documented in CAMO's CIMC nano-case, where tacit knowledge previously embedded in experienced individuals had to be deliberately reconstructed in a structured knowledge base before AI-driven workflows could function reliably.",
+      "claude_summary": "Standard automation ROI calculations systematically ignore four categories of risk that erode long-term organizational performance: tacit knowledge loss, reduced resilience, regulatory exposure, and degradation of socio-institutional capital. The paper introduces PHP-AIO, a five-gate sequential decision protocol that quantifies these unpriced risks at the role level and produces four distinct outcomes — automate, augment, hybrid, or preserve — rather than defaulting to automation wherever costs fall. A formal 'automation-debt' measure tracks how role-level decisions compound across multi-step processes, with risk neutralized only by a mandated human-in-the-loop anchor. Applied to stylized internal roles, the protocol reverses automation decisions that standard cost-benefit analysis would approve. The framework is preprint-stage and applied to stylized, not empirical, case profiles.",
+      "key_takeaway": "Before automating any role, organizations need a structured protocol that prices tacit knowledge loss and resilience risk — costs that standard ROI calculations will not surface on their own.",
       "matched_camo": [
         {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "TITAN's pattern of pairing an AI productivity push with unresolved organizational and leadership questions mirrors the Index finding that adoption barriers are predominantly executional and structural rather than technical.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
+          "id": "nanocase-cimc-2026",
+          "reason": "Both pieces center on the organizational risk of tacit knowledge erosion when experienced human roles are displaced by AI, and on the need for deliberate knowledge-preservation mechanisms before automation proceeds.",
+          "title": "Scaling Expert Knowledge with AI at CIMC",
+          "url": "https://camo.hku.hk/nanocase-scalingexpertknowledgewithaiatcimc/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "Both papers identify systemic costs of AI-driven role elimination that are invisible to standard cost-benefit analysis — one through a formal automation-debt measure, the other through principal-agent modeling of incentive degradation.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
         }
       ],
       "pillar": "AI Adoption",
-      "pillar_relevance": 38,
+      "pillar_relevance": 82,
       "red_flags": [
-        "Primary source is a podcast episode based on an HBR case study — the underlying case may be paywalled or require course access, limiting audience ability to verify claims directly.",
-        "The AI initiative is mentioned only briefly in the excerpt; no specifics on scope, outcomes, or methodology are provided, making any AI-focused analysis speculative.",
-        "HBR Cold Call is practitioner-oriented storytelling, not peer-reviewed research — findings should be treated as illustrative rather than empirically generalized.",
-        "Potential hagiographic framing: the case is co-discussed with the departing CEO himself, which may limit critical perspective on the AI or governance decisions."
+        "Preprint only — not peer-reviewed; findings have not been independently validated.",
+        "Protocol is applied to stylized, hypothetical role profiles rather than empirical organizational data, limiting generalizability claims.",
+        "Threshold sensitivity analysis covers only four representative cases; robustness across diverse industries and role types is undemonstrated."
       ],
-      "visual_concept": "A cross-section diagram of a multi-story building under renovation: the upper floors show new open-plan layouts being constructed while the load-bearing columns — representing ownership structure and governance — remain unchanged at the base. The tension between new configuration above and fixed structure below conveys organizational modernization constrained by inherited architecture.",
-      "x_caption_draft": "TITAN Cement's CEO spent 26 years modernizing a family industrial firm — AI productivity push included. But the harder question was governance: who leads next? Org structure shapes whether AI initiatives actually change work. CAMO's Adoption Index found the same. https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio\n\nAI adoption in legacy firms isn't mainly a technology problem. TITAN's story: the succession decision may matter more to AI's real impact than the tools themselves. https://camo.hku.hk/ai-adoption-survey/"
+      "visual_concept": "A single wooden chair positioned slightly off-center in the left third of the frame, sitting in an otherwise empty, softly lit office corridor with a long tiled floor receding toward a vanishing point at the far end. The chair is the focal subject — solid, grounded, clearly occupied in purpose if not in fact — and the corridor's converging lines draw the eye directly to it. The surrounding space is spare: pale walls, minimal furniture, no clutter competing for attention. Lighting is cool and directional, entering from high windows on one side so that a clean shadow falls away from the chair toward the right, reinforcing its solidity against the empty space around it. The palette runs from warm amber on the chair's wood grain to cool grey-blue in the receding corridor, suggesting the tension between what is preserved and what recedes."
     },
-    "enriched_at": "2026-05-17",
+    "enriched_at": "2026-07-21",
     "model": "claude-sonnet-4-6",
-    "title": "How a Family-Owned Greek Cement Company Evolved Its Leadership While Pivoting Its Product Portfolio"
+    "title": "When Not to Automate: A Formal Protocol for Human Preservation in AI-Optimized Organizations"
+  },
+  "https://arxiv.org/abs/2607.16130": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This paper addresses a practical gap in AI governance: the absence of a systematic, auditable method for tracking whether a deployed AI system remains within acceptable trustworthiness bounds over time. From CAMO's perspective on algorithmic decision-making, the implication is significant — organizations deploying AI at scale need more than static validation at launch; they need continuous, documentable reassessment mechanisms that can withstand regulatory scrutiny. This work provides a formal scaffolding for exactly that, though its value to managers will depend on whether governance teams can operationalize interpretable rule-learning within their existing compliance workflows.",
+      "claude_summary": "How do you know whether an AI system is still trustworthy six months after deployment — and how do you document that judgment in a way auditors can verify? This paper proposes a structured methodology: a formal framework that encodes trustworthiness as interpretable rules over measurable dimensions, and a governance procedure that embeds those rules into a lifecycle workflow covering design-time labeling, post-deployment monitoring, reassessment, and reporting. Using decision trees as the interpretable model class, the approach generates explicit trustworthiness plateaus and two diagnostics — boundary margins and profile drift — to flag when a system is approaching or has crossed a governance threshold. The methodology is positioned as an evidential support layer, not a replacement for legal or expert judgment.",
+      "key_takeaway": "Organizations deploying AI need structured, auditable methods to document whether a system remains trustworthy after launch — not just at the point of initial approval.",
+      "matched_camo": [
+        {
+          "id": "nanocase-dingdong-2026",
+          "reason": "Dingdong's case illustrates a real-world instance where AI-driven performance attribution required an auditable appeals process and ongoing human oversight — exactly the kind of lifecycle governance accountability gap this methodology aims to formalize.",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Preprint only — not yet peer-reviewed; findings and framing may change.",
+        "Evaluation is conducted on synthetic lifecycle traces rather than real deployed AI systems, which limits immediate practical validation.",
+        "Methodology is presented as a proof-of-concept; operational feasibility in complex enterprise governance contexts is not demonstrated."
+      ],
+      "visual_concept": "A single large analog gauge or dial — the kind used in industrial control rooms — positioned slightly left of center in the frame, occupying the middle ground. The gauge face displays a spectrum from green through amber to red, with the needle resting in the amber zone. A single overhead industrial light pools down onto the gauge face, leaving the surrounding space in soft shadow. The environment is minimal — a plain dark wall, a faint suggestion of a technical console below — nothing that competes with the gauge itself. The palette is cool and institutional: slate grays, muted steel tones, with the amber needle providing the only warm accent. The mood is measured vigilance rather than alarm."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "A Methodology for Auditable Trustworthiness Levels in AI Lifecycle Governance"
   },
   "https://hbr.org/podcast/2026/07/are-we-entering-a-new-age-of-creativity-with-the-help-of-ai": {
     "data": {
@@ -1549,6 +1369,37 @@
     "model": "claude-sonnet-4-6",
     "title": "How Leaders Can Use AI to Solve Real Business Problems"
   },
+  "https://hbr.org/podcast/2026/07/leadership-summit-2026-att-ceo-john-stankey-on-developing-technology-and-talent-in-the-ai-era": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This podcast conversation illustrates a recurring pattern in enterprise AI adoption: the technical integration of AI is tractable, but reshaping the organizational culture and talent base to use it effectively is the harder constraint. From CAMO's perspective on AI adoption, Stankey's experience at AT&T reinforces what the Deloitte-HKU AI Adoption Index 2026 found across C-suite executives in China and Hong Kong — that the dominant barriers to meaningful AI impact are organizational and executional, not technical. The question of how a CEO actually instills a market-driven, AI-ready mindset at scale, without losing institutional continuity, is precisely the implementation gap that separates announced AI strategies from measured outcomes.",
+      "claude_summary": "AT&T CEO John Stankey describes how he reoriented a legacy telecommunications company around connectivity while simultaneously overhauling its culture. Speaking at HBR's Leadership Summit 2026, Stankey outlines how AT&T encouraged employees to adopt a customer-led, market-driven mindset, integrated AI into products and performance management, and reinstated in-person collaboration as a deliberate cultural tool. The conversation centers on the organizational and human challenges of large-scale AI integration inside an incumbent firm — how to retrain and retain talent, how to shift institutional habits, and how to prevent legacy culture from resisting necessary change. The excerpt is limited, so specific mechanisms and outcomes are not fully detailed.",
+      "key_takeaway": "At legacy-scale firms, AI adoption succeeds or fails on cultural and talent transformation, not on the technology itself.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the AT&T discussion and the Deloitte-HKU survey center on the gap between AI adoption ambition and realized performance, with organizational culture and change management identified as the primary friction points rather than technology availability.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 68,
+      "red_flags": [
+        "Podcast excerpt is thin — specific AI initiatives, metrics, and outcomes at AT&T are not described in the available RSS text; findings should not be extrapolated beyond what Stankey is quoted as saying.",
+        "Not peer-reviewed; represents a single executive's account of his own company's strategy, which carries inherent self-presentation bias.",
+        "Likely requires HBR subscription or podcast access to verify full content."
+      ],
+      "visual_concept": "A single empty executive conference table — long, rectangular, dark wood — photographed from one end in a slight low angle so it recedes toward a floor-to-ceiling window at the far end. The window is the sole light source, casting cool midday daylight down the length of the table as a single strong vanishing point that draws the eye forward. The surrounding boardroom is sparsely detailed — plain walls, no clutter — so nothing competes with the table's perspective line. The palette is cool grey and deep brown with the window providing a pale, overcast luminosity. The composition evokes institutional weight and the pressure of organizational decision-making without depicting people, technology, or corporate symbols."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "Leadership Summit 2026: AT&T CEO John Stankey on Developing Technology and Talent in the AI Era"
+  },
   "https://hbr.org/podcast/2026/07/leadership-summit-2026-mattels-ceo-on-driving-consumer-engagement-and-cultural-impact": {
     "data": {
       "audience_relevance": {
@@ -1580,45 +1431,6 @@
     "enriched_at": "2026-07-07",
     "model": "claude-sonnet-4-6",
     "title": "Leadership Summit 2026: Mattel’s CEO on Driving Consumer Engagement and Cultural Impact"
-  },
-  "https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "high",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This article argues that responsible AI governance has a blind spot: it evaluates models but not the workforce consequences of deploying them. From CAMO's perspective on AI and jobs, this gap is well-evidenced in practice — our research on the hidden competency penalty for AI users (see 'Research: The Hidden Penalty of Using AI at Work') shows that even when organizations provide AI access, the social and evaluative dynamics around its use can harm the very workers it is meant to help. Extending RAI frameworks to include job design, accountability attribution, and adoption incentives is not peripheral to responsible AI — it is central to whether deployment produces net benefit for organizations and the people inside them.",
-      "claude_summary": "A fifth consecutive annual survey by MIT Sloan Management Review and Boston Consulting Group examines how organizations are implementing responsible AI (RAI) worldwide. This year's edition shifts attention toward workforce impact as an underexamined dimension of RAI — arguing that responsible AI frameworks have focused heavily on model-level concerns (bias, explainability, safety) while neglecting the organizational and human consequences of deployment: job displacement, skill degradation, shifting accountability, and uneven distribution of AI's benefits and burdens. The article draws on an international panel of academics and practitioners to assess RAI maturity and calls on organizations to extend their governance frameworks to cover how AI reshapes work itself. Note: the full findings are behind a paywall; this summary is based on the RSS excerpt and title framing.",
-      "key_takeaway": "Responsible AI frameworks that stop at the model layer — ignoring how deployment reshapes jobs, accountability, and worker welfare — are incomplete governance, not just incomplete ethics.",
-      "linkedin_caption_draft": "Responsible AI has a structural blind spot.\n\nFor five years, MIT Sloan Management Review and BCG have tracked how organizations implement responsible AI. This year's report raises a pointed question: why do most RAI frameworks scrutinize the model — bias, explainability, safety — while saying little about what AI deployment does to the workforce?\n\nJob boundaries shift. Accountability becomes harder to assign. The benefits and risks of AI land unevenly on different workers. These are not edge cases; they are routine consequences of scaled deployment.\n\nAt CAMO, our own research reinforces this concern. We've found that engineers who use AI tools are rated as less competent by peers — despite producing identical work — and that AI adoption can systematically push firms toward lower-wage, lower-effort job structures even when that outcome harms everyone involved.\n\nGovernance that covers models but not the people working alongside them is not responsible AI. It's incomplete infrastructure.\n\nHow is your organization addressing workforce impact inside its AI governance framework? 🔍\n\n#ResponsibleAI #AIGovernance #FutureOfWork #AIAdoption #WorkforceStrategy",
-      "matched_camo": [
-        {
-          "id": "hidden-penalty-ai-work-2025",
-          "reason": "Both pieces identify a gap between organizational AI access/adoption policy and the social dynamics that determine whether employees can use AI without penalty — a direct illustration of why workforce impact belongs inside RAI frameworks.",
-          "title": "Research: The Hidden Penalty of Using AI at Work",
-          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
-        },
-        {
-          "id": "bad-job-economy-2026",
-          "reason": "The article's call to include workforce impact in RAI governance aligns with this paper's finding that AI adoption can systematically degrade job quality and worker welfare even when firms act rationally — a structural risk that model-level RAI checklists would not capture.",
-          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
-          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
-        }
-      ],
-      "pillar": "AI & Jobs",
-      "pillar_relevance": 78,
-      "red_flags": [
-        "Full article is paywalled at MIT Sloan Management Review — findings beyond the framing and excerpt cannot be independently verified from the RSS excerpt alone; pillar relevance and summary are based on limited available text.",
-        "Annual survey series from MIT SMR and BCG: BCG is a consulting firm with commercial interests in AI adoption advisory services, which may influence framing of 'RAI maturity' findings.",
-        "Not peer-reviewed — practitioner survey report rather than academic research."
-      ],
-      "visual_concept": "A cross-section architectural diagram of a building: the lower floors (labeled 'model governance') are densely detailed with rooms, walls, and regulations, while the upper floors (labeled 'workforce impact') are shown as an unfinished open frame — structural columns visible but no interior walls, no occupants. The contrast between completed infrastructure below and empty, ungoverned space above carries the central argument.",
-      "x_caption_draft": "Responsible AI frameworks scrutinize models — bias, safety, explainability. But who governs what AI deployment does to workers? MIT SMR/BCG's annual RAI survey says that gap is the next frontier. CAMO research shows the costs of ignoring it are already here. https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/\n\nEngineers penalized for using AI tools. Job structures degrading even when adoption succeeds. These aren't model failures — they're governance failures. Workforce impact belongs inside RAI frameworks, not outside them. https://sloanreview.mit.edu/article/beyond-the-model-why-responsible-ai-must-address-workforce-impact/"
-    },
-    "enriched_at": "2026-05-17",
-    "model": "claude-sonnet-4-6",
-    "title": "Beyond the Model — Why Responsible AI Must Address Workforce Impact"
   },
   "https://sloanreview.mit.edu/article/genai-success-metrics-look-beyond-reduced-workload/": {
     "data": {
@@ -1758,39 +1570,6 @@
     "enriched_at": "2026-06-09",
     "model": "claude-sonnet-4-6",
     "title": "Our Guide to the Summer 2026 Issue"
-  },
-  "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "high",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This article argues that GenAI's proliferation of idea-generation capacity renders ideation itself less differentiating, shifting competitive value toward execution and change management. From CAMO's perspective on AI adoption, this reframes the central adoption challenge: the bottleneck is not technical capability or even access to AI tools, but the organizational and social dynamics that determine whether AI-enabled ideas ever reach implementation. CAMO's Deloitte-HKU AI Adoption Index 2026 supports this directly — surveyed executives identified cultural resistance and siloed departments as more significant barriers to AI impact than any technical limitation, suggesting that the 'human element' the article describes is already the dominant constraint in enterprise AI deployment.",
-      "claude_summary": "As generative AI commoditizes idea generation, the article argues that competitive advantage is shifting from the quality of ideas to the ability to execute on them — specifically, to overcome the human resistance that new ideas inevitably encounter. The author contends that GenAI can produce an abundance of options, but it cannot navigate the organizational, social, and psychological friction that prevents good ideas from being adopted. The real innovation edge, the piece suggests, now belongs to firms and individuals who understand why people resist change and can design implementation strategies accordingly. The excerpt is brief and the full argument sits behind a paywall, so specific evidence or case studies cited in the article remain unknown.",
-      "key_takeaway": "When GenAI makes good ideas abundant, the scarce resource becomes the organizational capacity to overcome resistance and actually implement them.",
-      "linkedin_caption_draft": "GenAI can generate a hundred ideas before your first coffee. So what's the actual competitive advantage now?\n\nThis MIT Sloan piece makes a pointed argument: when ideation becomes a commodity, the differentiator shifts to execution — specifically, to understanding and overcoming the human resistance that stops good ideas from going anywhere.\n\nThat diagnosis aligns with what CAMO found in its 2026 AI Adoption Index with Deloitte: among C-suite leaders in China and Hong Kong, the dominant barriers to AI impact were cultural resistance and organizational silos, not technology gaps. Access to AI is no longer the hard part.\n\nFor managers, this reframes the investment question. Training budgets and tool subscriptions matter less than building the organizational capacity to move from AI-generated option to implemented reality.\n\nHow is your organization building that capacity — and who owns it?\n\n#AIAdoption #Innovation #OrganizationalChange #FutureOfWork #CAMO",
-      "matched_camo": [
-        {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "The index finds that organizational and cultural barriers — not technical ones — are the primary reason AI adoption falls short of expected ROI, directly corroborating the article's claim that execution and change management, not idea generation, are where competitive advantage now resides.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "Article appears to be behind a paywall at MIT Sloan Management Review; full argument and any supporting evidence cannot be verified from the excerpt alone.",
-        "Author is a practitioner-professor and co-author of a book on the same theme — potential framing bias toward the book's central thesis.",
-        "The excerpt is thin; the summary and analysis are based on the article's stated argument rather than verified empirical findings."
-      ],
-      "visual_concept": "A wide corridor lined with identical open doors, each door representing a generated idea, all leading to a single narrow passage at the far end that only one person can walk through at a time — emphasizing abundance at the generation stage and constraint at the execution stage.",
-      "x_caption_draft": "GenAI makes ideation cheap. The new competitive edge? Navigating the human resistance that stops ideas from becoming reality. @MITSloan's latest — and it matches what CAMO found in its AI Adoption Index. https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/\n\nCAMO's Deloitte survey of 100+ C-suite execs found cultural resistance & siloed departments outrank technical gaps as the #1 AI adoption barrier. The bottleneck was never the algorithm. #AIAdoption #Innovation"
-    },
-    "enriched_at": "2026-05-17",
-    "model": "claude-sonnet-4-6",
-    "title": "The Innovation Advantage GenAI Can’t Give You"
   },
   "https://sloanreview.mit.edu/article/the-real-question-to-ask-about-ai-governance/": {
     "data": {
@@ -2103,6 +1882,38 @@
     "model": "claude-sonnet-4-6",
     "title": "Economic ResearchJun 26, 2026Anthropic Economic Index report: CadencesIn our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?"
   },
+  "https://www.mckinsey.com/au/our-insights/ai-in-the-australian-for-purpose-sector-laying-a-strong-foundation": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This article raises a concern that applies well beyond the for-purpose sector: AI adoption guided primarily by efficiency metrics can quietly degrade the quality of work that matters most but is hardest to measure. CAMO's research on seesaw experimentation (Seesaw Experimentation, 2024) formalises exactly this dynamic—innovations that improve a primary measurable dimension can impose unmeasured costs that outweigh the gains. For mission-driven organisations, where outcomes are often relational and long-term, the risk of optimising the measurable at the expense of the meaningful is especially acute, and governance frameworks need to account for it explicitly.",
+      "claude_summary": "Australian for-purpose organisations—charities, NGOs, and social enterprises—are adopting AI at a growing rate, but the article warns that without deliberate planning, AI risks amplifying operational pressure and optimising for measurable outputs rather than genuine social outcomes. Leaders in this sector face a distinctive challenge: their mission is harder to quantify than profit, making it easy for AI-driven efficiency gains to crowd out the relational, judgment-intensive work that defines their impact. The piece calls on leaders to build considered AI foundations—covering governance, staff readiness, and mission alignment—before scaling deployment. The excerpt is brief and the full argument sits behind McKinsey's site, so specific evidence or data points cannot be confirmed.",
+      "key_takeaway": "For-purpose organisations adopting AI need governance frameworks that protect mission-critical, hard-to-quantify work from being displaced by efficiency pressures that only capture what is easy to measure.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "reason": "The article's core warning—that AI can improve measured outputs while degrading unmeasured outcomes—maps directly to the seesaw experimentation phenomenon, where optimising a primary metric creates negative spillovers in secondary, harder-to-track dimensions.",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 68,
+      "red_flags": [
+        "Full article may be gated or require McKinsey registration; the RSS excerpt is brief and does not surface specific data, methodology, or evidence base.",
+        "McKinsey Insights is practitioner commentary, not peer-reviewed research; findings should be treated as advisory rather than empirical.",
+        "Potential conflict of interest: McKinsey advises for-purpose and public-sector clients on AI strategy, which may shape framing toward managed consulting engagements.",
+        "Scope is Australia-specific, limiting direct generalisability to other markets."
+      ],
+      "visual_concept": "A single wooden signpost, positioned left-of-centre in the frame, standing in a spare open landscape under soft overcast daylight. The signpost carries two arms pointing in different directions—one labelled with a simple upward arrow suggesting speed or output, the other with a slower, curved path suggesting care or deliberation. The eye lands on the fork in the signpost as the primary subject. A single vanishing-point road behind the post draws attention inward and upward, implying a choice ahead rather than one already made. The surrounding environment is minimal—flat ground, muted sage and grey tones—so nothing competes with the signpost. Lighting is cool, diffused, and even, conveying measured reflection rather than urgency."
+    },
+    "enriched_at": "2026-07-21",
+    "model": "claude-sonnet-4-6",
+    "title": "AI in the Australian for-purpose sector: Laying a strong foundation"
+  },
   "https://www.mckinsey.com/capabilities/business-building/our-insights/the-seven-operating-truths-of-ai-native-companies": {
     "data": {
       "audience_relevance": {
@@ -2310,40 +2121,6 @@
     "enriched_at": "2026-06-23",
     "model": "claude-sonnet-4-6",
     "title": "AI is turning every company into a software company"
-  },
-  "https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "high",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This McKinsey article argues that agentic AI in real estate is shifting the locus of value from task-level automation to system-level workflow redesign. From CAMO's perspective on AI adoption, this mirrors a pattern we document in manufacturing and retail contexts: efficiency gains from automating individual tasks are frequently smaller than the gains from compressing coordination between tasks—as illustrated in our Decathlon China case, where coding efficiency rose 20–40% but end-to-end delivery speed improved by only 10–15% until coordination itself was restructured. The real estate sector may be approaching the same inflection point, where the binding constraint is organizational redesign rather than model capability.",
-      "claude_summary": "Agentic AI is shifting real estate from point-tool automation toward end-to-end workflow integration, according to McKinsey Insights. The article argues that the sector is moving beyond isolated AI applications—such as property valuation models or lease abstraction—toward systems that can reason, plan, and act across entire processes: deal sourcing, due diligence, asset management, and tenant engagement. The implication is that value creation is no longer about deploying a single model but about redesigning how work is sequenced and who—or what—handles each step. The excerpt is brief and the underlying article may contain more granular data, but the directional claim is that agentic architectures are beginning to reshape organizational roles and operating models in real estate.",
-      "key_takeaway": "In real estate, as elsewhere, the shift to agentic AI matters less for what individual tools can do and more for how organizations redesign the workflows those tools connect.",
-      "linkedin_caption_draft": "AI in real estate has spent years automating individual tasks. Agentic AI is now asking a harder question: what happens when you connect those tasks into a single, reasoning workflow?\n\nMcKinsey's latest piece argues the sector is moving from point-tool deployments toward end-to-end process integration—spanning deal sourcing, due diligence, asset management, and tenant engagement. The value, they suggest, is in the architecture, not the individual model.\n\nCAMO's research points to the same dynamic. In our Decathlon China case, coding efficiency rose 20–40% through AI assistance, but overall delivery speed improved by only 10–15%—because the bottleneck was coordination between tasks, not execution of them. Real estate firms may be approaching exactly this inflection point.\n\nThe question worth asking: is your organization optimizing tasks, or redesigning the system?\n\n#AIAdoption #RealEstate #AgenticAI #OrganizationalDesign #HKUCAMO",
-      "matched_camo": [
-        {
-          "id": "nanocase-decathlon-china-2026",
-          "reason": "Both the article and this case study argue that AI's organizational value is realized at the workflow and coordination level rather than through isolated task automation—a structural parallel that grounds CAMO's angle.",
-          "title": "Compressing Coordination with AI at Decathlon China",
-          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "The RSS excerpt is very brief; the full article's empirical basis, methodology, and data sources cannot be verified from the excerpt alone—pillar relevance and summary are based on limited information.",
-        "McKinsey Insights is a consulting-firm publication, not peer-reviewed research; findings may reflect client-facing framing or selection toward optimistic adoption narratives.",
-        "No authors are identified, which limits accountability for specific claims.",
-        "The article may be partially or fully gated depending on McKinsey account status."
-      ],
-      "visual_concept": "A cross-section architectural diagram of a mid-rise commercial building, where each floor represents a distinct business function—leasing, asset management, due diligence, tenant services—connected by a single continuous vertical shaft rather than isolated staircases. The shaft is the only element rendered in a different material, suggesting a structural integration rather than added decoration.",
-      "x_caption_draft": "Agentic AI in real estate isn't just faster automation—it's workflow redesign. McKinsey argues value shifts to end-to-end process integration. CAMO's research: the real bottleneck is usually coordination, not execution. https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate\n\nWhen AI connects deal sourcing, due diligence, and asset management into one reasoning system, the org chart changes too. Who owns the workflow when no single person runs it? #AIAdoption #RealEstate"
-    },
-    "enriched_at": "2026-05-16",
-    "model": "claude-sonnet-4-6",
-    "title": "Where AI is creating real value in real estate"
   },
   "https://www.mckinsey.com/industries/healthcare/our-insights/the-real-future-of-work-in-healthcare": {
     "data": {
