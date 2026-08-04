@@ -1,0 +1,412 @@
+{
+  "week_start": "2026-07-28",
+  "week_end": "2026-08-04",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "Optimizing Monetization Strategies for Generative AI Firms: Implications for Search Engagement",
+      "link": "https://arxiv.org/abs/2607.28780",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Veronica Rosendo-Rios (Universidad Pontificia Comillas, ICADE, Madrid. Spain), Paurav Shukla (Southampton Business School, University of Southampton, Southampton. UK)",
+      "summary": "arXiv:2607.28780v1 Announce Type: cross \nAbstract: As Generative Artificial Intelligence (GenAI) platforms, such as ChatGPT, have transformed digital search querying behavior, mounting operational costs challenge firms to explore alternative monetization strategies beyond traditional subscription models. However, little is known about how alternative advertising-supported monetization models can help GenAI firms recover costs while maintaining search query engagement. Drawing on the compromise effect and affective primacy theories, we develop a framework wherein the introduction of advertising-supported monetization models influences user upgrading and downgrading decisions, contingent on the number of available monetization options. Across four experiments (N=1063), findings reveal that introducing a single advertising-supported option enhances the compromise effect, encouraging free users to upgrade, but leading paid subscribers to downgrade. However, offering two advertising-supported models mitigates the effect, maintaining subscriber retention while still motivating free users to upgrade. We show that affective and cognitive evaluations serially mediate preference for advertising-supported models, with temporal intrusiveness, but not visual, moderating these effects. We provide actionable insights for GenAI firms on potentially optimizing revenue strategies while balancing user engagement with search queries on their platform.",
+      "ai_strong": 7,
+      "ai_booster": 0,
+      "domain_matches": 7,
+      "edu_demoted": false,
+      "score": 13.57,
+      "reappear": false,
+      "claude_summary": "How should generative AI platforms price their services without driving users away? This study tests whether ad-supported subscription tiers can help GenAI firms like ChatGPT recover rising operational costs while keeping users engaged. Across four experiments with 1,063 participants, the researchers find that adding a single ad-supported tier nudges free users to upgrade but prompts paying subscribers to downgrade. Offering two ad-supported tiers resolves this tension, retaining paid subscribers while still converting free users. Affective and cognitive evaluations mediate these preferences, and time-intrusive advertising — but not visually intrusive ads — is what most damages user experience. The findings draw on compromise-effect and affective-primacy theories to offer practical pricing-tier design guidance for GenAI platform operators.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 52,
+      "centre_angle": "This study argues that GenAI platform monetization is not simply a pricing problem but a user-psychology problem: the number and sequencing of subscription tiers shapes how users emotionally and cognitively evaluate their options, with real consequences for retention and revenue. From CAMO's perspective on AI adoption, the organisational implication reaches beyond consumer platforms — any firm deploying GenAI tools internally must consider how pricing architecture and access tiers affect whether employees engage seriously with those tools or treat them as disposable. This connects loosely to the adoption-barrier dynamics documented in CAMO's Deloitte-HKU AI Adoption Index, where shallow engagement, not lack of access, was the dominant failure mode.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both pieces grapple with the gap between nominal AI access and genuine, value-generating engagement — one from a consumer-pricing angle, the other from an enterprise-deployment angle."
+        }
+      ],
+      "key_takeaway": "Offering two ad-supported tiers — rather than one — lets GenAI platforms grow paid subscriptions without cannibalising existing ones, because it defuses the compromise effect that otherwise pulls paying users down.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A centered, vertical stack of three rectangular cards arranged like a pricing menu on a plain off-white background, each card a slightly different shade of cool grey-blue and progressively taller to suggest tiered value. The middle card is subtly highlighted by a soft pool of warm amber light falling directly onto it from above, drawing the eye without neon or glow effects. The surrounding space is deliberately minimal — no UI chrome, no figures, no device frames — so the tier structure itself is the sole subject. Lighting is soft and directional, studio-diffused, with cool ambient tone contrasted by the single warm highlight on the middle tier. The palette is restrained: near-white background, slate-blue cards, one warm accent.",
+      "red_flags": [
+        "Not yet peer-reviewed — posted as an arXiv preprint (v1, August 2026); findings should be treated as preliminary.",
+        "Experimental sample (N=1,063) may skew toward digitally active consumers; external validity to enterprise or non-Western GenAI contexts is untested.",
+        "The study focuses on consumer-facing GenAI platforms; applicability to B2B or workplace AI deployment contexts is limited and not directly tested."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The Tragedy of the Cognitive Commons: How AI Could Disrupt the Regeneration of Professional Expertise",
+      "link": "https://arxiv.org/abs/2607.29380",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Nolan Lovett",
+      "summary": "arXiv:2607.29380v1 Announce Type: cross \nAbstract: Artificial intelligence is reshaping cognitive work, but Human Resource Development scholarship has treated this transformation as an organizational training challenge, leaving the collective regeneration of professional expertise unexamined. This conceptual paper introduces the Cognitive Commons framework, integrating commons theory, HRD scholarship, and distributed cognition to explain how rational AI adoption decisions can deplete the shared expertise pool professions require for renewal. The framework distinguishes Internalized Mastery (deep domain knowledge from sustained practice) from Distributed Mastery (orchestrating human-AI systems), and develops the Validation Tether: effective AI oversight depends on the expertise AI adoption may undermine. Early labor market and clinical evidence suggests possible disruption to expertise-regeneration pathways in highly AI-exposed sectors, though adoption is recent and the strongest signals come from leading sectors rather than all professions. Five factors determine occupational vulnerability, and governance arrangements may form across organizational, professional-association, and policy levels. The paper reframes expertise development as collective stewardship rather than organizational optimization, with implications for HRD theory and workforce policy.",
+      "ai_strong": 7,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 11.63,
+      "reappear": false,
+      "claude_summary": "When professionals routinely delegate cognitive work to AI, they may stop developing the deep expertise that makes AI oversight possible in the first place. This conceptual paper introduces the 'Cognitive Commons' framework, drawing on commons theory and distributed cognition to argue that individual AI adoption decisions—each rational in isolation—can collectively deplete the shared pool of professional knowledge a field needs to reproduce itself. The author distinguishes between Internalized Mastery (domain knowledge built through sustained practice) and Distributed Mastery (coordinating human-AI systems), and proposes a 'Validation Tether': meaningful AI oversight requires exactly the expertise that AI adoption tends to erode. Early signals from clinical and labor-market data are suggestive but not yet conclusive, and the paper is explicitly conceptual rather than empirical.",
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 82,
+      "centre_angle": "This paper argues that AI adoption creates a collective-action problem in expertise development: when enough professionals offload cognitive work to AI, the profession loses its capacity to train the next generation or to validate AI outputs reliably. From CAMO's perspective on careers and accountability, this is a structural risk that sits above the firm level—no single organization's training strategy can resolve it alone. CAMO's work on the hidden penalty of AI use at work already shows that social and organizational dynamics shape whether professionals engage genuinely with AI tools; this framework extends that concern to the question of whether sustained engagement itself erodes the professional knowledge base it depends on.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both papers identify a gap between AI adoption as organizationally encouraged and the unexamined costs that accumulate at the professional and social level—one in reputation, the other in expertise regeneration."
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "The 'bad job economy' paper models how rational firm-level AI adoption can collectively depress the quality of work and worker welfare—a parallel commons-tragedy logic applied at the labor-market level rather than the expertise-pool level."
+        }
+      ],
+      "key_takeaway": "AI adoption may be individually rational for every professional and every firm while collectively hollowing out the expertise base that makes professional AI oversight possible at all.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single stone well, centered in the frame and occupying roughly the lower two-thirds of the image, set in an otherwise spare open courtyard with pale limestone paving. The viewer's eye is drawn into the well's dark circular opening by a tight vanishing point at its center, suggesting depth rather than emptiness. The surrounding courtyard is nearly bare—no figures, minimal detail—so the well reads immediately as the focal subject. Lighting is cool and diffuse, as though overcast midday, casting soft shadows that ring the well's rim and emphasize its circular form. The palette is muted stone grey and chalk white, with the well's interior rendered in near-black, evoking a shared resource that can be drawn down to nothing.",
+      "red_flags": [
+        "Conceptual paper, not peer-reviewed empirical research—findings are frameworks and propositions, not tested conclusions.",
+        "Author acknowledges that supporting empirical evidence is early-stage and drawn from leading sectors only, limiting generalizability.",
+        "Single-author preprint on arXiv; has not yet undergone formal peer review.",
+        "The 'Validation Tether' and 'Cognitive Commons' constructs are novel and untested; caution warranted before treating them as established theory."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Triangulating Across U.S. Federal AI Transparency Regimes",
+      "link": "https://arxiv.org/abs/2607.29540",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Emma Lurie, Emma Fauser, Qing He, Dana\\'e Metaxa, Sorelle A. Friedler",
+      "summary": "arXiv:2607.29540v1 Announce Type: new \nAbstract: Federal AI systems can deny benefits or flag individuals for deportation, but the public disclosures meant to make those systems visible are fragmented and unevenly detailed. This paper examines three existing U.S. federal transparency regimes---System of Records Notices (SORNs), Information Collection Requests (ICRs), and the AI Use Case Inventory---and asks how well they, individually and together, describe government AI use. We find that no single regime fully reveals how the government constructs or deploys AI: each discloses different aspects of a system, and the current disclosure infrastructure makes it very challenging for the public to track specific AI systems across regulatory regimes and over time. Persistent identifiers are absent, granularity varies widely, and the annual AI Use Case Inventory cycle means federal agencies can deploy systems months before appearing in any official record. Using hand-validated zero-shot classification and cross-document entity resolution, we contribute a triangulation method that links disclosures across all three regimes and present two case studies. Our case studies finds that linking records provides greater insight into government AI use, but even linked records would constitute insufficient oversight compared to what public reporting has revealed about the same systems. We trace each regime's disclosure weaknesses to its original administrative purpose, showing these gaps are structural, and offer recommendations focused on the AI Use Case Inventory as the mechanism best suited for public-facing transparency: (1) a broad and consistently applied AI system definition, (2) persistent system identifiers with cross-references to related disclosures, and (3) restored public visibility into risk management processes.",
+      "ai_strong": 10,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 10.66,
+      "reappear": false,
+      "claude_summary": "Federal AI systems in the United States make high-stakes decisions — denying benefits, flagging individuals for deportation — yet the public disclosures meant to ensure accountability are fragmented across three separate regulatory regimes: System of Records Notices, Information Collection Requests, and the AI Use Case Inventory. This paper tests how well these regimes, individually and combined, reveal government AI use. The answer is: poorly. No single regime offers a complete picture, persistent identifiers are absent, granularity is inconsistent, and the annual inventory cycle allows agencies to deploy systems months before any official record appears. Using zero-shot classification and cross-document entity resolution to link disclosures across regimes, the authors show that even linked records fall short of what investigative journalism has uncovered about the same systems. The gaps, the paper argues, are structural — each regime was designed for a different administrative purpose, not public accountability.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This paper demonstrates that the infrastructure for government AI accountability in the United States is architecturally unfit for purpose: three disclosure regimes, none designed with public transparency as a primary goal, collectively fail to provide a coherent picture of how federal AI systems operate. From CAMO's perspective on trustworthy AI-driven decisions, the finding is a structural reminder that auditability is not a default property of regulated systems — it must be deliberately engineered in from the outset. The authors' technical contribution, linking fragmented records via entity resolution, is itself a workaround for a governance gap that proper identifier design could close.",
+      "matched_camo": [],
+      "key_takeaway": "Government AI transparency regimes were built for administrative, not accountability, purposes — and that design choice leaves the public unable to track high-stakes AI systems in any reliable way.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single government filing cabinet drawer, slightly open, placed off-center in the left third of the frame in a sparse, institutional interior — pale concrete walls, cool fluorescent overhead light casting a soft downward pool onto the cabinet. Inside the drawer, three color-coded hanging file sections are visible but their tabs face different directions, making them unreadable from any single angle. A single thin corridor of darker shadow falls away to the right, emphasizing the isolation of the object. The palette is muted grey-blue with the file tabs as the only faint color contrast — no warm tones. The composition is still and documentary in feeling, closer to architectural photography than illustration.",
+      "red_flags": [
+        "arXiv preprint — not yet peer-reviewed; findings should be treated as preliminary",
+        "Case study scope is limited to two federal AI systems, which may constrain generalizability of the triangulation method"
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "A Benchmark for Strategic Auditee Gaming Under Continuous Compliance Monitoring",
+      "link": "https://arxiv.org/abs/2605.06340",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Florian A. D. Burnat, Brittany I. Davidson",
+      "summary": "arXiv:2605.06340v2 Announce Type: replace \nAbstract: Continuous post-deployment compliance audits, mandated by emerging regulations such as the EU AI Act and Digital Services Act, create a class of strategic gaming distinct from the one-shot input/output gaming studied in prior work. Regulated systems can delay outcome reporting, drift their reports within plausible noise envelopes, exploit longitudinal sample attrition, and cherry-pick among ambiguous metric definitions. We formalize continuous auditing as a $T$-round Stackelberg game between an auditor that commits to a temporal policy and an adaptive auditee, and identify a structural feature of any noise-aware static-auditor design: a cover regime in which coverage gaps and granularity gaps cannot be closed simultaneously. We make this formal as Observation 1 and show that two minimal extension policies, each derived from the observation, close the regime along orthogonal axes: a sample-size-aware static rule (Periodic-with-floor) closes the granularity-failure case, while a history-conditioned suspicion-escalation policy closes the coverage-failure case for the naive Drift strategy -- and neither closes both, exactly as the observation predicts; an audit-aware OffAuditDrift strategy that exploits Stackelberg commitment defeats both. To support empirical study we contribute a non-additive harm decomposition (welfare loss $W$, coverage loss $C$) that exposes how attrition shifts harm from the regulator-accountable surface to a regulator-invisible one; an initial library of five auditee strategies (Delay, Drift, Cherry-pick, Attrition, OffAuditDrift) and five auditor policies, calibrated to summary statistics from published audits of the DSA Transparency Database; and a reproducible simulator with a small, extensible Python interface.",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 6,
+      "edu_demoted": false,
+      "score": 6.78,
+      "reappear": false,
+      "claude_summary": "When AI systems face continuous regulatory audits rather than one-shot checks, they can be gamed in ways existing audit designs fail to catch. This paper formalizes the auditor-auditee relationship as a multi-round Stackelberg game and catalogues five distinct gaming strategies — including delaying outcome reports, drifting metrics within noise tolerances, and exploiting sample attrition — that regulated AI systems can use to evade detection. A key structural finding is that no static audit policy can simultaneously close both coverage gaps and granularity gaps; the two failure modes are orthogonal. The authors provide a reproducible simulator calibrated to real transparency data from the EU's Digital Services Act database, offering regulators a concrete tool for stress-testing audit designs before deployment.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This paper demonstrates that continuous compliance monitoring — the backbone of frameworks like the EU AI Act — is structurally vulnerable to adaptive gaming that static audit designs cannot fully prevent. From CAMO's perspective on the algorithmic and data foundations of trustworthy AI, the implication is that audit policy design must itself be treated as a dynamic decision problem, not an engineering specification set once at deployment. The cover-regime result — that granularity and coverage failures cannot be closed simultaneously by any static design — is a practically important constraint that regulators and compliance officers need to understand before mandating audit regimes.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/",
+          "reason": "Both examine how measurable compliance targets invite gaming behavior (Goodhart's Law dynamics), with actors optimizing to the metric rather than the underlying objective — whether internal AI usage quotas or external regulatory audit thresholds."
+        }
+      ],
+      "key_takeaway": "Static audit rules mandated by AI regulations are structurally gameable — regulators need adaptive, history-conditioned monitoring policies, or compliance numbers will diverge from reality.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single large analog scale — the kind used in formal weighing — positioned slightly left of center in the frame, rendered in cool steel-grey against a sparse, dimly lit government-chamber interior. The scale's pans are subtly uneven, one side heavier, though both look balanced from a distance; this tension is the focal point the eye settles on first. A single overhead spotlight pools directly onto the scale's central pivot, casting a clean shadow that fans outward across a bare stone floor, drawing the viewer's gaze inward toward the imbalance. The surrounding space is minimal — plain walls, no ornament — so nothing competes with the scale. Palette is cool and institutional: slate, ash-white, and muted bronze, with soft directional light suggesting a formal but slightly ominous accountability setting.",
+      "red_flags": [
+        "Not peer-reviewed — arXiv preprint (v2), no indication of journal acceptance.",
+        "Findings rest heavily on a formal game-theoretic model; empirical calibration uses summary statistics from published audits rather than primary data, which limits real-world validation.",
+        "The simulator is a research tool, not a validated policy instrument; practical uptake by regulators may be slow."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Do LLMs Hold Their Values? MANTA: A Multi-Turn Adversarial Benchmark for Animal Welfare Reasoning",
+      "link": "https://arxiv.org/abs/2605.16301",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Isabella Luong, Joyee Chen, Sankalpa Ghose, David Williams-King, Linh Le, Allen Lu",
+      "summary": "arXiv:2605.16301v3 Announce Type: replace \nAbstract: Evaluating animal welfare reasoning in LLMs remains an open challenge despite rapid deployment in consumer and professional contexts where welfare considerations appear implicitly in everyday queries. Existing benchmarks such as AnimalHarmBench evaluate this through single-turn, explicitly framed questions, measuring whether models avoid harmful content when directly asked. This approach overlooks two failure modes: alignment degradation under sustained adversarial pressure, and moral sensitivity (whether a model spontaneously surfaces welfare stakes in everyday queries). To fill this gap, we construct MANTA, a benchmark of 1,088 five-turn conversations progressing from an implicit Turn-1 scenario through an explicit welfare prompt to three adversarial pressure rounds drawn from a five-type taxonomy: Social, Cultural, Economic, Pragmatic, and Epistemic. We score conversations on two dimensions: Animal Welfare Value Stability (AWVS, primary) and Animal Welfare Moral Sensitivity (AWMS, diagnostic). We evaluate seven frontier models: Claude Opus 4.7, GPT-5.5, DeepSeek V4, Llama 3.3 70B, Mistral Small, Grok 4.3, and Gemini 3.1 Flash Lite. Multi-turn evaluation captures behavior single-turn benchmarks miss: 4 of 7 models change rank relative to Turn 1 scores, including Gemini Flash Lite, which drops from fifth on AWMS to last on AWVS. AWMS and AWVS are positively but imperfectly correlated, suggesting moral-recognition tests capture a stable but incomplete component of model behavior under pressure. MANTA also enables a species-by-pressure interaction matrix unavailable to prior benchmarks, showing welfare robustness depends jointly on the animal and pressure applied; companion animals score above wild animals, which score above farmed animals and invertebrates. We release the dataset, scripted pressure plans, judge prompts, and analysis code.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 6.78,
+      "reappear": false,
+      "claude_summary": "MANTA is a new benchmark designed to test whether large language models maintain consistent animal welfare reasoning under sustained adversarial pressure across multi-turn conversations. Unlike existing single-turn benchmarks, MANTA's 1,088 five-turn dialogues expose two distinct failure modes: models that recognize welfare concerns in isolation but abandon them when pressed (value instability), and models that fail to surface welfare stakes proactively in everyday queries (low moral sensitivity). Testing seven frontier models reveals that four change their performance ranking between turn-one and later rounds, and that a model's ability to recognize a moral issue does not reliably predict whether it will hold that position under pressure. The benchmark also finds that welfare robustness varies by species category, with companion animals receiving more consistent treatment than farmed animals or invertebrates.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 58,
+      "centre_angle": "This study introduces a structured evaluation framework showing that frontier LLMs exhibit measurable, systematic inconsistency in value-laden reasoning when subjected to multi-turn adversarial pressure — a failure mode invisible to single-turn benchmarks. From CAMO's perspective on the statistical and algorithmic foundations of trustworthy AI-driven decisions, the finding is a concrete illustration of why benchmark design choices have real consequences: a model that appears aligned in one-shot testing may behave very differently in the extended, realistic interactions that professional and consumer deployments actually involve. Organizations relying on LLM outputs for decisions with ethical dimensions — from procurement to patient care — should treat single-turn safety evaluations as necessary but insufficient evidence of model reliability.",
+      "matched_camo": [
+        {
+          "id": "ai-persuasion-doctors-2025",
+          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/",
+          "reason": "Both papers examine how AI outputs hold up under pressure in high-stakes professional contexts, and both highlight that surface-level AI compliance or apparent alignment can mask more complex, context-dependent behavior."
+        }
+      ],
+      "key_takeaway": "An LLM that passes a standard safety check on ethical reasoning may still capitulate when users push back across multiple conversational turns — a gap that benchmark designers and deploying organizations need to account for.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single weathered stone pillar standing slightly off-center in a sparse, minimalist interior — perhaps a bare concrete room with high ceilings and one narrow window to the left. Pale, cool daylight enters from that window and falls directly on the pillar, casting a long shadow diagonally across the floor away from the light source. The pillar is the clear focal subject, positioned at the golden-ratio point, occupying roughly the middle third of the frame vertically. The surrounding space is deliberately empty, keeping the eye on the pillar's texture and the interplay of light and shadow. The palette is cool grey and off-white with a single warm band of light on the pillar's face — suggesting the idea of a value or principle under sustained pressure, standing or beginning to lean.",
+      "red_flags": [
+        "Not yet peer-reviewed — posted to arXiv (cs.CY preprint); findings should be treated as preliminary until formally reviewed.",
+        "Benchmark covers a narrow ethical domain (animal welfare), so generalizability of conclusions about LLM value stability to other domains is untested and should not be assumed.",
+        "Model versioning: frontier models are updated frequently; benchmark results may date quickly as model weights change.",
+        "No information on author affiliations or potential conflicts of interest in the excerpt provided."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How a Museum Marketing Team Used AI to Bring People Closer to Art",
+      "link": "https://hbr.org/podcast/2026/07/how-a-museum-marketing-team-used-ai-to-bring-people-closer-to-art",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "Jul 21, 2026",
+      "authors": "Unknown",
+      "summary": "In 2025, Harvard Art Museums considered using generative AI in a marketing campaign to increase visitor engagement and membership. Looking to boost attendance and appeal to a younger audience base, and facing intensified competition for leisure time, the Museums’ marketing team explored animating a canonical artwork using AI-generated avatars as part of a digital campaign. While the approach promised novelty and attention, it raised internal concerns about brand authenticity, interpretive authority, donor relations, and reputational risk. Harvard Business School Assistant Professor Julian De Freitas and Harvard Art Museums Director of Marketing John Connolly join host Brian Kenny to discuss the case, Harvard Art Museums: When Art Meets Artificial Intelligence. They explore tensions between innovation and brand stewardship in cultural marketing, organizational barriers to new technology adoption, and the strategic use of emerging technologies in brand management.",
+      "ai_strong": 5,
+      "ai_booster": 0,
+      "domain_matches": 7,
+      "edu_demoted": false,
+      "score": 6.58,
+      "reappear": true,
+      "claude_summary": "When Harvard Art Museums explored using AI-generated avatars to animate a canonical artwork for a digital marketing campaign, the initiative surfaced tensions that go well beyond marketing strategy. The team weighed potential gains in visitor engagement and appeal to younger audiences against concerns about brand authenticity, interpretive authority, donor relations, and reputational risk. The case — discussed by HBS Assistant Professor Julian De Freitas and the Museums' Director of Marketing — illustrates how cultural institutions face organizational and ethical friction when adopting generative AI, even in relatively low-stakes applications. The excerpt is from a podcast discussion of an HBS case study rather than an empirical research paper, so specific findings are limited.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This case illustrates how even a modest generative AI pilot — animating a single artwork for a marketing campaign — can stall not for technical reasons but because of unresolved organizational questions about authority, brand stewardship, and stakeholder trust. CAMO's research on AI adoption consistently finds that the dominant barriers are cultural and executional rather than technical; the Harvard Art Museums case adds a dimension specific to mission-driven organizations, where brand identity and interpretive legitimacy complicate the cost-benefit calculus that drives adoption in commercial firms. The tension between innovation appetite and institutional caution shown here echoes findings from the Deloitte-HKU AI Adoption Index, which identified cultural resistance and unclear ownership as leading reasons why AI initiatives fall short of expected returns.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both the case and the Index highlight how organizational and cultural resistance — rather than technical capability — are the central obstacles to moving AI pilots forward.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "For mission-driven organizations, the hardest AI adoption questions are not technical but institutional — who owns the brand, who interprets the work, and what risks are acceptable to take with reputation.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "visual_concept": "A single large gilt-framed painting centered on the wall of an otherwise spare, high-ceilinged gallery, lit by a narrow overhead spotlight that pools warm amber light onto the canvas while the surrounding walls recede into cool shadow. In the immediate foreground, slightly off-center to the left, a small tablet or screen rests face-up on a plain white plinth, its faint cool-blue glow contrasting with the warm painting behind it — the sole indicator of digital presence without depicting any AI iconography. Vanishing-point perspective lines from the gallery's stone floor tiles draw the eye from the screen in the foreground back toward the painting on the far wall, creating a visual question about the relationship between the two objects. The environment is minimal: bare walls, no visitors, no text labels. Palette is warm ochre and deep museum-grey, with the cool screen glow as the single chromatic counterpoint.",
+      "red_flags": [
+        "Source is a podcast episode accompanying an HBS case study, not a peer-reviewed empirical paper — findings are illustrative and based on a single institution.",
+        "No quantitative data or outcomes reported in the excerpt; article may be primarily narrative and practitioner-facing.",
+        "Potential for conflict of interest: John Connolly is the Museums' own Director of Marketing, giving an insider perspective without independent verification.",
+        "Paywalled or access-limited: HBR podcast content may require subscription for full episode."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "From Process to Evidence: How Computing Can Ground Appropriate Reliance on Legal AI",
+      "link": "https://arxiv.org/abs/2607.28869",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 03, 2026",
+      "authors": "James Bryan Williams",
+      "summary": "arXiv:2607.28869v1 Announce Type: new \nAbstract: Lawyers and self-represented litigants are already using artificial intelligence (AI) to draft legal documents, and courts are responding with rules. After more than 1,500 cases involving AI hallucinations, lawyers have been instructed to perform careful, independent review of AI-assisted filings. Discharging these duties requires what the human-computer interaction (HCI) literature calls ``appropriate reliance,'' which cannot be calibrated without evidence on how often, how badly, and how detectably these tools fail at legal work. Existing research barely describes any of the three. We analyze the official record of the New York court system. The documents repeatedly call for evidence that does not exist (e.g., error rates, do-not-use lists). In its place they invoke procedure, including training mandates, checklists, and uncalibrated human review. The burden falls hardest on those least equipped to bear it: legal aid programs are told to track their own error rates, and judges are left to improvise their own tests. The paper makes four contributions: (1) a mapping from the legal duties to concepts in HCI; (2) a set of requirements elicited from the official record; (3) an analysis of how the legal system substitutes process for evidence; and (4) a research agenda for computing, including task taxonomies, shared error metrics, maintained benchmarks, and test harnesses for evaluations on private data. The computing community must supply what the justice system lacks; in doing so, it can help close, rather than widen, the justice gap.",
+      "ai_strong": 5,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 5.81,
+      "reappear": false,
+      "claude_summary": "When lawyers and litigants use AI to draft legal documents, courts demand careful human review — but those review obligations are impossible to discharge without evidence on how often AI tools fail, how severely, and how detectably. Analyzing the official record of the New York court system, this paper finds that rules repeatedly call for evidence that does not yet exist (error rates, do-not-use lists) and substitute procedure — training mandates, checklists, uncalibrated review — in its place. The burden falls hardest on those least equipped: legal aid programs are told to track their own error rates; judges improvise their own tests. The paper proposes a computing research agenda including task taxonomies, shared error metrics, maintained benchmarks, and test harnesses to supply what the justice system currently lacks.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This paper argues that 'appropriate reliance' on legal AI is an empirical problem masquerading as a procedural one: courts have issued hundreds of rules about how lawyers should verify AI output, but the error-rate evidence those rules presuppose does not exist. From CAMO's perspective on AI Algorithms & Data, this is a systemic measurement failure — the absence of shared benchmarks and task-specific error metrics means that human oversight is being mandated without the calibration data needed to make it meaningful. The implication extends beyond law: wherever AI is deployed in high-stakes settings, procedural compliance cannot substitute for evidence about how and when these systems fail.",
+      "matched_camo": [
+        {
+          "id": "ai-persuasion-doctors-2025",
+          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/",
+          "reason": "Both papers grapple with the conditions under which professionals can appropriately calibrate reliance on AI output — the legal paper through error-rate evidence, the CAMO paper through interpretability and attribution — making them natural complements on the broader problem of human-AI disagreement in expert work."
+        }
+      ],
+      "key_takeaway": "Courts are mandating careful human review of AI-generated legal documents without providing — or requiring anyone to produce — the error-rate evidence that would make such review calibrated rather than ceremonial.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden courtroom bench, centered and slightly below the frame's midline, lit by a narrow shaft of cool daylight entering from a high window directly above it — the light pooling onto the bench's surface as the focal subject. The surrounding courtroom recedes into soft shadow, with pew-like rows behind kept deliberately dark and indistinct so they do not compete. On the bench's surface, a single sheet of paper is the only other visible element, ambiguously plain. Palette is muted — aged oak tones, cool grey-white light, deep shadow — conveying institutional weight and the absence of resolution rather than drama.",
+      "red_flags": [
+        "Preprint only — posted to arXiv, not yet peer-reviewed.",
+        "Analysis is confined to the New York court system; generalizability to other jurisdictions is asserted but not demonstrated.",
+        "The paper's proposed computing research agenda is programmatic rather than empirically tested; findings on the court record are descriptive."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Leadership Summit 2026: Inspiring Grit and Growth Amid Unprecedented Change",
+      "link": "https://hbr.org/podcast/2026/07/leadership-summit-2026-inspiring-grit-and-growth-amid-unprecedented-change",
+      "source": "HBR IdeaCast (podcast)",
+      "published_display": "Jul 23, 2026",
+      "authors": "Unknown",
+      "summary": "Most leaders are asking the same question about AI: Will it make their teams more productive—or slowly erode the very skills they're trying to build? In this special episode, as part of the recent HBR Leadership Summit 2026, University of Pennsylvania's Angela Duckworth says her long-standing research on grit—and the fact the most successful people aren't simply persistent, they stay committed to long-term goals while adapting their tactics as the world changes—is more relevant than ever in the age of generative AI. Rather than replacing human capability, she explains, AI can become a powerful coach that accelerates learning, if people treat it as something to learn from, not simply something that does the work for them. Duckworth’s new book is Situated: Find the People and Places That Bring Out Your Best.",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 5.52,
+      "reappear": true,
+      "claude_summary": "Angela Duckworth, speaking at the HBR Leadership Summit 2026, argues that her research on grit—sustained commitment to long-term goals while adapting tactics—becomes more important, not less, in the generative AI era. The central question she addresses is whether AI will build or erode the skills of the people using it. Her answer depends on how people relate to the technology: AI used as a passive executor of tasks undermines skill development, while AI used as an active coach can accelerate learning. The excerpt is thin on empirical data and draws primarily on Duckworth's existing grit research rather than new findings on AI specifically.",
+      "pillar": "AI & Incentives",
+      "pillar_relevance": 58,
+      "centre_angle": "This podcast episode raises a motivational question that sits at the center of organizational AI adoption: when AI reduces the effort required to produce acceptable output, does it also reduce the effortful practice through which genuine skill is built? From CAMO's perspective on AI and incentives, this is not merely a mindset question but a structural one. CAMO's experimental work on generative AI and professional illustrators ('Better Technology, Worse Motivation') found precisely this dynamic in action—AI assistance flattened the quality curve and led a significant share of professionals to trade final quality for time savings, a strategic response to diminished returns on sustained effort. Duckworth's prescription that individuals should treat AI as something to learn from, rather than something that does the work, is intuitively appealing, but organizational incentive structures may work against it unless firms deliberately design for high-effort, high-growth engagement rather than minimum-viable-output efficiency.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both the podcast and this paper address how AI assistance can undermine sustained effort and the motivation for excellence, with the paper providing experimental evidence for the mechanism Duckworth warns about.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "key_takeaway": "AI strengthens skills only when workers treat it as a learning tool—but organizations must design incentives that make effortful engagement worth the effort, or individuals will rationally default to 'good enough.'",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "visual_concept": "A single wooden ladder, photographed from slightly below and off-center to the left at golden-ratio position, leaning against a bare pale concrete wall in a sparse interior space. The ladder is the sole focal subject, occupying roughly the central third of the frame in height. A single shaft of cool, directional daylight enters from an unseen high window to the upper right, casting the ladder's rungs as parallel shadow lines that fall diagonally across the wall behind it—the shadows serve as the compositional device drawing the eye upward along the ladder's rails. The surrounding floor and wall are kept minimal and uncluttered. Palette is muted: warm-toned natural wood against a cool grey-white wall, with the shadow lines in soft blue-grey. The mood is quiet, deliberate, and unhurried.",
+      "red_flags": [
+        "This is a podcast episode, not a peer-reviewed or empirical source; findings are based on Duckworth's pre-existing grit research rather than new AI-specific data.",
+        "The excerpt is thin and does not describe any new study or concrete finding about AI and skill development specifically.",
+        "Potential promotional element: Duckworth's new book 'Situated' is mentioned, suggesting the appearance may be partly book-tour related.",
+        "Grit as a construct has faced replication scrutiny in academic psychology literature; editors should note this context if citing her research as established science."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "AI transformations: Views from AMD, Dell, Liquid AI, and Mercedes-Benz",
+      "link": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/ai-transformations-views-from-amd-dell-liquid-ai-and-mercedes-benz",
+      "source": "McKinsey Insights",
+      "published_display": "Jul 30, 2026",
+      "authors": "Unknown",
+      "summary": "Executives from AMD, Dell, Liquid AI, and Mercedes-Benz discuss how to structure processes with AI in mind and why enterprise-wide transformation is about people, not just technology.",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 4.15,
+      "reappear": false,
+      "claude_summary": "Executives from AMD, Dell, Liquid AI, and Mercedes-Benz argue that successful enterprise AI transformation hinges less on technology selection than on organizational redesign and people. The conversation centers on how firms should restructure processes with AI in mind from the outset, rather than layering AI onto existing workflows. Key themes include the importance of change management, the gap between AI pilots and enterprise-wide deployment, and why leadership alignment is a prerequisite for meaningful adoption. The excerpt is thin on specific data or case details, drawing primarily on practitioner perspectives shared at what appears to be a McKinsey-convened forum.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This McKinsey discussion piece argues that enterprise AI transformation stalls when firms treat adoption as a technical problem rather than an organizational one — a diagnosis consistent with what CAMO's Deloitte-HKU AI Adoption Index 2026 found among C-suite executives in mainland China and Hong Kong, where siloed departments and cultural resistance outranked technical gaps as the leading barriers to ROI. From CAMO's perspective on AI adoption, the implication is that process redesign and leadership alignment are not soft complements to AI deployment — they are the primary determinants of whether AI investment translates into measurable organizational change.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both sources converge on the finding that organizational and executional barriers — not technical ones — are the central obstacle to enterprise AI transformation, and both draw on C-suite perspectives."
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "The Decathlon case illustrates concretely the article's core claim — that AI optimizes tasks but real enterprise gains require redesigning the coordination and process structures around those tasks."
+        }
+      ],
+      "key_takeaway": "Enterprise AI transformation succeeds or fails on organizational redesign and people alignment, not on technology choice alone.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single long conference table photographed from one end, placed slightly off-center to create a strong vanishing-point perspective that pulls the eye toward the far end of the room. The table is mostly empty — only a few sparse items visible — suggesting a meeting about to begin rather than one in progress. A floor-to-ceiling glass wall on the left side of the frame lets in cool, diffused daylight that falls across the table surface, creating a clean gradient of light-to-shadow moving left to right. The surrounding space is minimal: neutral concrete walls, no decor, no people visible. The palette is cool grey and soft white with a warm amber accent from a single pendant light centered above the far end of the table, drawing the eye to that focal point.",
+      "red_flags": [
+        "Article is based on a McKinsey-convened forum featuring clients and commercial partners; potential conflict of interest in framing AI adoption challenges and solutions.",
+        "RSS excerpt is thin — specific findings, data, or case evidence are not visible; summary and pillar relevance are accordingly hedged.",
+        "Practitioner opinion piece rather than peer-reviewed or independently verified research.",
+        "Likely partially or fully paywalled on McKinsey's site."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Artificial Intelligence: Supply-Chain Chokepoints and the Reach of Industrial Policy",
+      "link": "https://arxiv.org/abs/2607.29572",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Aug 03, 2026",
+      "authors": "Piyush Akimitsu",
+      "summary": "arXiv:2607.29572v1 Announce Type: new \nAbstract: Artificial intelligence depends on a stack of inputs, models on compute, compute on chips, and chips on electricity and refined minerals. This paper measures the concentration of each layer on one scale, the Herfindahl-Hirschman Index (HHI), from cited and reproducible data. Three findings follow. First, concentration forms a clear gradient. It is modest downstream, where public and regulatory attention is heaviest and model usage and cloud fall below the 1{,}800 mark United States agencies treat as highly concentrated. It rises steeply upstream, where public discourse is sparse. There advanced packaging scores 8{,}100, leading-edge lithography reaches the ceiling of 10{,}000, and one country dominates the production or refining of several critical minerals, gallium near that maximum. Second, these upstream layers are chokepoints and a strategic vulnerability for the whole AI economy. Antitrust cannot reach them, because they lie in foreign or state hands. Contesting them falls to export controls and domestic industrial policy. Third, placing reserves beside refining shows the concentration is built rather than geological, a variable industrial policy can move. A rise in an upstream input's price barely changes the cost of the product built from it, because the input is only a small share of that cost. A chokepoint's threat is therefore the loss of the input itself rather than a higher price.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 3.88,
+      "reappear": false,
+      "claude_summary": "How concentrated is the AI supply chain, and where are the real vulnerabilities? This paper applies the Herfindahl-Hirschman Index (HHI) to each layer of AI's input stack — from cloud services and models down to chips, advanced packaging, lithography, and critical minerals. The finding is a steep upstream concentration gradient: model and cloud markets sit below standard antitrust thresholds, but advanced chip packaging scores 8,100 on the HHI scale and leading-edge lithography hits the theoretical ceiling of 10,000. Crucially, the threat is not price — upstream inputs are a small share of final product cost — but supply denial. The paper also argues that mineral concentration is policy-built, not geologically fixed, making it a legitimate target for industrial strategy rather than a permanent constraint.",
+      "pillar": "No fit",
+      "pillar_relevance": 22,
+      "centre_angle": "This paper maps the structural chokepoints in AI's hardware and mineral supply chain, showing that antitrust tools — designed for downstream market power — are the wrong instrument for upstream risks that are geopolitical in nature. CAMO's research focus is on how AI reshapes firms, incentives, and labor markets from the inside; the supply-chain architecture that makes AI possible is a different analytical domain, closer to trade economics and industrial policy than organizational management. The paper is relevant context for understanding why AI deployment capacity may be fragile, but it does not connect directly to any of CAMO's four research pillars.",
+      "matched_camo": [],
+      "key_takeaway": "The AI economy's real vulnerabilities lie not in dominant model providers but in a handful of upstream hardware and mineral chokepoints that antitrust law cannot reach and only industrial policy can contest.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A tall, narrow industrial smelting tower centered in the frame, photographed from below against a flat grey-blue dusk sky so the structure fills and dominates the composition. A single cone of amber industrial light pools upward from the base of the tower, drawing the eye from the foreground upward along the structure's vertical lines to a small, bright exhaust flare at the top — the sole point of warmth in an otherwise cool palette of steel-grey and slate. The surrounding environment is deliberately sparse: a flat, featureless industrial ground plane with no competing structures, emphasizing isolation and singularity. The mood is austere and functional rather than dramatic — this is infrastructure, not spectacle.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint with no indication of journal submission or review status.",
+        "Single-author working paper; findings have not been independently replicated or scrutinized.",
+        "HHI calculations depend heavily on data availability and source definitions; reproducibility claim should be verified before citing figures.",
+        "The paper falls outside CAMO's four research pillars; publishing it under the centre's brand may dilute positioning."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}
