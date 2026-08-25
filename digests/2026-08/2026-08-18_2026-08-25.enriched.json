@@ -1,0 +1,410 @@
+{
+  "week_start": "2026-08-18",
+  "week_end": "2026-08-25",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "Chat First, Worry Later: Understanding Individuals' Privacy Perceptions Using ChatGPT in a Work Context",
+      "link": "https://arxiv.org/abs/2608.20789",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 24, 2026",
+      "authors": "Christoph Nirschl, Magdalena Glas, Gerhard Messmann, G\\\"unther Pernul",
+      "summary": "arXiv:2608.20789v1 Announce Type: cross \nAbstract: Generative Artificial Intelligence (GenAI) tools like ChatGPT, which can generate human-like responses from vast amounts of textual data, are increasingly transforming work routines across various fields, including education, healthcare, and IT. This integration, however, raises privacy concerns and questions the readiness of both environments and individuals. To investigate this issue, we conducted a user study with $N=224$ participants from a range of different employment sectors that have integrated ChatGPT into their work routines. We examined how proficiency in the utilization of ChatGPT, general privacy concerns, and organizational policies for GenAI usage impact users' actual ChatGPT usage and how these factors interact. Our findings reveal organizational policies are significantly positively associated with privacy-related ChatGPT proficiency, however, the overall proficiency is low. Higher privacy concerns were found to negatively influence both the frequency of ChatGPT use and the diversity of its applications, especially among users in organizations without GenAI policies.",
+      "ai_strong": 11,
+      "ai_booster": 0,
+      "domain_matches": 6,
+      "edu_demoted": false,
+      "score": 16.5,
+      "reappear": false,
+      "claude_summary": "A study of 224 employees across sectors finds that privacy concerns meaningfully shape how workers use ChatGPT on the job — reducing both the frequency and variety of use — but that organizational GenAI policies help. Employees in organizations with formal GenAI policies show higher privacy-related proficiency, suggesting policy can build competence, not just compliance. However, overall proficiency levels remain low across the sample. The findings suggest that the gap between deploying GenAI tools and using them responsibly is partly a governance problem: without organizational structure, employees either avoid the tools due to privacy anxiety or use them without adequate understanding of the risks involved.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This study argues that privacy concerns are a real and measurable brake on GenAI adoption at the individual level, and that formal organizational policies can partially offset this by building user proficiency. From CAMO's perspective on AI adoption, the finding aligns with a broader pattern — documented in the Deloitte-HKU AI Adoption Index 2026 — where organizational and cultural factors, not technical ones, determine whether AI tools actually get used. The implication for managers is concrete: organizations that invest only in access and infrastructure, without governance frameworks that address employee-level concerns, will face systematic underuse concentrated among their more privacy-conscious workers.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both studies identify organizational and cultural barriers — rather than technical ones — as the primary obstacle to realizing value from enterprise AI adoption."
+        },
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both papers identify social and contextual factors — reputational risk in one case, privacy anxiety in the other — that suppress actual AI tool use even when access is available, pointing to a shared gap between AI deployment and genuine adoption."
+        }
+      ],
+      "key_takeaway": "Without formal GenAI governance policies, privacy-conscious employees will quietly curtail their use of tools like ChatGPT, creating an adoption gap that training access alone cannot close.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single office desk occupies the lower-center foreground, viewed at a slight angle. On the desk sits an open laptop, its screen casting a cold blue-white glow upward onto the face of an empty chair — the user conspicuously absent. Behind the desk, a tall frosted-glass partition stretches toward the upper frame, its translucency hinting at the presence of other workspaces beyond without revealing them clearly. The frosted glass acts as the sole compositional device, both framing the desk and suggesting the boundary between private and shared information. The surrounding environment is a sparse, neutral-toned open-plan office kept deliberately bare. Lighting is cool and institutional, with the laptop screen as the only warm-ish light source, reinforcing the tension between the inviting tool and the hesitant user.",
+      "red_flags": [
+        "Not yet peer-reviewed — posted as arXiv preprint; findings should be treated as preliminary.",
+        "Sample of 224 participants may limit generalizability across sectors and national contexts; employment sectors are not disaggregated in the excerpt.",
+        "Self-reported usage data (frequency, diversity) are susceptible to social desirability bias, particularly on a sensitive topic like privacy behavior."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Can We Trust AI Agents? A Case Study of an LLM-Based Multi-Agent System for Ethical AI",
+      "link": "https://arxiv.org/abs/2411.08881",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 24, 2026",
+      "authors": "Jos\\'e Antonio Siqueira de Cerqueira, Mamia Agbese, Rebekah Rousi, Nannan Xi, Juho Hamari, Pekka Abrahamsson",
+      "summary": "arXiv:2411.08881v3 Announce Type: replace \nAbstract: AI-based systems, including Large Language Models (LLMs), impact millions by supporting diverse tasks but face issues like misinformation, bias, and misuse. AI ethics is crucial as new technologies and concerns emerge, but objective, practical guidance remains debated. This study explores the extent to which trustworthiness-enhancing techniques in LLMs can support the development of ethically aligned AI software. We adopt a single exploratory cycle of Design Science Research (DSR). First, we identify trustworthiness-enhancing techniques for LLMs: multi-agents, distinct roles, structured communication, and multiple rounds of debate. Second, we design a multi-agent prototype LLM-MAS in which agents address real-world AI ethics issues from the AI Incident Database. Finally, we evaluate the prototype across three case scenarios using thematic analysis, hierarchical clustering, a baseline comparison, and code execution. The system generates approximately 2,000 lines of code per case, compared to only 80 lines in baseline trials. Results reveal terms like bias detection, transparency, accountability, user consent, GDPR compliance, fairness evaluation, and EU AI Act compliance, showing this prototype ability to generate extensive source code and documentation addressing often overlooked AI ethics issues. However, practical challenges in source code integration and dependency management may limit its use by practitioners.",
+      "ai_strong": 15,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 15.53,
+      "reappear": false,
+      "claude_summary": "Can multi-agent LLM systems reliably produce ethically aligned AI software? This study builds and tests a prototype in which multiple AI agents—each assigned distinct roles—debate and generate code addressing real-world AI ethics incidents drawn from the AI Incident Database. The system produces roughly 2,000 lines of code per case (versus 80 in baseline trials), surfacing issues such as bias detection, GDPR compliance, fairness evaluation, and EU AI Act requirements. Thematic analysis and clustering confirm the system engages substantively with ethics concepts. However, the authors caution that source code integration and dependency management remain practical barriers, meaning the gap between generated output and deployable, trustworthy software is still significant.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This study asks whether structural techniques—role assignment, structured debate, multiple agents—can push LLMs toward generating code that operationalises AI ethics principles. From CAMO's perspective on algorithmic foundations for trustworthy AI-driven decisions, the finding is instructive but sobering: volume of output (2,000 lines of code) is not equivalent to trustworthiness, and the practical integration barriers the authors identify are precisely the kind of organisational and executional friction that CAMO's broader research highlights as the real bottleneck in AI deployment. The paper is a useful early-stage probe, but its Design Science Research framing and single exploratory cycle mean conclusions should be treated as directional rather than definitive.",
+      "matched_camo": [
+        {
+          "id": "nanocase-dingdong-2026",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/",
+          "reason": "Both works grapple with how AI systems can make accountability and fairness-related judgments more explicit, and both surface the gap between automated output accuracy and the human governance structures needed to validate and appeal those outputs."
+        }
+      ],
+      "key_takeaway": "Multi-agent LLMs can generate substantial ethics-aware code, but turning that output into integrated, deployable software remains an unsolved practical problem.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single sheet of printed code, centered in the frame and occupying the middle third of the image, resting on a plain matte surface under a focused overhead beam of cool white light. The light pools directly onto the paper, leaving the surrounding surface in soft shadow that falls away from the edges. The sheet is slightly dog-eared at one corner—suggesting review rather than pristine output—and a faint red annotation mark is visible on one line, the only colour accent in an otherwise monochromatic, grey-blue palette. The environment is minimal and spare: no desk clutter, no additional objects, nothing to compete with the document as the sole subject. The mood is clinical and deliberate, evoking scrutiny rather than celebration.",
+      "red_flags": [
+        "Single exploratory DSR cycle — findings are directional, not confirmatory; authors themselves note this limitation.",
+        "Prototype evaluated on only three case scenarios, limiting generalisability.",
+        "arXiv preprint (v3); not yet peer-reviewed in a journal.",
+        "Metric of 'lines of code generated' is a weak proxy for actual trustworthiness or deployability.",
+        "No independent replication or practitioner validation of the generated code in production environments."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Who Delegates to AI? Evidence from 53,000 Agent Configurations",
+      "link": "https://arxiv.org/abs/2608.20425",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 24, 2026",
+      "authors": "Hyeongjae Lee, Jihyang Cheon, Lanu Kim",
+      "summary": "arXiv:2608.20425v1 Announce Type: cross \nAbstract: A growing literature measures how far occupations are exposed to AI, but these measures capture where AI could perform tasks, not whether workers have adopted it. We propose a new layer of exposure, delegated exposure, which records whether a worker has committed a task to AI by building it into a workflow. We operationalize it as the Agentic Adoption Index (AAI), which measures how closely an occupation's tasks match the agentic routines practitioners have already built and shared. We embed roughly 53,000 agent skill specifications from the Manus Skills Marketplace, compute their semantic similarity to about 18,000 O*NET task statements, and aggregate to the occupation level. Three findings follow. First, the occupations where delegation concentrates differ sharply from those pre-AI frameworks identified as most at risk. Second, the AAI tracks what AI could do more closely than what workers currently use it for. Third, the AAI peaks below the top of the wage distribution and at the bachelor's level, declining at both extremes. Technical availability explains most of this variation, but not the shortfall among the most educated occupations, so feasibility alone cannot account for who adopts. That shortfall may reflect work that resists advance specification, or professional discretion over the pace of codification. Distinguishing the two, and tracking how these measures diverge over time, will require repeated measurement.",
+      "ai_strong": 8,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 11.65,
+      "reappear": false,
+      "enriched": false,
+      "enrichment_error": "enrichment failed after 2 attempts: Unterminated string starting at: line 30 column 5 (char 4334)"
+    },
+    {
+      "title": "Beyond Raw Transcripts: Structured Persona Extraction for LLM-Based Digital Twins",
+      "link": "https://arxiv.org/abs/2608.20344",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Aug 24, 2026",
+      "authors": "Iris Ye, Tianze Deng, Ozan Candogan",
+      "summary": "arXiv:2608.20344v1 Announce Type: cross \nAbstract: LLM-based \"digital twins\" aim to simulate how an individual would behavein new environments or respond to novel questions, given some representation of that individual's prior responses. A common approach constructs this representation from survey transcripts or summaries responses. Prior work shows that compressing long transcripts into shorter LLM-generated summaries does not significantly reduce predictive accuracy, suggesting that information volume is not the primary bottleneck.\n  In this work, we argue that the key limitation is instead structural:how persona information is organized before being provided to thesimulator model. We study this by comparing unstructured summaries with structured persona representations. First, we introduce a hand-craftedschema (BDE: Background, Decision procedure, Evaluation), grounded in consumer-behavior theory, and show that it improves predictive accuracy over raw transcripts by +1.91 percentage points on a homogeneous benchmark (Twin-2K-500), with similar gains on gpt-5.4-mini and Qwen3-8B as robustness checks. However, this fixed structure does not generalizeacross more heterogeneous tasks, where performance is statistically indistinguishable from the raw transcript baseline.\n  To address this limitation, we propose an automatic structure-discovery pipeline in which an LLM iteratively proposes and refines task-specific persona structures and extraction prompts. On a benchmark of 13 diverse sub-studies, this approach restores performance, improving mean accuracy by +1.91 percentage points over the raw transcript baseline and eliminating significant losses observed with the fixed schema.\n  Overall, our results suggest that the main constraint in LLM-based digital twins is not how much information is provided, but how it is structured -- and that the optimal structure depends on the task.",
+      "ai_strong": 6,
+      "ai_booster": 2,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 9.71,
+      "reappear": false,
+      "claude_summary": "How should an AI 'digital twin' represent a person's beliefs and decision-making to accurately simulate their responses? This paper tests whether structuring persona information -- rather than simply compressing it -- improves predictive accuracy. A hand-crafted schema grounded in consumer-behavior theory (Background, Decision procedure, Evaluation) yields modest but real gains on homogeneous tasks (+1.91 percentage points), yet fails to generalize across heterogeneous ones. The authors' solution is an automatic structure-discovery pipeline in which an LLM iteratively proposes task-specific persona schemas, recovering the accuracy gains across 13 diverse sub-studies. The core finding: the binding constraint on digital-twin quality is not the volume of information provided to the model, but how that information is organized -- and the right organization is task-dependent.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This paper argues that the predictive quality of LLM-based digital twins is determined by how persona information is structured, not how much of it is supplied -- and that no single fixed structure generalizes across tasks. From CAMO's perspective on the statistical and algorithmic foundations of AI-driven decisions, the implication is practical and cautionary: organizations building simulation or survey tools on top of large language models should treat schema design as a first-class engineering problem, not a post-hoc formatting choice. The automatic structure-discovery approach proposed here is a methodological step toward more reliable behavioral inference, though its robustness beyond the benchmarks tested remains to be established.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/",
+          "reason": "Both papers address how the structural organization of information fed into algorithmic systems shapes the quality and bias of the decisions those systems produce -- one in bandit algorithms, the other in LLM persona representations."
+        }
+      ],
+      "key_takeaway": "When using AI to simulate human behavior, how you organize the input persona matters more than how much information you provide -- and the right structure depends on the specific task.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "low",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single wooden card-index drawer pulled open and centered in the lower third of the frame, its contents fanning upward toward the top of the image. The drawer is the clear focal subject -- solid, tactile, slightly worn. Behind it, a smooth gradient wall in cool slate blue provides a clean, uncluttered background. A single shaft of soft directional light falls from the upper left, pooling onto the open drawer and the fanned cards inside, letting everything else recede into shadow. The palette is muted: warm oak on the drawer, cream-white card edges, cool blue surroundings. The composition suggests that the act of organizing information -- not accumulating it -- is where the real work happens.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint, no indication of journal acceptance.",
+        "Accuracy gains are modest (+1.91 percentage points) and may not be practically significant in many applied settings.",
+        "Benchmark generalizability is limited -- the fixed schema failed on heterogeneous tasks, and the automatic pipeline is tested on a single set of 13 sub-studies.",
+        "Audience relevance for managers and policymakers is low; this is primarily a technical NLP/ML methods paper with narrow direct applicability to organizational decision-making."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Can an AI-Powered Scribe Curb Physician Burnout?",
+      "link": "https://hbr.org/podcast/2026/08/can-an-ai-powered-scribe-curb-physician-burnout",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "Aug 18, 2026",
+      "authors": "Unknown",
+      "summary": "In 2024, Mass General Brigham, the largest health system in Massachusetts, piloted an AI-powered, ambient note-taking and transcription program among a subset of clinicians to address increasing rates of staff burnout and turnover --  largely driven by the administrative burden of clinical documentation in the electronic health records (EHR). Early results showed promising reductions in clinician burnout, intention to leave, and increased physician efficiency. But concerns about the technology, including the generation of inaccurate notes with errors or hallucinations made physicians resistant to learn and adopt it into their workflows. Harvard Business School Associate Professor Susanna Gallani and host Brian Kenny discuss the challenges leadership at the health care organization anticipated as they considered scaling the AI technology responsibly in the case: The AI Scribe: Enhancing Physician Presence and Curbing Burnout at Mass General Brigham",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 4.7,
+      "reappear": false,
+      "claude_summary": "Mass General Brigham, the largest health system in Massachusetts, piloted an AI-powered ambient documentation tool in 2024 to reduce clinician burnout driven by electronic health record (EHR) administrative load. Early results pointed to lower burnout, reduced intention to leave, and improved physician efficiency. Yet adoption stalled: physicians resisted learning the tool partly because it produced inaccurate notes and hallucinations, raising safety and trust concerns. The case, examined by HBS Associate Professor Susanna Gallani, focuses on how leadership approached the challenge of scaling the technology responsibly across the organisation. The excerpt is podcast-length and details are limited, but the central tension — promising aggregate outcomes versus individual-level resistance rooted in accuracy concerns — is clearly drawn.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This case shows that AI adoption in high-stakes professional settings can be simultaneously beneficial at the organisational level and actively resisted at the individual level — not due to inertia, but due to legitimate concerns about output quality. From CAMO's perspective on AI adoption, this mirrors a pattern documented in our research: the social and professional penalties associated with AI use, and the accuracy risks that physicians perceive, can suppress adoption even when aggregate efficiency gains are real. CAMO's work on the hidden competency penalty of AI use at work suggests that resistance is rarely irrational — it often reflects well-founded calculations about professional risk that organisations must address structurally, not just through training campaigns.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both cases examine why professionals resist adopting AI tools even when organisational benefits are evident, centring on the professional and reputational risks individuals perceive from AI-assisted work."
+        },
+        {
+          "id": "ai-persuasion-doctors-2025",
+          "title": "AI Persuasion, Bayesian Attribution, and Career Concern of Doctors",
+          "url": "https://camo.hku.hk/ai-persuasion-bayesian-attribution-and-career-concern-of-doctors/",
+          "reason": "Both pieces concern physicians' willingness to defer to or adopt AI outputs, with accuracy and interpretability central to how clinicians calibrate their trust in AI-generated content."
+        }
+      ],
+      "key_takeaway": "AI tools that demonstrably reduce burnout can still fail to scale if physicians cannot trust the accuracy of the output — making error reduction and responsible rollout as important as the efficiency case.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden clipboard holding a near-blank clinical note form, positioned slightly left of centre in the foreground against a softly blurred hospital corridor receding to a vanishing point behind it. The corridor's parallel lines draw the eye toward the clipboard as the primary subject. The form is almost entirely empty — suggesting the documentation burden that the scribe tool is meant to fill. Lighting is cool and institutional, with a gentle pool of warm overhead light falling directly onto the clipboard face, separating it from the muted blue-grey environment. The palette is desaturated except for the warm ivory of the paper, keeping the composition spare and readable.",
+      "red_flags": [
+        "Source is a podcast episode, not a peer-reviewed study; findings are case-based and may not generalise beyond Mass General Brigham.",
+        "RSS excerpt is thin — specific outcome metrics (magnitude of burnout reduction, accuracy rates, adoption figures) are not provided and cannot be verified from available text.",
+        "Potential for selection bias in pilot results: clinicians who volunteered for the pilot may differ systematically from the broader workforce.",
+        "No independent author attribution given; the case analysis originates from an HBS case study, which may reflect the health system's framing of its own initiative."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Beyond the copilot: Scaling the agentic product development life cycle",
+      "link": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/beyond-the-copilot-scaling-the-agentic-product-development-life-cycle",
+      "source": "McKinsey Insights",
+      "published_display": "Aug 21, 2026",
+      "authors": "Unknown",
+      "summary": "Only a few software teams are seeing real impact from incorporating AI. The key is launching an AI-driven redesign of the entire product development system, rather than just deploying new tools.",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 4.33,
+      "reappear": false,
+      "claude_summary": "Most software teams deploying AI tools see limited impact because they treat AI as a point-solution add-on rather than a reason to redesign how product development works end to end. This McKinsey article argues that real gains come from adopting 'agentic' AI systems that operate across the full product development lifecycle — planning, coding, testing, deployment — rather than assisting individual developers at the task level. The piece distinguishes between copilot-style assistance and coordinated multi-agent systems capable of autonomous, sequential work. The excerpt is brief and the full article is behind a soft paywall, so specific empirical claims cannot be verified, but the central argument is directional: systemic redesign, not incremental tooling, is the condition for measurable returns.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "centre_angle": "This article argues that AI's productivity payoff in software development depends on redesigning the entire development system rather than deploying tools within an unchanged process. CAMO's research on AI adoption points to the same structural tension: the Decathlon China case showed that coding efficiency rose 20–40% with AI assistance, yet overall delivery speed increased only 10–15% because coordination bottlenecks between tasks remained untouched. The implication is that firms measuring AI impact at the individual task level will consistently undercount coordination costs and overestimate readiness to scale.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both the article and the Decathlon case centre on the same finding: AI optimizes individual tasks but the real constraint is system-level coordination, and gains are capped until that is addressed."
+        }
+      ],
+      "key_takeaway": "Deploying AI tools inside an unchanged development process produces marginal gains; measurable impact requires redesigning the system those tools operate within.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single, clean architectural cross-section of a multi-storey building occupying the center of the frame, rendered in cool blue-grey tones with soft diffused light from above. Each floor represents a distinct stage of a workflow — visually separate but connected by a continuous open stairwell running vertically through the structure, which serves as the sole compositional device drawing the eye upward from ground to roof. The floors are mostly spare and uncluttered, with minimal abstract figures suggesting activity, so the stairwell remains the dominant visual element. The surrounding space fades to a pale, neutral background that does not compete. The overall palette is cool and architectural — slate, off-white, and a single muted amber accent on the stairwell — suggesting systematic structure rather than isolated effort.",
+      "red_flags": [
+        "Article is from McKinsey Insights, a consultancy publication — findings reflect practitioner perspective and advisory framing, not peer-reviewed research.",
+        "RSS excerpt is thin; specific empirical claims, data, or case evidence cannot be assessed without full article access.",
+        "McKinsey has a commercial interest in enterprise AI transformation engagements, which may shape the framing toward systemic redesign mandates."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Living and Working in the Age of Longevity",
+      "link": "https://hbr.org/podcast/2026/08/living-and-working-in-the-age-of-longevity",
+      "source": "HBR IdeaCast (podcast)",
+      "published_display": "Aug 18, 2026",
+      "authors": "Unknown",
+      "summary": "People are living longer, healthier lives than ever before. But many of our assumptions about executive careers—from climbing the corporate ladder to retiring at 65—haven't caught up. London Business School professor Lynda Gratton says we need a new way of thinking about work and life, and argues that traditional career paths are giving way to more flexible, multi-stage journeys that require greater personal agency, continuous learning, and a long-term perspective. She explains why leaders should think of their lives less as a ladder and more as a fabric they actively weave over time, and offers up practical advice for balancing productivity and personal well-being, preparing for career pivots before they're necessary, and developing the skills that will matter most in an AI-powered future. Gratton is the author of the upcoming book Living the 100-Year Life: How to build a career that lasts and a life you love.",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 3.9,
+      "reappear": false,
+      "claude_summary": "As lifespans extend toward and beyond 100 years, the traditional three-stage career model—education, work, retirement—is becoming structurally inadequate. London Business School professor Lynda Gratton argues that longer healthy lives require workers and leaders to redesign careers as multi-stage, non-linear journeys rather than ladders with a fixed endpoint. The practical implications include proactive skill renewal before pivots become urgent, a deliberate balance between productivity and well-being, and preparing for an AI-powered labor market. The podcast is based on her forthcoming book and draws on her long-running research into the future of work. The excerpt is light on empirical findings and heavier on prescriptive framing.",
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 52,
+      "centre_angle": "This podcast argues that longer working lives will require continuous skill renewal and greater personal agency, particularly as AI reshapes which competencies retain value over a 40-plus year career horizon. From CAMO's perspective on AI and jobs, the more pressing organizational question is not whether individuals can adapt, but whether firms are designing roles and incentive structures that support such adaptation—or inadvertently working against it. CAMO's work on job design in an AI economy suggests that the macro longevity challenge Gratton describes could be sharpened considerably by examining how AI adoption reshapes the quality and structure of the jobs people are expected to occupy across those longer careers.",
+      "matched_camo": [
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "Gratton's call for sustained skill investment and multi-stage careers sits in tension with CAMO's finding that AI adoption can systematically push firms toward low-effort, low-wage job structures that reduce the returns to exactly the long-run human capital development she advocates."
+        }
+      ],
+      "key_takeaway": "Longer working lives demand proactive career redesign, but that personal effort will be undercut if AI-driven organizational pressures simultaneously reduce the supply of jobs worth building toward.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "high"
+      },
+      "visual_concept": "A single wooden ladder leaning against a plain off-white wall, centered in the frame and occupying roughly two-thirds of the image height, with its top rung visibly cut short—suggesting an incomplete trajectory. The surrounding space is deliberately spare: a clean concrete floor, minimal shadow detail. A single shaft of warm afternoon daylight enters from the upper left, pooling onto the middle rungs and creating a gentle gradient of illumination that draws the eye upward before stopping at the severed top. The palette is warm ochre and pale grey, suggesting both age and unfinished possibility. No human figures, no digital elements.",
+      "red_flags": [
+        "Podcast episode based on a forthcoming book—primary claims are not yet peer-reviewed or independently verified.",
+        "RSS excerpt is thin; specific empirical findings are not described, making it difficult to assess the evidentiary basis.",
+        "AI content is peripheral rather than central—the longevity and multi-stage career framing is the dominant theme, with AI mentioned only as a future context.",
+        "Potential promotional framing tied to book launch cycle."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Where AI agents pay off: A practical guide to the economics of agentic workflows",
+      "link": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/where-ai-agents-pay-off-a-practical-guide-to-the-economics-of-agentic-workflows",
+      "source": "McKinsey Insights",
+      "published_display": "Aug 24, 2026",
+      "authors": "Unknown",
+      "summary": "Early experience implementing agentic workflows highlights emerging trade-offs that frontline leaders need to understand.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": false,
+      "score": 3.86,
+      "reappear": false,
+      "claude_summary": "When do agentic AI workflows actually justify their costs? This McKinsey Insights piece offers a practical framework for frontline leaders evaluating agentic deployments, focusing on the economic trade-offs that determine whether automation delivers returns. The article draws on early implementation experience to identify conditions under which agentic workflows outperform simpler AI tools or human execution — covering factors such as task complexity, error tolerance, integration costs, and workflow interdependencies. Because only an RSS excerpt is available, specific findings and quantitative benchmarks cannot be confirmed, but the piece appears oriented toward operational decision-making rather than strategic vision.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "centre_angle": "This McKinsey piece tackles a question that sits at the heart of responsible AI adoption: not whether to deploy agentic workflows, but under what economic conditions doing so makes sense. From CAMO's perspective on AI adoption, the framing reinforces a theme running through our nano-cases at Decathlon China and KFC China — that AI optimizes individual tasks far more readily than it reshapes the coordination and oversight structures around them, and that ROI calculations which ignore those systemic costs consistently disappoint. The practical implication for managers is that agentic deployment decisions should be evaluated at the workflow or system level, not the task level.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both pieces examine why task-level AI gains often fail to translate into workflow-level performance improvements, with coordination costs emerging as the critical bottleneck."
+        },
+        {
+          "id": "nanocase-kfc-china-2026",
+          "title": "Scaling Managers with AI at KFC China",
+          "url": "https://camo.hku.hk/nanocase-kfcchina/",
+          "reason": "The KFC case illustrates the same economics-of-deployment question — which managerial tasks justify agentic automation and how the freed capacity is redirected — making it a concrete counterpart to McKinsey's general framework."
+        }
+      ],
+      "key_takeaway": "Agentic AI workflows pay off only under specific economic conditions; leaders who evaluate them at the task level rather than the system level will routinely misread the returns.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single, mid-sized decision junction — rendered as a clean architectural fork in a spare corridor, shot from slightly below eye level and centered in the frame. The corridor splits into two clearly distinct paths, one narrower and more complex, one broader and direct, with the branching point as the focal subject. A single overhead light source pools downward exactly onto the junction point, leaving the two paths in progressively cooler shadow as they recede. The surrounding walls are bare concrete or matte plaster, keeping the environment minimal so the geometry of the choice carries all the visual weight. The palette is cool grey with one warm accent at the lit junction — no signage, no figures, no digital overlays.",
+      "red_flags": [
+        "Only an RSS excerpt was available; specific findings, data, and methodology cannot be verified from the source text — summary and analysis are necessarily provisional.",
+        "McKinsey Insights is practitioner-facing and not peer-reviewed; findings reflect consulting experience rather than independently validated research.",
+        "Potential conflict of interest: McKinsey advises organisations on AI implementation, which may shape the framing of when agentic workflows 'pay off'.",
+        "Published date of Aug 24, 2026 is in the future relative to the current knowledge cutoff — provenance and content should be confirmed before publication."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Algorithms Trap Us in the Familiar. Can They Also Spark Breakthroughs?",
+      "link": "https://sloanreview.mit.edu/article/algorithms-trap-us-in-the-familiar-can-they-also-spark-breakthroughs/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Aug 20, 2026",
+      "authors": "Moran Lazar, Hila Lifshitz, Charles Ayoubi, and Hen Emuna. <p>Moran Lazar is an assistant professor at the Coller School of Management at Tel Aviv University. Hila Lifshitz is a professor of management at Warwick Business School and a faculty affiliate at Harvard University’s Laboratory for Innovation Science. Charles Ayoubi is an assistant professor at ESSEC Business School. Hen Emuna is a doctoral candidate at the Edmond and Lily Safra Center for Brain Sciences at the Hebrew University of Jerusalem.</p>",
+      "summary": "Gary Waters/Ikon Images Algorithmic tools promise to democratize access to knowledge and thus spark creativity and innovation, but research we conducted revealed a hidden risk: Those tools may be silently narrowing organizations’ creative potential by suppressing the value of expertise. The fault lies not with the experts but with the hidden architecture of the tools [&#8230;]",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 3.39,
+      "reappear": false,
+      "claude_summary": "Algorithmic recommendation tools, designed to democratize access to knowledge, may be quietly undermining organizational creativity by suppressing the signal value of genuine expertise. Research by Lazar and colleagues finds that when everyone draws from the same algorithmically curated information pools, the diversity of knowledge inputs that drives breakthrough innovation narrows. Experts lose their distinctiveness as sources of novel insight, and organizations converge on familiar, well-trodden solutions. The article asks whether algorithm design could be deliberately reformed to reintroduce productive exploration and divergent thinking, rather than reinforcing what is already popular or well-connected in a knowledge network. Note: the full paper is behind a paywall, so specific empirical details are limited in this excerpt.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that the architecture of algorithmic recommendation systems creates a structural bias toward the familiar, eroding the creative edge that expertise is supposed to provide. From CAMO's perspective on AI Algorithms & Data, this is a governance problem as much as a design one: the rules embedded in ranking and retrieval algorithms shape which knowledge gets used, and by whom — with consequences for innovation that are invisible in any single decision. CAMO's work on seesaw experimentation offers a parallel warning: optimizing a measurable primary dimension (here, relevance or engagement) can produce unmeasured losses elsewhere, including precisely the exploratory recombinations that breakthroughs require.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/",
+          "reason": "Both pieces identify how optimizing a primary measured outcome through algorithmic systems creates untracked negative externalities — in CAMO's case, metric-driven A/B testing degrades unmeasured dimensions; here, relevance-optimized recommendations degrade knowledge diversity and creative potential."
+        }
+      ],
+      "key_takeaway": "Algorithms built to surface the most relevant knowledge may be quietly homogenizing what organizations know and can imagine, trading breakthrough potential for efficiency.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden library card-catalogue cabinet, photographed slightly off-center to the left using a golden-ratio composition, occupying the foreground at roughly two-thirds frame height. Behind it, a long corridor of identical filing cabinets recedes toward a single vanishing point at the centre-right of the frame, creating a strong sense of convergence and repetition. The surrounding space is sparse and institutional — bare walls, a stone or concrete floor — so nothing competes with the cabinet in front. One drawer on the foreground cabinet is pulled open, catching a narrow shaft of cool, directional overhead light, while the receding corridor fades into cooler shadow. The overall palette is muted grey-blue with a faint warm accent on the open drawer, suggesting the tension between the familiar archive and one moment of departure from it.",
+      "red_flags": [
+        "Article is paywalled on MIT Sloan Management Review; full empirical details unavailable from excerpt alone.",
+        "Not peer-reviewed in its current form (management review article); the underlying research paper would need separate verification.",
+        "Summary relies heavily on the RSS excerpt; specific experimental design, sample sizes, and effect sizes cannot be confirmed without full access."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Earning and sustaining trust in the age of AI",
+      "link": "https://www.mckinsey.com/industries/financial-services/our-insights/earning-and-sustaining-trust-in-the-age-of-ai",
+      "source": "McKinsey Insights",
+      "published_display": "Aug 20, 2026",
+      "authors": "Unknown",
+      "summary": "Invesco President and CEO Andrew Schlossberg argues that AI should be part of a firm’s strategy, not on the sidelines, and that trust, once lost, is hard to win back.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 3.33,
+      "reappear": false,
+      "claude_summary": "Invesco's CEO Andrew Schlossberg makes the case that AI must be embedded in a firm's core strategy rather than treated as a peripheral initiative, with trust as the central variable determining whether that integration succeeds or fails. The argument is that clients, employees, and regulators must all be able to rely on a firm's AI-related decisions, and that reputational trust — once eroded — is disproportionately costly to recover. The piece draws on Schlossberg's experience in asset management to argue that AI deployment without a clear trust architecture creates systemic risk to the firm. The excerpt is brief and the underlying article may contain richer empirical detail, but the headline thesis is clear: AI strategy and trust strategy are inseparable.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 68,
+      "centre_angle": "This article argues that AI adoption without a deliberate trust framework exposes firms to reputational and operational risk that can outlast any efficiency gain. From CAMO's perspective on AI adoption, this maps to a broader pattern: the barriers most executives underestimate are not technical but organisational and social. The Deloitte-HKU AI Adoption Index 2026 found that the dominant drag on AI ROI is cultural resistance and poor internal alignment — precisely the conditions that erode the trust Schlossberg describes. The implication is that 'trust' is not a soft add-on to AI strategy but a measurable organisational capability that requires the same design attention as the technology itself.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both pieces diagnose a gap between AI's strategic promise and its actual organisational impact, with non-technical factors — culture, alignment, credibility — identified as the primary friction."
+        }
+      ],
+      "key_takeaway": "AI that is not backed by a credible trust architecture is a liability, not an asset — and rebuilding lost trust costs far more than building it in the first place.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single large glass building facade photographed from a low angle, centered in the frame and filling most of the vertical space, so the eye immediately reads it as a structure under scrutiny. A narrow column of warm afternoon light falls vertically down the center of the facade, illuminating the middle floors while the upper and lower sections recede into cool blue shadow — the single compositional device directing attention. The surrounding environment is minimal: a plain urban plaza in soft out-of-focus grey at the base, no pedestrians or signage competing for attention. The palette contrasts warm amber light against a cool steel-and-glass background, suggesting institutional weight and the tension between transparency and opacity. The overall mood is measured and serious, appropriate for a piece about reputational risk in a regulated industry.",
+      "red_flags": [
+        "Article is likely paywalled or access-restricted on McKinsey.com for non-registered users.",
+        "Source is practitioner opinion (CEO perspective), not peer-reviewed or empirically grounded research — claims cannot be independently verified from the excerpt alone.",
+        "RSS excerpt is very thin; the full article's argument, evidence, and any conflicts of interest (McKinsey as a consultancy with commercial interest in AI strategy engagements) cannot be assessed without access to the full text.",
+        "Potential conflict of interest: McKinsey has a direct commercial stake in advising firms on AI strategy, which may shape how the CEO's argument is framed and amplified."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}
