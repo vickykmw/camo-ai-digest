@@ -14,6 +14,9 @@
   "https://arxiv.org/abs/2505.00100": [
     "2026-07-21"
   ],
+  "https://arxiv.org/abs/2505.13673": [
+    "2026-09-01"
+  ],
   "https://arxiv.org/abs/2506.12060": [
     "2026-06-01",
     "2026-06-02"
@@ -64,6 +67,9 @@
   "https://arxiv.org/abs/2603.18221": [
     "2026-05-18",
     "2026-05-19"
+  ],
+  "https://arxiv.org/abs/2604.21751": [
+    "2026-09-01"
   ],
   "https://arxiv.org/abs/2604.27245": [
     "2026-05-20"
@@ -305,6 +311,12 @@
   "https://arxiv.org/abs/2608.20789": [
     "2026-08-25"
   ],
+  "https://arxiv.org/abs/2608.28228": [
+    "2026-09-01"
+  ],
+  "https://arxiv.org/abs/2608.28405": [
+    "2026-09-01"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -348,10 +360,12 @@
     "2026-07-14"
   ],
   "https://hbr.org/podcast/2026/08/can-an-ai-powered-scribe-curb-physician-burnout": [
-    "2026-08-25"
+    "2026-08-25",
+    "2026-09-01"
   ],
   "https://hbr.org/podcast/2026/08/living-and-working-in-the-age-of-longevity": [
-    "2026-08-25"
+    "2026-08-25",
+    "2026-09-01"
   ],
   "https://hbr.org/podcast/2026/08/the-innovation-strategy-most-companies-miss": [
     "2026-08-18"
@@ -488,9 +502,15 @@
     "2026-08-11",
     "2026-08-18"
   ],
+  "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/your-ai-agents-need-performance-management-too": [
+    "2026-09-01"
+  ],
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/capturing-central-europes-ai-opportunity": [
     "2026-06-23",
     "2026-06-30"
+  ],
+  "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai": [
+    "2026-09-01"
   ],
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/where-ai-agents-pay-off-a-practical-guide-to-the-economics-of-agentic-workflows": [
     "2026-08-25"
@@ -508,6 +528,9 @@
   ],
   "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-how-ai-is-unlocking-creativity-and-heralding-the-rise-of-the-agent-manager": [
     "2026-07-28"
+  ],
+  "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-new-management-playbook-for-ai-how-to-move-faster-and-create-more-value": [
+    "2026-09-01"
   ],
   "https://www.mckinsey.com/featured-insights/mckinsey-explainers/where-ai-is-creating-real-value-in-real-estate": [
     "2026-05-16",
@@ -548,7 +571,8 @@
     "2026-06-02"
   ],
   "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/beyond-the-copilot-scaling-the-agentic-product-development-life-cycle": [
-    "2026-08-25"
+    "2026-08-25",
+    "2026-09-01"
   ],
   "https://www.mckinsey.com/mgi/our-research/the-real-ai-advantage": [
     "2026-07-13"
