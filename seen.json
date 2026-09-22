@@ -14,6 +14,9 @@
   "https://arxiv.org/abs/2412.09378": [
     "2026-09-15"
   ],
+  "https://arxiv.org/abs/2503.10556": [
+    "2026-09-22"
+  ],
   "https://arxiv.org/abs/2505.00100": [
     "2026-07-21"
   ],
@@ -344,6 +347,15 @@
   "https://arxiv.org/abs/2609.12482": [
     "2026-09-15"
   ],
+  "https://arxiv.org/abs/2609.21075": [
+    "2026-09-22"
+  ],
+  "https://arxiv.org/abs/2609.21192": [
+    "2026-09-22"
+  ],
+  "https://arxiv.org/abs/2609.21756": [
+    "2026-09-22"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -407,6 +419,15 @@
     "2026-08-11",
     "2026-08-18"
   ],
+  "https://hbr.org/podcast/2026/09/how-ai-is-changing-talent-not-just-tasks-rethinking-where-human-judgment-matters-most": [
+    "2026-09-22"
+  ],
+  "https://hbr.org/podcast/2026/09/how-geo-is-changing-the-role-of-brand-manager": [
+    "2026-09-22"
+  ],
+  "https://hbr.org/podcast/2026/09/what-it-takes-to-make-progress-when-the-future-feels-out-of-control": [
+    "2026-09-22"
+  ],
   "https://sloanreview.mit.edu/article/algorithms-trap-us-in-the-familiar-can-they-also-spark-breakthroughs/": [
     "2026-08-25"
   ],
@@ -452,7 +473,8 @@
     "2026-06-23"
   ],
   "https://sloanreview.mit.edu/article/responsible-ai-means-knowing-the-limits-of-agent-autonomy/": [
-    "2026-09-15"
+    "2026-09-15",
+    "2026-09-22"
   ],
   "https://sloanreview.mit.edu/article/stop-prompting-ai-start-directing-it/": [
     "2026-08-11",
@@ -607,6 +629,9 @@
   "https://www.mckinsey.com/industries/healthcare/our-insights/ushering-in-the-next-era-of-frontline-nursing-with-ai": [
     "2026-05-13"
   ],
+  "https://www.mckinsey.com/industries/industrials/our-insights/cutting-the-coordination-tax-how-agentic-ai-can-reshape-workflows": [
+    "2026-09-22"
+  ],
   "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos": [
     "2026-05-14",
     "2026-05-15",
@@ -628,5 +653,8 @@
   ],
   "https://www.mckinsey.com/mgi/our-research/the-real-ai-advantage": [
     "2026-07-13"
+  ],
+  "https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-the-economics-of-ai": [
+    "2026-09-22"
   ]
 }

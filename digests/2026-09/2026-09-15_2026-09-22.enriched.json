@@ -1,0 +1,346 @@
+{
+  "week_start": "2026-09-15",
+  "week_end": "2026-09-22",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "How AI Is Changing Talent, Not Just Tasks: Rethinking Where Human Judgment Matters Most",
+      "link": "https://hbr.org/podcast/2026/09/how-ai-is-changing-talent-not-just-tasks-rethinking-where-human-judgment-matters-most",
+      "source": "HBR IdeaCast (podcast)",
+      "published_display": "Sep 17, 2026",
+      "authors": "Unknown",
+      "summary": "The decisions leaders must make about AI today go far beyond what platforms to invest in: AI is changing organizational culture and leadership for good. In episode 1 of a special four-part series on how AI is changing leadership, we look at how the technology is changing how people interact at work, the new culture it is creating, and how leaders can get smart about talent management and strategy in this rapidly advancing world. Paula Goldman, Salesforce’s chief ethical and humane use officer, argues there's currently a big opportunity to redesign work around the complementary strengths of humans and AI. She explains how AI could reshape entry-level jobs and the development of future leaders, why companies need to rethink internal mobility and talent development, and how executives can prepare their organizations for an AI-powered workforce without sacrificing accountability, creativity, or trust. Goldman is the author of Manage the Machine: How to Harness Human-AI Collaboration at Work.",
+      "ai_strong": 8,
+      "ai_booster": 0,
+      "domain_matches": 17,
+      "edu_demoted": false,
+      "score": 21.2,
+      "reappear": false,
+      "enriched": false,
+      "enrichment_error": "enrichment failed after 2 attempts: Expecting ',' delimiter: line 31 column 173 (char 4306)"
+    },
+    {
+      "title": "When AI Enters the Workplace, Who Faces Greater Risks? A Gendered Analysis",
+      "link": "https://arxiv.org/abs/2609.21756",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Sep 21, 2026",
+      "authors": "Miriam Fernandez, \\'Angel Pav\\'on P\\'erez, Damiano Giallongo, Davide Ghia, Maryam Yaqub, Daniele Quercia, Tania Cerquitelli",
+      "summary": "arXiv:2609.21756v1 Announce Type: new \nAbstract: Gender inequality remains a persistent structural feature of the labour market, shaping women's lifetime earnings and economic security. As artificial intelligence (AI) transforms organisational practices, there is growing concern that existing disparities may be unintentionally amplified through task automation, unequal access to upskilling opportunities, and differential returns obtained from technological change. In this paper, we examine how exposure to AI-driven innovation varies across male- and female-dominated occupations, with particular attention to differences across the skill and wage distribution. Using a novel dataset that links occupational characteristics to measures of AI exposure, we analyse how recent advances in Large Language Models (LLMs) and broader AI technologies are distributed across the labour market. Our findings show that, while AI exposure is generally concentrated in higher-skilled and higher-paid occupations for male-dominated occupations, female-dominated occupations display relatively uniform levels of exposure across both high-skilled, high-paid, and low-skilled, low-paid occupations. Moreover, we find that LLM-related exposure is higher in female-dominated occupations, while exposure to broader AI innovation remains more concentrated in male-dominated occupations. A triangulation of these results with existing literature suggests that women, particularly those in the most vulnerable positions (lower-skilled and lower-paid female-dominated occupations), may face greater exposure to forms of AI associated with task automation, job restructuring, reduction of wages and limited career progression.",
+      "ai_strong": 12,
+      "ai_booster": 2,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 17.42,
+      "reappear": false,
+      "enriched": false,
+      "enrichment_error": "enrichment failed after 2 attempts: Unterminated string starting at: line 29 column 5 (char 4169)"
+    },
+    {
+      "title": "AI-GRACE: A Use-Case Operationalization Framework for Agentic AI: From Organizational Objectives and Obligations to Deployment Capabilities and Architecture",
+      "link": "https://arxiv.org/abs/2609.21192",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Sep 21, 2026",
+      "authors": "John Cuneo, David Chun, Gaurav Khanna",
+      "summary": "arXiv:2609.21192v1 Announce Type: cross \nAbstract: Organizations deploying agentic artificial intelligence must determine more than whether a model is trustworthy; they must establish what to validate, control, and observe for a use case to deliver its intended outcome while meeting applicable obligations. This paper proposes AI-GRACE (Agentic Intelligence-Governance, Risk, Assurance, Controls, and Evidence) as a use-case operationalization framework connecting organizational governance with technical implementation. The proposal draws on professional observations and a purposive synthesis of standards and literature, using design science to frame the method contribution and situational method engineering to guide contextual tailoring and reuse. The framework establishes objectives and obligations and then assesses risks in seven proposed domains, including mission and value realization. It derives requirements for assurance before deployment, runtime controls, and evidence, which guide capability qualification, gap assessment, and a logical architecture. An Agent Operating Envelope specifies permitted actions and escalation conditions, while Risk-Aligned Independence Levels (RAIL) summarize the authorized independence. A fictional retail banking application illustrates the method. The contribution is a traceable basis for deciding what an organization must implement, what it already supports, and what remains unresolved. Empirical evaluation must establish whether it improves deployment decisions, efficiency, and reuse.",
+      "ai_strong": 7,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 10.65,
+      "reappear": false,
+      "enriched": false,
+      "enrichment_error": "enrichment failed after 2 attempts: Unterminated string starting at: line 31 column 5 (char 4311)"
+    },
+    {
+      "title": "Aligning with Lived Experience: Heterogeneous Benefits of Fine Tuning in Mental Health Support Generation",
+      "link": "https://arxiv.org/abs/2609.21075",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Sep 21, 2026",
+      "authors": "Mohit Chandra, Nabin Kim, Eli Min, Aamogh Sawant, Tanmay Sutar, Munmun De Choudhury",
+      "summary": "arXiv:2609.21075v1 Announce Type: cross \nAbstract: As access to professional mental healthcare remains limited, many individuals turn to online platforms such as Reddit to seek peer support situated within human lived experience. However, a significant portion of such queries go unanswered, presenting an opportunity for using Large Language Models (LLMs) to fill this gap. While LLMs have demonstrated strong performance on clinical benchmarks, their ability to generate lived-experience informed and community-aligned peer support is underexplored. Addressing this gap, we introduce the COmmunity-centered Peer Engaged Support (COPES) dataset and a three-axis evaluation framework to assess LLM alignment with community perspectives to mental health support seeking queries. Evaluating zero-shot and post-trained (SFT and DPO) models, we show that post-training on COPES significantly improves Strategy Alignment (>50% for general-purpose models) and alignment in Emotion & Tone. However, we also observe that such improvements are heterogeneous and alignment improvements vary significantly across subreddits and requested coping strategies. Furthermore, post-training induces distributional shifts, heavily favoring problem-focused recommendations while suppressing emotion-focused strategies. Together, this work shows that while curating community-driven data improves the alignment of LLM responses, model performance remains disparate across distinct sub-communities and specific mental health needs.",
+      "ai_strong": 5,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 8.71,
+      "reappear": false,
+      "claude_summary": "When individuals cannot access professional mental health care, many turn to online peer communities such as Reddit. This study asks whether Large Language Models can fill the gap left by unanswered queries in those spaces. The researchers built the COPES dataset from community posts and tested zero-shot and fine-tuned LLMs against a three-axis framework covering strategy alignment, emotion, and tone. Fine-tuning substantially improved alignment with community norms—strategy alignment rose by more than 50% for general-purpose models—but the gains were uneven: performance varied considerably across subreddits and coping-strategy types, and post-training pushed models toward problem-focused advice while suppressing emotion-focused responses, which are often what distressed users actually seek.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This study demonstrates that fine-tuning LLMs on community-sourced data improves average alignment with peer mental-health norms but introduces distributional shifts that systematically under-serve certain sub-communities and suppress emotion-focused support. From CAMO's perspective on AI Algorithms & Data, the finding is a concrete instance of a broader problem: aggregate benchmark gains can mask disparate outcomes across subgroups, and optimizing a measurable proxy—strategy alignment scores—can crowd out harder-to-quantify but equally important dimensions of response quality. Organizations or platforms deploying AI in high-stakes support roles should treat heterogeneous performance across user segments as a design constraint, not an afterthought.",
+      "matched_camo": [],
+      "key_takeaway": "Fine-tuning AI on community mental-health data raises average alignment scores but systematically suppresses emotion-focused support—precisely the type most users in distress request.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden chair centered slightly off to the left in the frame, positioned in a sparse, softly lit room with bare walls receding to a vanishing point behind it. The chair is the sole focal subject—human-scaled and tangible, conveying presence and absence simultaneously. A single shaft of diffuse natural light from an unseen window above pools onto the chair's seat, drawing the eye down and inward. The surrounding floor and walls are rendered in cool, desaturated grey-blue tones, while the light on the chair is warm amber, creating a quiet tension between connection and isolation. No figures, no devices, no text—just the chair and the light.",
+      "red_flags": [
+        "Preprint only (arXiv, not yet peer-reviewed); findings should be treated as preliminary.",
+        "Evaluation framework (COPES three-axis) is novel and introduced by the same authors, so external validation of the metric itself is lacking.",
+        "Alignment is assessed against community perspectives aggregated from Reddit, which may not represent clinical adequacy or safety—an important gap not fully addressed in the excerpt."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How GEO Is Changing the Role of Brand Manager",
+      "link": "https://hbr.org/podcast/2026/09/how-geo-is-changing-the-role-of-brand-manager",
+      "source": "HBR Cold Call (podcast)",
+      "published_display": "Sep 15, 2026",
+      "authors": "Unknown",
+      "summary": "AthenaHQ, a startup that helps brands monitor, protect, and optimize their visibility across conversational AI engines like ChatGPT, Claude, and Gemini was founded in 2025. Co-founded by Andrew Yan, the company built a platform that enables major consumer brands, B2B software companies, and marketing agencies to track their share of voice, correct factual errors in AI responses, and manage their reputation across generative answer engines. In this episode, Harvard Business School associate professor Julian De Freitas and AthenaHQ co-founder and CEO Andrew Yan join host Brian Kenny to discuss the case “AthenaHQ: Building Brands for AI Search,” exploring how marketers are navigating the new world of generative engine optimization (GEO), the so-called “dark funnel” of customer engagement, and the need for brand managers to optimize for brand sentiment and accuracy not just search rankings.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 7.01,
+      "reappear": false,
+      "claude_summary": "As conversational AI engines like ChatGPT, Claude, and Gemini increasingly serve as the first point of contact between consumers and brands, a new discipline — generative engine optimization (GEO) — is emerging to replace or supplement traditional search engine optimization. AthenaHQ, founded in 2025, helps brands track their 'share of voice' across AI-generated responses, correct factual errors, and manage reputation in what practitioners call the 'dark funnel': customer journeys that occur entirely inside AI conversations, invisible to conventional analytics. The HBR podcast episode explores what this shift means for the brand manager role, arguing that marketers must now optimize for AI-rendered sentiment and factual accuracy, not just keyword rankings. The excerpt is podcast-length and based on a business school case study rather than peer-reviewed research.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This podcast episode argues that generative AI is restructuring the brand manager's core function — shifting the performance metric from search-rank visibility to accuracy and sentiment inside AI-generated responses. From CAMO's perspective on AI adoption, the episode illustrates a broader pattern: AI does not merely automate existing workflows but relocates the organizational boundary at which human judgment must be applied. The Decathlon China nano-case documents the same dynamic in software delivery — AI optimized tasks while the real leverage came from rethinking coordination upstream. Here, the analogous realization is that brand managers who treat GEO as a technical SEO variant will misread where their judgment actually needs to move.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both cases illustrate that AI adoption forces practitioners to recognize that optimizing individual tasks (SEO ranking, coding speed) misses the structural shift — the real change is upstream in how outputs are generated and coordinated by AI systems."
+        }
+      ],
+      "key_takeaway": "When AI engines become the primary interface between brands and customers, brand managers must shift their focus from ranking for search queries to ensuring accuracy and favorable representation inside AI-generated answers they cannot directly control.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single physical signpost, centered slightly left of frame at medium scale, standing alone on a clean flat surface — one arm pointing toward a conventional search results page rendered as a small receding panel in the background, the other arm pointing toward an open conversational AI interface in the foreground. Converging perspective lines from the ground plane draw the eye toward the signpost as the focal subject. The environment is spare and architectural: pale concrete floor, neutral grey void, no clutter. Lighting is cool and directional from upper left, casting a crisp shadow to the right that anchors the post to the ground and reinforces its solidity. Palette is desaturated grey-blue with a single warm amber accent on the foreground AI panel to signal the direction of travel.",
+      "red_flags": [
+        "Source is a podcast episode, not a peer-reviewed study or primary research report — findings are practitioner claims and case narrative, not empirically validated.",
+        "AthenaHQ is a commercial startup with a direct financial interest in establishing GEO as a necessary discipline; co-founder participation introduces potential conflict of interest.",
+        "The underlying HBS case study may be paywalled or restricted to educators, limiting independent verification of the evidence base.",
+        "Excerpt is thin — key claims (share of voice metrics, dark funnel scale, ROI of GEO interventions) are asserted rather than substantiated in the available text."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Cutting the ‘coordination tax’: How agentic AI can reshape workflows",
+      "link": "https://www.mckinsey.com/industries/industrials/our-insights/cutting-the-coordination-tax-how-agentic-ai-can-reshape-workflows",
+      "source": "McKinsey Insights",
+      "published_display": "Sep 18, 2026",
+      "authors": "Unknown",
+      "summary": "Organizations must redesign workflows to realize value from AI, but the challenge is where to begin. An opportunity lies between workflow steps, where work passes between teams and systems.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 5.17,
+      "reappear": false,
+      "claude_summary": "Most organizations deploy AI to automate discrete tasks, yet the largest efficiency losses occur not within tasks but between them — in the coordination overhead of handoffs, approvals, and synchronization across teams and systems. This McKinsey article argues that agentic AI, which can act autonomously across multi-step processes, is best positioned to eliminate this 'coordination tax' rather than merely accelerate individual steps. The implication is that workflow redesign, not tool deployment, is the core challenge. Organizations that focus AI investment on inter-task coordination — rather than intra-task speed — are more likely to see measurable throughput gains. The excerpt is brief and the underlying analysis is not peer-reviewed, so specific empirical claims cannot be verified.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This McKinsey article argues that agentic AI creates value primarily by compressing coordination overhead between workflow steps, not by accelerating the steps themselves. From CAMO's perspective on AI adoption, this is a meaningful distinction with direct organizational implications: firms that treat AI as a task-level productivity tool will systematically underestimate where the real friction lies. CAMO's case study of Decathlon China reached a structurally identical conclusion — coding efficiency rose 20–40% after AI deployment, but overall delivery speed increased only 10–15%, because the bottleneck was coordination, not execution; only when a multi-agent system compressed upfront coordination did a weeks-long task collapse to under a day.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both the article and the Decathlon case centre on the same core finding: AI optimizes tasks but the dominant source of lost value is inter-task coordination, and agentic/multi-agent systems are the relevant intervention."
+        }
+      ],
+      "key_takeaway": "The biggest efficiency gains from agentic AI come from eliminating coordination overhead between workflow steps, not from speeding up the steps themselves — so redesigning handoffs matters more than automating tasks.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single wooden relay baton, centered and sharp in the foreground against a softly blurred track lane receding to a vanishing point behind it. The baton is the sole focal subject — the moment of handoff, before or after exchange, with no hands visible, emphasizing the gap rather than the actors. The lane lines converge toward the distant background, drawing the eye inward and reinforcing the idea of a long sequential process reduced to one critical transfer point. The surrounding environment is minimal: clean pale concrete and faded white lane markings, nothing competing with the baton. Lighting is cool and directional — a single overhead source casting a crisp shadow away from the baton, giving it weight and presence. Palette is desaturated grey-white with one warm amber accent on the baton itself.",
+      "red_flags": [
+        "Not peer-reviewed — McKinsey Insights is a practitioner publication with no independent academic review process.",
+        "RSS excerpt is brief; specific quantitative claims or methodology behind the 'coordination tax' framing cannot be assessed from available text.",
+        "Potential conflict of interest: McKinsey has commercial interest in advising organizations on agentic AI workflow redesign.",
+        "Concept of 'coordination tax' appears to be McKinsey framing rather than an established empirical construct; editors should verify whether underlying data are disclosed in the full article."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The economics of AI",
+      "link": "https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-the-economics-of-ai",
+      "source": "McKinsey Insights",
+      "published_display": "Sep 21, 2026",
+      "authors": "Unknown",
+      "summary": "AI is getting more expensive for companies. As rising token usage and workflow complexity make costs harder to predict, leaders need new ways to manage AI economics.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 4.81,
+      "reappear": false,
+      "claude_summary": "As AI usage scales inside organizations, the cost structure is shifting in ways many firms did not anticipate. Rising token consumption, increasingly complex multi-step workflows, and unpredictable inference costs are making AI economics harder to manage than the initial pilots suggested. The McKinsey piece argues that leaders need new frameworks for tracking and governing AI spend — moving beyond per-tool licensing to thinking about cost-per-outcome. The excerpt is brief and the full article may sit behind a soft paywall, so specific empirical claims cannot be verified from the RSS summary alone. The core challenge identified is a governance and measurement one: how do you manage something whose costs scale non-linearly with use?",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This McKinsey piece argues that AI's cost structure becomes genuinely difficult to govern as organizations move from discrete tools to interconnected, high-volume workflows. From CAMO's perspective on AI adoption, this is a predictable but underappreciated consequence of scaling: the organizational and economic frameworks built for software licensing do not transfer cleanly to consumption-based AI pricing. CAMO's Deloitte-HKU AI Adoption Index 2026 found that nearly half of C-suite executives reported AI initiatives falling short of expected ROI — the cost-management problem identified here is likely one structural reason why promise consistently outruns measured performance.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "The Index documents a widespread gap between expected and realized AI ROI among C-suite executives in China and Hong Kong, which aligns directly with the cost-predictability and governance problem this article surfaces."
+        },
+        {
+          "id": "seesaw-experimentation-2024",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/",
+          "reason": "The seesaw dynamic — where optimizing a measured dimension creates unmeasured costs elsewhere — parallels the way AI workflow scaling generates cost externalities that standard per-tool measurement frameworks miss."
+        }
+      ],
+      "key_takeaway": "AI costs scale non-linearly as workflows grow more complex, and the governance frameworks most firms use were not designed for consumption-based, outcome-linked pricing.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single industrial-style electricity meter, large and centered in the frame, mounted flush on a plain concrete wall. The meter's dial or digital display is the focal point, occupying roughly the upper third of the composition, with the needle or numerals just visible in soft directional light falling from the upper left. A single vertical conduit runs down from the meter toward the bottom of the frame, acting as a leading line that draws the eye upward to the display. The surrounding wall is bare and slightly cool-toned — grey-white — keeping all visual weight on the meter itself. Lighting is overcast and diffuse with a faint warm highlight on the meter face, suggesting rising consumption measured against an indifferent, impersonal infrastructure.",
+      "red_flags": [
+        "RSS excerpt is very thin — core empirical claims and methodology cannot be assessed without full article access.",
+        "McKinsey Insights is a consultancy publication, not peer-reviewed; findings may reflect McKinsey's service positioning.",
+        "Potential soft paywall on the full article may limit audience reach if linked directly.",
+        "Publication date (Sep 21, 2026) is in the future relative to current knowledge; treat as forthcoming or verify date accuracy."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "What It Takes to Make Progress When the Future Feels Out of Control",
+      "link": "https://hbr.org/podcast/2026/09/what-it-takes-to-make-progress-when-the-future-feels-out-of-control",
+      "source": "HBR IdeaCast (podcast)",
+      "published_display": "Sep 15, 2026",
+      "authors": "Unknown",
+      "summary": "When the future feels increasingly out of our control, how can leaders and organizations make progress? University of Pennsylvania psychologist Martin Seligman, a pioneer in the study of optimism, resilience, and human flourishing, argues that the answer is agency: the belief that we can influence outcomes and create positive change. He defines agency as a combination of three capabilities: efficacy—the belief that you can achieve a goal now; optimism—the belief that you can achieve it in the future; and imagination—the ability to envision possibilities that don't yet exist. And he explains how leaders can cultivate these qualities in themselves and their organizations, how managers can help employees overcome catastrophizing, and what AI can—and can't—do when it comes to one of the most important human capabilities: imagination. Seligman is the author of Agency: The Psychological History of Human Progress.",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 5,
+      "edu_demoted": false,
+      "score": 4.67,
+      "reappear": false,
+      "claude_summary": "When uncertainty makes the future feel uncontrollable, what enables leaders and organizations to keep moving forward? University of Pennsylvania psychologist Martin Seligman, drawing on his book 'Agency,' argues that progress depends on three interlocking capacities: efficacy (confidence in present ability), optimism (confidence in future outcomes), and imagination (the ability to conceive possibilities that do not yet exist). The podcast explores how leaders can build these qualities in themselves and their teams, how managers can help employees avoid catastrophizing, and where AI fits into this picture — specifically, what AI can and cannot contribute to imagination, which Seligman treats as a distinctively human capability. The discussion is conceptual and practitioner-oriented rather than empirical.",
+      "pillar": "AI & Incentives",
+      "pillar_relevance": 42,
+      "centre_angle": "Seligman's argument that AI falls short on imagination — the capacity to envision futures that do not yet exist — raises a pointed question for researchers studying how AI reshapes motivation and effort. If imagination is what separates excellent from adequate work, and if AI compresses the returns on sustained effort (as CAMO's work on the 'mediocrity trap' suggests), then organizations may be inadvertently eroding the very psychological capabilities Seligman identifies as essential for progress. The policy implication is that AI adoption strategies need to account not only for task efficiency but for whether they crowd out the conditions under which people develop confidence and creative agency.",
+      "matched_camo": [
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/",
+          "reason": "Both pieces grapple with how AI assistance can undermine the sustained effort and creative striving that produce high-quality, imaginative work — Seligman from a psychological agency perspective, CAMO from an experimental incentives perspective."
+        }
+      ],
+      "key_takeaway": "Leaders who rely on AI to fill capability gaps may inadvertently weaken the human agency — efficacy, optimism, imagination — that organizations need most when facing genuine uncertainty.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "low",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single figure — rendered small and seen from behind — stands at the far end of a long, empty corridor, centered in the frame at roughly two-thirds depth. The corridor walls converge to a vanishing point directly behind the figure, drawing the eye to it. The space around the figure is spare: bare concrete or pale stone walls with no decoration, so nothing competes for attention. Lighting is cool and directional, entering from a tall, narrow window just beyond the figure and pooling softly around it, with long shadows stretching back toward the viewer. The palette is desaturated grey-blue overall with a warm amber glow concentrated at the window — evoking uncertainty in the space behind the viewer and possibility ahead.",
+      "red_flags": [
+        "Source is a podcast episode, not a peer-reviewed study; claims about AI and imagination are the author's conceptual argument, not empirically tested findings.",
+        "The RSS excerpt is thin — specific claims about what AI 'can and can't do' regarding imagination are not detailed enough to evaluate or paraphrase with precision.",
+        "Pillar fit is weak; the article is primarily a psychology/leadership piece with only a brief AI angle, making it a stretch for any CAMO pillar."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "A Brief AI Literacy Intervention Does Not Significantly Reduce Over-Reliance and Increases Under-Reliance on ChatGPT: A Randomized Study",
+      "link": "https://arxiv.org/abs/2503.10556",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Sep 21, 2026",
+      "authors": "Brett Puppart, Jaan Aru",
+      "summary": "arXiv:2503.10556v2 Announce Type: replace \nAbstract: In this study, we examined whether a brief AI literacy intervention influences high school students' reliance on recommendations from large language models (LLMs). In a randomized experiment, students were assigned to either a control group receiving a brief introduction to LLMs or an intervention group receiving additional information about how LLMs work, their limitations, and effective usage strategies. Participants then solved eight math puzzles with ChatGPT's advice, which was incorrect in half of the trials. Results indicated widespread over-reliance, with incorrect recommendations adopted in 52.1% of the trials. The intervention did not significantly reduce over-reliance. Instead, it led to an increase in under-reliance, as students were more likely to reject correct recommendations. These findings provide preliminary evidence that brief text-based interventions may be ineffective in fostering appropriate reliance. More comprehensive and interactive approaches may be required to meaningfully influence students' real-world reliance on LLMs.",
+      "ai_strong": 9,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": true,
+      "score": 4.26,
+      "reappear": false,
+      "claude_summary": "A randomized experiment with high school students tested whether a brief text-based AI literacy intervention—covering how LLMs work, their limitations, and effective usage strategies—could reduce over-reliance on ChatGPT. Students solved math puzzles with ChatGPT's advice, which was deliberately incorrect in half of trials. Across both groups, students accepted wrong recommendations 52.1% of the time, indicating widespread over-reliance. The intervention failed to reduce this: instead, it increased under-reliance, causing students to reject correct recommendations more often. The findings suggest that short informational interventions may backfire by inducing blanket skepticism rather than calibrated judgment. More comprehensive, interactive training approaches appear necessary to meaningfully shape how people actually rely on AI outputs.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This study finds that brief AI literacy training does not produce calibrated reliance on LLMs—it shifts users from over-trust toward blanket distrust without improving judgment quality. From CAMO's perspective on AI adoption, this is a critical implementation warning: organizations rolling out AI tools often treat a short onboarding or training module as sufficient to govern how employees engage with AI recommendations. The evidence here suggests that access plus basic training is not enough—adoption strategies must invest in interactive, context-specific approaches that build genuine discernment, not just awareness of AI fallibility.",
+      "matched_camo": [
+        {
+          "id": "hidden-penalty-ai-work-2025",
+          "title": "Research: The Hidden Penalty of Using AI at Work",
+          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/",
+          "reason": "Both studies highlight a gap between organizations' assumptions about AI adoption readiness and the social or behavioral realities that determine how employees and users actually engage with AI tools."
+        }
+      ],
+      "key_takeaway": "Brief AI literacy training does not teach people when to trust AI—it may simply teach them to distrust it, trading over-reliance for under-reliance.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single wooden balance scale centered in the frame, slightly tipped to one side, set against a bare light-grey studio background with no competing elements. The scale's two pans are in focus; one sits noticeably lower than the other, representing miscalibrated judgment rather than equilibrium. A single overhead beam of cool, diffused daylight falls directly onto the fulcrum point, drawing the eye to the pivot as the conceptual anchor. The mood is clinical and still—cool whites and muted greys, soft shadows falling away from the base—evoking precision and measurement without warmth.",
+      "red_flags": [
+        "Sample is limited to high school students, which significantly limits generalizability to workplace or managerial contexts.",
+        "Preprint on arXiv—not yet peer-reviewed; findings should be treated as preliminary.",
+        "The math-puzzle task environment may not reflect real-world AI reliance behavior in professional or high-stakes settings.",
+        "Effect sizes and statistical details are not available in the excerpt; pillar relevance is moderated accordingly."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "Responsible AI Means Knowing the Limits of Agent Autonomy",
+      "link": "https://sloanreview.mit.edu/article/responsible-ai-means-knowing-the-limits-of-agent-autonomy/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Sep 08, 2026",
+      "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+      "summary": "For the fifth year in a row, MIT Sloan Management Review and Boston Consulting Group (BCG) have assembled an international panel of AI experts that includes academics and practitioners to help us understand how responsible artificial intelligence is being implemented across organizations worldwide. In previous posts this year, we have explored artificial intelligence’s impact on [&#8230;]",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 3.26,
+      "reappear": true,
+      "claude_summary": "As AI agents move from discrete task automation to multi-step, semi-autonomous decision-making, organisations face a governance gap: how much autonomy should an agent hold before human oversight becomes inadequate? Drawing on MIT Sloan Management Review and BCG's fifth annual responsible-AI expert panel, the article argues that responsible deployment requires organisations to define explicit limits on agent autonomy rather than treating autonomy as a dial to be turned up over time. The core concern is that current governance frameworks were designed for tool-like AI, not for agents that plan, delegate to sub-agents, and take consequential actions across organisational boundaries. The piece calls on leaders to map decision rights, establish intervention protocols, and resist competitive pressure to expand agent scope faster than accountability structures can support.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 74,
+      "centre_angle": "This article argues that the governance deficit in agentic AI is not technical but organisational: firms lack clear decision-rights frameworks for systems that act rather than merely advise. From CAMO's perspective on AI adoption, this connects directly to the execution gap documented in the Deloitte-HKU AI Adoption Index 2026, where the dominant barriers were cultural and structural rather than technical. The implication is that expanding agent autonomy without redesigning accountability structures risks compounding the organisational failures that already prevent AI from delivering on its promise.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify organisational and executional barriers — not technical ones — as the central obstacle to responsible, high-impact AI deployment at enterprise scale.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "The MedTech case illustrates how poorly designed governance of AI use — in that instance, a blunt adoption mandate — produces counterproductive behaviour, paralleling the article's argument that autonomy without accountability structures creates unintended consequences.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        }
+      ],
+      "key_takeaway": "Before expanding what an AI agent is permitted to do, organisations must first define who is accountable when it acts — and build the infrastructure to intervene when it acts wrongly.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A single heavy iron lever — the kind found on a large industrial control panel — positioned off-centre to the left in the frame, its handle pointing upward at roughly 45 degrees. The lever sits on a clean, matte-grey metal console that occupies the lower third of the image, with the background fading to a cool, near-empty industrial interior — concrete walls, no clutter — so nothing competes with the lever for attention. A single overhead spotlight pools hard white light directly onto the lever's handle and the plate around its base, where a simple arc of calibrated notch marks is just visible, suggesting degrees of travel and deliberate constraint. The surrounding space falls into soft shadow. Palette: cool slate and charcoal with a single warm white highlight; mood is deliberate and austere, evoking control rather than crisis.",
+      "red_flags": [
+        "Article is based on an RSS excerpt only; full text is likely paywalled on MIT Sloan Management Review, so specific findings, data, and methodology cannot be verified from the excerpt alone.",
+        "BCG is a co-producer of the underlying expert-panel report, which may introduce a consulting-industry perspective that favours enterprise-services framing of the governance problem.",
+        "Expert-panel surveys are not peer-reviewed and may reflect practitioner consensus or aspirational norms rather than empirical evidence of what governance approaches actually work."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    }
+  ]
+}
