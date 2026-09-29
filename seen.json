@@ -419,14 +419,23 @@
     "2026-08-11",
     "2026-08-18"
   ],
+  "https://hbr.org/podcast/2026/09/how-ai-is-changing-communication-weighing-efficiency-with-efficacy": [
+    "2026-09-29"
+  ],
   "https://hbr.org/podcast/2026/09/how-ai-is-changing-talent-not-just-tasks-rethinking-where-human-judgment-matters-most": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
   ],
   "https://hbr.org/podcast/2026/09/how-geo-is-changing-the-role-of-brand-manager": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
   ],
   "https://hbr.org/podcast/2026/09/what-it-takes-to-make-progress-when-the-future-feels-out-of-control": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
+  ],
+  "https://hbr.org/podcast/2026/09/what-new-ceos-get-wrong-about-the-job": [
+    "2026-09-29"
   ],
   "https://sloanreview.mit.edu/article/algorithms-trap-us-in-the-familiar-can-they-also-spark-breakthroughs/": [
     "2026-08-25"
@@ -474,7 +483,8 @@
   ],
   "https://sloanreview.mit.edu/article/responsible-ai-means-knowing-the-limits-of-agent-autonomy/": [
     "2026-09-15",
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
   ],
   "https://sloanreview.mit.edu/article/stop-prompting-ai-start-directing-it/": [
     "2026-08-11",
@@ -623,6 +633,9 @@
   "https://www.mckinsey.com/industries/financial-services/our-insights/earning-and-sustaining-trust-in-the-age-of-ai": [
     "2026-08-25"
   ],
+  "https://www.mckinsey.com/industries/healthcare/our-insights/the-ai-powered-future-of-care": [
+    "2026-09-29"
+  ],
   "https://www.mckinsey.com/industries/healthcare/our-insights/the-real-future-of-work-in-healthcare": [
     "2026-07-07"
   ],
@@ -630,7 +643,8 @@
     "2026-05-13"
   ],
   "https://www.mckinsey.com/industries/industrials/our-insights/cutting-the-coordination-tax-how-agentic-ai-can-reshape-workflows": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
   ],
   "https://www.mckinsey.com/industries/industrials/our-insights/the-ai-assembly-line-strategic-imperatives-for-ceos": [
     "2026-05-14",
@@ -642,6 +656,9 @@
   ],
   "https://www.mckinsey.com/industries/industrials/our-insights/the-operating-model-advantage-why-ai-winners-are-rewiring-their-organizations": [
     "2026-07-13"
+  ],
+  "https://www.mckinsey.com/industries/metals-and-mining/our-insights/harnessing-ai-to-make-mining-safer": [
+    "2026-09-29"
   ],
   "https://www.mckinsey.com/industries/retail/our-insights/when-ai-meets-desire-innovating-human-centered-luxury-experiences-in-the-agentic-age": [
     "2026-06-01",
@@ -655,6 +672,7 @@
     "2026-07-13"
   ],
   "https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-the-economics-of-ai": [
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29"
   ]
 }
