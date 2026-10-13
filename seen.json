@@ -433,12 +433,14 @@
   ],
   "https://hbr.org/podcast/2026/09/how-ai-is-changing-communication-weighing-efficiency-with-efficacy": [
     "2026-09-29",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-13"
   ],
   "https://hbr.org/podcast/2026/09/how-ai-is-changing-talent-not-just-tasks-rethinking-where-human-judgment-matters-most": [
     "2026-09-22",
     "2026-09-29",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-13"
   ],
   "https://hbr.org/podcast/2026/09/how-geo-is-changing-the-role-of-brand-manager": [
     "2026-09-22",
@@ -452,7 +454,11 @@
     "2026-09-29"
   ],
   "https://hbr.org/podcast/2026/10/how-ai-is-changing-innovation-why-speed-alone-isnt-a-strategy": [
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-13"
+  ],
+  "https://hbr.org/podcast/2026/10/how-ai-is-changing-strategy-rethinking-what-your-business-is-designed-to-do": [
+    "2026-10-13"
   ],
   "https://sloanreview.mit.edu/article/algorithms-trap-us-in-the-familiar-can-they-also-spark-breakthroughs/": [
     "2026-08-25"
@@ -490,7 +496,8 @@
     "2026-07-14"
   ],
   "https://sloanreview.mit.edu/article/how-to-outcompete-your-clients-ai/": [
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-13"
   ],
   "https://sloanreview.mit.edu/article/leaderships-blind-spot-in-the-age-of-ai/": [
     "2026-07-13",
@@ -524,6 +531,9 @@
   ],
   "https://sloanreview.mit.edu/article/when-ai-disruption-never-ends/": [
     "2026-09-15"
+  ],
+  "https://sloanreview.mit.edu/article/when-compliance-workarounds-backfire/": [
+    "2026-10-13"
   ],
   "https://sloanreview.mit.edu/article/why-ai-isnt-transforming-finance-yet/": [
     "2026-06-09"
@@ -592,7 +602,8 @@
     "2026-10-06"
   ],
   "https://www.mckinsey.com/capabilities/people-and-organization/our-insights/ai-is-changing-work-now-it-has-to-change-the-organization": [
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-13"
   ],
   "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/how-to-close-the-agentic-adoption-gap": [
     "2026-08-11",
@@ -623,6 +634,9 @@
     "2026-05-17",
     "2026-05-18"
   ],
+  "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-ceos-singular-impact-on-the-success-or-failure-of-ai-in-organizations": [
+    "2026-10-13"
+  ],
   "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/ai-is-turning-every-company-into-a-software-company": [
     "2026-06-23"
   ],
@@ -650,6 +664,9 @@
     "2026-05-17",
     "2026-05-18"
   ],
+  "https://www.mckinsey.com/industries/consumer-packaged-goods/our-insights/for-cpg-companies-agentic-ais-real-payoff-is-growth": [
+    "2026-10-13"
+  ],
   "https://www.mckinsey.com/industries/electric-power-and-natural-gas/our-insights/utilities-at-an-inflection-point-four-strategic-evolutions-ahead": [
     "2026-09-08"
   ],
@@ -658,6 +675,9 @@
   ],
   "https://www.mckinsey.com/industries/financial-services/our-insights/earning-and-sustaining-trust-in-the-age-of-ai": [
     "2026-08-25"
+  ],
+  "https://www.mckinsey.com/industries/financial-services/our-insights/pause-pivot-or-accelerate-saas-in-the-age-of-agentic-ai": [
+    "2026-10-13"
   ],
   "https://www.mckinsey.com/industries/healthcare/our-insights/the-ai-powered-future-of-care": [
     "2026-09-29"
