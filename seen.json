@@ -17,6 +17,9 @@
   "https://arxiv.org/abs/2503.10556": [
     "2026-09-22"
   ],
+  "https://arxiv.org/abs/2503.18238": [
+    "2026-10-20"
+  ],
   "https://arxiv.org/abs/2505.00100": [
     "2026-07-21"
   ],
@@ -79,6 +82,9 @@
   "https://arxiv.org/abs/2603.18221": [
     "2026-05-18",
     "2026-05-19"
+  ],
+  "https://arxiv.org/abs/2604.12851": [
+    "2026-10-20"
   ],
   "https://arxiv.org/abs/2604.21751": [
     "2026-09-01"
@@ -368,6 +374,12 @@
   "https://arxiv.org/abs/2610.06240": [
     "2026-10-06"
   ],
+  "https://arxiv.org/abs/2610.23025": [
+    "2026-10-20"
+  ],
+  "https://arxiv.org/abs/2610.23212": [
+    "2026-10-20"
+  ],
   "https://hbr.org/podcast/2026/04/how-a-family-owned-greek-cement-company-evolved-its-leadership-while-pivoting-its-product-portfolio": [
     "2026-05-17",
     "2026-05-18"
@@ -455,10 +467,12 @@
   ],
   "https://hbr.org/podcast/2026/10/how-ai-is-changing-innovation-why-speed-alone-isnt-a-strategy": [
     "2026-10-06",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-20"
   ],
   "https://hbr.org/podcast/2026/10/how-ai-is-changing-strategy-rethinking-what-your-business-is-designed-to-do": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-20"
   ],
   "https://sloanreview.mit.edu/article/algorithms-trap-us-in-the-familiar-can-they-also-spark-breakthroughs/": [
     "2026-08-25"
@@ -517,9 +531,15 @@
     "2026-08-11",
     "2026-08-18"
   ],
+  "https://sloanreview.mit.edu/article/the-defining-challenge-of-responsible-ai-is-designing-systems-that-preserve-human-judgment-when-and-where-it-counts/": [
+    "2026-10-20"
+  ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
     "2026-05-18"
+  ],
+  "https://sloanreview.mit.edu/article/the-new-rules-of-brand-visibility-in-ai-search/": [
+    "2026-10-20"
   ],
   "https://sloanreview.mit.edu/article/the-real-question-to-ask-about-ai-governance/": [
     "2026-07-07",
@@ -615,6 +635,9 @@
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/capturing-central-europes-ai-opportunity": [
     "2026-06-23",
     "2026-06-30"
+  ],
+  "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work": [
+    "2026-10-20"
   ],
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai": [
     "2026-09-01",
@@ -713,6 +736,9 @@
   "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/beyond-the-copilot-scaling-the-agentic-product-development-life-cycle": [
     "2026-08-25",
     "2026-09-01"
+  ],
+  "https://www.mckinsey.com/mgi/media-center/mckinsey-research-shows-ai-creating-more-jobs-than-automation-displaces-but-11-million-american-workers-will-need-help-this-decade": [
+    "2026-10-20"
   ],
   "https://www.mckinsey.com/mgi/our-research/the-real-ai-advantage": [
     "2026-07-13"

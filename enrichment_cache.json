@@ -89,6 +89,43 @@
     "model": "claude-sonnet-4-6",
     "title": "A Brief AI Literacy Intervention Does Not Significantly Reduce Over-Reliance and Increases Under-Reliance on ChatGPT: A Randomized Study"
   },
+  "https://arxiv.org/abs/2503.18238": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This study argues that the productivity gains from AI agents are not automatic — they depend heavily on how teams are structured and how communication is managed. From CAMO's perspective on AI adoption, this reframes the managerial challenge: the question is not whether to deploy AI agents but how to redesign team workflows around AI-appropriate work processes. This connects to findings from CAMO's Decathlon China case, where AI optimized individual tasks but coordination patterns between people determined whether system-level gains materialized — the parallel here is that interpersonal communication styles appropriate for human teams actively degrade human-AI team output.",
+      "claude_summary": "A large-scale field experiment with 2,234 participants producing over 11,000 advertisements finds that human-AI teams are 50% more productive per worker and generate higher text quality, while human-human teams produce higher image quality — illustrating AI's uneven capability frontier. A live experiment on X (~5M impressions) showed both quality types translate to distinct commercial outcomes. Crucially, the study identifies two mechanisms: task-oriented communication amplifies human-AI team performance across all dimensions and prevents homogenization, while interpersonal communication — beneficial in human-human teams — undermines human-AI team output. Delegation improves text quality but drives output homogeneity. The finding that process design, not just AI access, determines performance outcomes has direct implications for how organizations structure human-AI collaboration.",
+      "key_takeaway": "Human-AI teams outperform on productivity and text quality only when communication is task-oriented — the wrong team process can negate AI's advantage entirely.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both the article and the Decathlon case demonstrate that AI adoption reshapes organizational bottlenecks from task execution to coordination and process design, and that gains depend on restructuring work patterns rather than simply introducing AI tools.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "genai-mediocrity-trap-2025",
+          "reason": "Both studies identify conditions under which AI assistance produces lower-quality creative outputs — here, through diversity collapse and interpersonal communication mismatches — suggesting AI's effect on creative work quality is contingent and not uniformly positive.",
+          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
+          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 88,
+      "red_flags": [
+        "Preprint posted on arXiv; not yet peer-reviewed in a journal, so findings should be treated as preliminary.",
+        "Study platform (Pairit) was developed by the authors, which introduces potential experimenter-demand effects or platform design choices that could favor certain outcomes.",
+        "Ad production is a specific creative task — generalizability to other organizational contexts (e.g., knowledge work, decision-making, services) is unclear and should not be assumed."
+      ],
+      "visual_concept": "A long rectangular conference table photographed from a low angle at one end, with a single empty chair centered in the foreground as the focal subject. The table recedes sharply toward a vanishing point at the far end of the room, drawing the eye through the frame. On one side of the table, papers and notebooks are arranged in loose clusters suggesting organic human interaction; on the opposite side, identical evenly spaced single-sheet documents suggest structured, task-oriented output. The room is spare — bare walls, minimal objects — so nothing competes with the table's geometry. Lighting is cool and directional from high windows on one side, casting long soft shadows across the table surface and reinforcing the division between the two sides."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance"
+  },
   "https://arxiv.org/abs/2505.13673": {
     "data": {
       "audience_relevance": {
@@ -182,6 +219,38 @@
     "enriched_at": "2026-09-08",
     "model": "claude-sonnet-4-6",
     "title": "The Fake Friend Dilemma: Relational Trust and the Political Economy of Conversational AI"
+  },
+  "https://arxiv.org/abs/2604.12851": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This study shows that fine-tuning LLMs on demographic preference data produces a classic accuracy-fairness tradeoff: average performance improves, but the gap between well-represented and underrepresented subgroups widens. From CAMO's perspective on the statistical and algorithmic foundations of trustworthy AI, this is a concrete instance of a broader problem in algorithmic decision-making — optimizing a system on aggregate outcomes can systematically disadvantage minority subgroups in ways that aggregate metrics conceal. The finding is especially relevant for organizations deploying AI in culturally diverse contexts, such as customer service, HR screening, or policy consultation, where assuming a culturally neutral model introduces hidden bias that neither developers nor deployers may notice.",
+      "claude_summary": "Can AI language models reliably represent the values of specific demographic subgroups, or do they default to a dominant cultural average? Using Singapore as a case study and the World Values Survey as a benchmark, this paper finds that even top-tier models like GPT-4.1 correctly predict subgroup modal preferences only 57.4% of the time. Fine-tuning on structured preference data improves accuracy on unseen subgroups by 17.4 percentage points on average, but introduces a fairness problem: gains are uneven, with models performing substantially better for young, male, Chinese, and Christian personas. The disparity between best- and worst-served groups widens after fine-tuning, even as average accuracy rises. The study raises a fundamental question about whether culturally aligned AI can be both accurate and equitable across the populations it is meant to serve.",
+      "key_takeaway": "Fine-tuning LLMs for cultural alignment raises average accuracy but widens performance gaps between demographic subgroups, meaning organizations that rely on a single accuracy number to validate culturally adapted AI may be deploying systems that are quietly less fair than their predecessors.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers examine how the data and optimization choices embedded in an algorithm produce systematic biases — self-fulfilling bias in bandit models there, subgroup representation bias in LLM alignment here — that are invisible in aggregate performance metrics.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Preprint (arXiv), not yet peer-reviewed; findings should be treated as preliminary.",
+        "Case study is limited to Singapore using the World Values Survey, which may limit generalisability to other cultural or national contexts.",
+        "The 57.4% accuracy baseline for GPT-4.1 depends on how 'modal preference' is operationalized, which requires scrutiny of the methodology not fully visible in the abstract.",
+        "The fairness metric used (distance-aware) differs from the accuracy metric used to report gains, making direct comparison of improvement vs. disparity claims require careful reading."
+      ],
+      "visual_concept": "A large mosaic wall centered in the frame, occupying two-thirds of the image height, composed of dozens of small square tiles each filled with a distinct muted color — representing distinct demographic subgroups. Most tiles in the upper portion of the mosaic are crisp and well-defined, but toward the lower edges the tiles become blurred and desaturated, visually encoding uneven model performance across groups. A single overhead spotlight falls directly on the center of the mosaic, creating a gradient of clarity from the illuminated core outward to dim, indistinct edges. The surrounding space is a spare, minimalist gallery interior — white walls, stone floor — kept deliberately empty so the mosaic holds all the visual weight. The overall palette is cool and neutral, with the mosaic tiles providing the only color, reinforcing the idea that diversity is present but unevenly legible."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "Can Persona-Prompted LLMs Emulate Subgroup Values? An Empirical Analysis of Generalisability and Fairness in Cultural Alignment"
   },
   "https://arxiv.org/abs/2604.21751": {
     "data": {
@@ -317,38 +386,6 @@
     "model": "claude-sonnet-4-6",
     "title": "Voice AI in Firms: A Natural Field Experiment on Automated Job Interviews"
   },
-  "https://arxiv.org/abs/2608.06549": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This paper argues that LLMs evaluated on single-document tasks fail to capture the cumulative, turn-dependent structure of real political negotiations, and that better benchmarks must reflect this longitudinal reality. From CAMO's perspective on algorithmic foundations for trustworthy AI-driven decisions, the implication is instructive: deploying AI in high-stakes institutional contexts — trade arbitration, regulatory processes, complex contracting — requires models tested on sequential, interdependent data, not snapshot evaluations. Organizations and policymakers considering AI-assisted analysis of regulatory or diplomatic texts should treat benchmark design as a governance question, not merely a technical one.",
-      "claude_summary": "Can large language models understand the slow, iterative logic of real diplomatic negotiations? TradeVerse introduces a benchmark built from 1,170 reconstructed WTO meeting records, covering five negotiating groups and 89 product categories, to test exactly that. Three tasks are defined: predicting which product categories are under discussion, identifying the responding country from anonymized text, and generating a country's final-round statement. All ground-truth labels come directly from official proceedings, requiring no manual annotation. Results show current LLMs struggle significantly with these longitudinal, context-dependent tasks, suggesting that AI systems trained on isolated documents are poorly equipped for the sequential, multi-party reasoning that characterizes real institutional decision-making.",
-      "key_takeaway": "LLMs trained and evaluated on isolated documents are poorly suited to the sequential, multi-round reasoning that real institutional negotiations demand — a gap that matters before any such system is trusted in policy or trade contexts.",
-      "matched_camo": [
-        {
-          "id": "dynamic-selection-2023",
-          "reason": "Both papers address the problem that sequential, path-dependent data structures create biases and failure modes in AI systems that single-period evaluation frameworks are not designed to detect.",
-          "title": "Dynamic Selection in Algorithmic Decision-making",
-          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 62,
-      "red_flags": [
-        "Preprint (arXiv), not yet peer-reviewed — findings should be treated as preliminary.",
-        "Benchmark evaluation results are not yet independently replicated by outside researchers.",
-        "The excerpt does not report quantitative performance metrics, making it difficult to assess the magnitude of LLM shortcomings without reading the full paper.",
-        "Relevance to CAMO's core pillars (organizational and managerial AI) is adjacent rather than direct; editorial fit depends on a policy-audience framing."
-      ],
-      "visual_concept": "A long conference table receding toward a vanishing point at the center-rear of the frame, viewed from one end, with empty high-backed chairs lining both sides. The table surface is the focal subject, positioned centrally and occupying the foreground-to-midground. A single stack of printed meeting transcripts sits at the nearest end of the table, lit by a cool overhead spotlight that creates a narrow pool of light on the documents while the far end of the table fades into soft shadow. The surrounding room is spare — plain walls, no windows — so nothing competes with the receding geometry of the table. Overall palette is cool grey-blue with the document stack as the only warm-toned element, suggesting institutional deliberation rather than urgency."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "TradeVerse: A Longitudinal Benchmark of Political Negotiation in International Trade"
-  },
   "https://arxiv.org/abs/2608.12669": {
     "data": {
       "audience_relevance": {
@@ -372,81 +409,6 @@
     "enriched_at": "2026-09-08",
     "model": "claude-sonnet-4-6",
     "title": "From Fair Representation to Just Recognition in Generative AI"
-  },
-  "https://arxiv.org/abs/2608.13674": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This study finds that LLM diffusion correlates with discourse homogenization at the community level, but the mechanism appears ecological rather than individual — meaning aggregate-level patterns may obscure the absence of any detectable within-person effect. From CAMO's perspective on AI Algorithms & Data, this is a methodological cautionary note: observational causal designs applied to AI's societal effects can produce compelling aggregate signals that dissolve under individual-level scrutiny. The finding reinforces the importance of identifying the correct unit of analysis before drawing conclusions about how AI reshapes human behavior.",
-      "claude_summary": "A study of 6 million Reddit comments from 2019 to 2025 finds that political discourse on cross-partisan forums became measurably more homogeneous among conservative users after late 2022, while progressive users showed no comparable shift. The timing coincides with the rise of large language models, but a rigorous permutation test finds no clean break at ChatGPT's launch — the effect accumulates gradually across multiple model releases. Crucially, a 'stayer' analysis restricted to users active throughout the entire period finds no within-author homogenization, pointing to an ecological or community-level mechanism — shifts in who participates or how communities self-select — rather than individual users changing their own writing style through AI adoption.",
-      "key_takeaway": "Aggregate-level evidence that LLMs homogenize online discourse evaporates at the individual level, suggesting the real mechanism may be community composition change rather than AI shaping how any single person writes.",
-      "matched_camo": [],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 42,
-      "red_flags": [
-        "Not peer-reviewed — arXiv preprint only.",
-        "Causal identification is uncertain: the stayer analysis substantially undermines an AI-adoption mechanism, and the authors acknowledge the data cannot cleanly separate ecological change from secular trends.",
-        "Single-platform study (Reddit) limits generalizability to broader political discourse.",
-        "The ideologically asymmetric finding (conservative users only) is striking but could be sensitive to subreddit selection; replication on other platforms is absent."
-      ],
-      "visual_concept": "A split aerial view of a large public plaza, centered in the frame at medium scale. On the left half, small figures are spread across the space in loosely scattered, varied clusters; on the right half — separated by a single clean architectural dividing line, such as a low concrete wall — the figures have drifted into one dense, uniform mass near the center. The dividing line functions as the sole compositional device directing the eye from the varied side to the converged side. The surrounding plaza is bare stone, uncluttered, so the distribution of figures carries all the visual weight. Lighting is flat, cool overcast daylight — no dramatic shadows — keeping the mood analytical rather than ominous."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Asymmetric Discourse Homogenization and Shared Language Technology: Evidence from Reddit"
-  },
-  "https://arxiv.org/abs/2608.14356": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This paper argues that AI-assisted dispute resolution can reduce the access gap in crypto-asset redress, but only when automated and human roles are explicitly bounded — a point it grounds in EU regulatory requirements around algorithmic accountability. From CAMO's perspective on trustworthy AI-driven decision systems, the governance architecture proposed here raises a question that runs through applied AI design more broadly: when AI classifies disputes and organises evidence, how are errors detected and corrected before they compound into unjust outcomes? The concern about algorithmic bias and liability the authors raise connects to a wider challenge CAMO tracks — ensuring that AI-augmented decisions remain auditable and contestable, not merely efficient.",
-      "claude_summary": "When crypto-asset disputes arise — from exchange failures, asset seizures, or cross-border scams — existing legal systems often fail users who lack technical or legal expertise. This paper proposes a hybrid dispute resolution framework combining AI (for natural-language interaction, evidence organisation, and legal guidance) with smart contracts (for registration, timestamping, and escrow) to make redress more accessible. The architecture keeps AI off-chain and human oversight in the loop for complex cases. The authors stress explainability and procedural transparency, and examine the framework's compatibility with the EU AI Act and the Markets in Crypto-Assets Regulation. The paper argues that carefully delimited automation — not full replacement of human judgment — can improve fairness and enforceability for users who would otherwise be effectively excluded from remedy.",
-      "key_takeaway": "A hybrid AI-plus-smart-contract dispute framework can make crypto redress more accessible, but its legitimacy depends entirely on clear limits around what the algorithm decides and what humans must review.",
-      "matched_camo": [],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 42,
-      "red_flags": [
-        "Not peer-reviewed: preprint posted to arXiv (cs.CY), no indication of journal acceptance or external review.",
-        "The proposed framework is normative and conceptual — no empirical testing, user study, or pilot deployment is reported; findings are design arguments, not evidence.",
-        "The excerpt is thin on technical specifics of the AI components; claims about accessibility and fairness improvements are asserted rather than measured.",
-        "Relevance to CAMO's core pillars (organisational management, incentives, labour) is limited; this is primarily a legal-tech and governance paper."
-      ],
-      "visual_concept": "A single antique balance scale positioned at center-frame in the foreground, rendered in muted brass tones against a spare, cool-grey digital environment. One pan holds a small physical document or token; the other holds a faintly glowing translucent cube representing a smart contract or data object. A single beam of cool white light falls directly onto the scale from above, casting a clean shadow downward and behind it, drawing the eye to the point of equilibrium. The background is a minimalist flat surface — no clutter — with a faint receding grid of thin lines creating a vanishing point directly behind the scale's center post. Palette is cool blue-grey with warm brass accents; lighting is soft and directional, evoking institutional precision rather than technology spectacle."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Designing Inclusive Crypto-Asset Dispute Resolution A Hybrid AI and Smart Contract Online Dispute Resolution Framework for Vulnerable Users"
-  },
-  "https://arxiv.org/abs/2608.14421": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This paper estimates that the data centre expansion required to support agentic AI growth could produce a dramatic rise in CO2 emissions, with embodied carbon in server hardware forming a significant component that standard operational accounting ignores. From CAMO's perspective on AI Adoption, this adds a material cost dimension that is largely absent from enterprise AI investment decisions: the environmental liability of scaling infrastructure is not just an operational overhead but a capital-embedded one. Firms and policy makers evaluating AI expansion plans should treat lifecycle emissions as a governance variable alongside ROI and capability gain.",
-      "claude_summary": "How much CO2 will the AI infrastructure build-out actually produce? This paper applies life cycle assessment methodology to estimate operational and embodied emissions from projected AI data centre expansion, drawing on IEA and McKinsey scenarios. The central finding is that industry-favoured growth trajectories imply a dramatic rise in total CO2 output, and that embodied carbon — the emissions locked into manufacturing servers before they ever run — constitutes a substantial and often overlooked share of the total. The work provides a quantified, scenario-based counterpoint to industry claims that efficiency gains will contain AI's environmental footprint.",
-      "key_takeaway": "The carbon cost of building and running AI data centres at projected scale is substantially larger than industry scenarios imply, with manufacturing emissions alone forming a significant hidden share.",
-      "matched_camo": [],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 42,
-      "red_flags": [
-        "Preprint only — arXiv submission, not yet peer-reviewed; findings should be treated as preliminary.",
-        "Abstract is thin on methodological detail; the reliability of the life cycle assessment model and scenario assumptions cannot be assessed from the excerpt alone.",
-        "Projections depend heavily on IEA and McKinsey scenario inputs, which carry their own uncertainty ranges and have historically varied in accuracy.",
-        "Article has no direct connection to CAMO's research pillars on management and organization; editorial fit is a stretch and pillar relevance is low."
-      ],
-      "visual_concept": "A single large-scale data centre building centered in the frame at medium distance, its angular concrete and steel facade filling roughly two-thirds of the image height. Positioned at the golden-ratio left, the structure recedes along a strong vanishing point toward a flat industrial horizon on the right, drawing the eye through scale and depth. The surrounding environment is sparse — a bare concrete forecourt and an overcast, pale grey sky — so nothing competes with the building's mass. Lighting is cool and diffuse, flat northern-hemisphere overcast, rendering the structure in muted greys and blues with no warmth, reinforcing the idea of hidden systemic weight rather than technological optimism. No figures, no vehicles, no vegetation."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Estimating the growth in emissions from AI data centres"
   },
   "https://arxiv.org/abs/2608.20344": {
     "data": {
@@ -782,6 +744,70 @@
     "model": "claude-sonnet-4-6",
     "title": "Artificial Intelligence and the New Science of Culture"
   },
+  "https://arxiv.org/abs/2610.23025": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This study addresses a measurement problem that grows more consequential as generative AI commoditizes content production: how to attribute economic value to the upstream human expertise that steers AI outputs, rather than to the outputs themselves. From CAMO's perspective on algorithmic decision-making and causal inference, the methodological contribution — recovering causal effects of high-dimensional, interacting treatments from observational data under multimodal confounding — is directly relevant to any organization trying to evaluate which human skills or configurations actually drive AI-assisted performance. The endogeneity and self-fulfilling bias concerns that underpin CAMO's work on algorithmic decision-making apply here in a marketing context: without causal identification, firms risk optimizing for correlated proxies rather than the skill inputs that genuinely move outcomes.",
+      "claude_summary": "When AI generates marketing content at scale, the real competitive asset is no longer the ad itself but the expert knowledge used to specify the inputs that guide generation. This study tackles a core measurement problem: how do you isolate which labeling decisions by human experts causally improve ad performance, when outcomes depend on stochastic AI outputs, high-dimensional label combinations, and confounded data? The authors propose D-VAE, a causal inference framework combining a deconfounder with variational autoencoder architecture, and apply it to nearly 30,000 foundation-makeup ad creatives. AI-recommended label configurations lifted engagement by 32.7% and matched human expert performance in a field experiment. The broader implication is a methodology for pricing and optimizing the skill portfolios that sit upstream of AI-generated content.",
+      "key_takeaway": "As AI commoditizes content production, competitive advantage shifts to the expert labeling knowledge that steers AI generation — and causal inference methods can now quantify which specific skills are worth investing in.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "reason": "Both papers grapple with endogeneity and confounding in observational data generated by algorithmic systems, and both propose causal correction methods — instrumental variables in the CAMO paper, a deconfounder-VAE framework here — to recover unbiased estimates of treatment effects.",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
+        }
+      ],
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 78,
+      "red_flags": [
+        "Preprint only — posted to arXiv, not yet peer-reviewed; findings should be treated as preliminary.",
+        "Applied to a single product category (foundation makeup) which may limit generalizability of the causal estimates.",
+        "The 32.7% engagement lift comes from a field experiment whose design details are not available in the excerpt — sample size, randomization unit, and duration cannot be assessed.",
+        "Publication date of October 2026 is in the future relative to the knowledge cutoff; provenance should be verified before citing."
+      ],
+      "visual_concept": "A single physical filing index card, positioned slightly off-center to the left at medium scale, resting on a clean pale-grey surface. The card bears a sparse handwritten taxonomy — a branching hierarchy of two or three terms — rendered in dark ink. A shaft of soft directional daylight enters from the upper right, pooling onto the card and casting a clean shadow that falls to the lower left, drawing the eye to the card's surface. The surrounding environment is minimal: the remainder of the frame shows only the same neutral grey surface with no competing objects. Palette is cool-white with warm amber where the light touches the card, conveying precision and deliberate classification rather than automation."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "Causal Value Attribution of Marketing Labels in LLM-Generated Ads: A Deconfounder Approach"
+  },
+  "https://arxiv.org/abs/2610.23212": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "low",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This whitepaper argues that the conditions enabling broad, equitable AI adoption are as much a regulatory and institutional design problem as a technical one—and that without active policy intervention, open and cooperative alternatives will continue to be enclosed by dominant platforms. From CAMO's perspective on AI adoption, the organizational-level barriers documented in the Deloitte-HKU AI Adoption Index 2026—siloed structures, weak data governance, cultural resistance—are compounded at the societal level when the infrastructure layer itself is controlled by a handful of actors. The paper's concern with who captures value from AI, and how adoption trajectories get locked in, is a structural counterpart to the firm-level dynamics CAMO tracks.",
+      "claude_summary": "How should regulation protect public and cooperative AI alternatives from being absorbed or displaced by dominant technology platforms? This whitepaper argues that Big Tech's control over chips, cloud infrastructure, data, and talent actively suppresses viable alternatives—particularly in the Global South—and that ethical micro-tools embedded in workflows alone cannot resist these structural pressures. The authors propose a three-part policy framework: actively promoting cooperative technologies, building collective institutional structures to sustain them, and introducing regulations that constrain private enclosure of publicly funded resources. Drawing on desk research and case studies, the paper contends that without deliberate policy intervention, even well-intentioned open alternatives tend to be appropriated by the same concentrated actors they were meant to displace.",
+      "key_takeaway": "Embedding open AI tools in workflows achieves little without parallel regulatory action to prevent dominant platforms from enclosing the infrastructure those tools depend on.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both examine how structural barriers—rather than purely technical ones—determine whether AI adoption translates into broadly distributed value, though the Deloitte-HKU report focuses at the firm level while this paper addresses the infrastructure and regulatory layer.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 52,
+      "red_flags": [
+        "This is a whitepaper, not a peer-reviewed empirical study; findings rest on desk research and selected case studies rather than systematic evidence.",
+        "Advocacy framing is explicit—the paper is directed at 'campaigners, policy advocates, and grassroots organizers,' which introduces normative commitments that go beyond neutral analysis.",
+        "The arXiv preprint has not undergone peer review; empirical claims should be treated as preliminary.",
+        "Global South focus and policy specificity may limit direct relevance to CAMO's primary audience of business managers and C-suite executives in mainland China and Hong Kong."
+      ],
+      "visual_concept": "A single small cooperative building—a modest civic hall or community center—positioned slightly off-center in the left foreground, rendered in warm terracotta tones against a muted dusk sky. Behind it, a row of monolithic glass towers recedes toward a vanishing point on the right horizon, their cool blue-grey reflective surfaces drawing the eye back toward the smaller structure in the foreground through converging perspective lines. The lighting pools softly onto the civic building's facade, making it the luminous anchor of the composition while the towers remain in partial shadow. The surrounding ground is spare—a quiet plaza with minimal detail—so the contrast between the cooperative structure and the encircling scale of the towers reads immediately. Palette: warm amber and ochre for the foreground subject, cool slate and pewter for the background towers, soft overcast light overall."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "Regulating for an AI Commons: Adopting, sustaining, and defending people-first innovation trajectories"
+  },
   "https://hbr.org/podcast/2026/08/can-an-ai-powered-scribe-curb-physician-burnout": {
     "data": {
       "audience_relevance": {
@@ -851,38 +877,6 @@
     "enriched_at": "2026-08-25",
     "model": "claude-sonnet-4-6",
     "title": "Living and Working in the Age of Longevity"
-  },
-  "https://hbr.org/podcast/2026/08/the-innovation-strategy-most-companies-miss": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "medium",
-        "policy_makers": "low"
-      },
-      "centre_angle": "This podcast argues that the central obstacle to constraint-led innovation is organizational mindset rather than technical capability—a claim that sits at the edges of CAMO's research on why AI adoption stalls inside firms. The article's observation that AI can accelerate parts of the design process but cannot replace deep field research maps loosely onto a recurring theme in CAMO's work: technology readiness consistently outpaces organizational and cultural readiness, as documented in the Deloitte-HKU AI Adoption Index 2026, where structural and cultural barriers—not technical ones—were the dominant reason AI initiatives fell short of expected returns. That said, the article's core subject is innovation strategy for global markets, which lies outside CAMO's research scope; the AI angle is secondary and underspecified, and editors should weigh this honestly before publishing.",
-      "claude_summary": "Most companies build products for wealthy, infrastructure-rich markets and then try to adapt them downward—a process that usually fails or produces compromises. Dartmouth's Vijay Govindarajan and MIT's Amos Winter argue the opposite logic: design for the most constrained environments first—tight budgets, unreliable power, limited distribution—and the resulting solutions often outperform conventional products globally. Their framework emphasizes deep field research to surface latent customer needs, and deliberate performance-cost tradeoffs. Critically, they identify organizational mindset, not technology, as the primary barrier to this approach. AI is mentioned as a partial accelerant in the design process, but not a substitute for the upstream human work of identifying the right problem.",
-      "key_takeaway": "Designing for the hardest constraints first produces more robust innovations—but the real obstacle is persuading organizations to attempt it, not finding the right technology.",
-      "matched_camo": [
-        {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "Both sources converge on the finding that organizational and cultural factors—not technology—are the primary barriers to realizing value from innovation; the Index provides empirical grounding for this claim in the AI context.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 32,
-      "red_flags": [
-        "Source is a podcast episode based on an RSS excerpt only; no transcript or primary data reviewed—summary relies entirely on the brief description provided.",
-        "The AI dimension appears incidental to the episode's main argument; the pillar fit is weak and editors should consider whether this serves CAMO's audience better than pieces with a stronger AI-management link.",
-        "Not peer-reviewed; the underlying book has not been independently assessed here.",
-        "No named authors confirmed in the source metadata—attributed to podcast guests but not verified."
-      ],
-      "visual_concept": "A single weathered wooden prototype—roughly the size and shape of a portable water pump handle—centered in the foreground of an otherwise sparse concrete workshop floor, lit by a shaft of cool natural light entering from a high window off-frame left. The light pools directly onto the object, leaving the surrounding floor in soft shadow and keeping the background—bare walls, an empty workbench—subordinate and uncluttered. The palette is muted: grey concrete, pale wood grain, with a faint warm undertone from the wood itself. The image should read as a study in purposeful austerity: one functional object, made to do more with less."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "The Innovation Strategy Most Companies Miss"
   },
   "https://hbr.org/podcast/2026/09/how-ai-is-changing-communication-weighing-efficiency-with-efficacy": {
     "data": {
@@ -1222,6 +1216,76 @@
     "model": "claude-sonnet-4-6",
     "title": "Responsible AI Means Knowing the Limits of Agent Autonomy"
   },
+  "https://sloanreview.mit.edu/article/the-defining-challenge-of-responsible-ai-is-designing-systems-that-preserve-human-judgment-when-and-where-it-counts/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This article argues that responsible AI design must actively engineer the conditions for meaningful human oversight, not merely append a human in the loop as procedural cover. From CAMO's perspective on AI adoption inside organizations, this tension is structural: as our work on mandatory AI adoption at a leading MedTech firm illustrates, when organizations focus on utilization metrics rather than genuine integration, employees comply formally while judgment atrophies in practice. The implication for managers is that preserving human judgment is an incentive and job-design problem as much as a technical one—organizations need to be explicit about which decisions AI informs versus which it makes, and build accountability structures accordingly.",
+      "claude_summary": "Now in its fifth year, the MIT SMR/BCG responsible AI survey surfaces a finding that cuts across all sectors: the central design challenge for responsible AI is not capability, but preserving meaningful human judgment at the moments that matter. The article draws on an international panel of academics and practitioners to assess how organizations are implementing responsible AI in practice. The core argument is that well-intentioned AI deployments routinely erode the conditions under which human oversight remains genuine rather than nominal. The excerpt is brief and the full findings are behind a paywall, so specific metrics and sector breakdowns cannot be confirmed, but the framing is consistent with five years of BCG/MIT SMR tracking data on responsible AI implementation.",
+      "key_takeaway": "Responsible AI is less a technical compliance exercise than an organizational design challenge: firms must deliberately architect which decisions remain human, and under what conditions, rather than treating human oversight as a default that survives deployment on its own.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "The MedTech case directly illustrates how mandated AI use can produce formal compliance without genuine engagement, which is precisely the failure mode the article warns against when human judgment is nominally preserved but practically hollowed out.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        },
+        {
+          "id": "nanocase-dingdong-2026",
+          "reason": "Dingdong's experience shows that AI-driven attribution can make accountability explicit while simultaneously displacing the managerial judgment needed to handle ambiguous edge cases—directly relevant to the article's concern about where human oversight must be preserved.",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Article is likely paywalled at MIT Sloan Management Review; full findings not verifiable from excerpt alone.",
+        "RSS excerpt is thin—specific data, metrics, and sector breakdowns cannot be confirmed without access to the full piece.",
+        "BCG is a co-publisher with commercial interests in responsible AI consulting; findings may reflect practitioner optimism or frame issues in ways that favor consulting interventions.",
+        "Annual survey format means findings may be incremental rather than novel relative to prior four editions—editors should check whether the headline claim advances meaningfully on previous years."
+      ],
+      "visual_concept": "A single empty mid-century boardroom chair, centered slightly left of frame on the golden ratio, photographed from a low angle so it reads as monumental against a plain, receding conference table that forms a strong vanishing-point perspective line pulling the eye toward the chair. The surrounding room is deliberately spare—no clutter, no other furniture visible, just the long table surface and neutral walls. Light falls in a single cool shaft from an unseen overhead source, pooling onto the seat of the chair and casting a clean shadow behind it. The overall palette is muted grey-blue with warm amber only on the upholstered seat, suggesting both institutional authority and the question of whether that seat—human judgment—remains occupied."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "The Defining Challenge of Responsible AI Is Designing Systems That Preserve Human Judgment When and Where It Counts"
+  },
+  "https://sloanreview.mit.edu/article/the-new-rules-of-brand-visibility-in-ai-search/": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This article surfaces a familiar adoption pattern: organizations deploy or respond to a new AI capability—here, AI-mediated search—while their internal measurement systems and organizational routines remain calibrated to the prior technology. From CAMO's perspective on AI adoption, the more consequential finding is not the technical shift in how AI surfaces brands but the organizational inertia that prevents firms from even detecting whether their visibility is rising or falling. This echoes a broader theme in CAMO's work: the barriers to meaningful AI adoption are predominantly organizational and executional, not technical—a finding the Deloitte-HKU AI Adoption Index 2026 documents across C-suite executives in mainland China and Hong Kong.",
+      "claude_summary": "As AI-mediated search reshapes how consumers discover brands, organizations are struggling to adapt. Interviews with 15 senior marketing and digital leaders across financial services, retail, software, media, higher education, and professional services reveal three recurring problems: significant blind spots in how firms measure AI visibility, organizational inertia that slows adaptation of SEO practices, and a lack of strategic frameworks suited to AI-driven discovery. Traditional search engine optimization logic does not transfer cleanly to generative AI interfaces, yet most organizations have not updated their measurement systems or internal workflows to reflect this shift. The article is practitioner-facing and draws on qualitative interviews rather than a controlled study.",
+      "key_takeaway": "Firms that fail to update their visibility metrics and internal workflows for AI-mediated search risk being structurally invisible to a growing share of their audience, not because the technology excludes them but because their organizations are not set up to detect or respond to the shift.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify organizational inertia, siloed departments, and measurement gaps—rather than technical capability—as the primary barriers to effective AI adoption.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "red_flags": [
+        "Based on 15 qualitative interviews only — no quantitative validation or control conditions; findings are directional and practitioner-reported rather than causal.",
+        "Likely paywalled behind MIT Sloan Management Review subscription.",
+        "No peer-review status indicated; practitioner-facing outlet rather than academic journal.",
+        "RSS excerpt is thin — specific findings and methodology details are not fully visible, limiting confidence in summary accuracy."
+      ],
+      "visual_concept": "A single large vintage compass, centered and close in the frame, sitting on a plain pale-grey surface with nothing else competing for attention. The compass needle points confidently in one direction, but a faint etched grid beneath it—rendered in a slightly different scale and orientation—represents the old coordinate system that no longer aligns with the needle's reading. Soft, diffused overhead daylight falls directly onto the compass face, creating a gentle pool of illumination that fades to cool shadow at the frame edges. The surrounding surface is kept deliberately empty to emphasize the isolation of the instrument and the quiet tension between a tool and an environment that has quietly shifted around it. Palette is muted: aged brass tones on the compass against a cool, neutral ground."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "The New Rules of Brand Visibility in AI Search"
+  },
   "https://sloanreview.mit.edu/article/when-ai-disruption-never-ends/": {
     "data": {
       "audience_relevance": {
@@ -1289,43 +1353,6 @@
     "enriched_at": "2026-10-13",
     "model": "claude-sonnet-4-6",
     "title": "When Compliance Workarounds Backfire"
-  },
-  "https://www.mckinsey.com/capabilities/operations/our-insights/agentic-ai-and-the-future-of-global-business-services": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "high",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This McKinsey article argues that agentic AI demands a fundamental redesign of operating models in global business services, not incremental tool adoption. From CAMO's perspective on AI adoption, this aligns with a pattern we observe repeatedly: the binding constraint is organizational architecture and coordination, not technical capability. CAMO's case at Decathlon China illustrates exactly this dynamic — coding efficiency rose 20–40% with AI, yet overall delivery speed improved only 10–15% because coordination bottlenecks between tasks remained untouched. The implication for leaders is that deploying agentic AI without redesigning the workflows and accountability structures around it is likely to reproduce the same gap between promise and measured performance.",
-      "claude_summary": "Agentic AI is altering how global business services are structured and delivered, with McKinsey arguing that realizing its potential requires leaders to redesign workflows, rethink talent deployment, and reconfigure operating models rather than simply layering AI tools onto existing processes. The article focuses on the shift from task-level automation to systems of autonomous AI agents capable of handling end-to-end business service processes. Because the excerpt is brief, specific empirical claims, sector data, or case evidence cannot be confirmed from the available text alone. The core argument is that the constraint on value capture is organizational and managerial, not technological.",
-      "key_takeaway": "Agentic AI's value in business services will be determined not by the technology itself but by leaders' willingness to restructure workflows, talent roles, and operating models around it.",
-      "matched_camo": [
-        {
-          "id": "nanocase-decathlon-china-2026",
-          "reason": "Both pieces centre on the same argument: AI optimizes individual tasks but organizational value requires compressing coordination between tasks — the operating model, not the technology, is the limiting factor.",
-          "title": "Compressing Coordination with AI at Decathlon China",
-          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
-        },
-        {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "The Adoption Index documents that AI's impact remains shallow across enterprises because barriers are organizational and executional rather than technical — a direct empirical grounding for McKinsey's prescriptive claim about rethinking operating models.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 82,
-      "red_flags": [
-        "Source is McKinsey Insights, a consulting firm with commercial interests in advising on exactly the organizational transformations the article recommends — potential conflict of interest should be noted.",
-        "RSS excerpt is thin; no specific data, research methodology, or empirical findings are visible, making the article's evidentiary basis impossible to assess without full access.",
-        "Not peer-reviewed; practitioner commentary rather than research."
-      ],
-      "visual_concept": "A single empty conference table, shot from one end in slight perspective so the far end narrows toward a vanishing point at the centre of the frame. The table surface is clean and geometric — pale ash wood or white laminate — with two or three vacant chairs visible along its sides, suggesting a workforce in transition rather than absence. Cool, diffuse daylight enters from a large window on the left side of the frame, casting a long soft shadow diagonally across the table surface toward the viewer. The surrounding space — walls, ceiling — is kept minimal and neutral so nothing competes with the table as the focal subject. The overall palette is muted blue-grey and warm white, conveying organizational calm and structural change rather than urgency."
-    },
-    "enriched_at": "2026-08-18",
-    "model": "claude-sonnet-4-6",
-    "title": "Agentic AI and the future of global business services"
   },
   "https://www.mckinsey.com/capabilities/operations/our-insights/stacking-the-odds-a-blueprint-for-successfully-scaling-agentic-ai": {
     "data": {
@@ -1477,6 +1504,43 @@
     "enriched_at": "2026-09-01",
     "model": "claude-sonnet-4-6",
     "title": "Your AI agents need performance management, too"
+  },
+  "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "centre_angle": "This McKinsey piece argues that the predominant failure mode in enterprise AI is measuring adoption rather than economic value generated. From CAMO's perspective on AI adoption, this diagnosis aligns closely with findings in the Deloitte-HKU AI Adoption Index 2026, which found that nearly half of C-suite executives reported AI initiatives fell short of expected ROI — with the dominant barriers being organizational and executional rather than technical. The value curve framing is useful precisely because it pushes firms toward the task-level cost-displacement analysis that CAMO's research suggests is missing from most adoption conversations.",
+      "claude_summary": "Many organizations treat AI adoption as an end in itself, measuring deployment rates rather than economic outcomes. McKinsey's AI value curve framework reframes the question: where does AI's automation potential generate the most cost-effective returns when applied to existing work? The piece argues that firms should map tasks along a value curve that accounts for both automation feasibility and cost displacement, moving attention from 'are we using AI?' to 'where does AI actually pay?' The excerpt is thin on empirical detail, but the core argument is that misaligned measurement — tracking adoption rather than value — is the primary reason AI investments underdeliver. The framework appears aimed at helping executives prioritize AI deployment across existing workflows rather than chasing breadth of coverage.",
+      "key_takeaway": "Firms that measure AI adoption rather than cost-effective value creation are optimizing for the wrong variable and will continue to underdeliver on AI's economic potential.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify the gap between AI adoption breadth and measurable economic returns as the central challenge facing organizations today.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "The value curve's focus on cost displacement by task maps directly onto CAMO's analysis of how AI differentially reduces the cost of satisfactory versus high-effort performance, reshaping which jobs firms choose to retain.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "red_flags": [
+        "Source is a McKinsey consulting publication, not peer-reviewed research; findings may reflect consulting framing rather than independent empirical evidence.",
+        "RSS excerpt is very thin — the summary above is partly inferential; the full article may contain richer data or significantly different claims.",
+        "Potential conflict of interest: McKinsey has a commercial interest in advising firms on AI deployment strategy."
+      ],
+      "visual_concept": "A single large graph axis — rendered as a clean, physical architectural element like a polished metal rail or a ruled stone ledge — runs diagonally from the lower-left foreground to the upper-right background, occupying the center of a spare, cool-lit interior space. Resting on this axis at the midpoint is one distinct marker object: a small, solid geometric block (a cube or cylinder) catching a focused beam of warm amber light from above, while the rest of the composition recedes into cool blue-grey shadow. The surrounding space is minimal — a bare floor, neutral walls — so nothing competes with the block and its illuminated position on the curve. The palette contrasts warm gold at the focal point against a cool, desaturated background, suggesting the idea of identifying precisely where value concentrates along a range of possibilities. No figures, no screens, no robotic elements."
+    },
+    "enriched_at": "2026-10-20",
+    "model": "claude-sonnet-4-6",
+    "title": "The AI value curve: The economics of applying AI to existing work"
   },
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai": {
     "data": {
