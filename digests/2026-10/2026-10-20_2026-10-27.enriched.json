@@ -1,0 +1,446 @@
+{
+  "week_start": "2026-10-20",
+  "week_end": "2026-10-27",
+  "script_version": "v6.4 (2026-05-26)",
+  "model": "claude-sonnet-4-6",
+  "item_count": 10,
+  "items": [
+    {
+      "title": "The Effects of Generative AI on Collaboration and Social Networks Among Knowledge Workers",
+      "link": "https://arxiv.org/abs/2610.32461",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Oct 26, 2026",
+      "authors": "Giuseppe Soda, Alessandro Iorio, Leonardo Rizzo",
+      "summary": "arXiv:2610.32461v1 Announce Type: cross \nAbstract: The rapid diffusion of generative artificial intelligence has raised concerns that knowledge work may become less dependent on human-to-human interaction. Yet because AI-generated outputs require interpretation, verification, and social legitimation, generative AI may instead increase collaboration among workers. We test these competing predictions using passively collected behavioral data from more than 12,000 knowledge workers observed over 13 months during the staged organizational rollout of an AI-powered assistant (Microsoft Copilot). Using two complementary quasi-experimental designs -- a staggered difference-in-differences model and a fixed-effects instrumental-variable approach -- we estimate the effects of generative AI on workers' collaboration behavior and social network structure. We estimate that generative AI increased collaboration time across communication channels and reshaped individual networks. Those using generative AI interacted with more colleagues and their networks became less clustered, indicating broadening in collaboration structures. At the same time, they also concentrated more of their collaboration on ties with stronger prior histories, deepening reliance on already trusted colleagues. Together, these findings suggest that, while generative AI changes how people work, it may not displace human-to-human interactions.",
+      "ai_strong": 16,
+      "ai_booster": 0,
+      "domain_matches": 7,
+      "edu_demoted": false,
+      "score": 22.24,
+      "reappear": false,
+      "claude_summary": "A large-scale study of over 12,000 knowledge workers tracked for 13 months during a staged rollout of Microsoft Copilot finds that generative AI did not reduce human-to-human interaction — it increased it. Workers using AI spent more time collaborating, engaged with a wider set of colleagues, and built less clustered networks. At the same time, they deepened reliance on already-trusted ties. The study uses two quasi-experimental designs to establish causal estimates, making it methodologically stronger than most observational AI-at-work research. The core implication: AI-generated outputs require interpretation and social validation, which drives people toward colleagues rather than away from them, though the pattern of those relationships shifts in structure.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 82,
+      "centre_angle": "This study provides causal evidence that generative AI reshapes — rather than replaces — the social architecture of knowledge work. From CAMO's perspective on AI adoption, the finding that AI broadens workers' networks while simultaneously deepening reliance on trusted ties suggests that organizations rolling out tools like Copilot should anticipate changes in coordination patterns, not just task completion. This connects to the broader insight emerging from CAMO's case work — visible in the Decathlon China study on coordination bottlenecks — that AI's organizational effects are often more about how people synchronize and validate work than about raw productivity gains.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/",
+          "reason": "Both pieces center on the finding that AI's primary organizational effect is on coordination and interaction patterns between workers, not just individual task efficiency."
+        }
+      ],
+      "key_takeaway": "Deploying generative AI does not reduce the need for human collaboration — it restructures it, widening networks while intensifying reliance on trusted relationships.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single office worker seated at a desk in the center of the frame occupies the foreground, viewed from slightly above and behind at a three-quarter angle, their figure rendered at medium scale. Radiating outward from their position, thin lines extend across a sparse open-plan floor toward other desks in the background — the lines vary in weight, with two or three noticeably thicker than the rest, representing deeper trusted ties. The environment is clean and architectural: concrete columns, diffused natural light from large windows on one side casting soft, directional shadows across the floor that follow the same radiating geometry. The palette is cool blue-grey with warm amber pooling specifically on the central figure and the few thick connecting lines, drawing the eye to the asymmetry between breadth and depth in the network.",
+      "red_flags": [
+        "Preprint — listed as arXiv submission; not yet peer-reviewed.",
+        "The published date (Oct 26, 2026) is in the future relative to most reference points; verify publication date before citing.",
+        "Findings derive from a single organization's Copilot rollout; generalizability to other AI tools or sectors is uncertain.",
+        "Behavioral data is passively collected (likely calendar and email metadata); collaboration quality and content are inferred from frequency and tie strength, not directly observed."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "AI Alignment for Digital Democracy: Fairer Voters Representation against LLM Biases",
+      "link": "https://arxiv.org/abs/2610.32780",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Oct 26, 2026",
+      "authors": "Yi Qi, Srijoni Majumdar, Evangelos Pournaras",
+      "summary": "arXiv:2610.32780v1 Announce Type: new \nAbstract: AI representation is emerging in digital democracy, assisting in voter emulation and decision-making. Large language models (LLMs) behave differently depending on the model, the prompt context, and the voter information they receive, representing some groups more accurately than others and potentially making the emulation unfair to certain groups. We investigate demographic biases in LLM-emulated electorates: how accurately LLMs represent individual votes, whether some voter groups are represented more accurately than others, and whether AI alignment can reduce these disparities without sacrificing overall accuracy. Using three U.S. presidential elections, we compare a closed-source and an open-source LLM across voters' demographic features and test AI alignment strategies toward fairer voter representation. Removing gender from the voter profile reduces the largest group error of the models by 22-42%, and removing education reduces it by 64%, whereas removing self-reported race increases the mean group error by over 40%, all without lowering accuracy. Common alignment strategies, such as repeated queries or fairness instructions, do not reduce these errors and can double them.",
+      "ai_strong": 10,
+      "ai_booster": 0,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 11.61,
+      "reappear": false,
+      "claude_summary": "When AI models are used to emulate voters in digital democracy contexts, they do not represent all demographic groups equally well. This study tested two LLMs against three U.S. presidential elections and found significant disparities: removing education from voter profiles reduced the largest group-level prediction error by 64%, while removing self-reported race increased mean group error by over 40%. Standard alignment fixes—repeated queries, fairness instructions—not only failed to close these gaps but in some cases doubled them. The finding challenges the assumption that general-purpose LLM alignment techniques transfer reliably to high-stakes civic representation tasks.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 78,
+      "centre_angle": "This study demonstrates that LLM-based voter emulation encodes systematic demographic disparities that standard alignment techniques cannot reliably correct—and may actively worsen. From CAMO's perspective on algorithmic trustworthiness, the finding is a concrete instance of a broader problem: bias in AI-driven decision support is often feature-specific and context-dependent, meaning blanket fairness interventions can be ineffective or counterproductive. Organizations and policymakers deploying AI in any representative or evaluative role—not only civic applications—should audit which input features are driving group-level errors before reaching for off-the-shelf alignment strategies.",
+      "matched_camo": [
+        {
+          "id": "dynamic-selection-2023",
+          "title": "Dynamic Selection in Algorithmic Decision-making",
+          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/",
+          "reason": "Both papers identify how algorithmic systems encode biases that standard corrections fail to eliminate—self-fulfilling bias in online learning here, demographic representational bias in LLM emulation in the article—and both propose that the source of the bias must be diagnosed at the feature or data-generation level rather than patched generically."
+        }
+      ],
+      "key_takeaway": "Standard LLM alignment techniques do not reliably reduce demographic bias in voter emulation and can make disparities significantly worse, meaning domain-specific auditing of input features is essential before deploying AI in any representative role.",
+      "audience_relevance": {
+        "managers_csuite": "low",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single ballot box positioned slightly left of center in the foreground, rendered in clean geometric form with a narrow slot at its top. Behind it, a receding grid of identical ballot boxes extends toward a vanishing point at the center of the frame, each box progressively smaller and slightly out of focus, some subtly brighter and some darker to suggest uneven illumination. Light falls directly onto the foreground box from above-left, pooling on its surface and casting a long shadow to the right, while the background boxes fade into a cool, neutral grey. The palette is muted blue-grey with a single warm accent on the lit face of the focal box. The environment is otherwise bare—no figures, no text, no decoration—keeping all attention on the contrast between the one well-lit box and the unevenly lit field behind it.",
+      "red_flags": [
+        "Preprint only—arXiv submission, not yet peer-reviewed.",
+        "Findings are based solely on U.S. presidential election data; generalizability to other electoral systems or non-English LLM contexts is unestablished.",
+        "The publication date (Oct 26, 2026) appears to be in the future relative to current knowledge cutoff—verify authenticity and date before publishing."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "When AI Gets Cheaper, Do Prices Follow? Information Delays and Algorithmic Pricing",
+      "link": "https://arxiv.org/abs/2610.31693",
+      "source": "arXiv: Economics (econ.GN)",
+      "published_display": "Oct 26, 2026",
+      "authors": "Krish Tadigotla",
+      "summary": "arXiv:2610.31693v1 Announce Type: new \nAbstract: We examine whether lower costs of running AI models lead to lower prices, and whether delays in observing competitors' prices and limits on price changes affect how much consumers benefit. We study a simulated market with two differentiated sellers, logit demand, and tabular Q learning. A factorial experiment varies the age of rival price information, how often sellers can revise prices, whether production costs fall, and differences in firm quality and costs. We evaluate policies trained on 60 paired market seeds in each of 16 conditions, for 960 training runs, and measure expected consumer surplus after learning ends.\n  In the main setting with identical firms and falling costs, the estimated interaction between information delay and repricing frequency on consumer surplus is -0.00025 normalized units, with a 95% paired seed bootstrap interval of [-0.0402, 0.0393]. The interval includes zero, as do intervals for tests of whether the interaction changes with the cost regime or differences between firms. With the shortest information delay and the ability to revise prices every period, average price reductions equal 55.6% and 44.0% of the imposed cost reduction for the two firms. Mean consumer surplus under the learned policies is below the corresponding static grid Nash benchmark in all 16 conditions.\n  The findings show that simulated cost savings need not be fully passed on to buyers. They do not establish collusion or describe pricing by actual AI providers.",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 7.74,
+      "reappear": false,
+      "claude_summary": "When AI inference costs fall, do consumers see lower prices? This simulation study uses two competing sellers, logit demand, and Q-learning agents to test how information delays and repricing constraints shape how much of a cost reduction reaches buyers. The short answer: not much, and not reliably. Even under the most favorable conditions — fresh rival-price data, frequent repricing — the two firms passed on only 55.6% and 44.0% of the cost reduction respectively. Consumer surplus under learned pricing policies sat below the static Nash benchmark in all 16 experimental conditions. Crucially, the interaction between information delay and repricing frequency on consumer surplus was statistically indistinguishable from zero, suggesting these structural features are not the primary lever explaining underpassthrough.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 62,
+      "centre_angle": "This simulation study asks whether algorithmic pricing agents — trained via Q-learning in a duopoly — pass cost savings to consumers, or pocket them. From CAMO's perspective on AI algorithms and data, the result is a reminder that learned policies optimized for firm-level reward can diverge systematically from socially efficient outcomes, even absent explicit coordination. The gap between the learned equilibrium and the static Nash benchmark across all 16 conditions points to a design problem: when the objective function and the training environment are specified by the firms deploying these algorithms, consumer welfare is not guaranteed to follow. This matters for regulators and platform designers who assume competitive markets will transmit AI efficiency gains downstream.",
+      "matched_camo": [
+        {
+          "id": "seesaw-experimentation-2024",
+          "title": "Seesaw Experimentation: A/B Tests with Spillovers",
+          "url": "https://camo.hku.hk/2024-03-seesaw-experimentation-ab/",
+          "reason": "Both papers examine how algorithmic optimization on a measured primary dimension (revenue/price) can produce outcomes that diverge from broader welfare goals, and both use simulation-style experimental designs to identify the conditions under which this divergence occurs."
+        }
+      ],
+      "key_takeaway": "Algorithmic pricing agents trained to maximize firm payoffs may retain a large share of AI cost savings rather than passing them to consumers, even in competitive markets with frequent repricing.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single large price tag — rendered in crisp, minimal graphic style — centered in the frame at medium scale against a cool, muted grey background. The tag's string extends diagonally upward to the left, where it anchors to a small downward-pointing arrow representing a falling cost input, creating a visual tension: costs falling, price tag unmoved. A single shaft of flat, cool daylight from the upper right pools directly on the tag's face, leaving the surrounding space in soft shadow so nothing competes with it. The palette is slate grey and off-white with one accent of pale amber on the tag itself — no warm or promotional tones.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint with no indication of journal submission or review status.",
+        "Simulation-only findings: results derive from a stylized two-firm Q-learning model with logit demand; external validity to real-world AI pricing platforms is explicitly disclaimed by the author.",
+        "Author appears to be a solo early-stage researcher; no institutional affiliation or competing-interest statement is visible in the excerpt.",
+        "The paper explicitly states it 'does not establish collusion or describe pricing by actual AI providers' — editors should ensure this caveat is preserved in any coverage."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "From Regulation to Engineering: Organizational Privacy Climate as Mediator",
+      "link": "https://arxiv.org/abs/2610.32576",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Oct 26, 2026",
+      "authors": "Oshrat Ayalon, Eran Toch, Irit Hadar, Michael Birnhack",
+      "summary": "arXiv:2610.32576v1 Announce Type: new \nAbstract: Data protection legislation aims to protect privacy rights by regulating how information systems store and process personal information. While such legislation defines legal obligations, translating regulatory requirements into engineering practice is far from straightforward. As new frameworks such as the EU AI Act emerge, understanding these mechanisms becomes increasingly relevant. To investigate them, we conducted an online survey of 156 U.S. information system developers, examining the role of organizational privacy climate in the association between developers' perceptions of the GDPR and their privacy engineering practices. Using structural equation modeling, we found that organizational privacy climate mediates the relation between developers' perceived GDPR importance and their privacy attitudes, which in turn are associated with their privacy engineering practices. The mediation chain - regulation, climate, attitudes, practices - complements the direct effect of regulation on practice, revealing the organizational and attitudinal pathway through which regulatory intent reaches engineering behavior. We discuss implications for the next generation of privacy and AI regulation.",
+      "ai_strong": 2,
+      "ai_booster": 0,
+      "domain_matches": 4,
+      "edu_demoted": false,
+      "score": 5.8,
+      "reappear": false,
+      "claude_summary": "How does data protection law actually change what software developers do? A survey of 156 U.S. developers finds that the answer runs through organizational culture, not just legal text. Using structural equation modeling, the study shows that developers who perceive GDPR as important do not translate that perception directly into privacy-protective engineering practices. Instead, organizational privacy climate mediates the relationship: a supportive internal culture shapes developers' attitudes toward privacy, and those attitudes then drive practice. Regulation reaches the codebase indirectly, through the organization. The authors argue this mediation chain has direct implications for how the EU AI Act and next-generation AI regulations should be designed and implemented.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 62,
+      "centre_angle": "This study argues that regulatory compliance with privacy law is an organizational behavior problem before it is a technical one—internal climate determines whether regulatory intent reaches engineering practice. From CAMO's perspective on AI adoption, the finding has a direct parallel in enterprise AI deployment: mandates and policies are necessary but insufficient if the organizational environment does not reinforce the intended behavior. CAMO's work on the Dingdong and MedTech cases shows similarly that the gap between a firm's stated AI governance goals and actual employee behavior is closed—or widened—by how incentives and culture are designed at the organizational level, not by the policy text alone.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/",
+          "reason": "Both cases examine how a formal mandate (regulatory or managerial) fails to produce the intended behavior when the organizational environment and incentive design are misaligned with the policy goal."
+        }
+      ],
+      "key_takeaway": "Privacy regulation reshapes engineering practice only when organizational culture transmits regulatory intent into developers' daily attitudes—policy without a supporting internal climate largely fails to reach the code.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "high",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single glass-walled office corridor, photographed from slightly below eye level and centered in the frame at roughly two-thirds depth, so the vanishing point pulls the eye down its length. The corridor is spare—concrete floor, minimal furniture—and the walls are rendered in cool blue-grey tones with one warm amber light source pooling onto the floor midway down the hall, suggesting a single point where external rules enter internal space. In the far background, barely visible, a row of developers at workstations; in the immediate foreground, a faint shadow of a regulatory document or printed framework falls across the floor before the light, implying something must pass through the organizational space to reach the people at the end. Lighting is predominantly cool and institutional with that single warm pool as the compositional anchor. No people in close-up, no screens, no robotic elements.",
+      "red_flags": [
+        "Published as an arXiv preprint; not yet peer-reviewed at time of indexing.",
+        "Survey limited to 156 U.S. developers, which may limit generalizability to other jurisdictions where GDPR applies indirectly or where AI Act compliance will be primary.",
+        "Publication date listed as October 2026, which is unusual and may indicate a metadata error in the RSS feed—editors should verify the actual publication date.",
+        "Self-reported survey data for both privacy attitudes and engineering practices introduces social desirability bias."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How AI Is Changing Strategy: Rethinking What Your Business Is Designed to Do",
+      "link": "https://hbr.org/podcast/2026/10/how-ai-is-changing-strategy-rethinking-what-your-business-is-designed-to-do",
+      "source": "HBR IdeaCast (podcast)",
+      "published_display": "Oct 08, 2026",
+      "authors": "Unknown",
+      "summary": "AI is advancing so quickly that companies can’t afford to treat it as simply another productivity tool; it is fundamentally reshaping strategy. In this final episode of our special four-part series on how AI is changing leadership, Wharton professor and AI expert Ethan Mollick explains why leaders need to rethink what their organizations are designed to do—and how work gets done. He discusses how AI agents are changing the role of managers, why companies need to experiment rather than wait for proven playbooks, and how leaders can create competitive advantage when everyone has access to the same frontier models. Mollick is author of the forthcoming book Co-Existence: The Next Phase of AI.",
+      "ai_strong": 6,
+      "ai_booster": 0,
+      "domain_matches": 8,
+      "edu_demoted": false,
+      "score": 5.3,
+      "reappear": true,
+      "claude_summary": "When AI can perform an increasing share of organizational work, the strategic question shifts from how to use AI to what the organization itself should be designed to do. Wharton's Ethan Mollick argues that AI agents are reshaping the manager's role, that competitive advantage can no longer rest on proprietary access to frontier models (since those are broadly available), and that companies must experiment continuously rather than wait for established playbooks. The podcast is the final episode of a four-part HBR leadership series and serves as a preview of Mollick's forthcoming book. The excerpt is thin on empirical evidence, drawing primarily on Mollick's synthesis and framing rather than original research findings.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This podcast episode argues that AI forces firms to reconsider their fundamental design — not just their tooling — as agents absorb work once coordinated by managers. From CAMO's perspective on AI adoption, the diagnosis aligns with an emerging pattern in our field research: the bottleneck to AI value is rarely the technology itself but the organizational structures around it. Our Decathlon China case illustrates the same principle — coding efficiency improved readily, but real gains required compressing the coordination work between tasks, not just accelerating individual steps. The more pointed strategic question Mollick raises — how firms build advantage when everyone shares the same models — remains underexplored empirically and is one CAMO's ongoing work on adoption barriers and incentive design directly addresses.",
+      "matched_camo": [
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "Both the podcast and this case converge on the same structural insight: AI optimizes tasks but does not automatically redesign the organizational system, making coordination — not execution — the real locus of strategic change.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        },
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Mollick's argument that firms cannot wait for proven playbooks maps directly onto CAMO's survey finding that dominant adoption barriers are organizational and executional rather than technical, with only 4% of firms describing themselves as fully transformational.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "key_takeaway": "When frontier AI is equally accessible to all competitors, organizational design and the willingness to experiment — not model access — become the primary sources of strategic differentiation.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single wooden organizational chart, rendered as a three-dimensional physical structure roughly the size of a bookshelf, positioned slightly left of center in the frame. The structure is mid-collapse: upper tiers have already fallen away, leaving the base tier standing cleanly while the middle levels are suspended in slow descent, caught in a long-exposure blur. A single overhead spotlight pools onto the intact base, casting sharp shadows upward and letting the collapsing upper sections fade into soft penumbra. The surrounding environment is a bare concrete floor and neutral grey wall — nothing competes with the structure. Palette is cool grey and off-white with the spotlight adding a narrow band of warm amber at the base, suggesting transition rather than destruction.",
+      "red_flags": [
+        "Podcast format with no original empirical data — arguments rest on Mollick's synthesis and framing, not primary research findings.",
+        "Promoting a forthcoming book (Co-Existence), which introduces a potential conflict of interest in how claims are framed.",
+        "Excerpt is brief; several assertions (e.g. on competitive advantage from identical frontier models) are stated without supporting evidence and may be contested by strategists who emphasize implementation and complementary assets.",
+        "Not peer-reviewed."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Thumb on the scale: Using traditional wargaming adjudication practices to improve AI-judged evaluations and grading",
+      "link": "https://arxiv.org/abs/2610.32066",
+      "source": "arXiv: Computers & Society (cs.CY)",
+      "published_display": "Oct 26, 2026",
+      "authors": "Daniel S. Epstein",
+      "summary": "arXiv:2610.32066v1 Announce Type: new \nAbstract: Open-ended AI work has no single correct answer to check, so a judge, often another AI, decides each result. Research on these judges asks which AI to use and how to word the rubric. It rarely tests the procedure that the judge follows. Wargames have no correct answer either, and for two centuries the field has designed that procedure: named methods that set how much freedom the referee has, their known failures, and fixes. We map eleven wargaming practices onto AI evaluation failures. We test one, the adjudication method, on 378 player actions from nine games of an AI-refereed exercise. A player states its odds, the adjudicator turns them into a target number, and a 20-sided die decides pass or fail. With rolls fixed, the target came from the rulebook (Rigid), a judge AI adjusting it (Semi-Rigid), a judge AI setting it alone (Free) or a panel of four judge AIs. In evaluation terms these are a fixed scoring rule, a rubric the judge may adjust, holistic grading and a jury. The judge AIs were Opus 5 and Gemini 3.1 Pro, each re-run. An outcome changes when an action on the same roll passes under one ruling and fails under another. Re-run, a judge changed 3 to 6 per cent of outcomes under Semi-Rigid and 14 to 16 per cent under Free. Swapping Opus for Gemini changed about 3 percentage points more than a re-run did, a gap nine games cannot confirm. The panel changed 40 of the rulebook's 378 outcomes, but the changes cancelled and the pass count moved by 8. A pass rate hides them. One published finding rests on 15 rulings, and most of our AI adjudicators and every re-run changed how often it appeared. We measure how much rulings move, not which ruling is right. The method set how often a judge disagreed with itself. Choose it before the judge AI, report how often the judge disagrees with itself, and count the rulings behind each conclusion. We propose an adjudication statement.",
+      "ai_strong": 12,
+      "ai_booster": 0,
+      "domain_matches": 1,
+      "edu_demoted": true,
+      "score": 5.03,
+      "reappear": false,
+      "claude_summary": "When AI systems judge open-ended work — essays, exercises, evaluations — how reliable are those judgments? This paper borrows two centuries of wargaming adjudication practice to stress-test AI-as-judge. Across 378 scored actions in nine wargame sessions, the same AI judge changed 3–16% of its own rulings on re-run, depending on how much discretion the rubric allowed. Swapping one leading AI model for another shifted outcomes by a further 3 percentage points. A panel of four AI judges altered 40 rulings, but the changes cancelled out, masking the instability behind a stable pass rate. The core finding: the procedural method governing a judge matters at least as much as which AI model is chosen — and most current AI evaluation research never tests the procedure.",
+      "pillar": "AI Algorithms & Data",
+      "pillar_relevance": 82,
+      "centre_angle": "This paper demonstrates that AI evaluation reliability is a procedural problem, not merely a model-selection problem: the same AI judge, re-run under a discretionary rubric, disagrees with itself on up to 16% of outcomes. From CAMO's perspective on algorithmic foundations for trustworthy AI-driven decisions, this is a structural warning for any organization using AI to score employee performance, customer interactions, or compliance outputs. CAMO's work on AI-driven performance evaluation — including the Dingdong VOC case, where AI tagging accuracy of 92% still required an appeals process and managerial discretion — illustrates exactly why the procedural architecture around an AI judge shapes outcomes as much as the model itself.",
+      "matched_camo": [
+        {
+          "id": "nanocase-dingdong-2026",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/",
+          "reason": "Both works grapple with the reliability and procedural design of AI-driven evaluations: the paper tests how adjudication method drives outcome variance, while the Dingdong case shows how AI attribution accuracy, appeals mechanisms, and managerial override must be designed together to make AI judgments trustworthy in practice."
+        }
+      ],
+      "key_takeaway": "Choose the adjudication procedure before choosing the AI model, and always report how often the judge disagrees with itself — a stable pass rate can hide substantial ruling instability.",
+      "audience_relevance": {
+        "managers_csuite": "medium",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single large 20-sided die, slightly off-center to the left following the golden ratio, resting on a plain stone or concrete surface in the foreground. The die is the clear focal subject — its numbered faces sharp and readable. Behind it, a clean architectural vanishing point recedes into the background: a long empty corridor or ruled table surface, drawing the eye toward the die as the point of decision. The surrounding environment is minimal — no clutter, no figures — so the geometry of uncertainty is the only story. Lighting is cool and directional, a single soft overhead source casting a short shadow away from the die to the right, emphasizing solidity and chance in equal measure. Palette is desaturated grey-blue with the die rendered in off-white or pale ivory.",
+      "red_flags": [
+        "Not peer-reviewed: arXiv preprint only, no indication of journal acceptance.",
+        "Small sample size for some comparisons: the model-swap comparison (Opus vs Gemini) is based on nine games, which the authors themselves flag as insufficient to confirm the effect.",
+        "The wargaming-to-AI-evaluation analogy is novel but untested in peer review; the mapping of wargaming concepts onto AI evaluation failures is the paper's own framing without independent validation.",
+        "Published date (Oct 26, 2026) is in the future relative to current knowledge cutoff — treat metadata with caution."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "The AI value curve: The economics of applying AI to existing work",
+      "link": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
+      "source": "McKinsey Insights",
+      "published_display": "Oct 14, 2026",
+      "authors": "Unknown",
+      "summary": "Many organizations are still measuring AI adoption instead of value. The AI value curve helps identify where AI’s automation potential can be deployed most cost-effectively.",
+      "ai_strong": 5,
+      "ai_booster": 1,
+      "domain_matches": 2,
+      "edu_demoted": false,
+      "score": 4.49,
+      "reappear": true,
+      "claude_summary": "Many organizations treat AI adoption as an end in itself, measuring deployment rates rather than economic outcomes. McKinsey's AI value curve framework reframes the question: where does AI's automation potential generate the most cost-effective returns when applied to existing work? The piece argues that firms should map tasks along a value curve that accounts for both automation feasibility and cost displacement, moving attention from 'are we using AI?' to 'where does AI actually pay?' The excerpt is thin on empirical detail, but the core argument is that misaligned measurement — tracking adoption rather than value — is the primary reason AI investments underdeliver. The framework appears aimed at helping executives prioritize AI deployment across existing workflows rather than chasing breadth of coverage.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 78,
+      "centre_angle": "This McKinsey piece argues that the predominant failure mode in enterprise AI is measuring adoption rather than economic value generated. From CAMO's perspective on AI adoption, this diagnosis aligns closely with findings in the Deloitte-HKU AI Adoption Index 2026, which found that nearly half of C-suite executives reported AI initiatives fell short of expected ROI — with the dominant barriers being organizational and executional rather than technical. The value curve framing is useful precisely because it pushes firms toward the task-level cost-displacement analysis that CAMO's research suggests is missing from most adoption conversations.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify the gap between AI adoption breadth and measurable economic returns as the central challenge facing organizations today.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "reason": "The value curve's focus on cost displacement by task maps directly onto CAMO's analysis of how AI differentially reduces the cost of satisfactory versus high-effort performance, reshaping which jobs firms choose to retain.",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/"
+        }
+      ],
+      "key_takeaway": "Firms that measure AI adoption rather than cost-effective value creation are optimizing for the wrong variable and will continue to underdeliver on AI's economic potential.",
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "medium"
+      },
+      "visual_concept": "A single large graph axis — rendered as a clean, physical architectural element like a polished metal rail or a ruled stone ledge — runs diagonally from the lower-left foreground to the upper-right background, occupying the center of a spare, cool-lit interior space. Resting on this axis at the midpoint is one distinct marker object: a small, solid geometric block (a cube or cylinder) catching a focused beam of warm amber light from above, while the rest of the composition recedes into cool blue-grey shadow. The surrounding space is minimal — a bare floor, neutral walls — so nothing competes with the block and its illuminated position on the curve. The palette contrasts warm gold at the focal point against a cool, desaturated background, suggesting the idea of identifying precisely where value concentrates along a range of possibilities. No figures, no screens, no robotic elements.",
+      "red_flags": [
+        "Source is a McKinsey consulting publication, not peer-reviewed research; findings may reflect consulting framing rather than independent empirical evidence.",
+        "RSS excerpt is very thin — the summary above is partly inferential; the full article may contain richer data or significantly different claims.",
+        "Potential conflict of interest: McKinsey has a commercial interest in advising firms on AI deployment strategy."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "The Defining Challenge of Responsible AI Is Designing Systems That Preserve Human Judgment When and Where It Counts",
+      "link": "https://sloanreview.mit.edu/article/the-defining-challenge-of-responsible-ai-is-designing-systems-that-preserve-human-judgment-when-and-where-it-counts/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Oct 15, 2026",
+      "authors": "Elizabeth M. Renieris, David Kiron, Steven Mills, and Anne Kleppe.",
+      "summary": "For the fifth year in a row, MIT Sloan Management Review and Boston Consulting Group (BCG) have assembled an international panel of AI experts comprising academics and practitioners to help us understand how responsible artificial intelligence is being implemented across organizations worldwide. In previous posts this year, we have explored AI’s impact on the workforce, [&#8230;]",
+      "ai_strong": 4,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 4.27,
+      "reappear": true,
+      "claude_summary": "Now in its fifth year, the MIT SMR/BCG responsible AI survey surfaces a finding that cuts across all sectors: the central design challenge for responsible AI is not capability, but preserving meaningful human judgment at the moments that matter. The article draws on an international panel of academics and practitioners to assess how organizations are implementing responsible AI in practice. The core argument is that well-intentioned AI deployments routinely erode the conditions under which human oversight remains genuine rather than nominal. The excerpt is brief and the full findings are behind a paywall, so specific metrics and sector breakdowns cannot be confirmed, but the framing is consistent with five years of BCG/MIT SMR tracking data on responsible AI implementation.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article argues that responsible AI design must actively engineer the conditions for meaningful human oversight, not merely append a human in the loop as procedural cover. From CAMO's perspective on AI adoption inside organizations, this tension is structural: as our work on mandatory AI adoption at a leading MedTech firm illustrates, when organizations focus on utilization metrics rather than genuine integration, employees comply formally while judgment atrophies in practice. The implication for managers is that preserving human judgment is an incentive and job-design problem as much as a technical one—organizations need to be explicit about which decisions AI informs versus which it makes, and build accountability structures accordingly.",
+      "matched_camo": [
+        {
+          "id": "nanocase-medtech-2026",
+          "reason": "The MedTech case directly illustrates how mandated AI use can produce formal compliance without genuine engagement, which is precisely the failure mode the article warns against when human judgment is nominally preserved but practically hollowed out.",
+          "title": "The Double-Edged Sword of Mandatory AI Adoption at a Leading Medical Device Firm",
+          "url": "https://camo.hku.hk/nanocase-medtech/"
+        },
+        {
+          "id": "nanocase-dingdong-2026",
+          "reason": "Dingdong's experience shows that AI-driven attribution can make accountability explicit while simultaneously displacing the managerial judgment needed to handle ambiguous edge cases—directly relevant to the article's concern about where human oversight must be preserved.",
+          "title": "Performance Evaluation and Employee Incentives in the AI Era: Dingdong's Transformation of VOC Assessment",
+          "url": "https://camo.hku.hk/nanocase-dingdong/"
+        }
+      ],
+      "key_takeaway": "Responsible AI is less a technical compliance exercise than an organizational design challenge: firms must deliberately architect which decisions remain human, and under what conditions, rather than treating human oversight as a default that survives deployment on its own.",
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "visual_concept": "A single empty mid-century boardroom chair, centered slightly left of frame on the golden ratio, photographed from a low angle so it reads as monumental against a plain, receding conference table that forms a strong vanishing-point perspective line pulling the eye toward the chair. The surrounding room is deliberately spare—no clutter, no other furniture visible, just the long table surface and neutral walls. Light falls in a single cool shaft from an unseen overhead source, pooling onto the seat of the chair and casting a clean shadow behind it. The overall palette is muted grey-blue with warm amber only on the upholstered seat, suggesting both institutional authority and the question of whether that seat—human judgment—remains occupied.",
+      "red_flags": [
+        "Article is likely paywalled at MIT Sloan Management Review; full findings not verifiable from excerpt alone.",
+        "RSS excerpt is thin—specific data, metrics, and sector breakdowns cannot be confirmed without access to the full piece.",
+        "BCG is a co-publisher with commercial interests in responsible AI consulting; findings may reflect practitioner optimism or frame issues in ways that favor consulting interventions.",
+        "Annual survey format means findings may be incremental rather than novel relative to prior four editions—editors should check whether the headline claim advances meaningfully on previous years."
+      ],
+      "enriched": true,
+      "enrichment_cached": true
+    },
+    {
+      "title": "Is HR Tech Undermining Your Strategy?",
+      "link": "https://sloanreview.mit.edu/article/is-hr-tech-undermining-your-strategy/",
+      "source": "MIT Sloan Management Review",
+      "published_display": "Oct 26, 2026",
+      "authors": "Sharna Wiblen and Alexis Fink. <p><a href=\"https://au.linkedin.com/in/sharna-wiblen-0799124\" target=\"_blank\" rel=\"noopener noreferrer\">Sharna Wiblen</a> is a senior research scientist at the University of Southern California’s Marshall Center for Effective Organizations. She is the author of <cite>Rethinking Talent Decisions: A Tale of Complexity, Technology, and Subjectivity</cite> (De Gruyter, 2024). <a href=\"https://www.linkedin.com/in/alexisfink\" target=\"_blank\" rel=\"noopener noreferrer\">Alexis Fink</a> is the director of the USC Marshall Center for Effective Organizations. Her books include <cite>Investing in People: Financial Impact of Human Resource Initiatives</cite> (SHRM, forthcoming in 2027) and <cite>Employee Surveys and Sensing: Driving Organizational Culture and Performance</cite> (Oxford University Press, 2020).</p>",
+      "summary": "Getty Images HR technology is no longer peripheral to how organizations operate. A fast-growing assortment of platforms is touching the employee life cycle and capturing workforce data. At the October 2025 HR Technology Conference, more than 400 vendors showcased their wares, including new AI-enabled offerings. But despite this wealth of options, industry and consulting reports [&#8230;]",
+      "ai_strong": 1,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 3.91,
+      "reappear": false,
+      "claude_summary": "HR technology now touches nearly every stage of the employee life cycle, yet organizations consistently struggle to translate that investment into strategic value. Drawing on observations from the HR Technology Conference—where more than 400 vendors displayed AI-enabled offerings—the article questions whether the proliferation of HR tech is actually serving organizational strategy or quietly working against it. The core argument appears to be that technology adoption in HR is often vendor-led rather than strategy-led, resulting in fragmented data, misaligned processes, and tools that optimize for measurable proxies rather than genuine workforce outcomes. Note: the full article is behind a paywall, so this enrichment is based on the available excerpt and contextual inference.",
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "centre_angle": "This article raises a pointed question about whether HR technology purchases are driven by organizational strategy or by vendor momentum—a distinction that matters enormously for whether AI delivers value or merely adds complexity. From CAMO's perspective on AI adoption, the pattern mirrors what our Deloitte-HKU AI Adoption Index 2026 found: the dominant barriers to AI impact are organizational and executional rather than technical, with siloed departments and poor data quality consistently undermining initiatives that looked promising on paper. The HR context sharpens this: when AI tools are layered onto misaligned processes, they risk encoding existing inefficiencies at scale rather than resolving them.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both the article and the survey identify a gap between AI's organizational promise and its measurable impact, attributing underperformance to structural and executional barriers rather than the technology itself."
+        },
+        {
+          "id": "state-of-ai-in-hr-2026",
+          "title": "The State of AI in HR: Balancing Efficiency and Strategy",
+          "url": "https://camo.hku.hk/surveyreport-thestateofaiinhr/",
+          "reason": "CAMO's HR-specific survey directly examines how organizations prioritize AI adoption within HR functions, including the tension between administrative automation and longer-term strategic value—the same tension the article interrogates."
+        }
+      ],
+      "key_takeaway": "Buying HR technology without first anchoring it to a clear talent strategy risks optimizing processes that should be redesigned or eliminated entirely.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "medium",
+        "general_econ_public": "low"
+      },
+      "visual_concept": "A single, clean office corridor shot from one end, slightly off-center, with a row of identical closed doors receding toward a vanishing point at the far end. The focal subject is one door in the foreground-left, standing open just a few degrees—the only one in the frame that is not fully shut—with a narrow wedge of warm amber light falling through it onto the polished floor. The surrounding corridor is rendered in cool blue-grey tones, muted and institutional, so that the warm light from the single open door draws the eye immediately. The environment is sparse: no people, no decor, just geometry and light. The mood is quietly ambivalent—order that may or may not be serving a purpose.",
+      "red_flags": [
+        "Article is paywalled on MIT Sloan Management Review; full text unavailable for verification.",
+        "Enrichment is based on a brief RSS excerpt; findings and argument structure are partially inferred rather than confirmed from the full text.",
+        "No peer-reviewed empirical study is cited in the excerpt; the piece appears to be practitioner-oriented commentary rather than original research."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    },
+    {
+      "title": "How employment is changing at Anthropic",
+      "link": "https://www.anthropic.com/research/employment-at-anthropic",
+      "source": "Anthropic Research",
+      "published_display": "Oct 16, 2026",
+      "authors": "Unknown",
+      "summary": "How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy.",
+      "ai_strong": 3,
+      "ai_booster": 0,
+      "domain_matches": 3,
+      "edu_demoted": false,
+      "score": 3.77,
+      "reappear": false,
+      "claude_summary": "Anthropic has published an internal analysis of how AI has restructured work and employment within its own organization, positioning itself as a potential leading indicator of broader labor market shifts. The piece examines how AI adoption has altered work organization, hiring patterns, and labor demand at a frontier AI company. Because Anthropic both builds and intensively uses AI tools, its internal employment patterns may foreshadow changes that other firms will encounter as AI capabilities diffuse. The excerpt is brief and the full empirical detail is not available from the RSS summary alone, so the specific findings remain unclear from this source.",
+      "pillar": "AI & Jobs",
+      "pillar_relevance": 72,
+      "centre_angle": "This report uses Anthropic's own workforce as a case study in how frontier AI adoption reshapes hiring and work organization in real time. From CAMO's perspective on AI and jobs, the interesting question is whether a company that develops AI tools experiences the same substitution and complementarity dynamics it creates for others — or whether being at the frontier confers different outcomes. CAMO's Deloitte-HKU AI Adoption Index found that even among committed adopters, measurable impact remains shallow and organizational barriers dominate; Anthropic's self-reported experience should be read against that broader pattern, with attention to what it omits as much as what it reveals.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/",
+          "reason": "Both pieces examine how organizations actually experience AI adoption in practice — Anthropic from the inside, the CAMO index from a cross-firm survey — making them natural complements for assessing whether frontier firms differ from the broader enterprise population."
+        },
+        {
+          "id": "bad-job-economy-2026",
+          "title": "Toward a Bad Job Economy: AI Adoption, Agency Costs, and Job Design",
+          "url": "https://camo.hku.hk/toward-a-bad-job-economy-ai-adoption-agency-costs-and-job-design/",
+          "reason": "Anthropic's account of how AI reshapes hiring and job boundaries maps directly onto CAMO's theoretical analysis of how AI changes job design, effort incentives, and the composition of roles within firms."
+        }
+      ],
+      "key_takeaway": "Anthropic's internal employment data may be an early signal of how AI reorganizes work at scale, but the source's conflict of interest demands careful scrutiny before treating it as generalizable evidence.",
+      "audience_relevance": {
+        "managers_csuite": "high",
+        "policy_makers": "high",
+        "general_econ_public": "medium"
+      },
+      "visual_concept": "A single office floor plan rendered as a clean architectural blueprint, centered in the frame at medium scale, with most roles and job titles printed in a uniform pale grey — but two or three specific job categories printed in sharp black ink, visually distinct from the rest. The eye lands first on the contrast between the vivid black labels and the faded surrounding text. A single vanishing point behind the blueprint creates a mild sense of depth, as though the org chart recedes into an uncertain horizon. The background is bare white, keeping attention on the document itself. Lighting is flat and cool — fluorescent-adjacent — evoking an internal audit or planning document rather than a product announcement.",
+      "red_flags": [
+        "Clear conflict of interest: Anthropic is reporting on its own employment outcomes, creating strong incentive to present favorable or carefully curated findings.",
+        "Not peer-reviewed or independently verified; this is a company-authored report, not an academic or third-party study.",
+        "RSS excerpt is very thin — specific empirical findings, methodology, and sample definitions are not visible, making it difficult to assess rigor or generalizability.",
+        "Self-selected case study: Anthropic's workforce composition and culture are atypical, which limits how far findings can be extrapolated to the broader economy."
+      ],
+      "enriched": true,
+      "enrichment_cached": false
+    }
+  ]
+}
