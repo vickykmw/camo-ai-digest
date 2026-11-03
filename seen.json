@@ -530,7 +530,8 @@
     "2026-10-13"
   ],
   "https://sloanreview.mit.edu/article/is-hr-tech-undermining-your-strategy/": [
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-03"
   ],
   "https://sloanreview.mit.edu/article/leaderships-blind-spot-in-the-age-of-ai/": [
     "2026-07-13",
@@ -552,7 +553,8 @@
   ],
   "https://sloanreview.mit.edu/article/the-defining-challenge-of-responsible-ai-is-designing-systems-that-preserve-human-judgment-when-and-where-it-counts/": [
     "2026-10-20",
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-03"
   ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
@@ -577,6 +579,9 @@
   ],
   "https://sloanreview.mit.edu/article/why-ai-isnt-transforming-finance-yet/": [
     "2026-06-09"
+  ],
+  "https://sloanreview.mit.edu/article/why-data-modeling-is-not-enough/": [
+    "2026-11-03"
   ],
   "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/": [
     "2026-05-20",
@@ -607,12 +612,19 @@
     "2026-06-09",
     "2026-06-16"
   ],
+  "https://www.anthropic.com/research/agents-judgment-calls": [
+    "2026-11-03"
+  ],
+  "https://www.anthropic.com/research/early-progress-drug-development": [
+    "2026-11-03"
+  ],
   "https://www.anthropic.com/research/economic-index-june-2026-report": [
     "2026-06-30",
     "2026-07-07"
   ],
   "https://www.anthropic.com/research/employment-at-anthropic": [
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-03"
   ],
   "https://www.mckinsey.com/au/our-insights/ai-in-the-australian-for-purpose-sector-laying-a-strong-foundation": [
     "2026-07-21",
@@ -637,6 +649,9 @@
   ],
   "https://www.mckinsey.com/capabilities/operations/our-insights/agentic-ai-and-the-future-of-global-business-services": [
     "2026-08-18"
+  ],
+  "https://www.mckinsey.com/capabilities/operations/our-insights/agentic-ai-in-strategic-sourcing-hype-or-hero": [
+    "2026-11-03"
   ],
   "https://www.mckinsey.com/capabilities/operations/our-insights/stacking-the-odds-a-blueprint-for-successfully-scaling-agentic-ai": [
     "2026-09-15"
@@ -684,6 +699,9 @@
   "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-ceos-singular-impact-on-the-success-or-failure-of-ai-in-organizations": [
     "2026-10-13"
   ],
+  "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/turning-executive-judgment-into-organizational-intelligence-leveraging-ai-in-ceo-leadership": [
+    "2026-11-03"
+  ],
   "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/ai-is-turning-every-company-into-a-software-company": [
     "2026-06-23"
   ],
@@ -720,11 +738,17 @@
   "https://www.mckinsey.com/industries/financial-services/our-insights/at-last-customers-first-ai-powered-personalization-can-help-banks-create-value": [
     "2026-09-08"
   ],
+  "https://www.mckinsey.com/industries/financial-services/our-insights/closing-bankings-ai-value-gap-a-ceo-guide": [
+    "2026-11-03"
+  ],
   "https://www.mckinsey.com/industries/financial-services/our-insights/earning-and-sustaining-trust-in-the-age-of-ai": [
     "2026-08-25"
   ],
   "https://www.mckinsey.com/industries/financial-services/our-insights/pause-pivot-or-accelerate-saas-in-the-age-of-agentic-ai": [
     "2026-10-13"
+  ],
+  "https://www.mckinsey.com/industries/financial-services/our-insights/the-algorithm-isnt-the-advantage-the-team-is": [
+    "2026-11-03"
   ],
   "https://www.mckinsey.com/industries/healthcare/our-insights/the-ai-powered-future-of-care": [
     "2026-09-29"
