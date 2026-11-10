@@ -531,7 +531,8 @@
   ],
   "https://sloanreview.mit.edu/article/is-hr-tech-undermining-your-strategy/": [
     "2026-10-27",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://sloanreview.mit.edu/article/leaderships-blind-spot-in-the-age-of-ai/": [
     "2026-07-13",
@@ -554,7 +555,8 @@
   "https://sloanreview.mit.edu/article/the-defining-challenge-of-responsible-ai-is-designing-systems-that-preserve-human-judgment-when-and-where-it-counts/": [
     "2026-10-20",
     "2026-10-27",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://sloanreview.mit.edu/article/the-innovation-advantage-genai-cant-give-you/": [
     "2026-05-17",
@@ -581,7 +583,8 @@
     "2026-06-09"
   ],
   "https://sloanreview.mit.edu/article/why-data-modeling-is-not-enough/": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://sloanreview.mit.edu/audio/a-need-for-nuance-the-economists-andrew-palmer/": [
     "2026-05-20",
@@ -613,10 +616,15 @@
     "2026-06-16"
   ],
   "https://www.anthropic.com/research/agents-judgment-calls": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
+  ],
+  "https://www.anthropic.com/research/claude-electronics-design": [
+    "2026-11-10"
   ],
   "https://www.anthropic.com/research/early-progress-drug-development": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://www.anthropic.com/research/economic-index-june-2026-report": [
     "2026-06-30",
@@ -685,6 +693,9 @@
   "https://www.mckinsey.com/capabilities/quantumblack/our-insights/where-ai-agents-pay-off-a-practical-guide-to-the-economics-of-agentic-workflows": [
     "2026-08-25"
   ],
+  "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-ai-enabled-risk-function-of-the-future": [
+    "2026-11-10"
+  ],
   "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-speed-problem-how-frontier-ai-exposes-weakness-in-enterprise-cybersecurity": [
     "2026-09-15"
   ],
@@ -700,7 +711,8 @@
     "2026-10-13"
   ],
   "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/turning-executive-judgment-into-organizational-intelligence-leveraging-ai-in-ceo-leadership": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/ai-is-turning-every-company-into-a-software-company": [
     "2026-06-23"
@@ -739,7 +751,8 @@
     "2026-09-08"
   ],
   "https://www.mckinsey.com/industries/financial-services/our-insights/closing-bankings-ai-value-gap-a-ceo-guide": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-10"
   ],
   "https://www.mckinsey.com/industries/financial-services/our-insights/earning-and-sustaining-trust-in-the-age-of-ai": [
     "2026-08-25"
@@ -773,6 +786,9 @@
   ],
   "https://www.mckinsey.com/industries/industrials/our-insights/the-operating-model-advantage-why-ai-winners-are-rewiring-their-organizations": [
     "2026-07-13"
+  ],
+  "https://www.mckinsey.com/industries/industrials/our-insights/wartsila-ceo-hakan-agnevall-focus-flexibility-and-the-next-wave-of-growth": [
+    "2026-11-10"
   ],
   "https://www.mckinsey.com/industries/metals-and-mining/our-insights/harnessing-ai-to-make-mining-safer": [
     "2026-09-29"

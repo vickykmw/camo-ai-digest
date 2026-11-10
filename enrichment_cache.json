@@ -93,68 +93,6 @@
     "model": "claude-sonnet-4-6",
     "title": "Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance"
   },
-  "https://arxiv.org/abs/2511.03699": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This study demonstrates that LLMs embed latent psychological biases — including conspiratorial tendencies — that surface unevenly depending on how models are prompted or demographically conditioned. From CAMO's perspective on the algorithmic foundations of trustworthy AI-driven decisions, the implication is pointed: if the same model produces measurably different responses to functionally equivalent queries depending on perceived user demographics, then any organizational or policy deployment that assumes model neutrality is operating on a flawed premise. The reliability problem here is not a matter of factual accuracy alone but of systematic, prompt-sensitive distortion — a concern that sits directly alongside questions of endogeneity and self-fulfilling bias that CAMO has examined in other algorithmic contexts.",
-      "claude_summary": "This study investigates whether large language models (LLMs) carry latent conspiratorial tendencies — and how easily those tendencies can be triggered. Using validated psychometric surveys designed to measure conspiratorial mindset, the researchers tested multiple LLMs under different prompting and conditioning strategies. They found that LLMs show partial agreement with elements of conspiracy belief, that conditioning models with socio-demographic attributes produces uneven and biased effects, and that targeted prompts can readily shift model responses toward conspiratorial framings. The findings raise substantive concerns about deploying LLMs in sensitive information environments, and about treating LLM outputs as reliable proxies for human psychological or social constructs.",
-      "key_takeaway": "LLMs can be steered toward conspiratorial outputs with simple prompts and exhibit demographic biases that make them unreliable neutral proxies for human reasoning — a risk any organization deploying them in communication or research roles should account for.",
-      "matched_camo": [
-        {
-          "id": "dynamic-selection-2023",
-          "reason": "Both papers are concerned with how systematic, latent biases embedded in AI systems distort outputs in ways that are not immediately visible to users — the self-fulfilling bias in online learning algorithms is a structural analogue to the prompt-conditioned conspiratorial drift documented here.",
-          "title": "Dynamic Selection in Algorithmic Decision-making",
-          "url": "https://camo.hku.hk/2023-01-dynamic-selection-algorithmic/"
-        }
-      ],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 62,
-      "red_flags": [
-        "Preprint (arXiv): not yet peer-reviewed; findings should be treated as preliminary.",
-        "Psychometric surveys designed for human respondents may not map cleanly onto LLM response patterns — a methodological assumption the paper acknowledges but that remains contested in the field.",
-        "Generalizability is uncertain: results likely vary significantly across model families, versions, and fine-tuning regimes, which can change rapidly."
-      ],
-      "visual_concept": "A single wooden puppet — medium scale, centered in the lower third of the frame — suspended by visible strings that rise toward the top of the image and disappear into deep shadow above. The puppet is rendered in clean, pale wood tones against a sparse dark grey stage backdrop, so the eye settles immediately on it. A single cone of cool white light falls directly onto the puppet from above-center, leaving the upper portion of the frame — where the strings lead — in deliberate obscurity. No puppeteer is visible; the strings simply vanish into darkness. The palette is desaturated and cool, with the only warmth being a faint amber edge-light on the puppet's silhouette, suggesting latent presence rather than overt control."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "Do Androids Dream of Unseen Puppeteers? Probing for a Conspiracy Tendencies in Large Language Models"
-  },
-  "https://arxiv.org/abs/2601.03222": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "high",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This paper argues that relational trust in conversational AI is not a side-effect of good design but a resource that institutional actors can exploit when user interests and platform incentives diverge. From CAMO's perspective on AI adoption, the implication is that organizations deploying conversational AI — whether in customer service, HR, or advisory roles — inherit governance obligations that go beyond accuracy and uptime: they must account for the social dynamics of trust that these interfaces deliberately cultivate. The concern connects to findings in CAMO's work on AI adoption barriers, where social and cultural misalignments, not technical gaps, tend to be the deeper problem.",
-      "claude_summary": "When users form genuine social trust with conversational AI systems, that trust can be turned against them. This paper introduces the 'Fake Friend Dilemma': conversational AI is designed to feel supportive and responsive, yet the institutional interests behind these systems — commercial, political, or surveillance-oriented — may diverge sharply from users' own. The same relational warmth that makes these tools useful becomes a vector for product promotion, behavioral nudging, biased information, and data extraction. The author argues this is not primarily a technical alignment problem but a structural one rooted in the political economy of media and platform governance. Mitigation, the paper suggests, requires both regulatory and design-level interventions, not just better model training.",
-      "key_takeaway": "Conversational AI's social warmth is a design feature that can be turned into an institutional advantage over users, making this a governance problem as much as a technical one.",
-      "matched_camo": [
-        {
-          "id": "hidden-penalty-ai-work-2025",
-          "reason": "Both papers examine how social perception and relational dynamics — rather than technical performance — shape the consequences of AI use, whether for individual users forming misplaced trust or for employees penalized for visible AI reliance.",
-          "title": "Research: The Hidden Penalty of Using AI at Work",
-          "url": "https://camo.hku.hk/2025-02-research-hidden-penalty/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 62,
-      "red_flags": [
-        "Not peer-reviewed: this is a preprint posted to arXiv (cs.CY), version 3 as of the publication date.",
-        "The abstract is conceptual and argumentative rather than empirical; no experimental data or systematic evidence is reported in the excerpt.",
-        "The paper's framing as a 'political economy' analysis may reflect a normative stance; editors should note this is a theoretical intervention, not a neutral empirical study."
-      ],
-      "visual_concept": "A single empty park bench positioned slightly off-center in the frame, rendered in cool, overcast daylight with soft diffused shadows. The bench faces a calm body of water that recedes to a vanishing point at the center horizon, drawing the eye through the composition and past the bench. The surrounding environment — muted grey-green grass, pale sky — is kept spare and uncluttered so the bench reads as the sole focal subject: an object built for companionship that is, in this moment, occupied by no one. Palette is desaturated cool tones, slightly underexposed, with the bench in a slightly warmer mid-tone to differentiate it from the background."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "The Fake Friend Dilemma: Relational Trust and the Political Economy of Conversational AI"
-  },
   "https://arxiv.org/abs/2604.12851": {
     "data": {
       "audience_relevance": {
@@ -296,61 +234,6 @@
     "enriched_at": "2026-09-15",
     "model": "claude-sonnet-4-6",
     "title": "Voice AI in Firms: A Natural Field Experiment on Automated Job Interviews"
-  },
-  "https://arxiv.org/abs/2608.12669": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "medium",
-        "managers_csuite": "low",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This paper argues that fairness in generative AI cannot be reduced to descriptive accuracy — the real normative question is whether AI systems afford social groups equal standing to participate in defining themselves. From CAMO's perspective on trustworthy AI-driven decisions, the implication is that evaluation frameworks which treat fairness as a measurement problem may systematically miss a class of harms that are relational and political rather than statistical. Organizations deploying large language models for communication, content generation, or customer-facing applications face governance questions that their existing data-quality and bias-audit toolkits are not designed to answer.",
-      "claude_summary": "When generative AI systems misrepresent social groups, the problem is not simply that they get facts wrong — it is that they deny those groups the social standing to define themselves. This paper argues that existing 'representational fairness' frameworks, which measure AI outputs against some presumed accurate description of a group, are conceptually inadequate: many groups have no stable, agreed-upon referent against which accuracy can be judged, authority over what counts as misrepresentation is contested, and even accurate depictions can perpetuate harmful social hierarchies. Drawing on political theorist Nancy Fraser's concept of participatory parity, the authors propose replacing representational fairness with 'recognitional justice' — a framework that asks not whether AI outputs are accurate but whether they afford all social groups equal standing to participate in public life.",
-      "key_takeaway": "Auditing generative AI for representational fairness requires political and normative frameworks, not just accuracy benchmarks — a distinction that has direct consequences for how organizations govern LLM deployments.",
-      "matched_camo": [],
-      "pillar": "AI Algorithms & Data",
-      "pillar_relevance": 52,
-      "red_flags": [
-        "Not peer-reviewed — arXiv preprint (v2); normative/philosophical argument rather than empirical finding, which limits direct applicability for business audiences",
-        "Relevance to CAMO's core pillars (organizational management, incentives, jobs, algorithmic decisions) is indirect; the paper is primarily political theory applied to AI ethics",
-        "No empirical data or case evidence in the excerpt; claims rest on conceptual argumentation alone"
-      ],
-      "visual_concept": "A single empty chair, centered in the lower third of a wide, spare civic chamber — think a plain council hall with receding rows of identical vacant seats behind it in soft focus. The focal chair faces forward and is slightly illuminated by a diffuse column of cool, overcast light falling from an unseen clerestory window above, drawing the eye directly to it. The surrounding seats are identical but unlit, creating a quiet contrast without visual clutter. The palette is muted grey-blue with a faint warm undertone on the single lit chair. The mood is deliberate and still — evoking questions of voice, presence, and who is granted a seat."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "From Fair Representation to Just Recognition in Generative AI"
-  },
-  "https://arxiv.org/abs/2608.21618": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "medium",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This paper argues that as generative AI absorbs more of the cognitive process, it can erode the internal monitoring and sustained engagement that produce genuine competence — a risk that applies well beyond classrooms. From CAMO's perspective on AI and incentives, this resonates directly with findings in 'Better Technology, Worse Motivation: GenAI and the Mediocrity Trap,' where AI assistance was shown to flatten the quality curve and reduce professionals' motivation to sustain effort toward excellence. The AIRIS framework adds theoretical architecture to that empirical observation: the issue is not automation bias alone, but a systematic redistribution of cognitive control that may require deliberate structural countermeasures at the organizational and governance level.",
-      "claude_summary": "When generative AI handles more of the cognitive heavy lifting, humans may quietly stop doing the internal work that produces genuine understanding. This paper introduces AIRIS, a multi-level framework diagnosing seven ways hybrid human-AI cognition can become destabilized — including delegation drift, calibration drift, and motivational-affective drift — and proposes five regulatory operators to keep human epistemic agency intact. The framework draws on distributed cognition and self-regulated learning theory, and is aimed at instructional designers, educators, and governance bodies. Crucially, AIRIS does not itself improve learning or performance; it specifies the structural conditions that must be preserved for AI-assisted work to sustain real understanding rather than surface-level output.",
-      "key_takeaway": "Deploying generative AI without structural safeguards for human cognitive engagement risks producing workers — and decisions — that perform adequately on the surface while losing the deeper understanding that enables judgment under novel conditions.",
-      "matched_camo": [
-        {
-          "id": "genai-mediocrity-trap-2025",
-          "reason": "Both works identify a paradox in which AI assistance reduces the internal effort and sustained engagement required for high-quality output, with AIRIS providing theoretical mechanisms and CAMO's paper providing experimental evidence in a professional creative context.",
-          "title": "Better Technology, Worse Motivation: GenAI and the Mediocrity Trap",
-          "url": "https://camo.hku.hk/2025-01-better-technology-worse/"
-        }
-      ],
-      "pillar": "AI & Incentives",
-      "pillar_relevance": 58,
-      "red_flags": [
-        "Not peer-reviewed — arXiv preprint only; theoretical framework paper with no empirical results reported in the excerpt.",
-        "The excerpt is thin on empirical grounding; AIRIS is presented as a design and governance framework rather than a tested intervention, which limits claims about real-world effectiveness.",
-        "Primary audience is educational psychology and instructional design; organizational management relevance requires editorial bridging."
-      ],
-      "visual_concept": "A single wooden balance scale, centered and filling roughly two-thirds of the frame, photographed close-up against a plain pale concrete wall. On the left pan sits a small, precisely rendered mechanical component — a gear or calibrated dial — representing automated output; the right pan is empty but slightly lower, suggesting invisible weight. A single shaft of cool northern daylight enters from the upper left, pooling directly onto the scale's fulcrum, while the pans sit in softer ambient shadow. The environment is stripped bare — no props, no text, no background clutter — so the scale's slight imbalance carries all the narrative. The palette is muted grey and aged brass, with the light adding a faint warm edge to the fulcrum only."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "AI-Augmented Inquiry and Regulation in Hybrid Systems: A Control Allocation Architecture for Preserving Epistemic Agency in Hybrid Human-AI Cognition"
   },
   "https://arxiv.org/abs/2609.12447": {
     "data": {
@@ -1317,6 +1200,38 @@
     "model": "claude-sonnet-4-6",
     "title": "How AI agents shape experts’ judgment calls"
   },
+  "https://www.anthropic.com/research/claude-electronics-design": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "medium",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This demonstration argues that a general-purpose AI model can produce viable hardware design artifacts from minimal natural-language prompts, with physical prototypes as proof. From CAMO's perspective on AI adoption, the more consequential question is not whether the model can generate a working schematic, but what this means for how engineering organizations restructure roles, verification responsibilities, and human oversight when AI handles first-draft design work. CAMO's nano-case on CIMC offers a parallel: AI agents interpreting complex engineering drawings also achieved roughly 95% accuracy, but the organizational story was about which human roles were eliminated, which were elevated, and how tacit expert knowledge became transferable — questions this Anthropic demonstration leaves entirely open.",
+      "claude_summary": "Can an AI model serve as a hardware design engineer? Anthropic tested Claude Fable 5.2 by giving it short text prompts to design three consumer electronics devices — a speakerphone, a voice-assistant hub, and a handheld virtual pet. The model produced design files from which Diode Computers built functional physical prototypes. The article reports that the resulting prototypes worked. Beyond this high-level finding, the excerpt provides limited technical detail on failure modes, design iteration, human oversight required, or how output quality compares to professional engineers. The demonstration suggests AI is moving from software-only tasks into physical engineering workflows, with potential implications for how firms staff and structure product development teams.",
+      "key_takeaway": "AI can now generate functional hardware design files from plain-language prompts, but organizations adopting such tools still face unanswered questions about where human engineering judgment must remain.",
+      "matched_camo": [
+        {
+          "id": "nanocase-cimc-2026",
+          "reason": "Both cases involve AI handling technically complex engineering tasks previously requiring skilled human specialists, raising parallel questions about workflow redesign, accuracy thresholds, and what happens to the human expertise that AI displaces.",
+          "title": "Scaling Expert Knowledge with AI at CIMC",
+          "url": "https://camo.hku.hk/nanocase-scalingexpertknowledgewithaiatcimc/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 55,
+      "red_flags": [
+        "Source is Anthropic's own research blog — the organization that makes Claude — presenting a clear conflict of interest; findings should be treated as a capability demonstration, not independent evaluation.",
+        "RSS excerpt is very thin: no methodology, no failure rate, no comparison baseline, no detail on human intervention during the design process. Summary and pillar relevance are constrained by this limited information.",
+        "Not peer-reviewed.",
+        "No indication of how representative the three chosen devices are, or whether the prototypes met any professional engineering standard beyond 'working'."
+      ],
+      "visual_concept": "A single compact electronic device — roughly the size and shape of a hockey puck — sits centered on a plain matte surface in the lower middle of the frame, lit by a single soft overhead source that pools light directly onto the object and lets shadow fall cleanly away behind it. The surrounding environment is an uncluttered workshop bench, kept deliberately sparse so nothing competes with the device. The palette is cool-neutral with warm amber light on the device itself, emphasizing materiality — metal, plastic, a few visible ports — over abstraction. The composition implies something designed and made, without depicting the making process itself."
+    },
+    "enriched_at": "2026-11-10",
+    "model": "claude-sonnet-4-6",
+    "title": "Testing Claude on real-world electronics design"
+  },
   "https://www.anthropic.com/research/early-progress-drug-development": {
     "data": {
       "audience_relevance": {
@@ -1576,6 +1491,44 @@
     "model": "claude-sonnet-4-6",
     "title": "The AI value curve: The economics of applying AI to existing work"
   },
+  "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-ai-enabled-risk-function-of-the-future": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "high",
+        "policy_makers": "high"
+      },
+      "centre_angle": "This McKinsey piece argues that AI adoption in bank risk functions will stall unless firms redesign the operating model around AI rather than layering AI onto existing structures. From CAMO's perspective on AI adoption, this mirrors a pattern documented across industries: the binding constraint shifts quickly from technology access to organizational architecture—governance, coordination, and role redesign. The Deloitte-HKU AI Adoption Index 2026 found that the dominant barriers to enterprise AI are organizational and executional rather than technical, and the same logic applies with particular force in risk functions where accountability chains and regulatory obligations make ad hoc deployment especially costly.",
+      "claude_summary": "Banks are under pressure to redesign their risk functions around AI capabilities, moving beyond point solutions toward an integrated operating model. The McKinsey article argues that AI is already reshaping credit risk, fraud detection, and regulatory compliance in financial services, but that scaling these capabilities requires structural changes to how risk teams are organized, how decisions are governed, and how human oversight is embedded. The core challenge is not deploying individual AI tools but building the institutional architecture—data infrastructure, talent, and governance—that makes AI-driven risk management reliable at scale. The excerpt is brief, and the full argument may contain richer empirical grounding behind a soft paywall.",
+      "key_takeaway": "Scaling AI in bank risk management is fundamentally an organizational design problem, not a technology procurement one.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces identify organizational and executional barriers—siloed structures, governance gaps, and cultural resistance—as the principal obstacles to scaling AI beyond isolated pilots, with technical capability playing a secondary role.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        },
+        {
+          "id": "nanocase-decathlon-china-2026",
+          "reason": "The Decathlon case demonstrates that AI optimizes tasks rather than systems, and that real performance gains require compressing coordination overhead—a structural lesson directly applicable to multi-team risk functions attempting to scale AI across credit, fraud, and compliance silos.",
+          "title": "Compressing Coordination with AI at Decathlon China",
+          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 72,
+      "red_flags": [
+        "Source is a McKinsey Insights article—consulting firm output with potential commercial interest in AI advisory services; findings should be treated as practitioner perspective rather than peer-reviewed research.",
+        "RSS excerpt is very thin; the full article may be gated or require registration, limiting independent verification of claims and data sources.",
+        "No authors named, reducing accountability for specific empirical assertions.",
+        "Publication date (Nov 04, 2026) is in the future relative to current knowledge; content and methodology cannot be fully assessed from the excerpt alone."
+      ],
+      "visual_concept": "A single large risk or operations floor seen from a slightly elevated angle, with one central figure—a standing analyst at an oversized workstation—positioned at the golden-ratio point of the frame, their back partially to the viewer as they face a tall, floor-to-ceiling display panel showing clean dashboard lines and risk metrics in muted blues and greens. Leading lines formed by rows of empty desks recede toward a vanishing point directly behind the central figure, drawing the eye to them and implying organizational scale without crowding the frame. The surrounding space is sparse and ordered—minimal clutter, no other dominant figures—to emphasize the tension between human judgment and an expanding information architecture. Lighting is cool and directional, pooling softly onto the central figure and the display panel, with the periphery falling into gentle shadow. Overall palette: cool slate blue, off-white, with one restrained amber accent on the analyst's desk lamp."
+    },
+    "enriched_at": "2026-11-10",
+    "model": "claude-sonnet-4-6",
+    "title": "The AI-enabled risk function of the future"
+  },
   "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-speed-problem-how-frontier-ai-exposes-weakness-in-enterprise-cybersecurity": {
     "data": {
       "audience_relevance": {
@@ -1747,69 +1700,6 @@
     "model": "claude-sonnet-4-6",
     "title": "For CPG companies, agentic AI’s real payoff is growth"
   },
-  "https://www.mckinsey.com/industries/electric-power-and-natural-gas/our-insights/utilities-at-an-inflection-point-four-strategic-evolutions-ahead": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "medium",
-        "policy_makers": "high"
-      },
-      "centre_angle": "This McKinsey piece argues that AI is one of several forces simultaneously redrawing the competitive and operational landscape for European utilities. From CAMO's perspective on AI Adoption, the more pointed question is not whether utilities adopt AI but how adoption reshapes internal management structures, decision rights, and job boundaries — particularly when AI is introduced alongside other discontinuities such as grid decarbonization and market deregulation. The CIMC and Decathlon China cases in CAMO's research illustrate that productivity gains from AI often stall at coordination and workflow bottlenecks rather than at the technology itself, a dynamic likely to recur in asset-heavy, regulation-dense utility environments.",
-      "claude_summary": "European utilities are navigating a period of structural discontinuity driven by electrification, renewable expansion, flexibility demands, AI integration, and shifting policy environments. McKinsey identifies four strategic evolutions reshaping how utilities position themselves as industry economics are redefined. The article argues that utilities must adapt their operating models and strategic logic to survive a convergence of technological and regulatory pressures. The excerpt is brief and the full analysis is behind a consultancy paywall, so specific findings and data points are unavailable; the summary reflects the framing rather than detailed empirical content.",
-      "key_takeaway": "AI is only one of four simultaneous strategic pressures reshaping utilities, and executives who treat it in isolation risk misreading the deeper structural shifts underway.",
-      "matched_camo": [
-        {
-          "id": "nanocase-decathlon-china-2026",
-          "reason": "Both pieces concern organizations facing multi-dimensional operational pressures where AI adoption improves task-level efficiency but leaves coordination and structural bottlenecks — not technical execution — as the binding constraint on performance.",
-          "title": "Compressing Coordination with AI at Decathlon China",
-          "url": "https://camo.hku.hk/nanocase-compressingcoordinationwithaiatdecathlonchina/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 42,
-      "red_flags": [
-        "Article is from a management consultancy (McKinsey) with commercial interests in utility-sector advisory work; findings may reflect client-facing framing rather than independent research.",
-        "RSS excerpt is thin; the full article appears to require site access and may be gated or registration-walled, limiting independent verification of specific claims.",
-        "No named authors or empirical methodology disclosed in the excerpt; pillar relevance scored low because AI's role in the article cannot be confirmed as primary rather than incidental."
-      ],
-      "visual_concept": "A single high-voltage electricity transmission tower occupies the left third of the frame in sharp foreground detail, its steel lattice forming a vertical anchor. Behind it, a wide flat landscape recedes to a horizon under a cool, overcast sky with pale grey-blue tones diffused evenly across the scene. A single vanishing point on the horizon draws the eye from the tower outward along a row of smaller pylons that diminish into the distance, conveying scale and the long infrastructure horizon ahead. The palette is desaturated steel-grey and slate-blue with a faint warm amber at the horizon line suggesting transition rather than arrival. The overall mood is measured and industrial — neither alarming nor optimistic."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "Utilities at an inflection point: Four strategic evolutions ahead"
-  },
-  "https://www.mckinsey.com/industries/financial-services/our-insights/at-last-customers-first-ai-powered-personalization-can-help-banks-create-value": {
-    "data": {
-      "audience_relevance": {
-        "general_econ_public": "low",
-        "managers_csuite": "high",
-        "policy_makers": "medium"
-      },
-      "centre_angle": "This McKinsey article argues that AI-driven personalization is the primary lever through which traditional banks can restructure their customer engagement model and compete with digital-native platforms. From CAMO's perspective on AI Adoption, the more consequential question is not whether personalization technology works, but how banks reorganize internal workflows, data governance, and managerial accountability to make it work at scale — the organizational barriers that CAMO's 2026 Deloitte-HKU AI Adoption Index found to be the dominant reason AI initiatives fall short of expected returns. The strategic risk for banks is not a shortage of AI tools but a shortage of the coordination and change-management capability needed to move from pilot personalization to institution-wide deployment.",
-      "claude_summary": "Traditional banks face a structural disadvantage against digital-first rivals partly because they have underused the customer data they already hold. This McKinsey article argues that AI-powered hyperpersonalization — delivering the right offer or advice to the right customer at the right moment — is how incumbent banks can close that gap and generate measurable value. The piece identifies four components of a working personalization strategy, though the RSS excerpt does not detail all four. The argument is that personalization shifts banks from product-push models toward genuinely customer-centric engagement, with AI as the operational backbone. Note: full article content is not available from the excerpt alone, so specific data claims cannot be verified here.",
-      "key_takeaway": "Banks that want AI personalization to deliver real returns must solve the organizational and data-governance challenges first, not last.",
-      "matched_camo": [
-        {
-          "id": "deloitte-hku-ai-adoption-index-2026",
-          "reason": "Both pieces address the gap between the promise of enterprise AI and measurable business outcomes, with the CAMO index providing empirical evidence that organizational rather than technical barriers are the primary obstacle — directly relevant to bank-wide AI personalization rollouts.",
-          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
-          "url": "https://camo.hku.hk/ai-adoption-survey/"
-        }
-      ],
-      "pillar": "AI Adoption",
-      "pillar_relevance": 72,
-      "red_flags": [
-        "Source is McKinsey Insights, a consulting firm with commercial interest in advising banks on AI strategy — findings may overstate opportunity or understate implementation difficulty.",
-        "Only an RSS excerpt was available; specific claims, data points, and the four named components could not be verified from the full article text.",
-        "Not peer-reviewed; no methodology disclosed in excerpt.",
-        "Hyperpersonalization in banking raises data privacy and algorithmic fairness concerns not visible in the excerpt — regulatory risk is likely underweighted."
-      ],
-      "visual_concept": "A single bank teller window, centered in the frame and rendered in clean architectural lines, shot from slightly below eye level so the service counter becomes the clear focal subject. The surrounding banking hall recedes into soft-focus background, kept minimal — pale marble floors and high ceilings — so nothing competes with the window. A narrow shaft of cool daylight from an unseen skylight pools directly onto the counter surface, drawing the eye and implying a moment of attention or selection amid a larger, impersonal institution. The palette is restrained: cool greys and off-whites in the environment, with one warm amber tone on the counter itself suggesting human contact within an otherwise institutional space. Lighting is soft but directional, evoking measured optimism rather than drama."
-    },
-    "enriched_at": "2026-09-08",
-    "model": "claude-sonnet-4-6",
-    "title": "At last, customers first: AI-powered personalization can help banks create value"
-  },
   "https://www.mckinsey.com/industries/financial-services/our-insights/closing-bankings-ai-value-gap-a-ceo-guide": {
     "data": {
       "audience_relevance": {
@@ -1980,6 +1870,38 @@
     "enriched_at": "2026-09-22",
     "model": "claude-sonnet-4-6",
     "title": "Cutting the ‘coordination tax’: How agentic AI can reshape workflows"
+  },
+  "https://www.mckinsey.com/industries/industrials/our-insights/wartsila-ceo-hakan-agnevall-focus-flexibility-and-the-next-wave-of-growth": {
+    "data": {
+      "audience_relevance": {
+        "general_econ_public": "low",
+        "managers_csuite": "medium",
+        "policy_makers": "low"
+      },
+      "centre_angle": "This McKinsey interview presents AI as one instrument among several in a broader industrial turnaround playbook, alongside strategic focus and operational flexibility. From CAMO's perspective on AI adoption, the more consequential and underexplored question is what happens inside Wärtsilä's organization as AI and continuous improvement compress routine managerial work — who absorbs the freed capacity, and how are roles and incentives redesigned as a result. The excerpt does not answer this, limiting the article's value as evidence for how industrial firms are genuinely navigating the organizational dimensions of AI deployment.",
+      "claude_summary": "Wärtsilä CEO Håkan Agnevall outlines how the industrial conglomerate is navigating disruption by narrowing its strategic focus, building flexibility into its operations, and capitalizing on surging demand for data-center power infrastructure. The interview covers how AI and continuous improvement methodologies are being deployed internally to drive operational efficiency and position the company for its next growth phase. The source excerpt is brief, so specific findings on AI implementation depth, workforce effects, or measurable outcomes are not available from the material provided.",
+      "key_takeaway": "Industrial CEOs are framing AI as a growth enabler alongside strategic focus and power-demand tailwinds, but the organizational mechanics of that enablement remain largely unexamined in public accounts.",
+      "matched_camo": [
+        {
+          "id": "deloitte-hku-ai-adoption-index-2026",
+          "reason": "Both pieces address C-suite narratives around AI-driven growth and the gap between strategic ambition and demonstrable operational outcomes, a tension the Adoption Index documents systematically across firms in the region.",
+          "title": "Deloitte-HKU AI Adoption Index 2026: The Paradox of Promise and Performance",
+          "url": "https://camo.hku.hk/ai-adoption-survey/"
+        }
+      ],
+      "pillar": "AI Adoption",
+      "pillar_relevance": 42,
+      "red_flags": [
+        "Source is a McKinsey-produced CEO interview, not independent journalism or peer-reviewed research — findings reflect the interviewee's framing and McKinsey's editorial interests.",
+        "RSS excerpt is too brief to verify specific claims about AI deployment, operational outcomes, or workforce effects; summary is necessarily thin.",
+        "Potential conflict of interest: McKinsey may have a consulting relationship with Wärtsilä, which is not disclosed in the excerpt.",
+        "No quantitative evidence of AI impact is available from the provided material."
+      ],
+      "visual_concept": "A single large industrial turbine or marine engine component occupies the center-left of the frame at close range, its machined steel surfaces catching cool, directional workshop light from one side that leaves the far edge in soft shadow. The surrounding factory floor recedes into a vanishing point behind the component, drawing the eye through depth without cluttering the composition. The environment is sparse — concrete floor, high ceiling barely suggested — so the machinery reads as the unambiguous focal subject. Palette is industrial cool: slate greys and muted steel blues with one warm amber light source indicating human presence just off-frame. The mood is measured competence rather than spectacle."
+    },
+    "enriched_at": "2026-11-10",
+    "model": "claude-sonnet-4-6",
+    "title": "Wärtsilä CEO Håkan Agnevall: Focus, flexibility, and the next wave of growth"
   },
   "https://www.mckinsey.com/industries/metals-and-mining/our-insights/harnessing-ai-to-make-mining-safer": {
     "data": {
