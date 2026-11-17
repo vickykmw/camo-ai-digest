@@ -14,6 +14,7 @@ Runs weekly on **Monday 00:00 UTC** (Monday 7 pm CDT / 6 pm CST in Chicago).
 
 ## Recent digests
 
+- [2026-11-10_2026-11-17](digests/2026-11/2026-11-10_2026-11-17.md)
 - [2026-11-03_2026-11-10](digests/2026-11/2026-11-03_2026-11-10.md)
 - [2026-10-27_2026-11-03](digests/2026-11/2026-10-27_2026-11-03.md)
 - [2026-10-20_2026-10-27](digests/2026-10/2026-10-20_2026-10-27.md)
@@ -43,6 +44,5 @@ Runs weekly on **Monday 00:00 UTC** (Monday 7 pm CDT / 6 pm CST in Chicago).
 - [2026-05-19_2026-05-26](digests/2026-05/2026-05-19_2026-05-26.md)
 - [2026-05-18](digests/2026-05/2026-05-18.md)
 - [2026-05-17](digests/2026-05/2026-05-17.md)
-- [2026-05-16](digests/2026-05/2026-05-16.md)
 
 _Older digests in [`digests/`](digests/)._
